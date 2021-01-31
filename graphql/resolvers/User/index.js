@@ -19,7 +19,10 @@ export default {
     getUsers: async (_, args, { models: { UserModel } }) => {
       try {
         if (args.search) {
-          return await UserModel.find({ $text: { $search: args.search.toString() } }).sort({
+          return await UserModel.find({
+            $text: { $search: args.search.toString() },
+            account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY]
+          }).sort({
             createdAt: -1
           })
         }
