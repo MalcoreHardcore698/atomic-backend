@@ -9,10 +9,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     quotes: ['error', 'single'],

@@ -1,8 +1,4 @@
 export default {
-  Query: {
-
-  },
-  Mutation: {
-
-  }
+  Query: {},
+  Mutation: {}
 }

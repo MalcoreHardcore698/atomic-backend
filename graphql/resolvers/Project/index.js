@@ -113,6 +113,7 @@ export default {
       { id, input, status },
       {
         pubsub,
+        deleteUpload,
         createUpload,
         createUploads,
         models: { UserModel, ProjectModel, FileModel, ImageModel }
@@ -146,19 +147,26 @@ export default {
           project.members = members
         }
 
-        const preview = await createUpload(input.preview, input.previewSize, ImageModel)
+        if (input.preview) {
+          const preview = await createUpload(input.preview, input.previewSize, ImageModel)
+          if (preview) {
+            await deleteUpload(project.preview, ImageModel)
+            project.preview = preview
+          }
+        }
+
         const files = await createUploads(
           input.files?.filter((f) => f),
           input.fileSizes,
           FileModel
         )
+
         const screenshots = await createUploads(
           input.screenshots?.filter((f) => f),
           input.screenshotSizes,
           ImageModel
         )
 
-        if (preview) project.preview = preview
         if (files) project.files = files
         if (screenshots) project.screenshots = screenshots
 
@@ -181,9 +189,9 @@ export default {
       try {
         const project = await ProjectModel.findById(id)
 
-        deleteUpload(project.preview, ImageModel)
-        deleteUploads(project.screenshots, ImageModel)
-        deleteUploads(project.files, FileModel)
+        await deleteUpload(project.preview, ImageModel)
+        await deleteUploads(project.screenshots, ImageModel)
+        await deleteUploads(project.files, FileModel)
 
         await project.delete()
 

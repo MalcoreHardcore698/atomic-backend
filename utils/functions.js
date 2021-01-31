@@ -67,9 +67,10 @@ export async function storeUpload(upload) {
 }
 
 export async function storeRimraf(path) {
-  const parts = path.split('/')
-  const origin = parts.slice(0, parts.length - 1).join('/')
-  await rimraf(origin, () => {})
+  const replaced = path.replace('uploads', 'public/uploads')
+  const splitted = replaced.split('/')
+  const origin = splitted.slice(3, splitted.length - 1).join('/')
+  return rimraf(`./${origin}`, () => {})
 }
 
 export async function createUpload(file, size, model) {

@@ -60,7 +60,7 @@ export default {
     updateArticle: async (
       _,
       { id, input, status },
-      { pubsub, createUpload, models: { ArticleModel, ImageModel } }
+      { pubsub, deleteUpload, createUpload, models: { ArticleModel, ImageModel } }
     ) => {
       if (input.body.trim() === '') {
         throw new Error(ARTICLE_NOT_EMPTY)
@@ -75,7 +75,10 @@ export default {
         article.status = input.status || article.status || 'MODERATION'
 
         const preview = await createUpload(input.preview, input.previewSize, ImageModel)
-        if (preview) article.preview = preview
+        if (preview) {
+          await deleteUpload(article.preview, ImageModel)
+          article.preview = preview
+        }
 
         await article.save()
 
@@ -96,7 +99,7 @@ export default {
       try {
         const article = await ArticleModel.findById(id)
 
-        deleteUpload(article.preview, ImageModel)
+        await deleteUpload(article.preview, ImageModel)
 
         await article.delete()
 

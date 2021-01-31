@@ -328,7 +328,7 @@ export default {
     updateClientUser: async (
       _,
       { input },
-      { user, createUpload, models: { UserModel, ImageModel } }
+      { user, deleteUpload, createUpload, models: { UserModel, ImageModel } }
     ) => {
       user.name = input.name || user.name
       user.about = input.about || user.about
@@ -346,7 +346,10 @@ export default {
       if (input.password) user.password = input.password
 
       const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-      if (avatar) user.avatar = avatar
+      if (avatar) {
+        await deleteUpload(user.avatar, ImageModel)
+        user.avatar = avatar
+      }
 
       await user.save()
 
@@ -355,7 +358,7 @@ export default {
     updateUser: async (
       _,
       { email, input },
-      { createUpload, models: { UserModel, ImageModel } }
+      { deleteUpload, createUpload, models: { UserModel, ImageModel } }
     ) => {
       const user = await UserModel.findOne({ email })
 
@@ -376,7 +379,10 @@ export default {
         if (input.password) user.password = input.password
 
         const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-        if (avatar) user.avatar = avatar
+        if (avatar) {
+          await deleteUpload(user.avatar, ImageModel)
+          user.avatar = avatar
+        }
 
         await user.save()
       }
