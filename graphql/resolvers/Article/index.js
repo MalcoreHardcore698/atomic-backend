@@ -5,6 +5,14 @@ export default {
   Query: {
     getArticles: async (_, args, { models: { ArticleModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await ArticleModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await ArticleModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1

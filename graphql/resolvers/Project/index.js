@@ -5,6 +5,14 @@ export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await ProjectModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await ProjectModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1

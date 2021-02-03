@@ -4,6 +4,14 @@ export default {
   Query: {
     getTickets: async (_, args, { models: { TicketModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await TicketModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await TicketModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1

@@ -393,22 +393,31 @@ export default gql`
   }
 
   type Query {
-    getRoles(search: String): [Role]!
+    getRoles(offset: Int, limit: Int, search: String): [Role]!
     getUsers(
+      offset: Int
+      limit: Int
       search: String
       email: [String]
       search: String
       account: [AccountType]
       company: String
     ): [User]!
-    getFiles(search: String): [File]!
-    getImages(search: String): [Image]!
-    getCategories(search: String): [Category]!
+    getFiles(offset: Int, limit: Int, search: String): [File]!
+    getImages(offset: Int, limit: Int, search: String): [Image]!
+    getCategories(offset: Int, limit: Int, search: String): [Category]!
     getCategoryTypes: [CategoryType]!
-    getProjects(search: String, author: String, member: String, status: PostStatus): [Project]!
+    getProjects(
+      offset: Int
+      limit: Int
+      search: String
+      author: String
+      member: String
+      status: PostStatus
+    ): [Project]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
-    getArticles(search: String, status: PostStatus): [Article]!
-    getComments(search: String, id: ID!): [Comment]!
+    getArticles(offset: Int, limit: Int, search: String, status: PostStatus): [Article]!
+    getComments(offset: Int, limit: Int, search: String, id: ID!): [Comment]!
     getChatTypes: [ChatType]!
     getStatusChatTypes: [StatusChatType]!
     getAccountTypes: [AccountType]!

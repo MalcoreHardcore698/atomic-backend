@@ -18,6 +18,14 @@ export default {
   Query: {
     getUsers: async (_, args, { models: { UserModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await UserModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await UserModel.find({
             $text: { $search: args.search.toString() },

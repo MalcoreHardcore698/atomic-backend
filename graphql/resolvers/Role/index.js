@@ -4,6 +4,14 @@ export default {
   Query: {
     getRoles: async (_, args, { models: { RoleModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await RoleModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await RoleModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1

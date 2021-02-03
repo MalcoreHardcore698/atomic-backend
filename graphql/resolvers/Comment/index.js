@@ -8,6 +8,14 @@ import {
 export default {
   Query: {
     getComments: async (_, args, { models: CommentModel, ArticleModel }) => {
+      if (args.offset >= 0 && args.limit >= 0) {
+        return await CommentModel.find()
+          .sort({
+            createdAt: -1
+          })
+          .skip(args.offset)
+          .limit(args.limit)
+      }
       if (args.search) {
         return await CommentModel.find({ $text: { $search: args.search } }).sort({
           createdAt: -1

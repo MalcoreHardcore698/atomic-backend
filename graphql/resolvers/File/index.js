@@ -4,6 +4,14 @@ export default {
   Query: {
     getFiles: async (_, args, { models: { FileModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await FileModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await FileModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1

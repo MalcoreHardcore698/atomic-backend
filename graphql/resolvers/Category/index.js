@@ -4,6 +4,14 @@ export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
       try {
+        if (args.offset >= 0 && args.limit >= 0) {
+          return await CategoryModel.find()
+            .sort({
+              createdAt: -1
+            })
+            .skip(args.offset)
+            .limit(args.limit)
+        }
         if (args.search) {
           return await CategoryModel.find({ $text: { $search: args.search } }).sort({
             createdAt: -1
