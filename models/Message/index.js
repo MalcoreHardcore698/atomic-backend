@@ -13,4 +13,6 @@ const MessageSchema = new Schema(
   }
 )
 
+MessageSchema.index({ text: 'text' })
+
 export default model('Message', MessageSchema)

@@ -5,20 +5,21 @@ export default {
   Query: {
     getArticles: async (_, args, { models: { ArticleModel } }) => {
       try {
+        const status = args.status ? { status: args.status } : {}
+        const category = args.category ? { category: args.category } : {}
+        const search = args.search ? { $text: { $search: args.search } } : {}
+
         if (args.offset >= 0 && args.limit >= 0) {
-          return await ArticleModel.find()
+          return await ArticleModel.find({ ...status, ...category, ...search })
             .sort({
               createdAt: -1
             })
             .skip(args.offset)
             .limit(args.limit)
         }
-        if (args.search) {
-          return await ArticleModel.find({ $text: { $search: args.search } }).sort({
-            createdAt: -1
-          })
-        }
-        return await ArticleModel.find(args).sort({ createdAt: -1 })
+        return await ArticleModel.find({ ...status, ...category, ...search }).sort({
+          createdAt: -1
+        })
       } catch (err) {
         throw new Error(err)
       }

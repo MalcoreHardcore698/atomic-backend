@@ -11,4 +11,6 @@ const RoleSchema = new Schema(
   }
 )
 
+RoleSchema.index({ name: 'text' })
+
 export default model('Role', RoleSchema)

@@ -17,9 +17,16 @@ const SECRET = config.get('secret')
 export default {
   Query: {
     getUsers: async (_, args, { models: { UserModel } }) => {
+      const search = args.search
+        ? {
+            $text: { $search: args.search.toString() },
+            account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY]
+          }
+        : {}
+
       try {
         if (args.offset >= 0 && args.limit >= 0) {
-          return await UserModel.find()
+          return await UserModel.find(search)
             .sort({
               createdAt: -1
             })
@@ -27,10 +34,7 @@ export default {
             .limit(args.limit)
         }
         if (args.search) {
-          return await UserModel.find({
-            $text: { $search: args.search.toString() },
-            account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY]
-          }).sort({
+          return await UserModel.find(search).sort({
             createdAt: -1
           })
         }

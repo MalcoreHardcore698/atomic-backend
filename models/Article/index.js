@@ -21,4 +21,6 @@ const ArticleSchema = new Schema(
   }
 )
 
+ArticleSchema.index({ title: 'text' })
+
 export default model('Article', ArticleSchema)

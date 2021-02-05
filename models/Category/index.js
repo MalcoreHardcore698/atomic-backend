@@ -12,4 +12,6 @@ const CategorySchema = new Schema(
   }
 )
 
+CategorySchema.index({ name: 'text' })
+
 export default model('Category', CategorySchema)

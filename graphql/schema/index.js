@@ -410,6 +410,7 @@ export default gql`
     getProjects(
       offset: Int
       limit: Int
+      category: ID
       search: String
       author: String
       member: String

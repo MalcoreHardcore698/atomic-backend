@@ -5,18 +5,17 @@ export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
+        const status = args.status ? { status: args.status } : {}
+        const category = args.category ? { category: args.category } : {}
+        const search = args.search ? { $text: { $search: args.search } } : {}
+
         if (args.offset >= 0 && args.limit >= 0) {
-          return await ProjectModel.find()
+          return await ProjectModel.find({ ...status, ...category, ...search })
             .sort({
               createdAt: -1
             })
             .skip(args.offset)
             .limit(args.limit)
-        }
-        if (args.search) {
-          return await ProjectModel.find({ $text: { $search: args.search } }).sort({
-            createdAt: -1
-          })
         }
         if (args.author) {
           const user = await UserModel.findOne({ email: args.author })
@@ -30,7 +29,9 @@ export default {
             createdAt: -1
           })
         }
-        return await ProjectModel.find().sort({ createdAt: -1 })
+        return await ProjectModel.find({ ...status, ...category, ...search }).sort({
+          createdAt: -1
+        })
       } catch (err) {
         throw new Error(err)
       }

@@ -10,4 +10,6 @@ const LanguageSchema = new Schema(
   }
 )
 
+LanguageSchema.index({ title: 'text', code: 'text' })
+
 export default model('Language', LanguageSchema)

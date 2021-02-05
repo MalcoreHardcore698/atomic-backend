@@ -11,4 +11,6 @@ const NoticeSchema = new Schema(
   }
 )
 
+NoticeSchema.index({ title: 'text', message: 'text' })
+
 export default model('Notice', NoticeSchema)

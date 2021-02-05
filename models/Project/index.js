@@ -25,4 +25,6 @@ const ProjectSchema = new Schema(
   }
 )
 
+ProjectSchema.index({ title: 'text', description: 'text' })
+
 export default model('Project', ProjectSchema)

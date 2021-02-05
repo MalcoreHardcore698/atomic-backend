@@ -11,4 +11,6 @@ const CommentSchema = new Schema(
   }
 )
 
+CommentSchema.index({ text: 'text' })
+
 export default model('Comment', CommentSchema)
