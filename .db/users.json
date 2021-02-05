@@ -1,0 +1,3155 @@
+[{
+  "_id": {
+    "$oid": "5fd7ad9f6ec73f31f083a2a4"
+  },
+  "settings": [],
+  "name": "Admin",
+  "account": "ADMIN",
+  "email": "admin@mail.com",
+  "phone": "1231231212",
+  "password": "$2a$12$SVTJvexXwzvZkPxlTokemOIXbiNQXaTq/5bKMeLualrMdDkyNW3wC",
+  "role": {
+    "$oid": "5fd7a2d09766980814cf4785"
+  },
+  "sessionID": "804d55d0-e77e-434b-a1af-ab63bc2ae806",
+  "createdAt": {
+    "$date": "2020-12-14T18:23:27.625Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:34:43.360Z"
+  },
+  "__v": 3,
+  "gender": "MALE",
+  "dateOfBirth": "1607970207625",
+  "folders": [
+    {
+      "projects": [],
+      "_id": {
+        "$oid": "600a9fbaeb529f2d38d655cf"
+      },
+      "name": "Test"
+    },
+    {
+      "projects": [],
+      "_id": {
+        "$oid": "600a9fbfeb529f2d38d655d0"
+      },
+      "name": "Yet"
+    }
+  ],
+  "avatar": {
+    "$oid": "6017227336b1c46766a562eb"
+  }
+},{
+  "_id": {
+    "$oid": "600e784a6fd82f409aa920d1"
+  },
+  "settings": [],
+  "name": "Ребрин Станислав Олегович",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "account": "INDIVIDUAL",
+  "email": "s.rebrin@icatom.ru",
+  "phone": "89222067020",
+  "password": "$2b$10$FaHCnTrqO8Z6GWuiC3ApKOhVSI5rRGd1r0e4KpPOhahOTCbUEIL1m",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-25T07:50:34.476Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:35:42.011Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017a13d5724336bbda29362"
+  },
+  "gender": "MALE",
+  "dateOfBirth": "1982-08-12T18:00:00.000Z",
+  "about": "Руководитель проектов\nООО \"Я-Проект\""
+},{
+  "_id": {
+    "$oid": "601119634b603c44c06f0681"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Никита Игоревич Явейн",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "email": "niyavin@mail.com",
+  "phone": "89000001",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$I7kghD50kaZquz1CEDhXm.TvJETrNiPHkU7NOwYB4DSH3kl/3cl2a",
+  "createdAt": {
+    "$date": "2021-01-27T07:42:27.580Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:17:46.184Z"
+  },
+  "__v": 0,
+  "about": "Руководитель, основатель, старший партнёр архитектурного бюро \"Студия 44\"",
+  "avatar": {
+    "$oid": "6017ab1a5724336bbda2937a"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601119a84b603c44c06f0682"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Василий Адольфович Романцев",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "email": "varonacev@mail.com",
+  "phone": "89000002",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$WcBlH0PI0GjjPWtdZZZGlexZmDG1caPDxB/wWFN/wQ88BMhGv3Ji2",
+  "createdAt": {
+    "$date": "2021-01-27T07:43:36.616Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:33:33.335Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d8fd5724336bbda29390"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "60111a764b603c44c06f0683"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Алена Игоревна Амелькович",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "email": "aiamelkovich@mail.com",
+  "phone": "89000003",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$B58dXBDm9.5u2oy8/B3VxOi21zAQkX4bvMM88ggzFZm/Xnm0AjXNG",
+  "createdAt": {
+    "$date": "2021-01-27T07:47:02.928Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:17:05.937Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017aaf15724336bbda29379"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "60111afa60b6922ad0177e22"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "А.Д. Баженов",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "email": "adbajenov@mail.com",
+  "phone": "89000004",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$1JtJZsi8.8Nr3JpiAmXfU.uoNziNKlF2FXNZgGgMf.HlXBi4sL0ru",
+  "createdAt": {
+    "$date": "2021-01-27T07:49:14.122Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-27T07:49:14.122Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60111c0d2f169c24784688ec"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Евгения Владимировна Купцова",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "evkucova@mail.com",
+  "phone": "89000005",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$WztDH7332ox.82LK/YGkUOblk5DSD6wgHgPlSOboh8jgNnNbvqnh2",
+  "createdAt": {
+    "$date": "2021-01-27T07:53:50.070Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:32:57.248Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d8d95724336bbda2938f"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601121e62f169c24784688ed"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Ульяна Владимировна Сулимова",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "uvsulimova@mail.com",
+  "phone": "89000006",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$8S9pOTsrfPCallzdhx7K0uuY4hqSJ3QToE.3WR6GDFB8CG/.w5neu",
+  "createdAt": {
+    "$date": "2021-01-27T08:18:46.225Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:35:52.212Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9885724336bbda29394"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601122412f169c24784688ee"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Андрей Андреевич Патрикеев",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "aapatrikeev@mail.com",
+  "phone": "89000007",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$jB5AD9UAXeAEY3FBrBnMsOVHED/o4paoCiyHE/9kjZ5CfqHwJMgtC",
+  "createdAt": {
+    "$date": "2021-01-27T08:20:17.545Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:32:33.311Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d8c15724336bbda2938e"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601122932f169c24784688ef"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Дмитрий Петрович Кресов",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "dpkresov@mail.com",
+  "phone": "89000008",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$UUzcqREzEZVFMuWU.IYs8uc2b6Pzb3RG9vkGIsSP2yQhnntH1P4Vy",
+  "createdAt": {
+    "$date": "2021-01-27T08:21:39.441Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:33:57.096Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9145724336bbda29391"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601122da2f169c24784688f0"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Андрей Валерьевич Агашков",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "avagashov@mail.com",
+  "phone": "89000009",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$zupG00.fsOh4NS4EDornweVbBmtovyfwNDYPvtt5RZ2lgbHOcT7Ea",
+  "createdAt": {
+    "$date": "2021-01-27T08:22:50.495Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:36:13.162Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d99d5724336bbda29395"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601123202f169c24784688f1"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Сергей Сергеевич Богданов",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "ccbogdanov@mail.com",
+  "phone": "89000010",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$zmUd/OvG/K6Npr6dfByzQelmqYTv6PSODLYbAZWO1xp36wysgE5.K",
+  "createdAt": {
+    "$date": "2021-01-27T08:24:00.297Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:37:15.115Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9da5724336bbda29397"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601123782f169c24784688f2"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Елена Викторовна Силантьева",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Тест",
+  "email": "evselanteva@mail.com",
+  "phone": "89000011",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$hzJKEYX/wC/hmtZNHY3T/O49z0Kh6s9N4hpd0RUFYaYPMJKsIln0W",
+  "createdAt": {
+    "$date": "2021-01-27T08:25:28.569Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:34:53.707Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d94d5724336bbda29393"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601123b92f169c24784688f3"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Андрей Юрьевич Короваев",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "aukorovaev@mail.com",
+  "phone": "89000012",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$R4bVgaHnOl1S88MqUxEtaenh5BM/XVUtjvnhwwHuPpfasrS.BI8lm",
+  "createdAt": {
+    "$date": "2021-01-27T08:26:33.274Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:37:43.487Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9f75724336bbda29398"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601124362f169c24784688f4"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Ю. О. Сергеев",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "uosergeev@mail.com",
+  "phone": "89000013",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$dXknyCBC4k35eKzfAiue/uE/K128.KCZOxxybyBU542XKXQPDqbze",
+  "createdAt": {
+    "$date": "2021-01-27T08:28:38.815Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-27T08:28:38.815Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601124862f169c24784688f5"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Лев Владимирович Герштейн",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "lvgershtein@mail.com",
+  "phone": "89000014",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$ebeaoF823mpFlkFz6DF.S.aYps/MXhnBbuayNDmwrtn9qNy8A4RsC",
+  "createdAt": {
+    "$date": "2021-01-27T08:29:58.650Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:34:31.920Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9375724336bbda29392"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "601124c32f169c24784688f6"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Мария Александровна Рогожкина",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "marogoshkina@mail.com",
+  "phone": "89000015",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$hDuthJ8NOZ.pbpjgDklsguoWm6Y7leVMvTAUiylXId6hqYCKYs3Vi",
+  "createdAt": {
+    "$date": "2021-01-27T08:30:59.724Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:36:39.333Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017d9b75724336bbda29396"
+  },
+  "company": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  }
+},{
+  "_id": {
+    "$oid": "60114c14c76e766a0e105394"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Проектный институт Трансформатор",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "мы лучшая команда в. мире",
+  "email": "191640@gmail.com",
+  "phone": "89292191640",
+  "gender": "FEMALE",
+  "account": "ENTITY",
+  "dateOfBirth": "2004-01-08T23:00:00.000Z",
+  "password": "$2b$10$epyy5Ib.t9uMFCATGj8S1OyL5Attp17lnkYp1OtbA2TFxSMqLXq4K",
+  "avatar": {
+    "$oid": "60114c14c76e766a0e105395"
+  },
+  "createdAt": {
+    "$date": "2021-01-27T11:18:44.328Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-27T11:18:44.328Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "ООО “Белгородоблпроект”",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Белгородоблпроект был создан, как хозрасчетное областное проектно-сметное бюро при Облкомхозе, согласно постановлению Совета Министров РСФСР №648 от 5 мая 1954г. и решения Исполкома областного Совета депутатов трудящихся №396 от 26 июня 1954 года. Основным направление деятельности бюро было выполнение работ по составлению проектно-сметной документации на капитальный ремонт объектов облздравотдела, ОБЛОНО, облторготдела, облсобеса, жилфонда, коммунальных предприятий.",
+  "email": "info@oblpro.ru",
+  "phone": "84722732084",
+  "gender": "MALE",
+  "account": "ENTITY",
+  "dateOfBirth": "1995-04-06T18:00:00.000Z",
+  "password": "$2b$10$hZCG.w3CXNRL0uZUJA9Zuu8N.FP24UPGI1J.f24N8DyDx9WamoI4W",
+  "avatar": {
+    "$oid": "6017225636b1c46766a562ea"
+  },
+  "createdAt": {
+    "$date": "2021-01-27T16:36:56.596Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:34:14.925Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60128c5ef4f1418412c95330"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Клет Вадим Михайлович",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Председатель наблюдательного совета ОК Алгоритм Успеха",
+  "email": "mail1@mail.ru",
+  "phone": "89123456",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$QAVzawroeyR1artJpJvpUegzK8VcenzT8tEzQSgPOY5BlxY/vO6Ze",
+  "avatar": {
+    "$oid": "6017aa4e5724336bbda29378"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T10:05:18.436Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T15:09:09.304Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  }
+},{
+  "_id": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "ООО «Белгородстроймонтажпроект»",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Проектная организация Белгородстроймонтажпроект основана в 2005 году. За  этот срок фирма уверенно вошла в число ведущих проектных фирм Белгорода, выполняя работы не только в городе, но и по области. За время своего существования организация обрела надёжных партнёров и постоянных заказчиков.\n\nНаши специалисты имеют высокую квалификацию и большой опыт проектирования. В нашем портфолио вы увидите различные проекты многоэтажных жилых домов, промышленных предприятий, административных зданий и торговых центров.\n\nСпециалисты нашей компании посещают российские и зарубежные специализированные выставки и форумы, постоянно повышая свой профессиональный уровень.",
+  "email": "mail2@mail.ru",
+  "phone": "89111235",
+  "gender": "MALE",
+  "account": "ENTITY",
+  "password": "$2b$10$Es2nay4UXn7b.zpbWhKaj.7mD4chzcpigs46RAGM9R2v0dsVKsFtu",
+  "avatar": {
+    "$oid": "6017da505724336bbda29399"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T11:03:50.601Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:39:12.409Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60129dea399f0a4eb86bbcb7"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Быканов Олег Дмитриевич",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный архитектор\nООО \"Белгородоблпроект\"",
+  "email": "abykanov@mail.com",
+  "phone": "89000016",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$.2n5G3k9bWTkC.UbG2QwqOlEB5E9CMQHHmgziKllIJY8DTVrYVVgC",
+  "createdAt": {
+    "$date": "2021-01-28T11:20:11.063Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:49:27.090Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601814f65724336bbda293e1"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "60129ed8399f0a4eb86bbcb9"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "П. Островная",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Ведущий архитектор\nООО \"Белгородоблпроект\"",
+  "email": "postrovnaya@mail.com",
+  "phone": "89000017",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$/f1sSWnQR1/V/5FyrG9yfuNuQFvWn5p5SHL4TVtgb8le5hGM1VEVS",
+  "createdAt": {
+    "$date": "2021-01-28T11:24:08.831Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T15:08:28.497Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "60129efc399f0a4eb86bbcba"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Н. Локтева",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "nlokteva@mail.com",
+  "phone": "89000018",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$5ZHjIkWyOhhRYmt7flpK2u6Qk9sm9T94Hv7V6yGWi86hJzgXYwr02",
+  "createdAt": {
+    "$date": "2021-01-28T11:24:44.164Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:51:07.507Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "60129f1a399f0a4eb86bbcbb"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "О. Кузьминова",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "",
+  "email": "okuzminova@mail.com",
+  "phone": "89000019",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$Fa0TMsPbTMkotuhmXtXfQuRbisUUQsdTkWw2/GaPH6Jt0u9FNnWGO",
+  "createdAt": {
+    "$date": "2021-01-28T11:25:14.734Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:50:10.984Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "60129f3c399f0a4eb86bbcbc"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Д. Вердиева",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Ландшафтный архитектор\nООО \"Белгородоблпроект\"",
+  "email": "dverdieva@mail.com",
+  "phone": "89000020",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$Q2NdiCRKo0fujnDk7mWN6.dYJ8MYOzKgDUhy2pstK3O.x3EjlbolW",
+  "createdAt": {
+    "$date": "2021-01-28T11:25:48.803Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T15:07:56.882Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "60129f9f61798541d0734973"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Радоминова Ольга Игоревна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный инженер\nООО \"Белгородоблпроект\"",
+  "email": "oradominova@mail.com",
+  "phone": "89000021",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$z2Bqnu0sshJdapDicK.WEuc26ZWcZ0A5drFgHK1ysl3MmLaHdM.Gm",
+  "createdAt": {
+    "$date": "2021-01-28T11:27:27.360Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:53:46.349Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601815fa5724336bbda293e2"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012a01b339bbd08781f0521"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Харина Анна Александровна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Начальник строительного отдела\nООО \"Белгородоблпроект\"",
+  "email": "aharina@mail.com",
+  "phone": "89000022",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$4unG9K0hAIJTgdeh1yHPX.umuanKeiWRIQzpzTMEMqu3jtDantbXa",
+  "createdAt": {
+    "$date": "2021-01-28T11:29:31.700Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:58:15.161Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601817075724336bbda293e6"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012a0560469f6433c86adea"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Трунова Наталья Михайловна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный инженер проектов\nООО \"Белгородоблпроект\"",
+  "email": "htrunova@mail.com",
+  "phone": "89000023",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "password": "$2b$10$x9yQLFn3kPjOAW0OsVf4teTEPFlau30CF0YkiwLg.vO7bgNFfAMoK",
+  "createdAt": {
+    "$date": "2021-01-28T11:30:30.470Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:59:00.230Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601817345724336bbda293e7"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012a0f361ed79516471cb33"
+  },
+  "settings": [],
+  "name": "Солонин Роман Владимирович",
+  "about": "Начальник отдела отопления, вентиляции и газоснабжения\nООО \"Белгородоблпроект\"",
+  "password": "$2b$10$a8WRiOGSOoadaNsRkDZCjO3mZbCr5.MmSev388L/YOsHqz2D2UvuS",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "rsolonon@mail.com",
+  "phone": "89000024",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-28T11:33:07.646Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:57:22.314Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601816d25724336bbda293e5"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012a19b14084114cc12113e"
+  },
+  "settings": [],
+  "name": "Аликина Ирина Владимировна",
+  "about": "Начальник отдела водоснабжения и водоотведения\nООО \"Белгородоблпроект\"",
+  "password": "$2b$10$58e1qrY/HDE4BQeqKYW8n.oyNlfxxT5bq/F4yO1mJNcqHfYh6OSfW",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "ialikina@mail.com",
+  "phone": "89000025",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-28T11:35:55.479Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:56:14.651Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6018168e5724336bbda293e4"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012a1e524f11d4d349c32b0"
+  },
+  "settings": [],
+  "name": "Сингатулина Олеся Владимировна",
+  "about": "Начальник электротехнического отдела\nООО \"Белгородоблпроект\"",
+  "password": "$2b$10$M2ySw02ye.8mIGpv2jATM.wP.XcbW2J/NhmQ4UIlwDw9TWQWYRjQm",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "osingatulina@mail.com",
+  "phone": "89000026",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": "1984-12-31T19:00:00.000Z",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-28T11:37:09.988Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:54:45.509Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "601816355724336bbda293e3"
+  },
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  }
+},{
+  "_id": {
+    "$oid": "6012abc4f4f1418412c9533e"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Тяпугина Инна Валентиновна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Директор  ОГАОУ ОК «Алгоритм Успеха» Белгородская область",
+  "email": "tyapugina@mail.ru",
+  "phone": "89234567",
+  "gender": "FEMALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$Fv0F9VEHVHbld8wYtl/uNORNM.XPRzQ6vdoLjv1mBtuKFmT/GnUti",
+  "avatar": {
+    "$oid": "6017aa345724336bbda29377"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T12:19:16.605Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:13:56.730Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  }
+},{
+  "_id": {
+    "$oid": "6012aeeaf4f1418412c95340"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "ООО Архитектурное бюро \"Студия 44\"",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Архитектурное бюро \"Студия 44\" – одна из крупнейших частных проектных фирм в Санкт-Петербурге и в России. В составе бюро – более 230 высококвалифицированных специалистов различного профиля (архитекторы, реставраторы, конструкторы, инженеры). В общей сложности 46 специалистов исполняют функции руководителей и координаторов проектов – главных архитекторов проектов (ГАП) - 20, главных конструкторов - 13 и главных инженеров проектов (ГИП) - 13.\n\nВысокую профессиональную репутацию \"Студии 44\" подтверждают более 60 престижных наград, в числе которых награды Международного фестиваля архитектуры (WAF), Государственная премия в области литературы и искусства, премия Правительства РФ в области культуры, премии Правительства Санкт-Петербурга в области литературы, искусства и архитектуры, высшие национальные награды в области архитектуры – \"Хрустальный Дедал\" и \"Премия Владимира Татлина\", главные призы Санкт-Петербургского смотра-конкурса \"Архитектон\" и Международного архитектурного фестиваля \"Зодчество\" (Москва).",
+  "email": "st44@mail.ru",
+  "phone": "84955678",
+  "gender": "MALE",
+  "account": "ENTITY",
+  "password": "$2b$10$vVD.sbMZhyU1GD5ymSZwlOmapF1GBtU4D/Ntn2AHVqN/1T7qAg.26",
+  "avatar": {
+    "$oid": "6017a9ef5724336bbda29376"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T12:32:42.374Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:12:47.434Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6012b95ff4f1418412c95343"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Иванова Елена Владимировна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Заведующая лабораторией образовательных инфраструктур\nИнститут системных проектов МГПУ\nкандидат психологических наук, доцент",
+  "email": "mail5@mail.ru",
+  "phone": "89234123",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$ZKtYv4aEUe4M1eCodlT/q.eXix17fVlBjhRUp0G698cVq7xFiu5dS",
+  "avatar": {
+    "$oid": "6017dc725724336bbda293a0"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:17:20.169Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:48:18.164Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017dbf45724336bbda2939a"
+  }
+},{
+  "_id": {
+    "$oid": "6012b9d2f4f1418412c95345"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Барсукова Екатерина Михайловна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Младший научный сотрудник лаборатории образовательных инфраструктур\nИнститут системных проектов МГПУ",
+  "email": "mail6@mail.ru",
+  "phone": "89543213",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$gj4eQinx5WD7y5yoTgczh.o97ue.H6nXpb3hT1MtgCWwrDR4ha69.",
+  "avatar": {
+    "$oid": "6017dc605724336bbda2939f"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:19:14.614Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:48:00.248Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017dbf45724336bbda2939a"
+  }
+},{
+  "_id": {
+    "$oid": "6012ba5af4f1418412c95347"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Виноградова Ирина Анатольевна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Ведущий научный сотрудник лаборатории образовательных инфраструктур\nИнститут системных проектов\nкандидат психологических наук, доцент",
+  "email": "mail7@mail.ru",
+  "phone": "89543275",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$vzDjLFQcif5WMppuIoi4xO75r7zUUs9U.OuXlhtkhSkX4NDL6Jrhq",
+  "avatar": {
+    "$oid": "6017dc4d5724336bbda2939e"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:21:31.097Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:41.101Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017dbf45724336bbda2939a"
+  }
+},{
+  "_id": {
+    "$oid": "6012bae4f4f1418412c95349"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Маякова Елизавета Владимировна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Ведущий научный сотрудник лаборатории образовательных инфраструктур\nИнститут системных проектов МГПУ\nкандидат педагогических наук",
+  "email": "mail8@mail.ru",
+  "phone": "89453261",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$UXMbPMbjT7/Cu/s1WT/dmONkaIUYskBl754uoeONAAQ064PaHSRdy",
+  "avatar": {
+    "$oid": "6017dc3c5724336bbda2939d"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:23:48.772Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:24.232Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017dbf45724336bbda2939a"
+  }
+},{
+  "_id": {
+    "$oid": "6012bc53f4f1418412c9534b"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Тер-Григорян Анна Эммануиловна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Младший научный сотрудник лаборатории образовательных инфраструктур\nИнститут системных проектов МГПУ",
+  "email": "mail9@mail.ru",
+  "phone": "89546732",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$82qDJfQLAW6GAR82ksRB0umwDc4tFjolBE66FxRw8GtcUxMHEYCiy",
+  "avatar": {
+    "$oid": "6017dc285724336bbda2939c"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:29:55.225Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:05.065Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017dbf45724336bbda2939a"
+  }
+},{
+  "_id": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Архитектурное бюро ASADOV",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Архитектурное Бюро ASADOV — российское архитектурное бюро, основано в 1989г. Сфера деятельности — разработка проектов, различных по сложности и функциональному назначению – градостроительных комплексов, общественных, культурных и спортивных сооружений, многоэтажных и частных жилых домов, интерьеров и благоустройства.\n\nСвоей миссией мы видим не только разработку качественной проектной документации. Мы нацелены на создание пространств для всестороннего развития и самореализации человека. Мы анализируем будущие потребности общества и стараемся найти им адекватное воплощение в сегодняшнем дне.\n\nИстория компании началась в 1989, когда Александр Асадов основал одну из первых персональных архитектурных мастерских в бывшем СССР. В настоящее время он является творческим руководителем Бюро. Директором Бюро является его сын, Андрей Асадов. Число постоянных сотрудников Бюро составляет около 30 человек.",
+  "email": "mail11@mail.ru",
+  "phone": "89495723",
+  "gender": "MALE",
+  "account": "ENTITY",
+  "password": "$2b$10$DUzTRlONd3sHsKmIs9xj/uudoCbKpqR2R7cHL/ZvPsrYSxlRq82nm",
+  "avatar": {
+    "$oid": "6017d8805724336bbda2938d"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:50:38.953Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:31:28.858Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6012c197f4f1418412c9534f"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Асадов Андрей Александрович",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Руководитель\nАрхитектурное бюро ASADOV",
+  "email": "mail12@mail.ru",
+  "phone": "89564783",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$ghz1BV7ymvu4OqDFeG2nNO9EhBjKVigaN7Ds1zKg3xIQ6FhBbtbhi",
+  "avatar": {
+    "$oid": "6017d86c5724336bbda2938c"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:52:23.883Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:31:08.750Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c1fcf4f1418412c95351"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Асадов Александр Рафаилович",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Творческий руководитель\nАрхитектурное бюро ASADOV",
+  "email": "mail13@mail.ru",
+  "phone": "89765438",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$HrkjWGnfsNb/kTSEdeuRse2WRTfvYtKKHfBNB1oezNsg7d9bqlpQS",
+  "avatar": {
+    "$oid": "6017d85e5724336bbda2938b"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:54:04.841Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:54.510Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c257f4f1418412c95353"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Белкова Полина",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный архитектор проекта\nАрхитектурное бюро ASADOV",
+  "email": "mail14@mail.ru",
+  "phone": "89654781",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$wbaLyaqDC2XPQVZcxGFkaOOSCyKa9RS2owl6mT.fopX.tQ92fD1A2",
+  "avatar": {
+    "$oid": "6017d84f5724336bbda2938a"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:55:35.677Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:39.495Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c2a9f4f1418412c95355"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Бутырская Юлия",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный архитектор проекта\nАрхитектурное бюро ASADOV",
+  "email": "mail15@mail.ru",
+  "phone": "89764521",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$jh06fShQp7KKeNd8gFFmLu5Rju9U2xNfeHDrfoZOwnDGYxFjdxd3W",
+  "avatar": {
+    "$oid": "6017d83f5724336bbda29389"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:56:57.823Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:23.529Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c2fcf4f1418412c95357"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Григорьева Ольга",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный архитектор проекта\nАрхитектурное бюро ASADOV",
+  "email": "mail16@mail.ru",
+  "phone": "89654732",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$97ME0A4Z/UJMVbImxz0Mfuqj5P99csHjdY0xVTle28ia7GAUSyo7G",
+  "avatar": {
+    "$oid": "6017d8305724336bbda29388"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:58:20.282Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:08.717Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c348f4f1418412c95359"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Дзуцев Чермен",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Архитектор\nАрхитектурное бюро ASADOV",
+  "email": "mail17@mail.ru",
+  "phone": "89542876",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$cArbaW/wgqSSVhba/h/qrebpP7f/znU0wU2APYB2pCsv1vwvvYhBi",
+  "avatar": {
+    "$oid": "6017d81f5724336bbda29387"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T13:59:36.860Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:52.062Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c39af4f1418412c9535b"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Коновалова Татьяна",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Главный архитектор проекта\nАрхитектурное бюро ASADOV",
+  "email": "mail18@mail.ru",
+  "phone": "89764356",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$VrRGkGqePZdduQiQoQa63e42tRElzmugTbmP7GTO3wQedWbQqp0qO",
+  "avatar": {
+    "$oid": "6017d80d5724336bbda29386"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T14:00:58.300Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:33.489Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6012c3e4f4f1418412c9535d"
+  },
+  "settings": [],
+  "folders": [],
+  "name": "Матвеев Максим",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "about": "Ведущий архитектор\nАрхитектурное бюро ASADOV",
+  "email": "mail19@mail.ru",
+  "phone": "89653781",
+  "gender": "MALE",
+  "account": "INDIVIDUAL",
+  "password": "$2b$10$vpaypwF9kVL6B/H4HQvoCu9YeeGXa6JgxB/QZ6yrV5T8/T4POCmqm",
+  "avatar": {
+    "$oid": "6017d7ec5724336bbda29385"
+  },
+  "createdAt": {
+    "$date": "2021-01-28T14:02:13.097Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:00.217Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6012c12ef4f1418412c9534d"
+  }
+},{
+  "_id": {
+    "$oid": "6013b859f4f1418412c95363"
+  },
+  "settings": [],
+  "name": "Голубенко Евгений Николаевич",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "account": "INDIVIDUAL",
+  "email": "gen@agich.ru",
+  "phone": "89221686766",
+  "password": "$2b$10$lkmyKHJHvhKO7CgO67WIKuM78sjqDtWhdQx7vi6imuT4ltz.BlumW",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-29T07:25:13.487Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T05:37:47.066Z"
+  },
+  "__v": 0,
+  "about": "Генеральный директор АНО ДО ИЦ Атомик\nЛидер проекта АСИ - Школа 2025.Перезагрузка \nЧлен редакционной группы государственного совета при президенте РФ по общему образованию \nЧлен рабочей группы министерства просвещения \"Новая Школа\"",
+  "avatar": {
+    "$oid": "6017a1045724336bbda29361"
+  },
+  "dateOfBirth": "1984-05-05T18:00:00.000Z",
+  "gender": "MALE"
+},{
+  "_id": {
+    "$oid": "601493958b0b30944483c5b8"
+  },
+  "settings": [],
+  "name": "Волков А.В",
+  "about": "Автор",
+  "password": "$2b$10$257Hk1IHc64q6yr/ewrDyO9K9XwnFB/heH2A988aWi.kYSo.HU12K",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "avvolkov1@mail.com",
+  "phone": "89000115",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:00:37.997Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:00:37.997Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601493d08b0b30944483c5b9"
+  },
+  "settings": [],
+  "name": "Медведев К.В",
+  "about": "Автор",
+  "password": "$2b$10$EjW3yb.iWK43DrlKjqMfu.YKPV4b7fwoW8eRDAJYeUjhCStyLslV2",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "kbmedvdev@mail.com",
+  "phone": "89000121",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:01:37.028Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:01:37.028Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601493f98b0b30944483c5ba"
+  },
+  "settings": [],
+  "name": "Ефимов Е.А",
+  "about": "Автор",
+  "password": "$2b$10$E5PfNfzcl5EB2XaUXJ7G7./LiqXQSe0ZmDEQmPe35JTAiuAYh6E/m",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "eaefimov@mail.com",
+  "phone": "89000131",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:02:17.494Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:02:17.494Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601494218b0b30944483c5bb"
+  },
+  "settings": [],
+  "name": "Сыроватский И.С.",
+  "about": "Автор",
+  "password": "$2b$10$LoHhvBRh024BreGB/Ml0eeoq1TGRvO/RR7Rt/ZWx/PJpfnK5x2ciS",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "essyrovatski@mail.com",
+  "phone": "89000241",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:02:57.470Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:02:57.470Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6014943f8b0b30944483c5bc"
+  },
+  "settings": [],
+  "name": "Доценко В.Н",
+  "about": "Автор",
+  "password": "$2b$10$goJHeKtoft4R1eCOtOdxhu7VP0mOOKN66czgBF3ch4HmZJpLafz2i",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "aidocenko@mail.com",
+  "phone": "89000251",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "60129a16f4f1418412c95332"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:03:28.004Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:03:28.004Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "settings": [],
+  "name": "ООО “Пензагражданпроект”",
+  "about": "Описание компании",
+  "password": "$2b$10$/BEUoWq/9TKr74wEcGh.AeIeLVwucH3dp41oOvIWe1Xwvea4.c2fy",
+  "account": "ENTITY",
+  "email": "penzagrajdanproject@mail.com",
+  "phone": "89000511",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-29T23:14:23.711Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:14:23.711Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601497008b0b30944483c5be"
+  },
+  "settings": [],
+  "name": "Танасов Иван Дмитриевич",
+  "about": "Автор",
+  "password": "$2b$10$bGrYnaDVCQJxNDdqKVDu.ehQ/0tsYbv1.JFXAAc2wC5UHEK5PHoc.",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "idtanasov@mail.com",
+  "phone": "89000521",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:15:12.803Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:15:12.803Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601497798b0b30944483c5bf"
+  },
+  "settings": [],
+  "name": "Шляхин Юрий Евгеньевич",
+  "about": "Автор",
+  "password": "$2b$10$I7A/C5vBU6bByBIIQkHMwe0TvYf/kLbM93yCvGk34n8fIwUclQoFK",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "ueshlyahin@mail.com",
+  "phone": "89000381",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:17:13.900Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:17:13.900Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601497968b0b30944483c5c0"
+  },
+  "settings": [],
+  "name": "Мусатов Дмитрий Владимирович",
+  "about": "Автор",
+  "password": "$2b$10$xSsZIXmUsgLcN81EsguES.TNRMHERSG7YsmjMDpLYQvzJftIzmYM.",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "dvmusatov@mail.com",
+  "phone": "89000611",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:17:42.658Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:17:42.658Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601497b28b0b30944483c5c1"
+  },
+  "settings": [],
+  "name": "Иоффе Леонид Владимирович",
+  "about": "Автор",
+  "password": "$2b$10$vnL8vL70e2tmyjj..wDZReBt9W18dHx6mQQamSBK4s60LIglSwTTa",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "lvioffe@mail.com",
+  "phone": "89000591",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:18:10.659Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:18:10.659Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601497d28b0b30944483c5c2"
+  },
+  "settings": [],
+  "name": "Андреева Светлана Валерьевна",
+  "about": "Автор",
+  "password": "$2b$10$rXQ3VDA6ir/Z0mJl6mRT4OUKGZpfoHIPVwOoec2NQDCpFFTiARotO",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "svandreeva2@mail.com",
+  "phone": "89000711",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601496cf8b0b30944483c5bd"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T23:18:42.537Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:18:42.537Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60149a148b0b30944483c5d1"
+  },
+  "settings": [],
+  "name": "Творческая мастерская архитектора Валерия Никишина",
+  "about": "Автор",
+  "password": "$2b$10$xZUayflnS3FqL/xOfqcGzOX0DVMZhT8xRLgYPh6hHES1xC0F/GaNG",
+  "account": "ENTITY",
+  "email": "studiovar@mail.com",
+  "phone": "89000831",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-29T23:28:20.967Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T23:28:20.967Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601726b2fdf9f9074406400f"
+  },
+  "settings": [],
+  "name": "Даниил Попов",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "email": "fern6900@gmail.com",
+  "avatar": {
+    "$oid": "601726b2fdf9f9074406400e"
+  },
+  "account": "INDIVIDUAL",
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-01-31T21:52:50.183Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T16:08:34.121Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a5b75724336bbda2936f"
+  },
+  "settings": [],
+  "name": "Sinteza",
+  "about": "Группа компаний Sinтeza – это объединение услуг и уникальной мебели премиум-класса в комплексное Fit-out решение для создания не просто коммерческих помещений, а пространств с особой атмосферой.\n\nСобственное производство и особый подход к сопровождению каждого этапа – проектирования, строительства, комплектования, эксплуатации – обеспечивают надежное, качественное и оптимальное по стоимости и срокам воплощение.",
+  "password": "$2b$10$kUbsfw7E.1cuJedGcCmF9O04fMikwapNBDGIC.oviTUtds9QZKlqG",
+  "account": "ENTITY",
+  "email": "sintezamail@mail.ru",
+  "phone": "84951490346",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-02-01T06:54:47.462Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:54:47.462Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a6fa5724336bbda29370"
+  },
+  "settings": [],
+  "name": "Подлужный Дмитрий",
+  "about": "Основатель, партнер «sinтeza consulting»",
+  "password": "$2b$10$mI1YIa00a1YASbN8a5t7QuxeIDLPxGZC6gVINfsnTC14PzX9dA/j2",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "Podluzh@mail.ru",
+  "phone": "89457628",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "6017a6fa5724336bbda29371"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T07:00:10.263Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:00:40.636Z"
+  },
+  "__v": 0,
+  "company": {
+    "$oid": "6017a5b75724336bbda2936f"
+  }
+},{
+  "_id": {
+    "$oid": "6017a77a5724336bbda29372"
+  },
+  "settings": [],
+  "name": "Криворот Илья",
+  "about": "Генеральный директор, партнер основатель, партнер «sinтeza consulting»\n\nТОП-10 генеральных директоров по версии «Коммерсантъ». Руководил крупными розничными сетями, не понаслышке знаком со сложностями открытия и оборудования коммерческих пространств.",
+  "password": "$2b$10$wVeHiFI6y1SHfWDL/CZb4Of7mmYPBMz/PDQzUHnr0i5lwCc8oGaXi",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "krivorot@mail.ru",
+  "phone": "89764216",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017a5b75724336bbda2936f"
+  },
+  "avatar": {
+    "$oid": "6017a77a5724336bbda29373"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T07:02:18.644Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:02:18.644Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a9335724336bbda29374"
+  },
+  "settings": [],
+  "name": "Афонин Алексей",
+  "about": "Руководитель мебельного производства\n\nВ столярном производстве более 20 лет. Горит своим делом и собрал вокруг себя команду профессионалов.",
+  "password": "$2b$10$XuWVbY1UmdHzRsxketlheeO1r9nfeLyCM4J8Q5j.3/TaOONchhPea",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "afonin@mail.ru",
+  "phone": "89457218",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017a5b75724336bbda2936f"
+  },
+  "avatar": {
+    "$oid": "6017a9335724336bbda29375"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T07:09:39.673Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:09:39.673Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dbf45724336bbda2939a"
+  },
+  "settings": [],
+  "name": "Институт Системных Проектов МГПУ",
+  "about": "Институт системных проектов – драйвер науки и площадка экспертных коммуникаций Московского городского педагогического университета. \nВ фокусе научных исследований Института — проекты, связанные с обновлением городской и университетской жизни, совершенствованием системы образования. Результаты нашей работы активно применяются в образовательной деятельности московских школ, в том числе их дошкольных отделений, используются многочисленными партнерами. Институт осуществил запуск целого ряда заметных проектов в системе образования не только города Москвы, но и всей России.",
+  "password": "$2b$10$.UsYYoiQMOsER6airQJPB.28BBNJRbqDq01Z3Ba7Ei8ZGTB8ibLbm",
+  "account": "ENTITY",
+  "email": "ismgp@mail.ru",
+  "phone": "84991323509",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "6017dbf45724336bbda2939b"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T10:46:12.805Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:46:12.805Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "settings": [],
+  "name": "Архитектурное бюро \"Дружба\"",
+  "about": "Мы – Бюро Дружба.\nМы создаем пространства для людей и про людей, потому что верим, что комфортная городская среда – это первый шаг на пути к улучшению качества жизни. Детская площадка, городской сквер или набережная – для нас нет невыполнимых задач. Работая по авторской методике соучаствующего проектирования, мы, по сути, работаем на стыке архитектуры и социальной психологии, чтобы получить результат, максимально отвечающий ожиданиям клиентов, в том числе для повышения маркетинговой привлекательности проектов.\nНаша миссия – создавать качественно новое будущее.",
+  "password": "$2b$10$7vWonj1NOFZlpH0OeT3aqO1qvR8769XDHnI32OkvXKU4dNhUWGwnO",
+  "account": "ENTITY",
+  "email": "druzhba@mail.ru",
+  "phone": "89252725456",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-02-01T11:45:34.468Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:01:22.166Z"
+  },
+  "__v": 0,
+  "avatar": {
+    "$oid": "6017fba25724336bbda293c1"
+  }
+},{
+  "_id": {
+    "$oid": "6017f5a15724336bbda293a4"
+  },
+  "settings": [],
+  "name": "Филатова Белла",
+  "about": "Партнер\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$b1Ya/emKibS7MuMa8.riF.esvNPeIjCajiTmBvaRW34tJOxb9W3zS",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "filatova@mail.ru",
+  "phone": "89354278",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "avatar": {
+    "$oid": "6017f5a15724336bbda293a5"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T12:35:45.679Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:35:45.679Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6025724336bbda293a6"
+  },
+  "settings": [],
+  "name": "Черткова Александра",
+  "about": "Партнер\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$GfSVUGmLtEWK05nWJHddYuwEhCsTdOolsTNQ9fbSPX1tseYYZJafy",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "chertkovadruzhba@mail.ru",
+  "phone": "89675243",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "avatar": {
+    "$oid": "6017f6035724336bbda293a7"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T12:37:23.183Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:37:23.183Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6465724336bbda293a8"
+  },
+  "settings": [],
+  "name": "Рычкова Анастасия",
+  "about": "Партнер\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$qSZ6Y9r8ByW9FDOEKW48W.xZ1IqVwUP947z1Bv2eZkDJq3hSox0rW",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "rych@mail.ru",
+  "phone": "89653281",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "avatar": {
+    "$oid": "6017f6465724336bbda293a9"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T12:38:30.332Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:38:30.332Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6cb5724336bbda293aa"
+  },
+  "settings": [],
+  "name": "Родионова Анна",
+  "about": "Партнер\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$l8tTMObUoMbLSASe4uPP1ufRGb97q8jJPe4ZxbYShAgKMnMVqKuNu",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "rodya@mail.ru",
+  "phone": "89653278",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "avatar": {
+    "$oid": "6017f6cb5724336bbda293ab"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T12:40:43.215Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:40:43.215Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fcd25724336bbda293c2"
+  },
+  "settings": [],
+  "name": "Рахматуллина Алина",
+  "about": "Ведущий архитектор\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$Du.olxoKKolqLohVEGVZUOA1dZ6Lt3YJonUQTzJinZ9NoCuoCX0CG",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "rakhmat@mail.ru",
+  "phone": "89548761",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T13:06:27.119Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:06:27.119Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fd115724336bbda293c3"
+  },
+  "settings": [],
+  "name": "Парамонова Ольга",
+  "about": "Архитектор\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$nE1WrCKJNhT3W4T7l316teZZ1Ec.Lxq4U3ZcoFq5YDrFHKULwDhjK",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "param@mail.ru",
+  "phone": "89735219",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T13:07:29.845Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:07:29.845Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fd6e5724336bbda293c4"
+  },
+  "settings": [],
+  "name": "Ларионова Виолетта",
+  "about": "Главный инженер проекта\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$w64LZJAvb.PSnhpQYuT1POtAyzSUhMHvN2eFni0VpGxdTL7f0/HhO",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "larion@mail.ru",
+  "phone": "89687321",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T13:09:02.364Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:09:02.364Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fda75724336bbda293c5"
+  },
+  "settings": [],
+  "name": "Мироненко Мария",
+  "about": "Генпланист\nАрхитектурное бюро \"Дружба\"",
+  "password": "$2b$10$RdD2.R0OVX/bbTthXzSPruF/6AaM7T5YD04YMlyRLPKsgdq4Tncru",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "miron@mail.ru",
+  "phone": "89637481",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "6017e9de5724336bbda293a3"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T13:09:59.567Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:09:59.567Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601818015724336bbda293e8"
+  },
+  "settings": [],
+  "name": "Золотарев Роман Александрович",
+  "about": "Директор ООО \"Белгородоблпроект\"",
+  "password": "$2b$10$eLZR2/M6Ub18R8rZp6iAru.j1hiuHdNwRMjuDAg1SAQn0kQI9LAiW",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "zolotoy@mail.ru",
+  "phone": "89376197",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601196a84ae53a09c8ab0fc0"
+  },
+  "avatar": {
+    "$oid": "601818015724336bbda293e9"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T15:02:25.200Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T15:02:25.200Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601846415724336bbda29412"
+  },
+  "settings": [],
+  "name": "Муниципальное автономное учреждение г. Тобольска «Архитектура и градостроительство»",
+  "about": "",
+  "password": "$2b$10$mffsEBLwclvWgcn1VdJ.FOoAGTBuqzQ1l1c0NTFjFOta/I0t7JqKW",
+  "account": "ENTITY",
+  "email": "mauag-tob@mail.ru",
+  "phone": "83456251776",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "createdAt": {
+    "$date": "2021-02-01T18:19:46.072Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:19:46.072Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601846cd5724336bbda29413"
+  },
+  "settings": [],
+  "name": "Квашнин Павел Евгеньевич",
+  "about": "Директор МАУ г. Тобольска \"Архитектура и градостроительство\"",
+  "password": "$2b$10$h46FA0cYvO4VYxpk2Q/UJurq.DKrxjX8bcoL/9kfTEtiNO19KlSEK",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "kvashnin@mail.ru",
+  "phone": "89348761",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601846415724336bbda29412"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T18:22:05.647Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:22:05.647Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018473c5724336bbda29414"
+  },
+  "settings": [],
+  "name": "Горовая Светлана Геннадьевна",
+  "about": "Начальник проектного отдела\nМАУ г. Тобольска \"Архитектура и градостроительство\"",
+  "password": "$2b$10$0A227YlesopfqJW7LCsEkOadE3c6jDtg0GwenDZCY6LJ4q6lL.T1m",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "gorovaya@mail.ru",
+  "phone": "89765935",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601846415724336bbda29412"
+  },
+  "createdAt": {
+    "$date": "2021-02-01T18:23:57.034Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:23:57.034Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "settings": [],
+  "name": "Архитектурная мастерская ATRIUM",
+  "about": "В НАЧАЛЕ БЫЛО ПРОСТРАНСТВО!\n\nИменно так мы трактуем знаменитую строку, определяющую основу существования. С пространства начинается всё в этом мире. Пространство рождает форму, а форма насыщает реальность содержанием и придает смысл, даёт простор для эмоций и впечатлений. Мы верим, что пространство способно вдохновлять!",
+  "password": "$2b$10$7UGFJgDESBGAlTbRrxbIFerm73KxizxIWBShR89iOGzvjg2wnUBAS",
+  "account": "ENTITY",
+  "email": "atrium@mail.ru",
+  "phone": "84957428963",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601baebf8ddfda7d7e08bf2b"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:33:40.272Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:22:23.998Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad0f9364b0069f1d56c9a"
+  },
+  "settings": [],
+  "name": "Надточий Антон",
+  "about": "Сооснователь и СЕО\n\nВыпускник Московского архитектурного института, член Союза архитекторов Москвы, преподаватель Московской архитектурной школы МАРШ, профессор Международной Академии Архитектуры (МААМ), московское отделение. В 1994-м году в партнерстве с Верой Бутко основал архитектурную мастерскую ATRIUM. Под их руководством мастерская прошла путь от небольшого интерьерного бюро до крупной фирмы, занимающейся комплексным проектированием и находящейся в авангарде профессиональных процессов. Антон принимает самое активное участие в разнообразной просветительской деятельности — от лекций, круглых столов и воркшопов до выступлений на радио и телевидении. Антон был спикером таких мероприятий, как Международный культурный форум в Санкт-Петербурге, конференции «Ведомости» и «Ъ» в разных городах, Форум высотного строительства 100+ в Екатеринбурге и др. А объекты и работы мастерской демонстрировались не только в ведущих музеях Москвы, но и на выставках в Милане, Берлине и Шеньчжене.",
+  "password": "$2b$10$ZWY6B8qOj0uvW7npcAD9ZOrZA2fKbROO8I57puR2sKp4vlNKv/XPi",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "nadtoch@mail.ru",
+  "phone": "89358729",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "avatar": {
+    "$oid": "601ad0fa364b0069f1d56c9b"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:36:10.259Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:36:10.259Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad1cb364b0069f1d56c9c"
+  },
+  "settings": [],
+  "name": "Бутко Вера",
+  "about": "Сооснователь и главный архитектор\n\nВыпускница Московского архитектурного института, член Союза архитекторов Москвы, преподаватель Московской архитектурной школы МАРШ, профессор Международной Академии Архитектуры (МААМ), московское отделение. Прежде чем в 1994 году основать вместе с Антоном Надточим мастерскую ATRIUM, работала в компаниях «Моспроект-2» и ABD architects. В настоящее время Вера вместе с Антоном продолжает управлять бюро «в ручном режиме», сохраняя, несмотря на возросшее количество задач и сотрудников, формат авторской мастерской. Собственно, коллектив бюро — еще один важный Верин проект, которым она занимается все 25 лет существования ATRIUM и выступает как его художественный руководитель. Сегодня в нем есть и те, кто в работает в бюро с самого начала, и совсем молодые ребята, но, благодаря чуткому руководству, каждый находит способы самореализации и одновременно становится частью слаженного организма. ",
+  "password": "$2b$10$CVltsWvZAnSCFqZPH3H1bu35GBrmeQr1i.OqVn1rrrDtxsLB.bS9G",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "butko@mail.ru",
+  "phone": "89376196",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "avatar": {
+    "$oid": "601ad1cc364b0069f1d56c9d"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:39:40.135Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:39:40.135Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad272364b0069f1d56c9e"
+  },
+  "settings": [],
+  "name": "Папертян Айказ",
+  "about": "Ведущий архитектор\nАрхитектурная мастерская ATRIUM",
+  "password": "$2b$10$qIxWEgO0o2MG9na7WftCYulAIKF0L/SZ59td09TtDKLD5EiZVhbk6",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "papertyan@mail.ru",
+  "phone": "89348719",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:42:26.710Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:42:26.710Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad2e1364b0069f1d56c9f"
+  },
+  "settings": [],
+  "name": "Гайдай Виктория",
+  "about": "Главный инженер проектов\nАрхитектурная мастерская ATRIUM",
+  "password": "$2b$10$r/l.FFZydzCA/I0cU4hyJ.rcs0Gm2wlHd8/XFX7IgxbDesfXBmfhG",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "gaidai@mail.ru",
+  "phone": "89763458",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:44:17.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:44:17.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad4a4364b0069f1d56ca0"
+  },
+  "settings": [],
+  "name": "Раннева Юлия",
+  "about": "Ведущий архитектор\n\nРаботает в ATRIUM архитектором проектов по интерьерам с 2008 года. Занимается разработкой дизайн-проектов интерьеров от первоначальной идеи до стадии рабочей документации. До работы в компании ATRIUM, имела опыт работы в ГИПРОНИИ РАН и арх. Мастерской А.Л. Бавыкина.\n\nОсновные проекты: интерьеры детского сада в 12 микрорайоне Щукино, интерьеры Офиса компании \"Яндекс\" на ул. Льва Толстого, интерьер лобби офисной части комплекса «Водный», интерьеры частной гостиницы в Подмосковье, фитнес-центр в Подмосковье, интерьер офиса компании \"Odgers Berndson\", интерьеры гостиницы FourPoints Sheraton, интерьеры лобби в офисном комплексе NEO GEO, интерьеры  школы \"Летово\", интерьеры офиса ATRIUM, интерьеры школы \"Ботанический сад\", благоустройство набережной и реконструкция прибрежного комплекса на территории СКК»МРИЯ»( Крым,г.Ялта).",
+  "password": "$2b$10$W6iwSZx7lHcopDNbsJIsUuvzOXbpFU2NnM/NGaWAuuK7lB9YHWpk6",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "ranneva@mail.ru",
+  "phone": "89317863",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad064364b0069f1d56c98"
+  },
+  "avatar": {
+    "$oid": "601ad4a4364b0069f1d56ca1"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T16:51:48.253Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:51:48.253Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "settings": [],
+  "name": "Архитектурное бюро ARCHSTRUKTURA",
+  "about": "Наш опыт работы с всемирно известными иностранными компаниями сформировал современный западный подход к проектированию. Тщательность проработки каждого проекта определила использование BIM-систем на всех стадиях проектирования.\n\nМы предлагаем индивидуальные брендовые решения на всех стадиях разработки, детально продуманные архитектурные концепции для создания не только ярких, запоминающихся образов, но и сбалансированных,\n\nкачественных и эффективных проектов.\n\nСердце компании - группа архитекторов и менеджеров проектов высшей квалификации, которая много лет проработала в ведущих проектных институтах и архитектурных мастерских Москвы, участвуя в совместном проектировании значимых объектов и накопив большой опыт проектирования зданий самого разного назначения и масштаба.\n\nСпециалисты компании имеют редкий для России многолетний опыт проектирования музейных зданий, культурных центров и комплексов, среди них проекты филиалов Государственного Центра Современного Искусства в Екатеринбурге и Томске, Музей современного искусства в Москве, Оперный театр для Московской Государственной Консерватории имени П.И. Чайковского в Москве.\n\nКомпания постоянно принимает участие в значимых Российских и международных профессиональных конкурсах, так в 2014 разработан конкурсный проект для международного конкурса на архитектурную концепцию здания Государственного центра современного искусства (ГЦСИ) в Москве, ARCHSTRUKTURA вошла в число финалистов международного конкурса на разработку архитектурной концепции здания Музея науки и техники в Томске, выиграла закрытый конкурс на проектирование Оперного театра для Московской Консерватории.\n\nУчастие в конкурсах на общественные здания позволяет поддерживать высокий уровень квалификации наших специалистов, быть востребованными\n\nв этой сфере.\n\nСтиль работы и методы компании способствуют формированию устойчивых партнерских отношений.  Отличительной чертой работы ARCHSTRUKTURA является целеустремленность, применение инновационных методов и программ проектирования, влюбленность в профессию и сильный командный дух.\n\nКомпания ARCHSTRUKTURA динамично развивается, перспективна и занимает стабильное положение.",
+  "password": "$2b$10$.9oTMszn6Ulj93V51OLAU.npoXXsECbpQ/2ct8PluJQT.YrgzHz5G",
+  "account": "ENTITY",
+  "email": "archstrukt@mail.ru",
+  "phone": "82954102742",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601ad85c364b0069f1d56cbf"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:07:40.780Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:18:36.322Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad8f5364b0069f1d56cc0"
+  },
+  "settings": [],
+  "name": "Фархи Михаил",
+  "about": "Главный инженер\nARCHSTRUKTURA",
+  "password": "$2b$10$uUbewAQn1yM7RjWpDCSex.TVue4Kx4EN.tWt1td209js6c.j6sozW",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "farhi@mail.ru",
+  "phone": "89387517",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ad8f5364b0069f1d56cc1"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:10:13.543Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:10:13.543Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad93f364b0069f1d56cc2"
+  },
+  "settings": [],
+  "name": "Суворова Анна",
+  "about": "Архитектор\nARCHSTRUKTURA",
+  "password": "$2b$10$2PAaYNHudjuJUNTAtDYLl.uxj8MFXBn4Ixir2sYW0ncMq1jqTS0pK",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "suvorova@mail.ru",
+  "phone": "89763297",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ad93f364b0069f1d56cc3"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:11:27.243Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:11:27.243Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad97f364b0069f1d56cc4"
+  },
+  "settings": [],
+  "name": "Соколова Наталья",
+  "about": "Архитектор\nARCHSTRUKTURA",
+  "password": "$2b$10$K.Nee65Sr/v64neGRkKS8e8lD.Y/o4adQtqqU1En8NwGU4qYTYyhS",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "sokolova@mail.ru",
+  "phone": "89653183",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ad97f364b0069f1d56cc5"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:12:31.743Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:12:31.743Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad9cb364b0069f1d56cc6"
+  },
+  "settings": [],
+  "name": "Рачковская Ольга",
+  "about": "Ведущий архитектор\nARCHSTRUKTURA",
+  "password": "$2b$10$RyHVdElsdjtIyaK5TVhfkeAd1sL5Y./Veiad0GHDfWBHNI7U.7xIG",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "rachok@mail.ru",
+  "phone": "89673451",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ad9cb364b0069f1d56cc7"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:13:47.318Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:13:47.318Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ada2e364b0069f1d56cc8"
+  },
+  "settings": [],
+  "name": "Калашникова Марина",
+  "about": "Архитектор\nARCHSTRUKTURA",
+  "password": "$2b$10$iAGD0dqSv4YsRxKvF9nAdOqQmxZWmWSwGZ8n869w1vDOP02Fwple2",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "kalash@mail.ru",
+  "phone": "89745218",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ada2e364b0069f1d56cc9"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:15:26.936Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:15:26.936Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ada84364b0069f1d56cca"
+  },
+  "settings": [],
+  "name": "Базунова Александра",
+  "about": "Архитектор\nARCHSTRUKTURA",
+  "password": "$2b$10$v2hwoJYq5Wwj.pCZVf27r.p0GUCWwJKd5Q9fim7oQSCmwWPAvTgSy",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "bazunova@mail.ru",
+  "phone": "89478631",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601ada84364b0069f1d56ccb"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:16:52.906Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:16:52.906Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601adac7364b0069f1d56ccc"
+  },
+  "settings": [],
+  "name": "Нагавицын Антон",
+  "about": "Основатель бюро\nARCHSTRUKTURA",
+  "password": "$2b$10$RhC7eb0alhCzmchMAPa7LuMLP7tIOGYWXDrTNdivKwArIqAUM6xBW",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "nagav@mail.ru",
+  "phone": "89638562",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ad85c364b0069f1d56cbe"
+  },
+  "avatar": {
+    "$oid": "601adac7364b0069f1d56ccd"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:17:59.484Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:17:59.484Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae247364b0069f1d56ce8"
+  },
+  "settings": [],
+  "name": "Проектное бюро UNK project",
+  "about": "UNK project – российское проектное бюро с западными принципами работы. Компания основана в 2000 году Юлием Борисовым, Николаем Миловидовым и Юлией Тряскиной. Все три архитектора обладают опытом работы за рубежом. Бюро специализируется на архитектурном и инженерном проектировании зданий и комплексов, дизайне корпоративных интерьеров и общественных пространств. Объединение в одной команде специалистов различного профиля дает возможность разрабатывать комплексные решения и участвовать во всех стадиях работы над проектом.",
+  "password": "$2b$10$VkCCEtMkpX4D.oCXVx2HOOkaxmA8ZHY.5UuQPlB/csYh5Sl1TpQOq",
+  "account": "ENTITY",
+  "email": "unk@mail.ru",
+  "phone": "84992554818",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601ae247364b0069f1d56ce9"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:49:59.558Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:49:59.558Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae368364b0069f1d56cea"
+  },
+  "settings": [],
+  "name": "Шутова Анастасия",
+  "about": "Ведущий архитектор\nUNK project",
+  "password": "$2b$10$AwtYNC9SfnNefqOIYSIUM.SX4DiUJuLcFdMd9DWU8tDaBdlHCQ3CC",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "shutova@mail.ru",
+  "phone": "89659827",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ae247364b0069f1d56ce8"
+  },
+  "avatar": {
+    "$oid": "601ae368364b0069f1d56ceb"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:54:48.286Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:56:04.966Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae39f364b0069f1d56cec"
+  },
+  "settings": [],
+  "name": "Садова Юлия",
+  "about": "Ведущий архитектор\nUNK project",
+  "password": "$2b$10$8Meot/V6MghlfjUP9P4gGOxTIREt/l/Ss41EnrntXmUi5xexmvlZ6",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "sadova@mail.ru",
+  "phone": "89648953",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ae247364b0069f1d56ce8"
+  },
+  "avatar": {
+    "$oid": "601ae39f364b0069f1d56ced"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:55:43.776Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:55:43.776Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae3f5364b0069f1d56cee"
+  },
+  "settings": [],
+  "name": "Волков Илья",
+  "about": "Главный архитектор проектов\nUNK project",
+  "password": "$2b$10$dofhxdKomzKiIHOJgdyI5erw6tiqh0833cWxc.U8LeI6yUiqPFA8u",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "volkov@mail.ru",
+  "phone": "89721854",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ae247364b0069f1d56ce8"
+  },
+  "avatar": {
+    "$oid": "601ae3f5364b0069f1d56cef"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:57:10.003Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:57:10.003Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae42e364b0069f1d56cf0"
+  },
+  "settings": [],
+  "name": "Борисов Юлий",
+  "about": "СЕО UNK project",
+  "password": "$2b$10$ZDw6R4i1XJDZ./2HiGi1Ou.IuFeP2CdIZdY.hMwnsvhL2kWbn1Fa2",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "borisov@mail.ru",
+  "phone": "89686231",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ae247364b0069f1d56ce8"
+  },
+  "avatar": {
+    "$oid": "601ae42e364b0069f1d56cf1"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T17:58:06.688Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:58:06.688Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601aef40364b0069f1d56d0d"
+  },
+  "settings": [],
+  "name": "Проектно-технологический институт А-Проект (ГК Крост)",
+  "about": "Проектно-технологический институт «А-Проект», входящий в состав промышленно-строительного холдинга «КРОСТ», специализируется на проектировании гражданских объектов жилого и общественного назначения. Коллектив «А-Проект» насчитывает более 150 высококвалифицированных специалистов в области архитектурного проектирования, дизайна, инженерии, BIM и др. дисциплин.",
+  "password": "$2b$10$gL//TLpfo2ol0H6rE2quN.ZGJzBTaCV4J4iH69.NugliVI7L3aONm",
+  "account": "ENTITY",
+  "email": "aproject@mail.ru",
+  "phone": "89387653",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601aef40364b0069f1d56d0e"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T18:45:20.794Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:45:20.794Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601aef86364b0069f1d56d0f"
+  },
+  "settings": [],
+  "name": "Солдатенкова Юлия",
+  "about": "Архитектор",
+  "password": "$2b$10$DK8xYvh8/UgGggHUdcTasezoLFx0OcjfDvbP9BmbLDXX0dHTd/deO",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "soldatenkova@mail.ru",
+  "phone": "8954836342",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601aef40364b0069f1d56d0d"
+  },
+  "avatar": {
+    "$oid": "601aefb8364b0069f1d56d11"
+  },
+  "createdAt": {
+    "$date": "2021-02-03T18:46:30.856Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:47:20.763Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba8518ddfda7d7e08bf02"
+  },
+  "settings": [],
+  "name": "Студия Design for school",
+  "about": "Работа с образовательными пространствами лежит на стыке нескольких направлений: архитектуры, интерьерного и гарфического дизайна и тербует знаний педагогики и возрастной психологии. ",
+  "password": "$2b$10$IVHtvKrRPHzEm8X12xKYPuUuzOPga.LZLs1AwyRNd4RyBuVk.zZuK",
+  "account": "ENTITY",
+  "email": "dfs@mail.ru",
+  "phone": "84993406428",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601ba8518ddfda7d7e08bf03"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T07:54:57.447Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:54:57.447Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba9048ddfda7d7e08bf04"
+  },
+  "settings": [],
+  "name": "Коршунова Виктория",
+  "about": "Дизайнер\nDesign for school",
+  "password": "$2b$10$CdN8PDvLCmc1NqCeQkqhjeyKaOaMUi8/NfHwNtl/C3ZO7TaFZ9H76",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "korshun@mail.ru",
+  "phone": "89376831",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ba8518ddfda7d7e08bf02"
+  },
+  "avatar": {
+    "$oid": "601ba9048ddfda7d7e08bf05"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T07:57:56.955Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:57:56.955Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba95f8ddfda7d7e08bf06"
+  },
+  "settings": [],
+  "name": "Кудрявцев Сергей",
+  "about": "Дизайнер\nDesign for school",
+  "password": "$2b$10$gm7QDAiUyvlhkrrQgZldDeZBwEMuRiWelvP7bfwEx81C8MF6IcIpy",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "kudri@mail.ru",
+  "phone": "89763216",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ba8518ddfda7d7e08bf02"
+  },
+  "avatar": {
+    "$oid": "601ba95f8ddfda7d7e08bf07"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T07:59:27.943Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:59:27.943Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba9a88ddfda7d7e08bf08"
+  },
+  "settings": [],
+  "name": "Ивановская Рая",
+  "about": "Руководитель студии Design for school",
+  "password": "$2b$10$pYoDMtpDZ5LqpdrFYTN.aeQ3rd1dcktdyQxnn2fvzGPn.WDae3dK2",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "ivanovsk@mail.ru",
+  "phone": "89651452",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601ba8518ddfda7d7e08bf02"
+  },
+  "avatar": {
+    "$oid": "601ba9a88ddfda7d7e08bf09"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T08:00:40.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:00:40.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "settings": [],
+  "name": "Проектная группа Archimatika",
+  "about": "archimatika – это команда практиков, архитекторов, инженеров. Компания разрабатывает практичные решения, которые соответствуют целям клиентов, развивают городскую среду и увеличивают рентабельность проекта.",
+  "password": "$2b$10$EL21/z5fK1DGAVOhJVnTYupo8HnC/2dOEvCr4Uobq29F8HSvrYLda",
+  "account": "ENTITY",
+  "email": "arcbhimatika@mail.ru",
+  "phone": "89539746",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "avatar": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2f"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:05:19.638Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:05:19.638Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bb9aa8ddfda7d7e08bf30"
+  },
+  "settings": [],
+  "name": "Васильев Дмитрий",
+  "about": "Сооснователь и главный архитектор Archimatika",
+  "password": "$2b$10$cx7j/6IWUW8qhLlPzq5Myu5t5aJhrjxW6eznYfk66O9O6VgMKJsSy",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "vasiliev@mail.ru",
+  "phone": "89648921",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "avatar": {
+    "$oid": "601bb9aa8ddfda7d7e08bf31"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:08:58.860Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:08:58.860Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbad78ddfda7d7e08bf32"
+  },
+  "settings": [],
+  "name": "Попов Александр",
+  "about": "Основатель, архитектор., СЕО Archimatika",
+  "password": "$2b$10$44cfIsU.ClmxXnLY3Rbg4u5P3QyHcmfKT4/ictXI2SpFv53PzecA.",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "popov@mail.ru",
+  "phone": "89458732",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "avatar": {
+    "$oid": "601bbad78ddfda7d7e08bf33"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:13:59.859Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:13:59.859Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbb308ddfda7d7e08bf34"
+  },
+  "settings": [],
+  "name": "Оначук Катерина",
+  "about": "Главный архитектор проектов Archimatika",
+  "password": "$2b$10$HzhFXlJcw3PgElEG9sWVKezSWNLePrjfObL.phkuYGIirT3Q.HUWO",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "onachuk@mail.ru",
+  "phone": "89513743",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "avatar": {
+    "$oid": "601bbb308ddfda7d7e08bf35"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:15:28.873Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:15:28.873Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbb948ddfda7d7e08bf36"
+  },
+  "settings": [],
+  "name": "Чернова Ольга",
+  "about": "Главный архитектор проектов Archimatika",
+  "password": "$2b$10$SUD15VOeMnFLHr5EYPd.5eNOkVx5OBlUtQnUBowK3Y2cYSAvzxhEa",
+  "account": "INDIVIDUAL",
+  "gender": "FEMALE",
+  "email": "chernova@mail.ru",
+  "phone": "89643782",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "avatar": {
+    "$oid": "601bbb948ddfda7d7e08bf37"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:17:08.827Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:17:08.827Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbbed8ddfda7d7e08bf38"
+  },
+  "settings": [],
+  "name": "Столовой Александр",
+  "about": "Главный архитектор проектов Archimatika",
+  "password": "$2b$10$F3szCZsKv448sehzDJkqMeRntkn5faL7GacpeDfYpsUUW7CmrSiyy",
+  "account": "INDIVIDUAL",
+  "gender": "MALE",
+  "email": "stolovoi@mail.ru",
+  "phone": "89764329",
+  "role": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "dateOfBirth": null,
+  "folders": [],
+  "company": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2e"
+  },
+  "avatar": {
+    "$oid": "601bbbed8ddfda7d7e08bf39"
+  },
+  "createdAt": {
+    "$date": "2021-02-04T09:18:37.974Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:18:37.974Z"
+  },
+  "__v": 0
+}]

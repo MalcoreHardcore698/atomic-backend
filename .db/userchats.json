@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "6013b810f4f1418412c95361"
+  },
+  "chat": {
+    "$oid": "6013b810f4f1418412c95360"
+  },
+  "user": {
+    "$oid": "5fd7ad9f6ec73f31f083a2a4"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-01-29T07:24:00.245Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T07:24:00.245Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6013b810f4f1418412c95362"
+  },
+  "chat": {
+    "$oid": "6013b810f4f1418412c95360"
+  },
+  "user": {
+    "$oid": "6012c3e4f4f1418412c9535d"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-01-29T07:24:00.318Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T07:24:00.318Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6013b8a3f4f1418412c95365"
+  },
+  "chat": {
+    "$oid": "6013b8a3f4f1418412c95364"
+  },
+  "user": {
+    "$oid": "5fd7ad9f6ec73f31f083a2a4"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-01-29T07:26:27.985Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T07:26:27.985Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6013b8a4f4f1418412c95366"
+  },
+  "chat": {
+    "$oid": "6013b8a3f4f1418412c95364"
+  },
+  "user": {
+    "$oid": "6013b859f4f1418412c95363"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-01-29T07:26:28.030Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T07:26:28.030Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bd1ad8ddfda7d7e08bf6c"
+  },
+  "chat": {
+    "$oid": "601bd1ad8ddfda7d7e08bf6b"
+  },
+  "user": {
+    "$oid": "5fd7ad9f6ec73f31f083a2a4"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-02-04T10:51:25.298Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T10:51:25.298Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bd1ad8ddfda7d7e08bf6d"
+  },
+  "chat": {
+    "$oid": "601bd1ad8ddfda7d7e08bf6b"
+  },
+  "user": {
+    "$oid": "600e784a6fd82f409aa920d1"
+  },
+  "status": "OPENED",
+  "createdAt": {
+    "$date": "2021-02-04T10:51:25.361Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T10:51:25.361Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,5181 @@
+[{
+  "_id": {
+    "$oid": "6016f7dd4cbecf4375dcad3c"
+  },
+  "size": 130342,
+  "path": "http://api.atomic.ru.com/uploads/78744da3-cc08-45cd-badc-90461d0cdcaa/e3932e86-ad8e-4f85-951d-06ca3284d8d2-6014614c0c7bf-large.jpg",
+  "filename": "6014614c0c7bf-large.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T18:33:01.373Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T18:33:01.373Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60170d98ab26bb2e90ec97ec"
+  },
+  "size": 855323,
+  "path": "http://localhost:5000/uploads/5b2b763a-d34f-4c26-97eb-8d71ad508f5d/a4e49610-0c0e-49eb-a2d3-0a1ae52bac63-gs_school_cam_01_03_.jpg",
+  "filename": "gs_school_cam_01_03_.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T20:05:44.448Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T20:05:44.448Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60170d98ab26bb2e90ec97ed"
+  },
+  "size": 8096501,
+  "path": "http://localhost:5000/uploads/291aed31-9dd2-4e08-87cf-5cf3947fc16f/48e7b45c-886e-4199-a368-e4356a074391-gs_school_cam_02_03_ (1).jpg",
+  "filename": "gs_school_cam_02_03_ (1).jpg",
+  "createdAt": {
+    "$date": "2021-01-31T20:05:44.538Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T20:05:44.538Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60170d98ab26bb2e90ec97ee"
+  },
+  "size": 10204896,
+  "path": "http://localhost:5000/uploads/6341a078-6c9a-45b0-a03f-587f3abc13f9/28d8d79f-68e9-4657-914c-3bc93d43696d-gs_school_cam_04_03_.jpg",
+  "filename": "gs_school_cam_04_03_.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T20:05:44.615Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T20:05:44.615Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60170d98ab26bb2e90ec97ef"
+  },
+  "size": 15759619,
+  "path": "http://localhost:5000/uploads/adb09575-a036-4853-81ca-b16c2153ac9a/f794d748-ab9c-471f-a225-9fcde1e10526-Library_Lobby_FINAL.jpg",
+  "filename": "Library_Lobby_FINAL.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T20:05:44.697Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T20:05:44.697Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017205336b1c46766a562be"
+  },
+  "size": 855323,
+  "path": "http://api.atomic.ru.com/uploads/5ed444fe-844d-4d51-861a-3235aae2a7ea/b8f49c17-13fd-438a-8a9b-d6c5a4d0b8b2-gs_school_cam_01_03_.jpg",
+  "filename": "gs_school_cam_01_03_.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:25:39.970Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:25:39.970Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017205436b1c46766a562bf"
+  },
+  "size": 8096501,
+  "path": "http://api.atomic.ru.com/uploads/797d2a20-947c-4883-a20f-a36311e73297/82738f7e-8508-4ef5-9228-82e7a0c48f50-gs_school_cam_02_03_ (1).jpg",
+  "filename": "gs_school_cam_02_03_ (1).jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:25:40.433Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:25:40.433Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017205436b1c46766a562c0"
+  },
+  "size": 10204896,
+  "path": "http://api.atomic.ru.com/uploads/6aeec843-a7f0-4053-bda5-cf78348a6c2d/a163ce54-f4f5-406c-b131-d1c00d096803-gs_school_cam_04_03_.jpg",
+  "filename": "gs_school_cam_04_03_.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:25:40.749Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:25:40.749Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017205436b1c46766a562c1"
+  },
+  "size": 15759619,
+  "path": "http://api.atomic.ru.com/uploads/bbcf7702-e05c-440a-85f9-a320b0ff1c99/3488b115-0ea3-49af-aa6f-fe7015e1ff64-Library_Lobby_FINAL.jpg",
+  "filename": "Library_Lobby_FINAL.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:25:40.943Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:25:40.943Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720dc36b1c46766a562c2"
+  },
+  "size": 996893,
+  "path": "http://api.atomic.ru.com/uploads/b3ce95a4-44da-4c9e-96b3-7b2eba33072b/462210e4-e499-4e84-83e4-f5220ec14e35-Ключевский_печатная версия 20.10 (1)_Страница_04.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_04.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:56.848Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:56.848Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720dd36b1c46766a562c8"
+  },
+  "size": 1771209,
+  "path": "http://api.atomic.ru.com/uploads/5928d259-2a49-4ee0-8a33-182bdd366b0c/2f658e5b-ab87-48d7-aa25-354f3810407c-Ключевский_печатная версия 20.10 (1)_Страница_11.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_11.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:57.904Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:57.904Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720dd36b1c46766a562c9"
+  },
+  "size": 2840610,
+  "path": "http://api.atomic.ru.com/uploads/050b6381-5470-47ca-b93a-b6b9ed657564/b001bf1d-a944-4116-b7b3-b310c467dbe8-Ключевский_печатная версия 20.10 (1)_Страница_17.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_17.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:57.966Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:57.966Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720de36b1c46766a562ca"
+  },
+  "size": 2863458,
+  "path": "http://api.atomic.ru.com/uploads/0a9f135c-0aff-40c0-851a-f7e7e0421bca/1a2b14d7-d41c-4e55-b8ef-76d4ca601c7c-Ключевский_печатная версия 20.10 (1)_Страница_25.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_25.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:58.033Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:58.033Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720de36b1c46766a562cb"
+  },
+  "size": 2348034,
+  "path": "http://api.atomic.ru.com/uploads/78ea3ee4-be42-4464-b3b0-d4edf4cf8635/d9f69245-7a46-40ee-8526-51ea445ee139-Ключевский_печатная версия 20.10 (1)_Страница_32.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_32.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:58.204Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:58.204Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720de36b1c46766a562cc"
+  },
+  "size": 2125030,
+  "path": "http://api.atomic.ru.com/uploads/60971ee8-ccb8-4ad7-ab92-9d0baf425cb7/7c2a6f02-64cf-4727-82fd-4fbdb7c8bef0-Ключевский_печатная версия 20.10 (1)_Страница_37.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_37.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:58.258Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:58.258Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601720de36b1c46766a562cd"
+  },
+  "size": 2261004,
+  "path": "http://api.atomic.ru.com/uploads/fabea59e-09e1-44f5-a653-e58583baaa1f/a4b23861-9e9e-4811-ade2-3207e1df42f9-Ключевский_печатная версия 20.10 (1)_Страница_42.png",
+  "filename": "Ключевский_печатная версия 20.10 (1)_Страница_42.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:27:58.324Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:27:58.324Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215036b1c46766a562ce"
+  },
+  "size": 286037,
+  "path": "http://api.atomic.ru.com/uploads/836df83c-750b-4160-971d-a49f30797294/1b8726f5-f8ec-4d25-8b0c-7e85d59f001b-Панорама_без_названия1.jpg",
+  "filename": "Панорама_без_названия1.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:52.641Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:52.641Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d1"
+  },
+  "size": 458206,
+  "path": "http://api.atomic.ru.com/uploads/8c2e38f3-2fe1-424a-b8ea-1942f1a3a2e5/79c34fbc-cd65-47b2-b45a-e22fcb7b59ce-1 этаж -3.jpg",
+  "filename": "1 этаж -3.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.172Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.172Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d2"
+  },
+  "size": 7257439,
+  "path": "http://api.atomic.ru.com/uploads/000cf8c5-154f-4a29-a1a6-1a29e29b314c/750be2e2-4c5e-4045-9f33-725ecbaec8e7-4.20.09.2017.JPG",
+  "filename": "4.20.09.2017.JPG",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.442Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.442Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d3"
+  },
+  "size": 1175442,
+  "path": "http://api.atomic.ru.com/uploads/ef9018be-a7c6-4c44-93ba-d290ce524707/093abdfa-26a7-47ec-86e0-2eade32f4531-IMG_5174.jpg",
+  "filename": "IMG_5174.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.499Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.499Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d4"
+  },
+  "size": 2067977,
+  "path": "http://api.atomic.ru.com/uploads/8edf670d-7f05-45d9-8765-e4c124fcc8c3/1fd53185-927f-4232-8e71-03547811bd6d-IMG_5223.jpg",
+  "filename": "IMG_5223.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.559Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.559Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d5"
+  },
+  "size": 1866345,
+  "path": "http://api.atomic.ru.com/uploads/7ad8345a-bdc9-47ab-83b9-a20818b965c4/60b077bb-a594-4da1-9be9-a92fe3029293-IMG_5254.jpg",
+  "filename": "IMG_5254.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.720Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.720Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d6"
+  },
+  "size": 1559500,
+  "path": "http://api.atomic.ru.com/uploads/085e87ff-836d-415f-adac-9bdaaf545208/ce199a7a-4833-4bf7-9721-f247b6db6fdf-IMG_5315.jpg",
+  "filename": "IMG_5315.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.831Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.831Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215136b1c46766a562d7"
+  },
+  "size": 7349594,
+  "path": "http://api.atomic.ru.com/uploads/bb682db0-372c-495e-8238-66c29769bf6f/8e47cf41-4309-4ea3-8bd0-5592f805e171-IMG_8181.JPG",
+  "filename": "IMG_8181.JPG",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:53.932Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:53.932Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215236b1c46766a562d8"
+  },
+  "size": 5332932,
+  "path": "http://api.atomic.ru.com/uploads/e3a0458c-2a44-4b78-bf5d-0f64379226fb/8b8d8409-994c-4be1-ac71-99a17d1fc093-IMG_8851.jpg",
+  "filename": "IMG_8851.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:54.204Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:54.204Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017215236b1c46766a562d9"
+  },
+  "size": 12512122,
+  "path": "http://api.atomic.ru.com/uploads/b27edcfb-53d4-4f9b-94c6-7c8674ba90fb/e06248bf-b364-4b39-b719-763169cb1891-IMG_9003.jpg",
+  "filename": "IMG_9003.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:29:54.484Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:29:54.484Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c836b1c46766a562da"
+  },
+  "size": 441237,
+  "path": "http://api.atomic.ru.com/uploads/88ff96d6-acb1-4af9-8767-78765d997bfc/59fdfc01-4081-4f0a-bdf4-aaee8ebfdf79-002.jpg",
+  "filename": "002.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:52.820Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:52.820Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e0"
+  },
+  "size": 170813,
+  "path": "http://api.atomic.ru.com/uploads/fce930a2-edc4-45fa-ae6d-d8cac11c6310/25c972c2-4d65-4534-b729-f398a876bd0c-03.jpg",
+  "filename": "03.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.160Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.160Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e1"
+  },
+  "size": 217590,
+  "path": "http://api.atomic.ru.com/uploads/b0fe40b3-ab46-4e6b-8f1c-abfae0a7a923/c4b860af-d4df-4393-9a98-c8fc1ca35fe7-004.jpg",
+  "filename": "004.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.211Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.211Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e2"
+  },
+  "size": 169320,
+  "path": "http://api.atomic.ru.com/uploads/5809842f-4f87-411c-8763-4dcc3819c29d/e59b41a0-493a-4255-84b3-3b4c9bf87b17-08.jpg",
+  "filename": "08.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.266Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.266Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e3"
+  },
+  "size": 200726,
+  "path": "http://api.atomic.ru.com/uploads/b5f4f221-396d-437f-8e1f-ac58032e445a/14b74d1a-e547-4302-b6e2-3e7dfdd9e71a-014.jpg",
+  "filename": "014.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.312Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.312Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e4"
+  },
+  "size": 660206,
+  "path": "http://api.atomic.ru.com/uploads/b397d81a-85cd-4595-b691-9b6f0726c77f/fff896d3-2e92-4ade-ac83-b484705e106b-016.jpg",
+  "filename": "016.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.359Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.359Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e5"
+  },
+  "size": 173895,
+  "path": "http://api.atomic.ru.com/uploads/0f79daa2-1c87-4a59-9cc4-36b8b4b3b394/d439eb6d-3ba3-4cfe-a3f7-77ce7b1cedef-16.jpg",
+  "filename": "16.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.405Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.405Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e6"
+  },
+  "size": 561009,
+  "path": "http://api.atomic.ru.com/uploads/32c05b4c-0961-4889-be72-6a8d5fc4a4a3/ebc65eed-e7f4-4d73-a855-c89831820999-017.jpg",
+  "filename": "017.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.453Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.453Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e7"
+  },
+  "size": 603273,
+  "path": "http://api.atomic.ru.com/uploads/7713f57d-1e94-4841-a2d4-56144389d808/9f4a502e-3bd6-455c-979f-d69087f85af1-020.jpg",
+  "filename": "020.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.505Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.505Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e8"
+  },
+  "size": 210940,
+  "path": "http://api.atomic.ru.com/uploads/f751c641-ef3b-4b74-9386-0d7458f48a31/a9a6ad25-7216-42c5-9bff-91870efebdf3-cport-3.jpg",
+  "filename": "cport-3.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.553Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.553Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601721c936b1c46766a562e9"
+  },
+  "size": 1023242,
+  "path": "http://api.atomic.ru.com/uploads/29155405-cdf1-4608-b26a-41a76facb87a/6800b5a7-0d05-441b-ba36-8e55ae918dee-foto1.jpg",
+  "filename": "foto1.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:31:53.612Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:31:53.612Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017225636b1c46766a562ea"
+  },
+  "size": 14047,
+  "path": "http://api.atomic.ru.com/uploads/89dfbf57-4af8-4a60-b141-46d19ed9cea2/2f664da4-eef4-4a6c-8cd5-dfb3110f9076-cropped-logo-grey.png",
+  "filename": "cropped-logo-grey.png",
+  "createdAt": {
+    "$date": "2021-01-31T21:34:14.829Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:34:14.829Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017227336b1c46766a562eb"
+  },
+  "size": 31920,
+  "path": "http://api.atomic.ru.com/uploads/8683c4e7-ee5d-44df-8d3e-d02dbe436663/5527262a-76b5-4abe-bc9a-2b3b4baf55a4-40381-vselennaya-lyubopytstvo-astronomiya-mars-atmosfera-360x640.jpg",
+  "filename": "40381-vselennaya-lyubopytstvo-astronomiya-mars-atmosfera-360x640.jpg",
+  "createdAt": {
+    "$date": "2021-01-31T21:34:43.268Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:34:43.268Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601726b2fdf9f9074406400e"
+  },
+  "filename": "https://lh3.googleusercontent.com/a-/AOh14GjrmTFvKUAdmIjLBhzw0tvbNKSoRYfi50S5Bnkghg=s96-c",
+  "path": "https://lh3.googleusercontent.com/a-/AOh14GjrmTFvKUAdmIjLBhzw0tvbNKSoRYfi50S5Bnkghg=s96-c",
+  "size": 10,
+  "createdAt": {
+    "$date": "2021-01-31T21:52:50.104Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-31T21:52:50.104Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a1045724336bbda29361"
+  },
+  "size": 30485,
+  "path": "http://api.atomic.ru.com/uploads/17d119e7-0f0e-489b-995c-003d59c35f3d/ed532489-511f-42ec-bc79-62e87f846144-pp.jpg",
+  "filename": "pp.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:34:44.270Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:34:44.270Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a13d5724336bbda29362"
+  },
+  "size": 6788,
+  "path": "http://api.atomic.ru.com/uploads/d0933070-ab25-4dea-99e6-ae632da4714b/9895db03-ceb6-4be6-88cf-a431f8650282-billy bob.jpg",
+  "filename": "billy bob.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:35:41.913Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:35:41.913Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2635724336bbda29363"
+  },
+  "size": 458206,
+  "path": "http://api.atomic.ru.com/uploads/a342bf76-5a9c-40cd-b660-54d6c67597c9/f4e4195e-de19-4668-b9e7-21b86910eb6a-IMG_5180.jpg",
+  "filename": "IMG_5180.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:35.921Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:35.921Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2635724336bbda29364"
+  },
+  "size": 7257439,
+  "path": "http://api.atomic.ru.com/uploads/f100f2b9-511a-4662-b9a0-0d71387a4654/fa0a4281-6d36-472a-bc39-df478b942d31-IMG_5209.jpg",
+  "filename": "IMG_5209.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:35.979Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:35.979Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2645724336bbda29365"
+  },
+  "size": 1175442,
+  "path": "http://api.atomic.ru.com/uploads/5f2be7f2-5e4d-4b6d-a8e1-d4a12b855af6/2112c9aa-05a5-47cf-a6c2-26cafadf2a54-IMG_5263.jpg",
+  "filename": "IMG_5263.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:36.033Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:36.033Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2645724336bbda29366"
+  },
+  "size": 2067977,
+  "path": "http://api.atomic.ru.com/uploads/5b7b6c63-142c-445b-9a3e-4d8da4f3b46a/1e9f082e-3b88-4731-a36f-634e792c92ba-IMG_5348.jpg",
+  "filename": "IMG_5348.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:36.086Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:36.086Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2645724336bbda29367"
+  },
+  "size": 1866345,
+  "path": "http://api.atomic.ru.com/uploads/29222ab8-2686-4b07-9632-67d5cfefe180/ac49350d-802f-4f81-a2ef-14380d5e8869-IMG_8717.jpg",
+  "filename": "IMG_8717.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:36.141Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:36.141Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a2645724336bbda29368"
+  },
+  "size": 1559500,
+  "path": "http://api.atomic.ru.com/uploads/ecbbe731-e3b8-4926-b62f-f9252790c4bf/69bdae0f-7e5f-46dd-91a8-a90533ab200b-IMG_8959.jpg",
+  "filename": "IMG_8959.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:40:36.200Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:40:36.200Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a3ee5724336bbda2936a"
+  },
+  "size": 177931,
+  "path": "http://api.atomic.ru.com/uploads/352c213c-0493-4d98-9b50-52dedd91dfd1/fe0556f2-a628-435d-abd0-75030f963086-preview.jpg",
+  "filename": "preview.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:47:10.004Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:47:10.004Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a3ee5724336bbda2936b"
+  },
+  "size": 385143,
+  "path": "http://api.atomic.ru.com/uploads/0ea9f6d5-e737-4b5a-a70c-692d5f74c744/2802a38a-0db5-4075-ae3d-6fef0513574b-Smart-столы Острова_Sinteza (1).jpg",
+  "filename": "Smart-столы Острова_Sinteza (1).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:47:10.054Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:47:10.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a3ee5724336bbda2936c"
+  },
+  "size": 325970,
+  "path": "http://api.atomic.ru.com/uploads/b236bf18-5886-4a60-978b-7fb48581521f/75ec3fe2-6113-4262-8098-17324fcfc1b6-Smart-столы Острова_Sinteza (2).jpg",
+  "filename": "Smart-столы Острова_Sinteza (2).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:47:10.101Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:47:10.101Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a3ee5724336bbda2936d"
+  },
+  "size": 364182,
+  "path": "http://api.atomic.ru.com/uploads/2439a40e-e3bf-42d3-883f-d2d0db424e12/1df12b73-daee-45ba-973a-72a7a483ddb8-Smart-столы Острова_Sinteza (3).jpg",
+  "filename": "Smart-столы Острова_Sinteza (3).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:47:10.164Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:47:10.164Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a3ee5724336bbda2936e"
+  },
+  "size": 245488,
+  "path": "http://api.atomic.ru.com/uploads/b9fda5a9-c227-4015-a7d7-c869f8532eec/d9b89af3-b461-4466-abfe-15756ae90521-Smart-столы Острова_Sinteza (4).jpg",
+  "filename": "Smart-столы Острова_Sinteza (4).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T06:47:10.222Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T06:47:10.222Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a6fa5724336bbda29371"
+  },
+  "size": 55490,
+  "path": "http://api.atomic.ru.com/uploads/32e70f6f-2562-46df-9243-c96fa98acf42/f3b973c0-0c8b-4acb-8296-d7c81eb987a8-Дмитрий Подлужный - основатель партнер sinteza consulting.jpg",
+  "filename": "Дмитрий Подлужный - основатель партнер sinteza consulting.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:00:10.212Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:00:10.212Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a77a5724336bbda29373"
+  },
+  "size": 62866,
+  "path": "http://api.atomic.ru.com/uploads/0a04bb4a-9810-49ac-bd76-bb7e491d8c09/f2a0e2a6-fccb-4b04-a0f3-94818014e827-Илья Криворот - генеральный директор партнер основатель партнер sinteza consulting.jpg",
+  "filename": "Илья Криворот - генеральный директор партнер основатель партнер sinteza consulting.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:02:18.585Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:02:18.585Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a9335724336bbda29375"
+  },
+  "size": 7173,
+  "path": "http://api.atomic.ru.com/uploads/9a86ab6f-52d4-4660-aa50-a88e168935d9/85ac9db6-4905-4c17-8d20-8d000769ca2c-Алексей Афонин - руководитель мебельного производства.jpg",
+  "filename": "Алексей Афонин - руководитель мебельного производства.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:09:39.542Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:09:39.542Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a9ef5724336bbda29376"
+  },
+  "size": 5554,
+  "path": "http://api.atomic.ru.com/uploads/69833a5a-f410-4d75-bd3b-c7d36df5b071/a61320a2-121e-41f9-adaf-5183f2c2c82c-лого.JPG",
+  "filename": "лого.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T07:12:47.345Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:12:47.345Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017aa345724336bbda29377"
+  },
+  "size": 11164,
+  "path": "http://api.atomic.ru.com/uploads/02231f45-cd79-420d-9df1-d4eb540fe36a/a8baaca4-e93b-43d1-946c-04eb40361be9-Тяпугина Инна Валентиновна.jpg",
+  "filename": "Тяпугина Инна Валентиновна.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:13:56.639Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:13:56.639Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017aa4e5724336bbda29378"
+  },
+  "size": 21106,
+  "path": "http://api.atomic.ru.com/uploads/7f68cee7-4203-4f82-b7d4-f22be94ff4da/e5ae6530-952d-4ad1-aed4-0f6f2cf39459-Клет Вадим Михайлович.jpg",
+  "filename": "Клет Вадим Михайлович.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:14:22.295Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:14:22.295Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017aaf15724336bbda29379"
+  },
+  "size": 23717,
+  "path": "http://api.atomic.ru.com/uploads/ab468537-e6da-497f-8d6d-55f48fce161d/e24d271a-937a-4eba-b052-606666c8b08d-amelkovich_alena исх.jpg",
+  "filename": "amelkovich_alena исх.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:17:05.844Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:17:05.844Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017ab1a5724336bbda2937a"
+  },
+  "size": 30841,
+  "path": "http://api.atomic.ru.com/uploads/506e5d4f-5dc0-4ec1-af14-6a0111bcad62/5e716eb0-8f21-4777-a365-53229e58e2c7-nikita_yaveyn.jpg",
+  "filename": "nikita_yaveyn.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T07:17:46.091Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T07:17:46.091Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d34f5724336bbda2937b"
+  },
+  "size": 347362,
+  "path": "http://api.atomic.ru.com/uploads/f5ecd41b-aa21-4f33-800a-4e7e0e620b50/92954f0a-7005-442a-a3d4-9f13009c7ced-Фото 1_вид.jpg",
+  "filename": "Фото 1_вид.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:19.741Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:19.741Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d34f5724336bbda2937c"
+  },
+  "size": 277505,
+  "path": "http://api.atomic.ru.com/uploads/7aa1b372-4d91-4ff3-889c-87eb62cacf71/2e745e58-3d2f-4db4-bde0-d69a63883923-1_детская комната.JPG",
+  "filename": "1_детская комната.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:19.838Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:19.838Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d34f5724336bbda2937d"
+  },
+  "size": 235443,
+  "path": "http://api.atomic.ru.com/uploads/eea4aa8c-f999-4ab7-b751-c20e6dd3a6ec/77e79762-3024-4df5-b45a-9c063420662a-2_коридор.JPG",
+  "filename": "2_коридор.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:19.888Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:19.888Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d34f5724336bbda2937e"
+  },
+  "size": 291421,
+  "path": "http://api.atomic.ru.com/uploads/d3c642f4-8869-4b7b-b940-04d95a03b4a9/26dd72da-ec6d-42c5-ba64-bd474d8957e5-3_детская.JPG",
+  "filename": "3_детская.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:19.939Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:19.939Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d34f5724336bbda2937f"
+  },
+  "size": 345454,
+  "path": "http://api.atomic.ru.com/uploads/812c566a-7404-481e-be91-1b9dec442820/29aa6782-3e30-4607-99ba-34b46b1e5c38-5_холл.JPG",
+  "filename": "5_холл.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:19.997Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:19.997Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3505724336bbda29380"
+  },
+  "size": 264596,
+  "path": "http://api.atomic.ru.com/uploads/a82c6a98-1459-4aa5-bda8-f18c0e50b348/69cec635-51c7-406e-84b3-05bd0c01b680-6_хореография.JPG",
+  "filename": "6_хореография.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:20.049Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:20.049Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3505724336bbda29381"
+  },
+  "size": 256168,
+  "path": "http://api.atomic.ru.com/uploads/168cd95a-8e37-4ce6-82df-90d1ae49efa9/6afa8307-8311-44b6-9a73-6d14113e5f84-7_спортзал.JPG",
+  "filename": "7_спортзал.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:20.095Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:20.095Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3505724336bbda29382"
+  },
+  "size": 277439,
+  "path": "http://api.atomic.ru.com/uploads/caf333a7-7d86-49b6-be05-3f4f505c08d0/e1a73175-b7cf-4ac8-b371-1c6335af3a72-8_уч класс.JPG",
+  "filename": "8_уч класс.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:20.140Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:20.140Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3505724336bbda29383"
+  },
+  "size": 329773,
+  "path": "http://api.atomic.ru.com/uploads/97e3d092-552f-4cb5-a0e6-553389159eba/91977e61-e326-4355-8846-0a1595a80812-9_учебный класс.JPG",
+  "filename": "9_учебный класс.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:20.188Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:20.188Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3505724336bbda29384"
+  },
+  "size": 721601,
+  "path": "http://api.atomic.ru.com/uploads/ccfd7fbd-a4e3-4658-90a9-ff9e20217802/dcf6dc90-353c-40df-be2a-325f81e4a4b1-Фото 2_общий вид.jpg",
+  "filename": "Фото 2_общий вид.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:09:20.247Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:09:20.247Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d7ec5724336bbda29385"
+  },
+  "size": 18263,
+  "path": "http://api.atomic.ru.com/uploads/2c1091b2-02f4-4b20-9b91-53d726ecf49f/09e05388-ce3a-4356-9f16-fedcab234b8f-Матвеев Максим - ведущий архитектор.jpg",
+  "filename": "Матвеев Максим - ведущий архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:29:00.121Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:00.121Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d80d5724336bbda29386"
+  },
+  "size": 13192,
+  "path": "http://api.atomic.ru.com/uploads/4981f62d-0595-4479-9f6d-235066470222/419924e0-5f2a-4341-8b79-6d1e694c8e61-Коновалова Татьяна - ГАП.jpg",
+  "filename": "Коновалова Татьяна - ГАП.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:29:33.397Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:33.397Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d81f5724336bbda29387"
+  },
+  "size": 13940,
+  "path": "http://api.atomic.ru.com/uploads/41689224-dfc6-4259-98c7-99a29143f21a/6b5a1f7a-6f65-4d7e-9ded-1379d8e33633-Дзуцев Чермен - архитектор.jpg",
+  "filename": "Дзуцев Чермен - архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:29:51.979Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:29:51.979Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d8305724336bbda29388"
+  },
+  "size": 10162,
+  "path": "http://api.atomic.ru.com/uploads/975baf93-dc82-4b23-b327-8c6492c02ffd/89d1a482-01bd-4fe7-a349-1ed961ca8048-Григорьева Ольга - ГАП.jpg",
+  "filename": "Григорьева Ольга - ГАП.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:30:08.619Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:08.619Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d83f5724336bbda29389"
+  },
+  "size": 9263,
+  "path": "http://api.atomic.ru.com/uploads/ce936613-a21e-4ddf-ac10-f5a2b99da1b4/f45f5cc4-a6fb-4776-a3c0-dff3d440daee-Бутырская Юлия - ГАП.jpg",
+  "filename": "Бутырская Юлия - ГАП.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:30:23.436Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:23.436Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d84f5724336bbda2938a"
+  },
+  "size": 15468,
+  "path": "http://api.atomic.ru.com/uploads/961278af-7256-449b-a29c-7b7478dbbcb5/fee095f5-fe8d-492f-a03f-ad8bb805ee90-Белкова Полина - ГАП.jpg",
+  "filename": "Белкова Полина - ГАП.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:30:39.399Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:39.399Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d85e5724336bbda2938b"
+  },
+  "size": 11237,
+  "path": "http://api.atomic.ru.com/uploads/e6f901ce-9369-4cf2-b190-33c088162015/4628f15b-d5a0-420f-a171-7dd95389744b-Асадов Александр Рафаилович.jpg",
+  "filename": "Асадов Александр Рафаилович.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:30:54.416Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:30:54.416Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d86c5724336bbda2938c"
+  },
+  "size": 11766,
+  "path": "http://api.atomic.ru.com/uploads/776b72c4-f3b2-46d2-bf83-e96b4747f437/45bbd989-7249-427b-862a-9d70deb5cec6-Асадов Андрей Александрович.jpg",
+  "filename": "Асадов Андрей Александрович.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:31:08.645Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:31:08.645Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d8805724336bbda2938d"
+  },
+  "size": 5852,
+  "path": "http://api.atomic.ru.com/uploads/2bf7ba74-d403-445b-87b1-3d3f7b36d900/eff06655-628f-4552-9b9f-e3085ac4e4dc-logo.png",
+  "filename": "logo.png",
+  "createdAt": {
+    "$date": "2021-02-01T10:31:28.764Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:31:28.764Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d8c15724336bbda2938e"
+  },
+  "size": 20359,
+  "path": "http://api.atomic.ru.com/uploads/3c104969-d887-42ed-8a8a-ba41f8666f59/1950e42b-e0f0-47aa-9110-cd95b6185da6-patrikeev_andrey.jpg",
+  "filename": "patrikeev_andrey.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:32:33.223Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:32:33.223Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d8d95724336bbda2938f"
+  },
+  "size": 23380,
+  "path": "http://api.atomic.ru.com/uploads/f11756eb-5bb0-4337-8f27-c257a6ca4ade/1334e1fa-0d36-4e65-be48-5863f0f53be1-kuptsova_evgeniya.jpg",
+  "filename": "kuptsova_evgeniya.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:32:57.159Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:32:57.159Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d8fd5724336bbda29390"
+  },
+  "size": 23630,
+  "path": "http://api.atomic.ru.com/uploads/b55ead3e-0ed6-4af0-9db4-ad72f421f7ed/275081c1-3742-4317-bd0b-04c0ca692434-romantsev_vasily.jpg",
+  "filename": "romantsev_vasily.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:33:33.245Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:33:33.245Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9145724336bbda29391"
+  },
+  "size": 34893,
+  "path": "http://api.atomic.ru.com/uploads/146927e0-9960-4e8a-91dd-2433e6570e7c/f8771e89-58b1-453a-9ccd-5a5da0ce7e76-kresov_dmitriy.jpg",
+  "filename": "kresov_dmitriy.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:33:56.994Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:33:56.994Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9375724336bbda29392"
+  },
+  "size": 30185,
+  "path": "http://api.atomic.ru.com/uploads/ecbef104-d928-4bee-a610-c1746cfe2ba5/6d5e3258-17e0-4634-b504-ad03e1d417bd-gershteyn_lev.jpg",
+  "filename": "gershteyn_lev.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:34:31.833Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:34:31.833Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d94d5724336bbda29393"
+  },
+  "size": 19076,
+  "path": "http://api.atomic.ru.com/uploads/f39e12f2-1577-4da8-81bc-59fb4daa8b01/7e300451-5bf3-4dc1-9099-b7fdbb848c7a-silantyeva_elena.jpg",
+  "filename": "silantyeva_elena.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:34:53.600Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:34:53.600Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9885724336bbda29394"
+  },
+  "size": 20001,
+  "path": "http://api.atomic.ru.com/uploads/828e2ee2-5520-4ec8-a7b3-5c18bd555074/17be9ae4-1239-4ba2-9ef8-59e079cc059c-sulimova_ulyana.jpg",
+  "filename": "sulimova_ulyana.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:35:52.123Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:35:52.123Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d99d5724336bbda29395"
+  },
+  "size": 71014,
+  "path": "http://api.atomic.ru.com/uploads/a9baffe8-6101-426f-84f2-a01adefa0ebb/b3ada8eb-6689-4e0d-a288-e7fa8e692c12-agashkov_andrey.jpg",
+  "filename": "agashkov_andrey.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:36:13.066Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:36:13.066Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9b75724336bbda29396"
+  },
+  "size": 29407,
+  "path": "http://api.atomic.ru.com/uploads/7f714509-6d0f-4f8d-a9ec-cbf7904cd0e9/648b886d-d46c-41f3-b7ac-325d53df6db5-rogozhkina_mariya.jpg",
+  "filename": "rogozhkina_mariya.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:36:39.239Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:36:39.239Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9da5724336bbda29397"
+  },
+  "size": 71206,
+  "path": "http://api.atomic.ru.com/uploads/157cacac-4ec9-40df-8c59-6916fa7d1a70/c34a7c1f-7f58-4eca-b5fd-613900e2f74a-bogdanov_sergey.jpg",
+  "filename": "bogdanov_sergey.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:37:15Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:37:15Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d9f75724336bbda29398"
+  },
+  "size": 18725,
+  "path": "http://api.atomic.ru.com/uploads/b7ccf09b-1a8a-410d-b55b-b463ac10ff10/98014cbd-a0fd-412d-9b78-cb23d4940bbe-korovaev_andrey.jpg",
+  "filename": "korovaev_andrey.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:37:43.392Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:37:43.392Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017da505724336bbda29399"
+  },
+  "size": 8521,
+  "path": "http://api.atomic.ru.com/uploads/402eeeef-e552-48df-adec-c6589c005af5/5718ff99-a651-4b60-9891-af908eab7445-bmlogo.png",
+  "filename": "bmlogo.png",
+  "createdAt": {
+    "$date": "2021-02-01T10:39:12.313Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:39:12.313Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dbf45724336bbda2939b"
+  },
+  "size": 13871,
+  "path": "http://api.atomic.ru.com/uploads/6f9704fb-b65b-4547-ad02-09d9247f227b/b73b9f1b-3f2c-4589-bd68-63bd1b6701a0-logo.JPG",
+  "filename": "logo.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T10:46:12.760Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:46:12.760Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dc285724336bbda2939c"
+  },
+  "size": 355781,
+  "path": "http://api.atomic.ru.com/uploads/dfc5ae8a-e3c1-4487-956c-d422153b9be6/5b3c4e73-e1cc-4d3d-ad7a-82ff3c91baf4-Тер-Григорян Анна Эммануиловна.png",
+  "filename": "Тер-Григорян Анна Эммануиловна.png",
+  "createdAt": {
+    "$date": "2021-02-01T10:47:04.973Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:04.973Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dc3c5724336bbda2939d"
+  },
+  "size": 39284,
+  "path": "http://api.atomic.ru.com/uploads/35c3e030-fc52-4c9d-a9c8-9c12e6eea414/9251c09e-5627-4560-a8b9-b44e549aa006-Маякова Елизавета Владимировна.jpg",
+  "filename": "Маякова Елизавета Владимировна.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:47:24.137Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:24.137Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dc4d5724336bbda2939e"
+  },
+  "size": 31226,
+  "path": "http://api.atomic.ru.com/uploads/1ad371ab-76c0-46bf-a116-69cc648df629/238b2e4b-32c6-4f28-9ee9-2b6df100f09b-Виноградова Ирина Анатольевна.jpg",
+  "filename": "Виноградова Ирина Анатольевна.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:47:41.008Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:47:41.008Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dc605724336bbda2939f"
+  },
+  "size": 119025,
+  "path": "http://api.atomic.ru.com/uploads/2e63a6c6-90b0-4e68-bf74-c55aa563bb8c/32f541fa-3044-4581-a153-bc215239af1b-Барсукова Екатерина Михайловна.jpg",
+  "filename": "Барсукова Екатерина Михайловна.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:48:00.162Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:48:00.162Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017dc725724336bbda293a0"
+  },
+  "size": 48279,
+  "path": "http://api.atomic.ru.com/uploads/d5ee0a90-0b54-42bf-9b99-4dd90b82f9e9/ce50b708-0fe3-4c53-bdb1-593677c55363-Иванова Елена Владимировна.jpg",
+  "filename": "Иванова Елена Владимировна.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T10:48:18.072Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:48:18.072Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f5a15724336bbda293a5"
+  },
+  "size": 25695,
+  "path": "http://api.atomic.ru.com/uploads/629d673a-9b25-473b-b6bf-996f3ee61762/fc641639-119d-43b6-a300-0fa2989748b4-Белла Филатова.JPG",
+  "filename": "Белла Филатова.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T12:35:45.627Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:35:45.627Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6035724336bbda293a7"
+  },
+  "size": 13401,
+  "path": "http://api.atomic.ru.com/uploads/38ff4c47-cb36-4225-9330-2cd897f4d15f/0a324ce5-12cc-424e-beee-1a1064616510-Александра Черткова.JPG",
+  "filename": "Александра Черткова.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T12:37:23.132Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:37:23.132Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6465724336bbda293a9"
+  },
+  "size": 26004,
+  "path": "http://api.atomic.ru.com/uploads/66361c1e-ac34-46fd-a109-198326dd283e/6672801d-4528-435e-a131-ff5ce8c7e7d9-Анастасия Рычкова.JPG",
+  "filename": "Анастасия Рычкова.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T12:38:30.283Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:38:30.283Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017f6cb5724336bbda293ab"
+  },
+  "size": 25667,
+  "path": "http://api.atomic.ru.com/uploads/6f07b986-7ddf-4e4f-a685-a8e8c571feea/78aac271-77b0-4164-ad11-c445fccd34ec-Анна Родионова.JPG",
+  "filename": "Анна Родионова.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T12:40:43.165Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:40:43.165Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293ad"
+  },
+  "size": 544675,
+  "path": "http://api.atomic.ru.com/uploads/44f411e4-50a6-4858-a1ea-b680992e5097/392d7f7a-8699-424d-9b04-46a6e796e6c1-пг (1).jpg",
+  "filename": "пг (1).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.615Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.615Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293ae"
+  },
+  "size": 391870,
+  "path": "http://api.atomic.ru.com/uploads/8113ff51-9687-4e0f-b378-41240cba7bd7/edb4291f-6f2f-4afd-aadd-e97018b4e185-_MG_0672-1.jpg",
+  "filename": "_MG_0672-1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.670Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.670Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293af"
+  },
+  "size": 476988,
+  "path": "http://api.atomic.ru.com/uploads/b8378363-3108-4ae9-b762-b25e5ef5254d/434fde9f-eada-4428-a8ca-69444ea32492-пг (2).jpg",
+  "filename": "пг (2).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.719Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.719Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293b0"
+  },
+  "size": 663291,
+  "path": "http://api.atomic.ru.com/uploads/46eab8d3-ca27-4b05-8180-c3e0f8dcb275/ca510252-e8a1-4871-aa82-d07552f54b1b-пг (3).jpg",
+  "filename": "пг (3).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.773Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.773Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293b1"
+  },
+  "size": 424769,
+  "path": "http://api.atomic.ru.com/uploads/38a45d38-d962-496c-8fc4-63c7eb27f179/cfefa2db-61c1-4b67-84a5-615bd27ef937-пг (4).jpg",
+  "filename": "пг (4).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.821Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.821Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293b2"
+  },
+  "size": 386132,
+  "path": "http://api.atomic.ru.com/uploads/5558724f-7bd4-4436-94fe-c1d94966cd46/b2d17d8b-7b1b-4461-bb4e-0ed14986f87a-пг (5).jpg",
+  "filename": "пг (5).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.867Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.867Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293b3"
+  },
+  "size": 330350,
+  "path": "http://api.atomic.ru.com/uploads/30cebbbd-b536-4a5e-ad1e-3a03f0302fa2/2f3596aa-727b-4e37-8af7-fbbbc278d24b-пг (6).jpg",
+  "filename": "пг (6).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.934Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.934Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fa675724336bbda293b4"
+  },
+  "size": 471820,
+  "path": "http://api.atomic.ru.com/uploads/d42cd650-6a2c-43b1-8b55-5687b88a9e1b/8a840039-cea9-4367-8606-2e3367d9c827-пг (7).jpg",
+  "filename": "пг (7).jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:56:07.983Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:56:07.983Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faef5724336bbda293b5"
+  },
+  "size": 458206,
+  "path": "http://api.atomic.ru.com/uploads/e7777c21-2810-4410-b56c-b9e0b4403f83/09e7c4b6-bc8d-43e4-8f21-a097624d19d8-IMG_5180.jpg",
+  "filename": "IMG_5180.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:23.834Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:23.834Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faef5724336bbda293b6"
+  },
+  "size": 7257439,
+  "path": "http://api.atomic.ru.com/uploads/dc9fb99d-d5ba-47c3-ae71-f4c0e62e093c/7477c4f8-2d16-4761-a1c1-5dc6d9da241a-IMG_5209.jpg",
+  "filename": "IMG_5209.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:23.886Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:23.886Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faef5724336bbda293b7"
+  },
+  "size": 1175442,
+  "path": "http://api.atomic.ru.com/uploads/04295914-8a41-4e56-a7bc-876d59a2509c/484b55f8-876b-43ba-b599-45de7ffb2379-IMG_5232.jpg",
+  "filename": "IMG_5232.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:23.931Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:23.931Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faef5724336bbda293b8"
+  },
+  "size": 2067977,
+  "path": "http://api.atomic.ru.com/uploads/b708d20a-371b-4880-bbb0-4e3e7efbb694/af72981d-3cc8-4f5d-ac99-6d16eb00a6a1-IMG_5263.jpg",
+  "filename": "IMG_5263.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:23.975Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:23.975Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faf05724336bbda293b9"
+  },
+  "size": 1866345,
+  "path": "http://api.atomic.ru.com/uploads/42e1441c-c0f0-43f3-b366-e6c4c8352276/57f54375-7ad1-4ce1-862c-8e8df2bbcb1c-IMG_5348.jpg",
+  "filename": "IMG_5348.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:24.026Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:24.026Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017faf05724336bbda293ba"
+  },
+  "size": 1559500,
+  "path": "http://api.atomic.ru.com/uploads/d139e010-95d3-40b6-921b-414a35522104/08fec80f-6ce4-4f7a-bf2c-c8b5d28393f9-IMG_8717.jpg",
+  "filename": "IMG_8717.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T12:58:24.080Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T12:58:24.080Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017fba25724336bbda293c1"
+  },
+  "size": 23357,
+  "path": "http://api.atomic.ru.com/uploads/2cce0e8f-3be6-447d-be10-e0a04598f07a/b3765f4e-ad0d-40f3-b7e4-72722e08f391-16990881_18568667312.gif",
+  "filename": "16990881_18568667312.gif",
+  "createdAt": {
+    "$date": "2021-02-01T13:01:22.079Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:01:22.079Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293c7"
+  },
+  "size": 403137,
+  "path": "http://api.atomic.ru.com/uploads/aaf0fbeb-5c5b-478b-b086-c5845659140f/891fad1d-02d5-4473-b00f-7fa2048f5340-Domodedovo-school_!view09.jpg",
+  "filename": "Domodedovo-school_!view09.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.358Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.358Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293cc"
+  },
+  "size": 462304,
+  "path": "http://api.atomic.ru.com/uploads/2b44f326-3d5e-42a4-992c-ffde5dcae012/6754a52e-0a70-4411-9407-4de202c72345-Domodedovo-school_!view00.jpg",
+  "filename": "Domodedovo-school_!view00.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.661Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.661Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293cd"
+  },
+  "size": 413953,
+  "path": "http://api.atomic.ru.com/uploads/557ffdb4-1be3-4a26-9bf6-c940b948b969/c335a3d8-0f7e-4503-92be-6ef2e1bfc75a-Domodedovo-school_!view01.jpg",
+  "filename": "Domodedovo-school_!view01.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.708Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.708Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293ce"
+  },
+  "size": 411359,
+  "path": "http://api.atomic.ru.com/uploads/0c89a7b9-2fe3-469a-a8e2-b3fba9104034/fa803d1e-f471-49e9-a391-78af6edeb10d-Domodedovo-school_!view02.jpg",
+  "filename": "Domodedovo-school_!view02.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.755Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.755Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293cf"
+  },
+  "size": 459859,
+  "path": "http://api.atomic.ru.com/uploads/c7f8d735-969a-409b-a5a3-6b119b73c106/a17fc9bd-7f01-4e1b-b1ab-2bdcb5dee253-Domodedovo-school_interior02.jpg",
+  "filename": "Domodedovo-school_interior02.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.809Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.809Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293d0"
+  },
+  "size": 315952,
+  "path": "http://api.atomic.ru.com/uploads/f35b4532-f8fe-433d-bf02-bf1da8eb00c4/5af0b15c-16bb-45ad-8eb9-e4e62c43b736-Domodedovo-school_interior05.jpg",
+  "filename": "Domodedovo-school_interior05.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.875Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.875Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293d1"
+  },
+  "size": 374267,
+  "path": "http://api.atomic.ru.com/uploads/e53583a1-9db1-4dbc-a9e2-3460d0746583/087bd24e-efe7-4188-85ce-7279eb00c8b4-Domodedovo-school_interior09.jpg",
+  "filename": "Domodedovo-school_interior09.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.921Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.921Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601803f15724336bbda293d2"
+  },
+  "size": 213232,
+  "path": "http://api.atomic.ru.com/uploads/0f4d1d50-a26a-451c-ad07-15a7ecaf5769/79ddebb3-3f42-4141-a3fe-5c4afa2bd90e-Domodedovo-school_view10.jpg",
+  "filename": "Domodedovo-school_view10.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:36:49.972Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:36:49.972Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293d4"
+  },
+  "size": 492307,
+  "path": "http://api.atomic.ru.com/uploads/1fe9d41d-6aa2-4e9b-aa2d-0b6287eaea2a/ba102be2-32be-46a0-b232-f809f43feab8-Troitsk-school_!view02a.jpg",
+  "filename": "Troitsk-school_!view02a.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.284Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.284Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293da"
+  },
+  "size": 469921,
+  "path": "http://api.atomic.ru.com/uploads/7d0d38bd-a466-4e26-8a69-3a7c72370f4b/9466e7ba-bc32-41c3-bfd0-f9522eb47129-Troitsk-school_!view01.jpg",
+  "filename": "Troitsk-school_!view01.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.588Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.588Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293db"
+  },
+  "size": 506631,
+  "path": "http://api.atomic.ru.com/uploads/d3e33e4f-1a44-499a-814d-84e6032b8965/db80c4a3-bf44-4ab3-99a6-33a36b7709ab-Troitsk-school_!view03a.jpg",
+  "filename": "Troitsk-school_!view03a.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.640Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.640Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293dc"
+  },
+  "size": 549841,
+  "path": "http://api.atomic.ru.com/uploads/d4f51a74-2ab3-425c-b876-a904d6461738/23bf8f3a-996f-44aa-84b1-42783823eb34-Troitsk-school_!view04.jpg",
+  "filename": "Troitsk-school_!view04.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.694Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.694Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293dd"
+  },
+  "size": 280546,
+  "path": "http://api.atomic.ru.com/uploads/0d94a0d3-9852-41e3-be0d-05c4f6a5c43b/763f402c-0790-4684-a60c-4b9b9e9dd7bf-Troitsk-school_!view08.jpg",
+  "filename": "Troitsk-school_!view08.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.747Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.747Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293de"
+  },
+  "size": 712141,
+  "path": "http://api.atomic.ru.com/uploads/49bc1287-6464-4ca6-9fa7-ebcfa17f7923/39f63cf6-6f7a-4702-8df8-ec13500a5b04-Troitsk-school_1scheme.jpg",
+  "filename": "Troitsk-school_1scheme.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.800Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.800Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293df"
+  },
+  "size": 334435,
+  "path": "http://api.atomic.ru.com/uploads/85b590fe-b2e2-4b1d-ba53-ab2b3c0f155b/c1cbecf7-3b0a-469f-9299-bfa28a1db6f3-Troitsk-school_interior1.jpg",
+  "filename": "Troitsk-school_interior1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.845Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.845Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018095e5724336bbda293e0"
+  },
+  "size": 298274,
+  "path": "http://api.atomic.ru.com/uploads/da164f00-1788-45d5-a330-6be33182e585/422efa06-88da-4731-9108-40d670855eb4-Troitsk-school_interior2.jpg",
+  "filename": "Troitsk-school_interior2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T13:59:58.890Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T13:59:58.890Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601814f65724336bbda293e1"
+  },
+  "size": 8152,
+  "path": "http://api.atomic.ru.com/uploads/4369bc62-94e1-4b64-9ef0-2fc9791f7ad7/de7cd29e-5139-4ef5-a586-3268217449e9-Быканов Олег Дмитриевич - главный архитектор.jpg",
+  "filename": "Быканов Олег Дмитриевич - главный архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:49:27Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:49:27Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601815fa5724336bbda293e2"
+  },
+  "size": 10969,
+  "path": "http://api.atomic.ru.com/uploads/4b9205dc-9baa-4d8d-bed6-4b679ad372a3/2a06c283-8464-4205-8531-d343af5762d0-Радоминова Ольга Игоревна - главный инженер.jpg",
+  "filename": "Радоминова Ольга Игоревна - главный инженер.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:53:46.259Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:53:46.259Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601816355724336bbda293e3"
+  },
+  "size": 11866,
+  "path": "http://api.atomic.ru.com/uploads/49157b85-e538-488f-8e92-b0fd1e23ad7b/1f958fab-38c5-48fb-bed6-a374ebe21d0b-Сингатулина Олеся Владимировна - начальник электротехнического отдела.jpg",
+  "filename": "Сингатулина Олеся Владимировна - начальник электротехнического отдела.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:54:45.409Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:54:45.409Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018168e5724336bbda293e4"
+  },
+  "size": 10388,
+  "path": "http://api.atomic.ru.com/uploads/1b2f5392-b7da-487e-a3de-f394c1734725/373ddeb1-5ddc-47c5-b9fd-b6090e0c05cd-Аликина Ирина Владимировна - начальник отдела водоснабжения и водоотведения.jpg",
+  "filename": "Аликина Ирина Владимировна - начальник отдела водоснабжения и водоотведения.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:56:14.557Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:56:14.557Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601816d25724336bbda293e5"
+  },
+  "size": 12711,
+  "path": "http://api.atomic.ru.com/uploads/dc440441-846f-462d-b021-fb52220e5e8a/c8873284-1b2a-477d-b17b-1c18f133e7b1-Солонин Роман Владимирович - начальник отдела отопления вентиляции и газоснабжения.jpg",
+  "filename": "Солонин Роман Владимирович - начальник отдела отопления вентиляции и газоснабжения.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:57:22.216Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:57:22.216Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601817075724336bbda293e6"
+  },
+  "size": 11763,
+  "path": "http://api.atomic.ru.com/uploads/1ef85e42-5e63-4039-8d38-3e63cff24c2b/40846a20-0cba-4b92-8b5d-1178de4fe6a6-Харина Анна Александровна - начальник строительного отдела.jpg",
+  "filename": "Харина Анна Александровна - начальник строительного отдела.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:58:15.064Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:58:15.064Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601817345724336bbda293e7"
+  },
+  "size": 24496,
+  "path": "http://api.atomic.ru.com/uploads/0ae9371f-4543-4263-bb54-5cb5fb0bcdda/21525211-08b7-457e-a4dd-c110bcb72254-Трунова Наталья Михайловна - ГИП.jpg",
+  "filename": "Трунова Наталья Михайловна - ГИП.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T14:59:00.137Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T14:59:00.137Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601818015724336bbda293e9"
+  },
+  "size": 22690,
+  "path": "http://api.atomic.ru.com/uploads/9474bc05-bfec-4215-bf3f-2ac523cd7771/45dddc1e-ab47-4199-af97-1e90072fc498-Золотарев Роман Александрович - Директор.jpg",
+  "filename": "Золотарев Роман Александрович - Директор.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T15:02:25.155Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T15:02:25.155Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601825e85724336bbda293eb"
+  },
+  "size": 1018896,
+  "path": "http://api.atomic.ru.com/uploads/ae154520-7888-4c18-a9b1-d9d7652a0679/2e9ce932-0dfa-4109-81a1-2eb975f7f4e5-1DJI_0196.jpg",
+  "filename": "1DJI_0196.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T16:01:44.102Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T16:01:44.102Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293ec"
+  },
+  "size": 439633,
+  "path": "http://api.atomic.ru.com/uploads/52d0df0f-8659-4c83-bf98-b753d2ae774e/47a8847f-9e1e-44d4-936e-0287226b6480-Фото 2_общий план.jpg",
+  "filename": "Фото 2_общий план.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.647Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.647Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293ed"
+  },
+  "size": 812377,
+  "path": "http://api.atomic.ru.com/uploads/a23ad62e-88be-436b-9865-604481e803ba/c1f98762-a0f7-406d-8c12-d1ba031ec884-Фото 3_вид сверху.jpg",
+  "filename": "Фото 3_вид сверху.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.702Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.702Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293ee"
+  },
+  "size": 395043,
+  "path": "http://api.atomic.ru.com/uploads/8911b9a7-a0a8-495b-b15b-d892835ec7f9/3dea7f5c-fda5-4e8f-b9e5-104aade347ad-Фото 4_внешний вид.jpg",
+  "filename": "Фото 4_внешний вид.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.748Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.748Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293ef"
+  },
+  "size": 438569,
+  "path": "http://api.atomic.ru.com/uploads/5e692af9-8449-42fc-8d26-48f1250fc191/8772733a-43ab-4474-90a2-7cd09d62211e-Фото 5_вид 1.jpg",
+  "filename": "Фото 5_вид 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.796Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.796Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293f0"
+  },
+  "size": 402377,
+  "path": "http://api.atomic.ru.com/uploads/c9b02668-3057-4721-a8fb-96325fca6429/dad2cbeb-f130-4020-a81d-6ac93adda4b0-1DJI_0196.jpg",
+  "filename": "1DJI_0196.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.846Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.846Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293f1"
+  },
+  "size": 575851,
+  "path": "http://api.atomic.ru.com/uploads/53b36537-839d-402e-9c12-db8c6579d15e/fb00a08c-4821-4418-b979-5a7dcae97672-Фото 6_вид 2.jpg",
+  "filename": "Фото 6_вид 2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.900Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.900Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c45724336bbda293f2"
+  },
+  "size": 480335,
+  "path": "http://api.atomic.ru.com/uploads/1bb3b7a0-5a54-42fa-8b39-693ce78f1dca/c22aa2e4-845e-4d36-a61c-b05c2f020b97-Фото 7_общий вид.jpg",
+  "filename": "Фото 7_общий вид.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:56.953Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:56.953Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c55724336bbda293f3"
+  },
+  "size": 191533,
+  "path": "http://api.atomic.ru.com/uploads/17bb46ce-828c-4f92-9a52-6e855ece1c25/86b567f4-5608-479c-b8ca-35194eb6bfa3-Интерьер 1.jpg",
+  "filename": "Интерьер 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:57.008Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:57.008Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c55724336bbda293f4"
+  },
+  "size": 260691,
+  "path": "http://api.atomic.ru.com/uploads/acb69ce6-bd7e-4463-8f17-da50694f501f/f62c8d1e-57e1-468a-a21c-abd3d48acac1-Интерьер 2.jpg",
+  "filename": "Интерьер 2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:57.064Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:57.064Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601837c55724336bbda293f5"
+  },
+  "size": 257395,
+  "path": "http://api.atomic.ru.com/uploads/dfdecefe-ddd7-486d-8770-441032ff8b4c/fa24dbc0-dfc0-4ca1-9f57-4edae124adf5-Интерьер 3_актовый зал.jpg",
+  "filename": "Интерьер 3_актовый зал.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:17:57.117Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:17:57.117Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbc5724336bbda293f7"
+  },
+  "size": 449846,
+  "path": "http://api.atomic.ru.com/uploads/613ec91f-76e2-454e-a56a-93a53db3530c/de7b13b7-f248-4557-a0b9-5514882e7358-A101-school1100_model-interior01.jpg",
+  "filename": "A101-school1100_model-interior01.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:08.648Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:08.648Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbc5724336bbda293fd"
+  },
+  "size": 620096,
+  "path": "http://api.atomic.ru.com/uploads/c35e6b88-1c13-4e72-927c-14ba16fbc3e2/67ab6d3b-856e-4eba-8fa9-8ba989357bf5-A101-school1100_model01.jpg",
+  "filename": "A101-school1100_model01.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:08.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:08.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda293fe"
+  },
+  "size": 632805,
+  "path": "http://api.atomic.ru.com/uploads/35d2dfa2-2f24-44d3-8d34-00a7a9baf665/6057d0d5-d029-408d-9516-0db2bc010f76-A101-school1100_model02.jpg",
+  "filename": "A101-school1100_model02.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.013Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.013Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda293ff"
+  },
+  "size": 451662,
+  "path": "http://api.atomic.ru.com/uploads/a1b879c2-0cc3-4a6f-8b3b-585687ac2d42/ee9000c2-0bc1-4158-92dd-25700ed21ae9-A101-school1100_model03a.jpg",
+  "filename": "A101-school1100_model03a.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.066Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.066Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29400"
+  },
+  "size": 406483,
+  "path": "http://api.atomic.ru.com/uploads/e8f69a4b-1425-4dcc-bdf0-e5e99226aa06/285e3ca8-e475-43db-ae6c-0549397d5ff7-A101-school1100_model-interior03.jpg",
+  "filename": "A101-school1100_model-interior03.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.113Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.113Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29401"
+  },
+  "size": 389512,
+  "path": "http://api.atomic.ru.com/uploads/39f8b60f-afa0-4e3f-a572-a6e03903721f/494b2308-0ce4-4a75-9dc3-e75bea77960b-A101-school1100_model-interior04.jpg",
+  "filename": "A101-school1100_model-interior04.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.160Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.160Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29402"
+  },
+  "size": 584862,
+  "path": "http://api.atomic.ru.com/uploads/3cf97e6a-c906-48fa-9320-f846bf10b7b0/96ea7ec2-244c-492f-bd82-7356f9eb7157-A101-school1100_model-interior05.jpg",
+  "filename": "A101-school1100_model-interior05.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.214Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.214Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29403"
+  },
+  "size": 356607,
+  "path": "http://api.atomic.ru.com/uploads/6b2b8828-38dc-43c6-9f17-30b9e5153248/405308e7-1e1c-4235-90e8-8117b46e6b31-A101-school1100_model-interior07.jpg",
+  "filename": "A101-school1100_model-interior07.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.272Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.272Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29404"
+  },
+  "size": 304031,
+  "path": "http://api.atomic.ru.com/uploads/6500d352-b797-4ce8-a66f-c86f72aa4dfb/6a0d031f-2533-43ce-9d91-1929c5089813-A101-school1100_model-interior08.jpg",
+  "filename": "A101-school1100_model-interior08.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.326Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.326Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60183cbd5724336bbda29405"
+  },
+  "size": 308441,
+  "path": "http://api.atomic.ru.com/uploads/a754b80f-4bfe-4a74-8610-a656278859ba/d1e62e08-1c3a-4f8a-9c57-184eb83fa21a-A101-school1100_model-interior10.jpg",
+  "filename": "A101-school1100_model-interior10.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T17:39:09.382Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T17:39:09.382Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018424b5724336bbda29407"
+  },
+  "size": 450365,
+  "path": "http://api.atomic.ru.com/uploads/2ad51769-0b49-4389-b3b8-d49a91b1274f/01e10af9-65f6-434f-9dac-2398e36eaf7a-планировка 2.jpg",
+  "filename": "планировка 2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:02:51.936Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:02:51.936Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018424b5724336bbda29408"
+  },
+  "size": 389878,
+  "path": "http://api.atomic.ru.com/uploads/a77d72d8-8834-4801-a7f1-d8ec9da64b73/f1441a40-c676-462f-9dd5-3ef53c17a4a6-планировка 3.jpg",
+  "filename": "планировка 3.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:02:51.996Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:02:51.996Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018424c5724336bbda29409"
+  },
+  "size": 347649,
+  "path": "http://api.atomic.ru.com/uploads/69607043-2239-4f57-a792-f71bbe1b1b87/0cd777e8-0d61-4360-bc99-db9fe55cec9c-планировка 4.jpg",
+  "filename": "планировка 4.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:02:52.042Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:02:52.042Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018424c5724336bbda2940a"
+  },
+  "size": 409469,
+  "path": "http://api.atomic.ru.com/uploads/b60bb84f-0d44-4a63-adc2-ca27308ad0ea/ffedfeec-dc7b-4a32-bd2a-212968421554-планировка 5.jpg",
+  "filename": "планировка 5.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:02:52.088Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:02:52.088Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6018424c5724336bbda2940b"
+  },
+  "size": 522288,
+  "path": "http://api.atomic.ru.com/uploads/cda83fad-e1a8-46b6-93c6-0e77f02268be/6462ad66-da17-471e-a7b8-131b9db06184-планировка.jpg",
+  "filename": "планировка.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:02:52.135Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:02:52.135Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601844c55724336bbda2940d"
+  },
+  "size": 446763,
+  "path": "http://api.atomic.ru.com/uploads/04df9939-4aa0-4ab7-8445-f4124b238d08/7995720b-765b-4df6-a341-7646357d2818-рекреация 2_2.jpg",
+  "filename": "рекреация 2_2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:13:25.316Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:13:25.316Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601844c55724336bbda2940e"
+  },
+  "size": 423413,
+  "path": "http://api.atomic.ru.com/uploads/98a8dbce-e822-44b2-bbb9-e717e10026aa/1268766b-276e-47f0-817d-304bcc8cd120-рекреация 1.jpg",
+  "filename": "рекреация 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:13:25.376Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:13:25.376Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601844c55724336bbda2940f"
+  },
+  "size": 406509,
+  "path": "http://api.atomic.ru.com/uploads/1bc72a98-9b06-43b6-b11d-ca825edbfd29/bb1a4c9e-4562-4dbe-b5d0-19e4efb5519e-рекреация 2.jpg",
+  "filename": "рекреация 2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:13:25.429Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:13:25.429Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601844c55724336bbda29410"
+  },
+  "size": 439945,
+  "path": "http://api.atomic.ru.com/uploads/2068c8e8-8780-41fb-bc12-a10adc80d638/0b94687d-0cea-4238-bfc2-7719036e627b-рекреация 3.jpg",
+  "filename": "рекреация 3.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:13:25.485Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:13:25.485Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601844c55724336bbda29411"
+  },
+  "size": 446586,
+  "path": "http://api.atomic.ru.com/uploads/d14d2023-1b33-43e0-8101-d9481a0d5e1b/685ec2ed-f880-4138-8c6e-9ea50fa2ff8e-рекреация 3_3.jpg",
+  "filename": "рекреация 3_3.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T18:13:25.536Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:13:25.536Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda29416"
+  },
+  "size": 157705,
+  "path": "http://api.atomic.ru.com/uploads/99f9024e-210b-4423-a517-a3699d3d96c9/a3fb860e-f906-41cf-82f6-5b13f3e7d168-IMG_1316_стены коридор.JPG",
+  "filename": "IMG_1316_стены коридор.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.123Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.123Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda29417"
+  },
+  "size": 236879,
+  "path": "http://api.atomic.ru.com/uploads/0604a7d7-587b-4908-9b98-ad13d8576d71/06379540-1d79-4783-91ee-b8248670eede-IMG_1330_класс 1.JPG",
+  "filename": "IMG_1330_класс 1.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.167Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.167Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda29418"
+  },
+  "size": 243367,
+  "path": "http://api.atomic.ru.com/uploads/793c05b9-f21b-4204-973f-bf1b616aa069/1ac4b8d4-13f1-44cf-9286-81ee7390b994-IMG_1375_столовая 1.JPG",
+  "filename": "IMG_1375_столовая 1.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.215Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.215Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda29419"
+  },
+  "size": 155637,
+  "path": "http://api.atomic.ru.com/uploads/b89bb4a0-9bdf-465b-ac5c-dadfd02d8b1a/aee03a1a-851c-4380-b7a2-442db09bce64-IMG_1381_стена шахматы.JPG",
+  "filename": "IMG_1381_стена шахматы.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.271Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.271Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda2941a"
+  },
+  "size": 161966,
+  "path": "http://api.atomic.ru.com/uploads/4a4ba7a1-ef8d-4a3e-aaf3-c94668332da7/83278138-4293-4f6d-a4f4-7a69db91bb0c-IMG_1383_зона отдыха 2.JPG",
+  "filename": "IMG_1383_зона отдыха 2.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.345Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.345Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda2941b"
+  },
+  "size": 176358,
+  "path": "http://api.atomic.ru.com/uploads/0067f554-daa1-4173-8c71-62c23d830b7f/c4949bbc-7d45-4914-9d07-0a18a409a670-IMG_1386_зона отдыха.JPG",
+  "filename": "IMG_1386_зона отдыха.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.397Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.397Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60184aa65724336bbda2941c"
+  },
+  "size": 71219,
+  "path": "http://api.atomic.ru.com/uploads/677524ec-4014-45d4-9f60-647266d53335/e61acf29-51f6-4b38-a0d3-c8ab11ecaa67-IMG_1402_фойе 2.JPG",
+  "filename": "IMG_1402_фойе 2.JPG",
+  "createdAt": {
+    "$date": "2021-02-01T18:38:30.448Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T18:38:30.448Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda2941e"
+  },
+  "size": 440417,
+  "path": "http://api.atomic.ru.com/uploads/4f6e2ac6-4d45-4646-9349-e9f78fdd26d4/216b34c8-0d58-4d64-a78c-e7e26791aad7-Безымянный 4.jpg",
+  "filename": "Безымянный 4.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.534Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.534Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda2941f"
+  },
+  "size": 413920,
+  "path": "http://api.atomic.ru.com/uploads/65e293c2-5d75-4bd8-9665-4fd15ed51004/3d5f1bb4-715b-4b22-9cb2-b263792b30d3-Безымянный 1.jpg",
+  "filename": "Безымянный 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.598Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.598Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29420"
+  },
+  "size": 432629,
+  "path": "http://api.atomic.ru.com/uploads/ee81fb2c-30fc-4b6b-9b88-c42d41273a90/ed5bc1fc-1111-433e-846c-a1a4cf462094-Безымянный 2.jpg",
+  "filename": "Безымянный 2.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.658Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.658Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29421"
+  },
+  "size": 408489,
+  "path": "http://api.atomic.ru.com/uploads/db654d08-2102-425c-a37c-eae02f98cf1c/ee7e9afa-75c7-46a0-9dd8-27c6086e21a3-Безымянный 3.jpg",
+  "filename": "Безымянный 3.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.721Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.721Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29422"
+  },
+  "size": 578504,
+  "path": "http://api.atomic.ru.com/uploads/cca9de48-7480-4795-af42-2a86d7dee225/d3a072be-c808-450c-9fb2-801037a7a151-Безымянный 5.jpg",
+  "filename": "Безымянный 5.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.788Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.788Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29423"
+  },
+  "size": 87297,
+  "path": "http://api.atomic.ru.com/uploads/78efa6c0-fa2a-4fb0-a285-e04948b17c92/93bd6478-d576-438b-abfb-f34152961624-Безымянный 6.jpg",
+  "filename": "Безымянный 6.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.853Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29424"
+  },
+  "size": 867452,
+  "path": "http://api.atomic.ru.com/uploads/fb0ac2d3-48b6-424d-9d57-c1fc3c75a949/ec40657a-97ff-4c5e-ae05-c968784c3323-Безымянный 8.jpg",
+  "filename": "Безымянный 8.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.913Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.913Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c75724336bbda29425"
+  },
+  "size": 462934,
+  "path": "http://api.atomic.ru.com/uploads/df9e0657-85fb-40a9-8071-e9fe15e5bc8f/b2edfd87-2628-4554-839c-18f37b4a1c3f-Безымянный 9.jpg",
+  "filename": "Безымянный 9.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:27.972Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:27.972Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c85724336bbda29426"
+  },
+  "size": 624315,
+  "path": "http://api.atomic.ru.com/uploads/eb57c19a-5b60-4aa3-9121-c540185e1787/37cc04f7-b439-458c-ae51-27ec648fde66-Безымянный 10.jpg",
+  "filename": "Безымянный 10.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:28.031Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:28.031Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c85724336bbda29427"
+  },
+  "size": 372331,
+  "path": "http://api.atomic.ru.com/uploads/6a328ee5-f02d-4e6d-9619-1384847403dd/6b6b57c3-8b9b-48f1-acc7-f124df638b65-Безымянный 11.jpg",
+  "filename": "Безымянный 11.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:28.091Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:28.091Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c85724336bbda29428"
+  },
+  "size": 204060,
+  "path": "http://api.atomic.ru.com/uploads/5a8ca1e4-1ca4-4dce-996e-7d3e6bdba9d4/b3cc6a05-1d4c-488e-916e-a37a014295a0-внешний вид 1.jpg",
+  "filename": "внешний вид 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:28.150Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:28.150Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c85724336bbda29429"
+  },
+  "size": 440417,
+  "path": "http://api.atomic.ru.com/uploads/10aa2d60-25eb-4cee-ae22-63e31862efd0/166c7493-ea06-4a3a-b538-269baf98d9e1-Безымянный 4.jpg",
+  "filename": "Безымянный 4.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:28.211Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:28.211Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601853c85724336bbda2942a"
+  },
+  "size": 216923,
+  "path": "http://api.atomic.ru.com/uploads/ebd0adc3-2a06-4ba8-a1c8-87a2526ccaf4/98584cf9-3991-483c-8e9b-73c5e785267a-схема вид сверху.jpg",
+  "filename": "схема вид сверху.jpg",
+  "createdAt": {
+    "$date": "2021-02-01T19:17:28.275Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T19:17:28.275Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad0fa364b0069f1d56c9b"
+  },
+  "size": 45849,
+  "path": "http://api.atomic.ru.com/uploads/79cd6880-2a58-4182-81cf-992bcc086c76/fef75ab8-cfc7-44cd-a412-080f48b8fb9b-Надточий Антон - сооснователь и СЕО.jpg",
+  "filename": "Надточий Антон - сооснователь и СЕО.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T16:36:10.171Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:36:10.171Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad1cc364b0069f1d56c9d"
+  },
+  "size": 47439,
+  "path": "http://api.atomic.ru.com/uploads/72b9ee7f-5339-4979-8594-8517e9c15cf5/9e126214-7a77-4480-909c-cc6e9211fdd8-Бутко Вера - сооснователь и главный архитектор.jpg",
+  "filename": "Бутко Вера - сооснователь и главный архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T16:39:40.085Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:39:40.085Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad4a4364b0069f1d56ca1"
+  },
+  "size": 22902,
+  "path": "http://api.atomic.ru.com/uploads/0b622aeb-e032-41ba-9777-0bb5d3f8f6ef/e794f611-d77b-4d2c-ab53-9ace837a0406-Раннева Юлия - ведущий архитектор.JPG",
+  "filename": "Раннева Юлия - ведущий архитектор.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T16:51:48.196Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:51:48.196Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70e364b0069f1d56ca3"
+  },
+  "size": 392388,
+  "path": "http://api.atomic.ru.com/uploads/abdaa6c2-2969-430a-8ca4-9ffad6b50107/1c9634f3-f446-4b4f-914c-391d41ee4339-28-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "filename": "28-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:06.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:06.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56ca7"
+  },
+  "size": 217066,
+  "path": "http://api.atomic.ru.com/uploads/e001590f-e117-44e3-8a05-90149464b6c6/66d51d25-06f0-429e-a87d-0535718fc00f-02-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "filename": "02-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.323Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.323Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56ca8"
+  },
+  "size": 299078,
+  "path": "http://api.atomic.ru.com/uploads/c87028a4-9208-4204-96f1-2222ae34df3f/6ed4d64f-d6df-414d-b7f9-752f2ed4d6dd-04-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "filename": "04-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.376Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.376Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56ca9"
+  },
+  "size": 198007,
+  "path": "http://api.atomic.ru.com/uploads/a5315b83-ae0c-4da4-abd2-377e675dcf37/2196002e-191e-4385-a7fa-766d941edb95-05-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "filename": "05-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.434Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.434Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56caa"
+  },
+  "size": 206359,
+  "path": "http://api.atomic.ru.com/uploads/2d8fe293-534a-4635-9539-ba3b167b18b7/61912ecf-3981-4a2a-ae96-892005b9d182-25-Atelier-PRO-2.jpg",
+  "filename": "25-Atelier-PRO-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.482Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.482Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cab"
+  },
+  "size": 206288,
+  "path": "http://api.atomic.ru.com/uploads/62250b30-ff43-454d-9878-48cbd08c0365/c13ad2fc-b7de-455f-ab1a-15f786048ff6-26-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "filename": "26-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.545Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.545Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cac"
+  },
+  "size": 352723,
+  "path": "http://api.atomic.ru.com/uploads/028e896f-2e73-4618-87f8-669c51f14308/f357f407-7758-4712-bd36-5eaa248896d8-29-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "filename": "29-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.634Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.634Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cad"
+  },
+  "size": 369735,
+  "path": "http://api.atomic.ru.com/uploads/337b0593-d113-4dc5-8a0f-128841f28a01/ff0c9119-42dd-4798-b5e6-113f5e11a804-31-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "filename": "31-Atelier-PRO_Letovo_Moscow-Dmitry-Voinov-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.691Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.691Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cae"
+  },
+  "size": 391768,
+  "path": "http://api.atomic.ru.com/uploads/4c8cf379-e2d2-4150-a2ea-7292539b435e/32071dd6-596d-4df4-a8ff-51e81ddb6b0d-34-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "filename": "34-Atelier-PRO_Letovo-Moscow_NARODIZKIY-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.747Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.747Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56caf"
+  },
+  "size": 118733,
+  "path": "http://api.atomic.ru.com/uploads/0f70200b-b98b-4c0a-852a-be06e6c49d4f/0e136a81-2a38-4121-96fe-42866a3b572e-NARODIZKIY0031.jpg",
+  "filename": "NARODIZKIY0031.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.805Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.805Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cb0"
+  },
+  "size": 106181,
+  "path": "http://api.atomic.ru.com/uploads/e70faeaf-7d8d-4fcd-bafa-9e11917045e6/80340a1a-a16a-407b-9d19-f688227af87a-NARODIZKIY0046.jpg",
+  "filename": "NARODIZKIY0046.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.888Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.888Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad70f364b0069f1d56cb1"
+  },
+  "size": 198323,
+  "path": "http://api.atomic.ru.com/uploads/0dba5e38-20e3-4bf4-9e34-6974bc7622c8/fb2e37b9-b3f7-4250-97d1-060992131a57-NARODIZKIY0115.jpg",
+  "filename": "NARODIZKIY0115.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:07.956Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:07.956Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb2"
+  },
+  "size": 140485,
+  "path": "http://api.atomic.ru.com/uploads/8403bf00-3d15-4b84-8a2e-08a6d5479497/6cbbf09c-be85-44e1-91a4-ed66fe53ae11-NARODIZKIY5310.jpg",
+  "filename": "NARODIZKIY5310.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.044Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.044Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb3"
+  },
+  "size": 235303,
+  "path": "http://api.atomic.ru.com/uploads/795a45d6-b5bf-4421-956e-21f052fe9043/fd19ba3b-77a5-4548-9484-4d398619cd79-narodizkiy5376-copy-kopiya.jpg",
+  "filename": "narodizkiy5376-copy-kopiya.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.124Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.124Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb4"
+  },
+  "size": 222018,
+  "path": "http://api.atomic.ru.com/uploads/35e35128-7663-4fdb-af0c-8ef423d105ac/2ffd705a-d16d-4219-b926-345cf29fe04e-NARODIZKIY5428.jpg",
+  "filename": "NARODIZKIY5428.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.181Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.181Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb5"
+  },
+  "size": 222531,
+  "path": "http://api.atomic.ru.com/uploads/b89a462f-a473-40a9-aa8f-1e6fa5b6af69/33379b6f-e4e9-46d9-ac17-cbc9a331d576-narodizkiy5432-copy-kopiya.jpg",
+  "filename": "narodizkiy5432-copy-kopiya.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.236Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.236Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb6"
+  },
+  "size": 199415,
+  "path": "http://api.atomic.ru.com/uploads/561568ca-8c8a-4ccc-842f-0d17dab58555/d9273219-20e4-495a-bd65-d12f64613e61-NARODIZKIY6193.jpg",
+  "filename": "NARODIZKIY6193.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.306Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.306Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb7"
+  },
+  "size": 204106,
+  "path": "http://api.atomic.ru.com/uploads/befdc9f3-08a7-4467-9ef1-e8a062a87382/c0184cca-70c9-4da2-8869-2ac25960cca6-NARODIZKIY6283.jpg",
+  "filename": "NARODIZKIY6283.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.354Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.354Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb8"
+  },
+  "size": 204012,
+  "path": "http://api.atomic.ru.com/uploads/d26af667-4f1a-446b-a32d-e1eca011a6fc/148223cc-fa60-4f2f-9f85-2fc52b7b6a4d-NARODIZKIY6287.jpg",
+  "filename": "NARODIZKIY6287.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.405Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.405Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cb9"
+  },
+  "size": 155172,
+  "path": "http://api.atomic.ru.com/uploads/6b6511c3-576e-4175-80cc-32f710e27978/f04ae2fc-527f-451e-9e9a-cfeb2494de13-NARODIZKIY9576.jpg",
+  "filename": "NARODIZKIY9576.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.469Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.469Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cba"
+  },
+  "size": 145487,
+  "path": "http://api.atomic.ru.com/uploads/65a0961b-a397-4075-8b76-54c099635308/df1ebb2d-92a7-492a-bde8-f408ebc84524-NARODIZKIY9586.jpg",
+  "filename": "NARODIZKIY9586.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.526Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.526Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cbb"
+  },
+  "size": 162066,
+  "path": "http://api.atomic.ru.com/uploads/198c2159-f6d6-4f4e-8b61-f2d2785aef36/0f7539f4-ddcd-4b52-adec-02f24bb75357-NARODIZKIY9666.jpg",
+  "filename": "NARODIZKIY9666.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.573Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.573Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cbc"
+  },
+  "size": 229806,
+  "path": "http://api.atomic.ru.com/uploads/3991b06b-7bba-4583-9184-fed573e1d9be/e804b780-dd93-41ca-927c-866f0fde5c68-NARODIZKIY9984.jpg",
+  "filename": "NARODIZKIY9984.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.631Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.631Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad710364b0069f1d56cbd"
+  },
+  "size": 100812,
+  "path": "http://api.atomic.ru.com/uploads/c3ed428e-466e-4a9f-b2a5-6609d3a651cc/26f4239b-cc35-48dd-9cad-465da70fcfa6-P6290233.jpg",
+  "filename": "P6290233.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:02:08.685Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:02:08.685Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad85c364b0069f1d56cbf"
+  },
+  "size": 2533,
+  "path": "http://api.atomic.ru.com/uploads/362e2454-2878-4f40-842a-72ecda79a11e/6cc0f7e9-1de4-4d61-af55-9ad00569c2f2-logo.png",
+  "filename": "logo.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:07:40.713Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:07:40.713Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad8f5364b0069f1d56cc1"
+  },
+  "size": 43645,
+  "path": "http://api.atomic.ru.com/uploads/3f91cdca-f82a-4821-b6b1-68e2a1c7320b/a3ed3ffd-720b-4033-9e64-c87979244e0e-Фахри Михаил - главный инженер.jpg",
+  "filename": "Фахри Михаил - главный инженер.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:10:13.483Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:10:13.483Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad93f364b0069f1d56cc3"
+  },
+  "size": 44779,
+  "path": "http://api.atomic.ru.com/uploads/fc4168b8-2894-4f51-959a-92b50f5bb4a2/39ba301f-cfca-4f4c-b4c5-da71355050bc-Суворова Анна - архитектор.jpg",
+  "filename": "Суворова Анна - архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:11:27.191Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:11:27.191Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad97f364b0069f1d56cc5"
+  },
+  "size": 48491,
+  "path": "http://api.atomic.ru.com/uploads/e689095e-e698-4814-8207-24bac45966c4/f18a93ca-99c5-42cd-9870-9989cb2b41bc-Сокоолова Наталья - архитектор.jpg",
+  "filename": "Сокоолова Наталья - архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:12:31.691Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:12:31.691Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad9cb364b0069f1d56cc7"
+  },
+  "size": 46691,
+  "path": "http://api.atomic.ru.com/uploads/f2e9d300-4047-4641-8d58-d7df1d7c16a0/61f9d1c8-833d-40a1-b207-1d1298da2e21-Рачковская Ольга - ведущий архитектор.jpg",
+  "filename": "Рачковская Ольга - ведущий архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:13:47.271Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:13:47.271Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ada2e364b0069f1d56cc9"
+  },
+  "size": 45139,
+  "path": "http://api.atomic.ru.com/uploads/019c05ee-a2a5-45cc-a252-91b1da7fae0e/2a025dba-6077-4e7e-af7f-b16d8d0c643a-Калашникова Марина - архитектор.jpg",
+  "filename": "Калашникова Марина - архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:15:26.885Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:15:26.885Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ada84364b0069f1d56ccb"
+  },
+  "size": 41886,
+  "path": "http://api.atomic.ru.com/uploads/143b1000-a5be-40a0-85c9-e79865ecb39e/b9046879-d100-4971-ba00-15f2569bda60-Базунова Александра - архитектор.jpg",
+  "filename": "Базунова Александра - архитектор.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:16:52.845Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:16:52.845Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601adac7364b0069f1d56ccd"
+  },
+  "size": 39597,
+  "path": "http://api.atomic.ru.com/uploads/ee07b0be-faf3-4063-a648-163f8084c5b6/470546ee-9324-4e69-b00a-ad4077698154-Нагавицын Антон - основатель бюро.jpg",
+  "filename": "Нагавицын Антон - основатель бюро.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:17:59.432Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:17:59.432Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5d364b0069f1d56ccf"
+  },
+  "size": 503619,
+  "path": "http://api.atomic.ru.com/uploads/9887c404-5936-43f3-a344-16a7afe9a4ed/9ea90418-6595-48a8-b0d4-b4f8974d3f7f-2000-archstruktura-0cfbc178c0e6bce196757b60a25c1e49.png",
+  "filename": "2000-archstruktura-0cfbc178c0e6bce196757b60a25c1e49.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:17.807Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:17.807Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cd6"
+  },
+  "size": 128865,
+  "path": "http://api.atomic.ru.com/uploads/3df66c5f-28b3-4083-92f4-eb7611e6d6ba/ad402036-16d1-40f9-803a-0484fc856003-1000-1df6f0462f24ca6a2fe27479d3d37b42.jpg",
+  "filename": "1000-1df6f0462f24ca6a2fe27479d3d37b42.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.237Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.237Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cd7"
+  },
+  "size": 89130,
+  "path": "http://api.atomic.ru.com/uploads/6f1c79a6-bc5d-43f2-988e-704661b14e0a/d9c2adb7-e37c-4f39-8c94-5a0171ba021f-1000-archstruktura-8acb940ba4c3b3f7116f52610bee1326.jpg",
+  "filename": "1000-archstruktura-8acb940ba4c3b3f7116f52610bee1326.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.293Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.293Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cd8"
+  },
+  "size": 118979,
+  "path": "http://api.atomic.ru.com/uploads/6bdff48a-96a7-438e-840b-0c6e087bffc4/c6b36b82-f805-43e4-a662-b4d96ba23323-1000-archstruktura-47e79ea5971f3f86b13cb8477d66d20b.jpg",
+  "filename": "1000-archstruktura-47e79ea5971f3f86b13cb8477d66d20b.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.344Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.344Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cd9"
+  },
+  "size": 114931,
+  "path": "http://api.atomic.ru.com/uploads/e301b6d1-6531-44fd-874b-594118f59434/8ad5c386-c67f-40b3-b7fb-39921476ab3e-1000-archstruktura-91e1b7ba19442e693cbcd17689c13296.jpg",
+  "filename": "1000-archstruktura-91e1b7ba19442e693cbcd17689c13296.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.391Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.391Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cda"
+  },
+  "size": 319950,
+  "path": "http://api.atomic.ru.com/uploads/06a8dee2-b70f-4b0e-93c0-245839d67eb8/b5b8f939-e564-4d5a-a067-902a41039622-1000-archstruktura-569ee0be8937f84be5d72cf14f0c06e5.png",
+  "filename": "1000-archstruktura-569ee0be8937f84be5d72cf14f0c06e5.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.460Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.460Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cdb"
+  },
+  "size": 94720,
+  "path": "http://api.atomic.ru.com/uploads/92b7f274-2739-4163-b13f-c01e8942f37b/ff5f1d5c-e5dc-4045-9937-e6f90b2cf1c4-1000-archstruktura-a5cb00df1e21bd8c88cd6678805937f9.jpg",
+  "filename": "1000-archstruktura-a5cb00df1e21bd8c88cd6678805937f9.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.513Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.513Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cdc"
+  },
+  "size": 102268,
+  "path": "http://api.atomic.ru.com/uploads/d0138300-36ec-41bc-85d1-8fe8c901954f/cb176b7c-2ed7-4bf6-bedf-75c6248c00fb-1000-archstruktura-a747e25534205251b189597c6ad88f7d.jpg",
+  "filename": "1000-archstruktura-a747e25534205251b189597c6ad88f7d.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.569Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.569Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cdd"
+  },
+  "size": 337200,
+  "path": "http://api.atomic.ru.com/uploads/beb03637-6555-415f-8ccb-2ba0578920de/b87470cc-86d4-403b-9003-85f84585942d-1000-archstruktura-b7db606bfea1b51e880b9fcc5a267fff.png",
+  "filename": "1000-archstruktura-b7db606bfea1b51e880b9fcc5a267fff.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.623Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.623Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cde"
+  },
+  "size": 92574,
+  "path": "http://api.atomic.ru.com/uploads/4a5ab6bc-b14f-4fca-a5cf-fcd58c50ee18/68a4a37e-4003-47b4-bb69-82706ba3632d-1000-archstruktura-b35e25fae28588cfd237c158b318ba72.jpg",
+  "filename": "1000-archstruktura-b35e25fae28588cfd237c158b318ba72.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.677Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.677Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56cdf"
+  },
+  "size": 105081,
+  "path": "http://api.atomic.ru.com/uploads/3843b564-946e-4689-aad5-fc6ef0257ff1/fc0191de-abcb-4b70-982f-af9007e387ee-1000-archstruktura-bb13bf93a1747191e1b66eac359ff310.jpg",
+  "filename": "1000-archstruktura-bb13bf93a1747191e1b66eac359ff310.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.741Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.741Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56ce0"
+  },
+  "size": 95947,
+  "path": "http://api.atomic.ru.com/uploads/e3857659-534c-436a-b309-6b018af1645c/c158f7b8-937b-40a0-a76f-dfc73787a98c-1000-archstruktura-f26d0bc778de20ea5946194ea64a7636.jpg",
+  "filename": "1000-archstruktura-f26d0bc778de20ea5946194ea64a7636.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.789Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.789Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56ce1"
+  },
+  "size": 158316,
+  "path": "http://api.atomic.ru.com/uploads/19f4ff04-3a91-4117-9962-399b275903a4/b90f7ce1-b8cb-499f-b342-e9d4be44a1d8-1000-bd7730a128c6c50ed5cf6ffca27344fd.jpg",
+  "filename": "1000-bd7730a128c6c50ed5cf6ffca27344fd.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.852Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.852Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56ce2"
+  },
+  "size": 470352,
+  "path": "http://api.atomic.ru.com/uploads/bdfc0f82-2feb-4704-aaef-7f8fd00d6442/662369fe-0108-4cd8-a67b-7368a2afa74c-2000-archstruktura-9c219089eb01f3f82eedd2f066327d5c.png",
+  "filename": "2000-archstruktura-9c219089eb01f3f82eedd2f066327d5c.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.901Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.901Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5e364b0069f1d56ce3"
+  },
+  "size": 298515,
+  "path": "http://api.atomic.ru.com/uploads/bd09b37c-948d-49a6-aff9-372636190b28/bdbb3649-a695-40ed-9b75-2282c2c109a3-2000-archstruktura-616b821f7d5fcbc3faa6487ba995c63d.jpg",
+  "filename": "2000-archstruktura-616b821f7d5fcbc3faa6487ba995c63d.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:18.958Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:18.958Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5f364b0069f1d56ce4"
+  },
+  "size": 212925,
+  "path": "http://api.atomic.ru.com/uploads/09d3f0e4-5b81-4a7f-a329-baed817102a5/116cff92-543b-4d00-af1f-36f20a409746-2000-archstruktura-3024b424af317d63371711f439c75d25.jpg",
+  "filename": "2000-archstruktura-3024b424af317d63371711f439c75d25.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:19.019Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:19.019Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5f364b0069f1d56ce5"
+  },
+  "size": 426513,
+  "path": "http://api.atomic.ru.com/uploads/61a0f63e-f45f-42d3-9c5f-499412aa12b1/c4ea02d4-8ad8-4820-8b48-868060101d96-2000-archstruktura-760692f6124bd725c1a4f1d8b6955610.png",
+  "filename": "2000-archstruktura-760692f6124bd725c1a4f1d8b6955610.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:19.076Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:19.076Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5f364b0069f1d56ce6"
+  },
+  "size": 483496,
+  "path": "http://api.atomic.ru.com/uploads/0919ab52-c964-469c-8068-5fd73a3e188b/8dc79fc4-dbec-4f7b-bce4-0b674540fc55-2000-archstruktura-d3543e8aec5e0e6775f767e07dbfe303.png",
+  "filename": "2000-archstruktura-d3543e8aec5e0e6775f767e07dbfe303.png",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:19.132Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:19.132Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ade5f364b0069f1d56ce7"
+  },
+  "size": 267048,
+  "path": "http://api.atomic.ru.com/uploads/641d3663-f234-4afe-9c0b-94999d0c74ff/98ec3018-f37f-4202-8982-61402e5e508f-2000-archstruktura-f323a7f69390dfccdf1c753dcb2ffd39.jpg",
+  "filename": "2000-archstruktura-f323a7f69390dfccdf1c753dcb2ffd39.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T17:33:19.186Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:33:19.186Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae247364b0069f1d56ce9"
+  },
+  "size": 3387,
+  "path": "http://api.atomic.ru.com/uploads/916a4c82-0370-4836-b88a-ec7e6367c32b/c7c3befe-6a91-4a4a-8019-6b3a451187ef-лого.JPG",
+  "filename": "лого.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T17:49:59.500Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:49:59.500Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae368364b0069f1d56ceb"
+  },
+  "size": 6754,
+  "path": "http://api.atomic.ru.com/uploads/8db84a2e-f9f5-4534-8f48-9b5cdf5bd5f8/048130aa-bd3b-4150-a962-2fc57bebdfd8-Шутова Анастасия - ведущий архитектор.JPG",
+  "filename": "Шутова Анастасия - ведущий архитектор.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T17:54:48.230Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:54:48.230Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae39f364b0069f1d56ced"
+  },
+  "size": 7302,
+  "path": "http://api.atomic.ru.com/uploads/debd24ce-af33-4b6c-b83b-3d01b0e79596/04ff2cdc-77ec-491a-a199-629accfa339b-Садова Юлия - ведущий архитектор.JPG",
+  "filename": "Садова Юлия - ведущий архитектор.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T17:55:43.731Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:55:43.731Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae3f5364b0069f1d56cef"
+  },
+  "size": 5622,
+  "path": "http://api.atomic.ru.com/uploads/81ecafcf-40e3-4815-af35-29632ece53b7/886c9a5d-8126-425e-a9fe-058d348f5c9c-Волков Илья - ГАП.JPG",
+  "filename": "Волков Илья - ГАП.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T17:57:09.948Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:57:09.948Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae42e364b0069f1d56cf1"
+  },
+  "size": 22851,
+  "path": "http://api.atomic.ru.com/uploads/07d4fb5c-0a91-45b5-a598-6698854e8b8d/e2baaf4f-c66a-4fd7-8a02-5d08483b67a8-Борисов Юлий - СЕО.JPG",
+  "filename": "Борисов Юлий - СЕО.JPG",
+  "createdAt": {
+    "$date": "2021-02-03T17:58:06.642Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T17:58:06.642Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae835364b0069f1d56cf3"
+  },
+  "size": 484281,
+  "path": "http://api.atomic.ru.com/uploads/4aed08f1-66fa-4c3b-86eb-0329d21838cc/ab13b24e-4a76-41c7-ad6a-db4f4f0c0000-4f3ce5ec4b4383c68d1aba84a0e0bba6.jpg",
+  "filename": "4f3ce5ec4b4383c68d1aba84a0e0bba6.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:17.919Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:17.919Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae835364b0069f1d56cf4"
+  },
+  "size": 285259,
+  "path": "http://api.atomic.ru.com/uploads/81955926-89b7-4543-88a3-6c2d221c7cab/a212e645-71da-4f73-981d-03ee1105b018-2b6d760a1b0ef0a923f58920742fe7cd.jpg",
+  "filename": "2b6d760a1b0ef0a923f58920742fe7cd.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:17.969Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:17.969Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cf5"
+  },
+  "size": 344839,
+  "path": "http://api.atomic.ru.com/uploads/0dbe09dc-29ff-4ba7-81e6-c3f19e6dea46/7d41b0de-8113-4f24-a041-1ce66cb1956b-11afce5ad79f0f5dea7eb52a2e9272a4.jpg",
+  "filename": "11afce5ad79f0f5dea7eb52a2e9272a4.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.025Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.025Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cf6"
+  },
+  "size": 158090,
+  "path": "http://api.atomic.ru.com/uploads/02bdc911-037a-40e9-979b-cfcf1c72ae42/745ee28a-500d-4bb7-852f-990109715126-119A5913.jpg",
+  "filename": "119A5913.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.078Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.078Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cf7"
+  },
+  "size": 426433,
+  "path": "http://api.atomic.ru.com/uploads/8511a497-718a-4801-b4a1-63eeaa7622d8/b015a564-6bb2-4887-828c-2e78634c174c-790d7d1fd5aa8e7fef444be048c7de4f.jpg",
+  "filename": "790d7d1fd5aa8e7fef444be048c7de4f.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.137Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.137Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cf8"
+  },
+  "size": 71821,
+  "path": "http://api.atomic.ru.com/uploads/d5ba2d8a-bd32-4f76-8c79-1a4c1f77c855/e667e942-8087-48c9-8e72-3f5bf9fd4d1c-200828-049.jpg",
+  "filename": "200828-049.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.187Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.187Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cf9"
+  },
+  "size": 90004,
+  "path": "http://api.atomic.ru.com/uploads/8a823a9b-d18b-49e2-9f30-a2f1f0635382/57dd4951-e310-49da-a55d-43ec37b8bd72-200828-062.jpg",
+  "filename": "200828-062.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.244Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.244Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cfa"
+  },
+  "size": 62958,
+  "path": "http://api.atomic.ru.com/uploads/a729c2ed-df1e-4e8a-9c1f-861b38b6e2b1/7ba618ea-6c6f-4d95-bf0e-5418837c80af-200828-111.jpg",
+  "filename": "200828-111.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.306Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.306Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cfb"
+  },
+  "size": 34964,
+  "path": "http://api.atomic.ru.com/uploads/52af07dd-a2b8-4818-9f73-3ed71d3900c4/a684b7ea-82d0-436b-aca6-8fd5359b8784-200828-121_8YnsRkk.jpg",
+  "filename": "200828-121_8YnsRkk.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.356Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.356Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cfc"
+  },
+  "size": 133846,
+  "path": "http://api.atomic.ru.com/uploads/50953bb6-ea2c-44c8-9f06-ab4ea545abff/ced30783-86d7-4aef-b5f7-0a6d804b002d-200828-129.jpg",
+  "filename": "200828-129.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.419Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.419Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cfd"
+  },
+  "size": 36024,
+  "path": "http://api.atomic.ru.com/uploads/5fd41725-3f10-4255-9540-a9322eaf9d1d/2c7ef46a-72a0-4f9e-8bf2-8de9cc204fcf-200828-web-071_s0nTeJ8.jpg",
+  "filename": "200828-web-071_s0nTeJ8.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.475Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.475Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cfe"
+  },
+  "size": 54080,
+  "path": "http://api.atomic.ru.com/uploads/8e2e0b57-1212-400c-be91-7bb0448caa86/c6a4d4dc-7835-48ff-9f05-b8b483ad1f50-200828-web-152.jpg",
+  "filename": "200828-web-152.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.529Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.529Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56cff"
+  },
+  "size": 108392,
+  "path": "http://api.atomic.ru.com/uploads/185048b4-6731-4d79-a9b1-ad9733a224ae/b6ff9839-188b-4f75-a804-56d04b14a8d4-200828-web-159.jpg",
+  "filename": "200828-web-159.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.585Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.585Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56d00"
+  },
+  "size": 121463,
+  "path": "http://api.atomic.ru.com/uploads/7d71c3bd-443e-4494-88b6-9056788fd3a6/6018537e-28cd-4bd6-b2a6-b5d78856532a-201228-279.jpg",
+  "filename": "201228-279.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.643Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.643Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56d01"
+  },
+  "size": 107111,
+  "path": "http://api.atomic.ru.com/uploads/933b2dc2-091e-4ba7-8503-dfb48fecd518/f7a2e38c-07bf-425e-a6b9-c36b393424ad-201228-474.jpg",
+  "filename": "201228-474.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.724Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.724Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56d02"
+  },
+  "size": 32535,
+  "path": "http://api.atomic.ru.com/uploads/b33e14a6-30cc-4455-b170-13aed7b3ba7e/113d80de-3601-4b02-a4f0-fead476c2116-317243.jpg",
+  "filename": "317243.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.828Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.828Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56d03"
+  },
+  "size": 54348,
+  "path": "http://api.atomic.ru.com/uploads/1394dc46-9ba4-4b06-bb99-46de0ac43577/2c9fa04b-13b3-4d4c-b565-1c5c845529f7-329903.jpg",
+  "filename": "329903.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.897Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.897Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae836364b0069f1d56d04"
+  },
+  "size": 301820,
+  "path": "http://api.atomic.ru.com/uploads/7289a0b2-b94f-4345-8f8f-69a9d58e7f15/0ce36cd1-e7bd-42fd-92f1-cbf2cfeb7f80-arch1.jpg",
+  "filename": "arch1.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:18.964Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:18.964Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae837364b0069f1d56d05"
+  },
+  "size": 330925,
+  "path": "http://api.atomic.ru.com/uploads/27f8eacc-4538-4146-a5ed-2ee399b7448f/f86c254b-db81-41e1-905c-5c0b45488451-b2a9333f83e4e092e7aec1c462b1dfa0.jpg",
+  "filename": "b2a9333f83e4e092e7aec1c462b1dfa0.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:19.010Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:19.010Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae837364b0069f1d56d06"
+  },
+  "size": 464513,
+  "path": "http://api.atomic.ru.com/uploads/fb23ffd9-6c12-467c-843a-003c19167531/e1d3ab70-5c37-4e38-af1b-6e27c78aef7f-c03b044dacea3066c6e75aefa76f90e3.jpg",
+  "filename": "c03b044dacea3066c6e75aefa76f90e3.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:19.079Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:19.079Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae837364b0069f1d56d07"
+  },
+  "size": 126372,
+  "path": "http://api.atomic.ru.com/uploads/42ac239d-352a-434a-8464-0e4fd6cca3f2/e6044404-cc7b-4b71-b9c1-b12e021fd73a-HE6A9413.jpg",
+  "filename": "HE6A9413.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:19.136Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:19.136Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae837364b0069f1d56d08"
+  },
+  "size": 100482,
+  "path": "http://api.atomic.ru.com/uploads/e40f97b5-11c9-4888-9ad2-50eab25417ca/420f6885-01e2-4d13-8036-cd5199e691e4-photo_2020-09-18_05-54-27.jpg",
+  "filename": "photo_2020-09-18_05-54-27.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:19.189Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:19.189Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae837364b0069f1d56d09"
+  },
+  "size": 82779,
+  "path": "http://api.atomic.ru.com/uploads/11607b2f-64f9-48f5-bb9b-749976c34e72/2fb450a4-2262-437e-b1dd-419ef7902673-дс2.jpg",
+  "filename": "дс2.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:15:19.246Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:15:19.246Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ae993364b0069f1d56d0c"
+  },
+  "size": 204106,
+  "path": "http://api.atomic.ru.com/uploads/299ec927-89b1-44ff-9a05-56a7c64b6869/e788bbbc-6204-41b8-b084-3436ead35b05-NARODIZKIY6283.jpg",
+  "filename": "NARODIZKIY6283.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:21:07.279Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:21:07.279Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601aef40364b0069f1d56d0e"
+  },
+  "size": 10778,
+  "path": "http://api.atomic.ru.com/uploads/bd3712ad-3e22-4d10-ae45-323e80469e10/6eb6ce7c-a5df-42c7-9239-b756d19e160e-лого.jpg",
+  "filename": "лого.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:45:20.732Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:45:20.732Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601aefb8364b0069f1d56d11"
+  },
+  "size": 15857,
+  "path": "http://api.atomic.ru.com/uploads/7e2795b6-8da0-43d0-88ca-5ba16d5c59c3/1c6dd880-2a6e-42b5-b7c2-9f908ceadaa1-Солдатенкова Юлия.jpg",
+  "filename": "Солдатенкова Юлия.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:47:20.622Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:47:20.622Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d13"
+  },
+  "size": 73954,
+  "path": "http://api.atomic.ru.com/uploads/c55f3cd1-870c-4963-b4a5-a7bf292cb7c4/47a786a9-5f0b-4246-bcfc-d3faff148319-342411.jpg",
+  "filename": "342411.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.174Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.174Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d14"
+  },
+  "size": 99747,
+  "path": "http://api.atomic.ru.com/uploads/66ccbd32-db9a-47d2-ae92-73dec9916f52/dc81776e-a26a-453a-9bc7-c5356775442b-342370.jpg",
+  "filename": "342370.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.241Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.241Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d15"
+  },
+  "size": 315886,
+  "path": "http://api.atomic.ru.com/uploads/a591394e-fcee-4c22-865f-88883b54e899/85fa9413-ce6f-4636-945f-7bb5601bb9fc-342371.jpg",
+  "filename": "342371.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.309Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.309Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d16"
+  },
+  "size": 238892,
+  "path": "http://api.atomic.ru.com/uploads/0653d91a-b338-4cd7-a2a1-12e299515b80/8ecd0c22-397b-455d-8e3e-0e8eef43cf31-342373.jpg",
+  "filename": "342373.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.355Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.355Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d17"
+  },
+  "size": 156044,
+  "path": "http://api.atomic.ru.com/uploads/24582c44-9c19-4995-90fc-75d5e747ba64/76be32d8-7474-465a-aada-a8519159221c-342376.jpg",
+  "filename": "342376.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.435Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.435Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d18"
+  },
+  "size": 118796,
+  "path": "http://api.atomic.ru.com/uploads/2cd3eed4-3e7d-497a-ac02-038fb694481b/14842df0-1bb7-4a25-9701-509277e93a0a-342380.jpg",
+  "filename": "342380.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.535Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.535Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d19"
+  },
+  "size": 128636,
+  "path": "http://api.atomic.ru.com/uploads/7c14038f-d1eb-4f9c-8d31-2d86f40d77df/9e79b4c7-1715-4f5b-9a68-d21811da81ce-342381.jpg",
+  "filename": "342381.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.611Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.611Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d1a"
+  },
+  "size": 126276,
+  "path": "http://api.atomic.ru.com/uploads/596a4235-bfd5-405d-bda4-8d9b75ba7987/d42cef10-7a23-4833-bbd2-1df3c4b64584-342383.jpg",
+  "filename": "342383.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.696Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.696Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d1b"
+  },
+  "size": 126815,
+  "path": "http://api.atomic.ru.com/uploads/02dd1b97-7978-43f4-8796-6f90d5e2fdc2/db01ca38-7a0a-4085-b922-afc1ae3a9175-342384.jpg",
+  "filename": "342384.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.766Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.766Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d1c"
+  },
+  "size": 114849,
+  "path": "http://api.atomic.ru.com/uploads/5b044d01-2180-4f88-92c0-c235af6ff5e7/614420cf-5b2a-4b18-88f7-9e50f5a72153-342385.jpg",
+  "filename": "342385.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.839Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.839Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d1d"
+  },
+  "size": 135937,
+  "path": "http://api.atomic.ru.com/uploads/c9b26e6c-0fc4-4734-9fd8-03f938ab5de8/79c93750-33e7-4f27-8cb7-f17afc80b008-342386.jpg",
+  "filename": "342386.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.889Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.889Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af108364b0069f1d56d1e"
+  },
+  "size": 136412,
+  "path": "http://api.atomic.ru.com/uploads/e74a6a8a-2f16-4bfd-a071-e5cdbc6987ca/8dbfabbd-900c-411f-bc8f-ee1152618d43-342387.jpg",
+  "filename": "342387.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:56.949Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:56.949Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601af109364b0069f1d56d1f"
+  },
+  "size": 119843,
+  "path": "http://api.atomic.ru.com/uploads/c05de8f7-1ec0-4be0-bf29-39081a7003ff/9319adc0-4561-4ef2-b23b-307662ff9614-1802967569.jpg",
+  "filename": "1802967569.jpg",
+  "createdAt": {
+    "$date": "2021-02-03T18:52:57.005Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T18:52:57.005Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba8518ddfda7d7e08bf03"
+  },
+  "size": 30922,
+  "path": "http://api.atomic.ru.com/uploads/7aa1bf5a-1658-4629-902a-0259c5b76b3b/556ac0fe-8ab3-4589-94c1-9d190f6740f8-logo.png",
+  "filename": "logo.png",
+  "createdAt": {
+    "$date": "2021-02-04T07:54:57.393Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:54:57.393Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba9048ddfda7d7e08bf05"
+  },
+  "size": 102950,
+  "path": "http://api.atomic.ru.com/uploads/aafb6896-5260-4bc9-8e2e-9b2171c5da56/56bf2a3e-8ad5-41dc-b1a3-8e11fd6bc763-Коршунова Виктория - дизайнер.jpg",
+  "filename": "Коршунова Виктория - дизайнер.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T07:57:56.889Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:57:56.889Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba95f8ddfda7d7e08bf07"
+  },
+  "size": 256127,
+  "path": "http://api.atomic.ru.com/uploads/4c06d2ab-74ff-4063-a279-8e50dd43862b/e8175826-1b10-461b-961e-9d530ee862d5-Кудрявцев Сергей - дизайнер.jpg",
+  "filename": "Кудрявцев Сергей - дизайнер.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T07:59:27.877Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T07:59:27.877Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ba9a88ddfda7d7e08bf09"
+  },
+  "size": 159597,
+  "path": "http://api.atomic.ru.com/uploads/c41c13aa-f3cc-445e-a533-001403d4d875/16093989-9e6d-4209-afd6-607f7414f4fa-Ивановская Рая Руководитель.jpg",
+  "filename": "Ивановская Рая Руководитель.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:00:40.899Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:00:40.899Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf0b"
+  },
+  "size": 215852,
+  "path": "http://api.atomic.ru.com/uploads/efc3241f-7187-4ef0-8568-0ed34aaee426/b51a0e4a-d7a8-4a80-92f1-b22f22ea1d60-school17-img-7.jpg",
+  "filename": "school17-img-7.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.540Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.540Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf0e"
+  },
+  "size": 230065,
+  "path": "http://api.atomic.ru.com/uploads/9ef12f3d-7bf6-4dd4-9679-b014b3e754ae/16254a29-08ec-4b1c-a7a5-e36581dc8902-school17-img-3.jpg",
+  "filename": "school17-img-3.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.718Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.718Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf0f"
+  },
+  "size": 197003,
+  "path": "http://api.atomic.ru.com/uploads/c4f35075-4b7b-4d16-9977-15092ae99abf/64de5db0-0ca8-49c5-abfc-7cae5b08f340-school17-img-5.jpg",
+  "filename": "school17-img-5.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.783Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.783Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf10"
+  },
+  "size": 245397,
+  "path": "http://api.atomic.ru.com/uploads/98842523-9597-4fb6-a453-c1ffeec98503/a63a1dd8-1215-4524-b316-8e2618000153-school17-img-6.jpg",
+  "filename": "school17-img-6.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.840Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.840Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf11"
+  },
+  "size": 144238,
+  "path": "http://api.atomic.ru.com/uploads/30f5c641-7c5c-4f03-adab-de9f888f60c1/97333b39-14b3-4444-ae6a-b1c58fb7f740-school17-img-8.jpg",
+  "filename": "school17-img-8.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.902Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.902Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab078ddfda7d7e08bf12"
+  },
+  "size": 131277,
+  "path": "http://api.atomic.ru.com/uploads/2c433a23-7d99-4c13-9b2a-949834fc6986/ebb44328-6a48-4c51-be6f-884de09d392b-school17-img-9.jpg",
+  "filename": "school17-img-9.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:31.960Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:31.960Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab088ddfda7d7e08bf13"
+  },
+  "size": 157850,
+  "path": "http://api.atomic.ru.com/uploads/4fddf65a-c337-4982-bb4a-38c3d274f918/2bb348b3-58e0-46dd-9322-65719b1a0997-school17-img-13.jpg",
+  "filename": "school17-img-13.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:32.012Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:32.012Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab088ddfda7d7e08bf14"
+  },
+  "size": 177829,
+  "path": "http://api.atomic.ru.com/uploads/5e3413ef-87b5-4186-8045-9d87524df3ce/2ca383cf-c174-47c1-80d1-514e54a0ddec-school17-img-19.jpg",
+  "filename": "school17-img-19.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:32.073Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:32.073Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab088ddfda7d7e08bf15"
+  },
+  "size": 164408,
+  "path": "http://api.atomic.ru.com/uploads/09c6d4ec-790f-4a9c-af67-af1e9412d3d8/d2b849c1-aa91-421a-afd6-30436e702ad7-school17-img-24.jpg",
+  "filename": "school17-img-24.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:32.125Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:32.125Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bab088ddfda7d7e08bf16"
+  },
+  "size": 52857,
+  "path": "http://api.atomic.ru.com/uploads/ca189aad-e2c5-446c-9216-98fee954bcba/bd14bd73-78cb-4bc1-aece-8443fcf3cbd5-thumb__640_360_0_0_auto.jpg",
+  "filename": "thumb__640_360_0_0_auto.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:06:32.176Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:06:32.176Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf88ddfda7d7e08bf18"
+  },
+  "size": 279810,
+  "path": "http://api.atomic.ru.com/uploads/3dfdf1c0-d712-4ad7-87b6-a62bc3f04940/3e2c3553-9962-4836-9d9c-7bc722abe8c9-gbpoy_kbt-img-1.jpg",
+  "filename": "gbpoy_kbt-img-1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:32.937Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:32.937Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf88ddfda7d7e08bf19"
+  },
+  "size": 279607,
+  "path": "http://api.atomic.ru.com/uploads/3611b1ef-472e-4bac-b2f0-eec4735eed5f/653bb63a-1421-4960-9cd1-d5ae53c9b7f1-gbpoy_kbt-img-2.jpg",
+  "filename": "gbpoy_kbt-img-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:33Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:33Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf98ddfda7d7e08bf1a"
+  },
+  "size": 315750,
+  "path": "http://api.atomic.ru.com/uploads/81109033-b4dd-4103-a0f4-eefb1b802122/dffbb6f0-f436-4191-b5cf-be95287a3dac-gbpoy_kbt-img-3.jpg",
+  "filename": "gbpoy_kbt-img-3.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:33.054Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:33.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf98ddfda7d7e08bf1b"
+  },
+  "size": 255223,
+  "path": "http://api.atomic.ru.com/uploads/8aa44dc1-6e98-47ab-b6e8-29d276700177/e28a5ef3-9a6e-4c7d-8766-6f7aa0409676-gbpoy_kbt-img-4.jpg",
+  "filename": "gbpoy_kbt-img-4.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:33.106Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:33.106Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf98ddfda7d7e08bf1c"
+  },
+  "size": 299385,
+  "path": "http://api.atomic.ru.com/uploads/cdcf68b5-d531-42ff-a472-88be0f3f8dc1/cbeaca99-7a83-419d-978c-ea3150f43b24-gbpoy_kbt-img-5.jpg",
+  "filename": "gbpoy_kbt-img-5.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:33.160Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:33.160Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601babf98ddfda7d7e08bf1d"
+  },
+  "size": 202617,
+  "path": "http://api.atomic.ru.com/uploads/dbd4b488-2e53-4fa1-a248-3cafffecfbc8/de57276c-f36d-4a9e-ad0a-feae67775b3e-gbpoy_kbt-img-6.jpg",
+  "filename": "gbpoy_kbt-img-6.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:10:33.214Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:10:33.214Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf1f"
+  },
+  "size": 161232,
+  "path": "http://api.atomic.ru.com/uploads/1aabbef3-911c-4345-a9fc-563a9dc3e214/9ef991f3-252f-4125-ab57-f2c0399a04d2-british-img-3.jpg",
+  "filename": "british-img-3.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.401Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.401Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf20"
+  },
+  "size": 254437,
+  "path": "http://api.atomic.ru.com/uploads/e989db2d-2cc5-470b-afa5-edb334a785fa/84ecced6-2bba-4d8d-a7c4-6259ed28ffca-british-img-1.jpg",
+  "filename": "british-img-1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.459Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.459Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf21"
+  },
+  "size": 131632,
+  "path": "http://api.atomic.ru.com/uploads/52f88c12-d0eb-44a1-a1b2-11865b57eee0/ff2daae1-4902-4738-86ae-d47f3cd24aac-british-img-2.jpg",
+  "filename": "british-img-2.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.526Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.526Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf22"
+  },
+  "size": 137101,
+  "path": "http://api.atomic.ru.com/uploads/3b7af771-43b5-4ccb-86fd-ea8ac18f8eac/beddd1a4-1eab-41ce-a809-aa326a4929c0-british-img-4.jpg",
+  "filename": "british-img-4.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.580Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.580Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf23"
+  },
+  "size": 177511,
+  "path": "http://api.atomic.ru.com/uploads/4b00214c-1dff-4640-bbf6-378fb12d72b3/ddf7f4d8-e504-473f-b1cd-324a1a6a9683-british-img-5.jpg",
+  "filename": "british-img-5.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.633Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.633Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf24"
+  },
+  "size": 102321,
+  "path": "http://api.atomic.ru.com/uploads/e80b8783-6e20-4fea-ae25-cb52410335bb/4052ba72-166a-4d40-8196-c015d0b0f7e8-british-img-6.jpg",
+  "filename": "british-img-6.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.695Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.695Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf25"
+  },
+  "size": 161860,
+  "path": "http://api.atomic.ru.com/uploads/9914e90e-6d7e-47a0-b06b-a7795e3543bc/bef735b1-4330-4a69-84b5-9e3f873df6f9-british-img-7.jpg",
+  "filename": "british-img-7.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.748Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.748Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf26"
+  },
+  "size": 213996,
+  "path": "http://api.atomic.ru.com/uploads/5bd3a87a-b671-429e-bd2a-6ee25dbfb813/b2ecb030-0b91-4bdb-8649-e6d2a933da6e-british-img-8.jpg",
+  "filename": "british-img-8.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.802Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.802Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf27"
+  },
+  "size": 128602,
+  "path": "http://api.atomic.ru.com/uploads/c9edf523-f177-4cf8-a9d8-f8cab8bb3f93/2a51faf8-f304-4de1-82c6-d5ed154c5b9c-british-img-9.jpg",
+  "filename": "british-img-9.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.853Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf28"
+  },
+  "size": 170073,
+  "path": "http://api.atomic.ru.com/uploads/b1fa6da6-4e88-4d3c-860d-2640475577fe/bfd1af32-416d-4de9-8f85-f0f10a482104-british-img-10.jpg",
+  "filename": "british-img-10.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.910Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.910Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada08ddfda7d7e08bf29"
+  },
+  "size": 215412,
+  "path": "http://api.atomic.ru.com/uploads/cc49b3cf-1886-4b14-9fb0-d0be2496e3af/3a46abcd-79fe-4142-ad0c-02e32f337014-british-img-11.jpg",
+  "filename": "british-img-11.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:36.964Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:36.964Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bada18ddfda7d7e08bf2a"
+  },
+  "size": 141683,
+  "path": "http://api.atomic.ru.com/uploads/77762aea-b690-45da-994f-05f3520e2b88/56c134b9-5afd-4b0e-b1cc-24f82c6fa3fc-british-img-12.jpg",
+  "filename": "british-img-12.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T08:17:37.020Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:17:37.020Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601baebf8ddfda7d7e08bf2b"
+  },
+  "size": 30624,
+  "path": "http://api.atomic.ru.com/uploads/4a3dfbf1-ec94-47d0-a935-15978a64efff/e52427d7-96fd-4838-8e6d-6b6b9def49ba-logo.JPG",
+  "filename": "logo.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T08:22:23.844Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T08:22:23.844Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bb8cf8ddfda7d7e08bf2f"
+  },
+  "size": 5642,
+  "path": "http://api.atomic.ru.com/uploads/95b3d417-3542-4af5-8ce8-afae78436d01/9146c67b-beb3-44b2-9867-d500d9395f69-лого.jpeg",
+  "filename": "лого.jpeg",
+  "createdAt": {
+    "$date": "2021-02-04T09:05:19.591Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:05:19.591Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bb9aa8ddfda7d7e08bf31"
+  },
+  "size": 26550,
+  "path": "http://api.atomic.ru.com/uploads/0b1311b0-4f68-4bb4-9ed3-73ebc6728f57/31e0a714-6db6-480d-a2f6-c08da2ff7204-Васильев Дмитрий сооснователь и главный архитектор.JPG",
+  "filename": "Васильев Дмитрий сооснователь и главный архитектор.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T09:08:58.804Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:08:58.804Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbad78ddfda7d7e08bf33"
+  },
+  "size": 24093,
+  "path": "http://api.atomic.ru.com/uploads/48dcd2db-deda-4faa-9b2d-7637381ffcaa/570e8519-71d3-40ca-b41d-537d20899a0e-Попов Алекандр - СЕО.JPG",
+  "filename": "Попов Алекандр - СЕО.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T09:13:59.811Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:13:59.811Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbb308ddfda7d7e08bf35"
+  },
+  "size": 40899,
+  "path": "http://api.atomic.ru.com/uploads/79e6ba7a-bcf2-465c-b505-7974682b35eb/ffc9c8c1-44c7-4b94-a148-680d9ef8167d-Оначук Катерина.JPG",
+  "filename": "Оначук Катерина.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T09:15:28.810Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:15:28.810Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbb948ddfda7d7e08bf37"
+  },
+  "size": 48531,
+  "path": "http://api.atomic.ru.com/uploads/193326bc-9e12-4165-87b0-a9bbfc056830/5b90a240-757b-4132-a50f-c26f0a44a3f3-Чернова Ольга.JPG",
+  "filename": "Чернова Ольга.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T09:17:08.773Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:17:08.773Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbbed8ddfda7d7e08bf39"
+  },
+  "size": 34686,
+  "path": "http://api.atomic.ru.com/uploads/8feef93b-c342-4a32-9393-3aca83bda3c8/e58fee08-dbca-4809-882c-caec231c15f7-Столовой Александр.JPG",
+  "filename": "Столовой Александр.JPG",
+  "createdAt": {
+    "$date": "2021-02-04T09:18:37.922Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:18:37.922Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe778ddfda7d7e08bf3b"
+  },
+  "size": 168321,
+  "path": "http://api.atomic.ru.com/uploads/62cbb98c-f67b-4d1c-ab78-8ea3e4f2cf9c/99b2ea7b-256c-463e-8ba7-5e27479db726-2203-1997_img_3821_2.jpg",
+  "filename": "2203-1997_img_3821_2.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:27.799Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:27.799Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf42"
+  },
+  "size": 181708,
+  "path": "http://api.atomic.ru.com/uploads/55b92d2e-0421-4b7b-b8bc-9d646b47dcd3/56758771-db61-4d14-9271-53136ba6c5ea-1545-img_1468_0.jpg",
+  "filename": "1545-img_1468_0.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.139Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.139Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf43"
+  },
+  "size": 367376,
+  "path": "http://api.atomic.ru.com/uploads/d57cce73-e95a-409e-93cb-036f317c6af2/31769248-d10d-4378-b917-58c91831bf0a-1546-img_1553_0.jpg",
+  "filename": "1546-img_1553_0.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.291Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.291Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf44"
+  },
+  "size": 390746,
+  "path": "http://api.atomic.ru.com/uploads/ce80b5cd-3333-4e3d-8d43-d9c7cb0b5977/774ce172-4c97-4428-b2c9-2fb56d8ebec9-1547-img_1506_3.jpg",
+  "filename": "1547-img_1506_3.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.396Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.396Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf45"
+  },
+  "size": 299952,
+  "path": "http://api.atomic.ru.com/uploads/49860372-7832-4f2d-8156-796fd96a4a90/b9caa6ae-5bd8-4af5-9029-f276ad9c967a-1548-img_1529.jpg",
+  "filename": "1548-img_1529.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.488Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.488Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf46"
+  },
+  "size": 379365,
+  "path": "http://api.atomic.ru.com/uploads/03163a9b-8c3d-48e9-9175-5b0f180e79b6/5d8bed24-25b2-4aca-a702-63d24beb191a-1549-img_1563_1.jpg",
+  "filename": "1549-img_1563_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.607Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.607Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf47"
+  },
+  "size": 295688,
+  "path": "http://api.atomic.ru.com/uploads/0bb06d03-febc-4486-a597-8776a7b88c7a/50874a65-f4a4-441f-8540-d04ccaef2f7f-1551-img_1582_1.jpg",
+  "filename": "1551-img_1582_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.697Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.697Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf48"
+  },
+  "size": 324885,
+  "path": "http://api.atomic.ru.com/uploads/9779f883-33cf-4870-8009-12aebbf94f98/4554ece0-851e-461a-9165-270b74df32c8-1552-img_1615.jpg",
+  "filename": "1552-img_1615.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.753Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.753Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf49"
+  },
+  "size": 268381,
+  "path": "http://api.atomic.ru.com/uploads/bc0af302-2123-4870-9ba8-3f25693b45b5/520a247f-1a6a-4ce2-9812-4f580412f452-1554-img_1634.jpg",
+  "filename": "1554-img_1634.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.827Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.827Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf4a"
+  },
+  "size": 364908,
+  "path": "http://api.atomic.ru.com/uploads/06a2f7c6-5345-4209-ac18-09294e5066f2/12633a5a-eb1c-4525-99c8-cdf4e24a4686-1555-img_1619_1.jpg",
+  "filename": "1555-img_1619_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.890Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.890Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe798ddfda7d7e08bf4b"
+  },
+  "size": 206171,
+  "path": "http://api.atomic.ru.com/uploads/2d69fae0-0ff3-4cc2-8309-c355fd3646bc/d8c4f07a-d28b-4aae-8693-ab4a7c17d7ed-1557-img_1571.jpg",
+  "filename": "1557-img_1571.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:29.936Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:29.936Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf4c"
+  },
+  "size": 336373,
+  "path": "http://api.atomic.ru.com/uploads/c179723b-baf5-47da-9a49-144e8ccf78cf/548d9e46-5824-4696-915f-422bc442a91f-1558-img_1413_1.jpg",
+  "filename": "1558-img_1413_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.006Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.006Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf4d"
+  },
+  "size": 354692,
+  "path": "http://api.atomic.ru.com/uploads/3418981c-6ac0-4373-8f8a-c0977e7102ba/6111e26d-9a91-4350-a093-fec0e24e55ef-1559-img_1437.jpg",
+  "filename": "1559-img_1437.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.064Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.064Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf4e"
+  },
+  "size": 320076,
+  "path": "http://api.atomic.ru.com/uploads/a120aaf5-879c-4173-8de8-c1af642b8df6/2fb81073-d794-4791-a1b6-51dec1a5a0ca-1560-img_1748.jpg",
+  "filename": "1560-img_1748.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.121Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.121Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf4f"
+  },
+  "size": 339374,
+  "path": "http://api.atomic.ru.com/uploads/48460672-baaf-4267-8eb6-7c844107e74f/e6a6afe6-c82a-4a7c-a95b-7aa6ecdcaa76-1561-img_1752.jpg",
+  "filename": "1561-img_1752.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.173Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.173Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf50"
+  },
+  "size": 405538,
+  "path": "http://api.atomic.ru.com/uploads/2026cd81-9bf8-451f-853a-2b632d4032fd/521b0b0a-d6fd-4d29-83ff-b3a501e2b24b-1564-img_1533_1.jpg",
+  "filename": "1564-img_1533_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.229Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.229Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf51"
+  },
+  "size": 339188,
+  "path": "http://api.atomic.ru.com/uploads/a429abf4-49e3-4c6b-a11b-23713da76521/3469603a-35ce-48ef-8102-ee2c787c35bf-1565-img_1487_1.jpg",
+  "filename": "1565-img_1487_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.286Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.286Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf52"
+  },
+  "size": 356527,
+  "path": "http://api.atomic.ru.com/uploads/fdb0c86d-7ba2-4fb1-a9a9-4fdeb816c944/a5623c29-0ab5-4b08-b687-b21b4d3b70df-1568-img_1607.jpg",
+  "filename": "1568-img_1607.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.344Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.344Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf53"
+  },
+  "size": 324325,
+  "path": "http://api.atomic.ru.com/uploads/682c5c1d-247c-4cd0-990a-f07b9b4f1099/4b5594a7-4a1c-4017-83f4-959c86610171-1569-img_1590_1.jpg",
+  "filename": "1569-img_1590_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.429Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.429Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf54"
+  },
+  "size": 293872,
+  "path": "http://api.atomic.ru.com/uploads/036c56e3-5787-4659-946b-711fd56e6b50/f5899dac-3091-4557-aa32-a36d3ac23c91-1570-img_1710.jpg",
+  "filename": "1570-img_1710.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.498Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.498Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf55"
+  },
+  "size": 285678,
+  "path": "http://api.atomic.ru.com/uploads/84e75254-78e8-49fa-9df6-acb4e2ef5727/2641b43d-b849-4eb9-84b2-2893b8f96e05-1571-img_1683.jpg",
+  "filename": "1571-img_1683.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.549Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.549Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf56"
+  },
+  "size": 212195,
+  "path": "http://api.atomic.ru.com/uploads/0e47bb46-830b-4ec9-911e-5bcdac5dd578/e875ed4f-c342-4ebe-879b-34f0605f6149-1572-img_1716.jpg",
+  "filename": "1572-img_1716.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.615Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.615Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf57"
+  },
+  "size": 443705,
+  "path": "http://api.atomic.ru.com/uploads/1b7311a3-afa4-46f2-a091-06831e2e824e/cdea6b48-e0a7-44a8-817b-e05d77af70b3-1574-img_1728_1.jpg",
+  "filename": "1574-img_1728_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.675Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.675Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf58"
+  },
+  "size": 253856,
+  "path": "http://api.atomic.ru.com/uploads/924ce7ee-972c-4fea-8ef2-f19d757e58a9/51cbe72d-9e18-4e66-a6bc-92e58744a8f3-1575-img_1826.jpg",
+  "filename": "1575-img_1826.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.736Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.736Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf59"
+  },
+  "size": 255569,
+  "path": "http://api.atomic.ru.com/uploads/659a14a7-3fb5-44a3-9871-81fff3c2ea0a/ade2af4b-89eb-40cb-a501-9f875caa01be-1576-img_1834.jpg",
+  "filename": "1576-img_1834.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.791Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.791Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf5a"
+  },
+  "size": 368380,
+  "path": "http://api.atomic.ru.com/uploads/cbc25a44-2593-4893-8136-243e0df50580/e76fd1fe-a71c-4993-bbe3-62201809ef11-1578-img_1472_1.jpg",
+  "filename": "1578-img_1472_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.850Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.850Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf5b"
+  },
+  "size": 287194,
+  "path": "http://api.atomic.ru.com/uploads/71c7fcdf-d28f-4c1c-9048-80cb5a1d4aab/4d167cf2-e5c8-4a37-8902-a0d7b563fad5-1579-img_1761_re.jpg",
+  "filename": "1579-img_1761_re.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.904Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.904Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7a8ddfda7d7e08bf5c"
+  },
+  "size": 490457,
+  "path": "http://api.atomic.ru.com/uploads/ac7672c6-49f5-4cbe-b6bd-e398b66a966f/7b2cd236-a001-41eb-b109-bf0235dbd39a-1580-img_1760.jpg",
+  "filename": "1580-img_1760.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:30.965Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:30.965Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf5d"
+  },
+  "size": 356157,
+  "path": "http://api.atomic.ru.com/uploads/649797d4-226b-41ac-bfa4-dac6678bf8d2/e97ccb0f-9efb-48e0-b23e-ca1abdee26aa-1581-img_1765.jpg",
+  "filename": "1581-img_1765.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.045Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.045Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf5e"
+  },
+  "size": 469269,
+  "path": "http://api.atomic.ru.com/uploads/f93f0298-65a1-483b-ae55-e369f32485c4/8585bb84-9175-4708-848a-f6ebea654ecd-1582-img_1764.jpg",
+  "filename": "1582-img_1764.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.109Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.109Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf5f"
+  },
+  "size": 416216,
+  "path": "http://api.atomic.ru.com/uploads/03c532ee-cfef-4785-8df8-c77d215c2538/83e175c6-9b89-4448-b77e-626f183194b0-1583-img_1767_1.jpg",
+  "filename": "1583-img_1767_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.156Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.156Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf60"
+  },
+  "size": 301827,
+  "path": "http://api.atomic.ru.com/uploads/fdf079f1-af72-4eee-aa03-b0132b120af9/83d68112-ba94-4a59-80f5-323209e677b0-1587-a3_cover_2.jpg",
+  "filename": "1587-a3_cover_2.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.203Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.203Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf61"
+  },
+  "size": 414997,
+  "path": "http://api.atomic.ru.com/uploads/bb23a1b1-d91f-4e34-8ee9-04fae6f2c3c4/9f248ad8-d8f1-4fab-89ab-fc0dffb7fcf6-1588-a4_cover.jpg",
+  "filename": "1588-a4_cover.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.253Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.253Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf62"
+  },
+  "size": 426700,
+  "path": "http://api.atomic.ru.com/uploads/050f69e4-58a8-47c1-8265-e3afcc8ff099/ffd9ef3c-c7d0-4358-9d4c-9a5b8edeb899-1996-img_3721.jpg",
+  "filename": "1996-img_3721.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.320Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.320Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf63"
+  },
+  "size": 290610,
+  "path": "http://api.atomic.ru.com/uploads/bd90e89d-057b-41b5-a6c4-09759b56feb0/92348e6c-c9a7-4fcd-a38d-1368b5b13a93-1998-img_3801.jpg",
+  "filename": "1998-img_3801.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.371Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.371Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf64"
+  },
+  "size": 459639,
+  "path": "http://api.atomic.ru.com/uploads/aa067497-b0bc-402f-8fe9-12fcee2fd36a/39304120-5178-4c23-aa74-2c371b189172-1999-img_3715.jpg",
+  "filename": "1999-img_3715.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.426Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.426Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf65"
+  },
+  "size": 127400,
+  "path": "http://api.atomic.ru.com/uploads/944538ed-db10-4450-af2d-25993f0f9577/044b5c09-7fce-4041-adb0-ef565de5a1e8-2201-1550_img_1555.jpg",
+  "filename": "2201-1550_img_1555.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.483Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.483Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf66"
+  },
+  "size": 173100,
+  "path": "http://api.atomic.ru.com/uploads/763542b5-0dc8-4543-9906-41dc86839306/4f6eca76-72c8-4207-957a-3e9925044dc7-2202-1995_img_3776_1.jpg",
+  "filename": "2202-1995_img_3776_1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.537Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.537Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbe7b8ddfda7d7e08bf67"
+  },
+  "size": 188162,
+  "path": "http://api.atomic.ru.com/uploads/35a2486e-1a7c-45d9-b89e-4a44a9643e59/d663ac9a-6b89-4db3-b525-d599ed572981-2204-1994_img_3967_2.jpg",
+  "filename": "2204-1994_img_3967_2.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T09:29:31.598Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:29:31.598Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bcbbc8ddfda7d7e08bf68"
+  },
+  "size": 93299,
+  "path": "http://api.atomic.ru.com/uploads/fc625acd-28b0-443f-a0cc-2f3da247a1e8/6f22cf9d-a3e9-4ffe-be6a-813d31d9fb07-Санитарные правила_2 1.jpg",
+  "filename": "Санитарные правила_2 1.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T10:26:04.211Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T10:26:04.211Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bcf448ddfda7d7e08bf6a"
+  },
+  "size": 193174,
+  "path": "http://api.atomic.ru.com/uploads/0afc102f-8e62-4fa8-aaed-caecc92b09f7/28488c44-27ac-4196-a569-5d14bd1ef225-12.jpg",
+  "filename": "12.jpg",
+  "createdAt": {
+    "$date": "2021-02-04T10:41:08.943Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T10:41:08.943Z"
+  },
+  "__v": 0
+}]

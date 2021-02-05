@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "5fd7a2ab9766980814cf4784"
+  },
+  "permissions": [
+    "ACCESS_CLIENT",
+    "ACCESS_DASHBOARD",
+    "EDIT_ARTICLE",
+    "EDIT_PROJECT",
+    "COMMENT_ARTICLE",
+    "COMMENT_PROJECT",
+    "CHATTING",
+    "VIEW_CATEGORY",
+    "VIEW_PROJECT",
+    "VIEW_ARTICLE",
+    "ADD_ARTICLE"
+  ],
+  "name": "MODERATOR",
+  "createdAt": {
+    "$date": "2020-12-14T17:36:43.942Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-24T18:18:30.347Z"
+  },
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "5fd7a2d09766980814cf4785"
+  },
+  "permissions": [
+    "ACCESS_CLIENT",
+    "ACCESS_DASHBOARD",
+    "VIEW_USER",
+    "VIEW_CATEGORY",
+    "VIEW_ARTICLE",
+    "VIEW_PROJECT",
+    "VIEW_TICKET",
+    "VIEW_ROLE",
+    "ADD_USER",
+    "ADD_CATEGORY",
+    "ADD_ARTICLE",
+    "ADD_PROJECT",
+    "EDIT_USER",
+    "EDIT_CATEGORY",
+    "EDIT_ARTICLE",
+    "EDIT_PROJECT",
+    "DELETE_USER",
+    "DELETE_CATEGORY",
+    "DELETE_ARTICLE",
+    "DELETE_PROJECT",
+    "COMMENT_ARTICLE",
+    "COMMENT_PROJECT",
+    "CHATTING"
+  ],
+  "name": "ADMIN",
+  "createdAt": {
+    "$date": "2020-12-14T17:37:20.769Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-14T17:37:20.769Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fd7a2e79766980814cf4786"
+  },
+  "permissions": [
+    "ACCESS_CLIENT",
+    "ADD_PROJECT",
+    "EDIT_PROJECT",
+    "DELETE_PROJECT",
+    "COMMENT_ARTICLE",
+    "COMMENT_PROJECT",
+    "CHATTING"
+  ],
+  "name": "USER",
+  "createdAt": {
+    "$date": "2020-12-14T17:37:43.993Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-27T16:21:23.737Z"
+  },
+  "__v": 0
+}]
