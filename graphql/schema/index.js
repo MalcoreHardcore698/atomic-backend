@@ -18,6 +18,11 @@ export default gql`
     CLOSED
   }
 
+  enum StatusTicket {
+    OPENED
+    CLOSED
+  }
+
   enum StatusMessageType {
     READED
     UNREADED
@@ -149,6 +154,16 @@ export default gql`
     createdAt: String!
   }
 
+  type TicketMessage {
+    id: ID!
+    user: User!
+    ticket: Ticket!
+    text: String!
+    type: StatusMessageType!
+    updatedAt: String!
+    createdAt: String!
+  }
+
   type Role {
     id: ID!
     name: String!
@@ -228,6 +243,18 @@ export default gql`
     user: User!
     article: Article!
     text: String!
+    updatedAt: String!
+    createdAt: String!
+  }
+
+  type Ticket {
+    id: ID!
+    title: String!
+    author: User!
+    counsellor: User!
+    messages: [TicketMessage]!
+    category: Category!
+    status: StatusTicket!
     updatedAt: String!
     createdAt: String!
   }
@@ -322,6 +349,13 @@ export default gql`
     text: String!
   }
 
+  input TicketCreateInput {
+    title: String!
+    author: String!
+    counsellor: String!
+    category: ID!
+  }
+
   input UserUpdateInput {
     name: String
     about: String
@@ -387,6 +421,15 @@ export default gql`
     status: PostStatus
   }
 
+  input TicketUpdateInput {
+    title: String
+    author: String
+    counsellor: String
+    messages: [ID]
+    category: ID
+    status: StatusTicket
+  }
+
   input CommentUpdateInput {
     article: ID
     text: String
@@ -405,7 +448,7 @@ export default gql`
     ): [User]!
     getFiles(offset: Int, limit: Int, search: String): [File]!
     getImages(offset: Int, limit: Int, search: String): [Image]!
-    getCategories(offset: Int, limit: Int, search: String): [Category]!
+    getCategories(offset: Int, limit: Int, type: CategoryType, search: String): [Category]!
     getCategoryTypes: [CategoryType]!
     getProjects(
       offset: Int
@@ -416,6 +459,7 @@ export default gql`
       member: String
       status: PostStatus
     ): [Project]!
+    getTickets(offset: Int, limit: Int, search: String): [Ticket]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
     getArticles(offset: Int, limit: Int, search: String, status: PostStatus): [Article]!
     getComments(offset: Int, limit: Int, search: String, id: ID!): [Comment]!
@@ -435,6 +479,7 @@ export default gql`
     getArticle(id: ID!): Article
     getProject(id: ID!): Project
     getCategory(id: ID!): Category
+    getTicket(id: ID!): Ticket
 
     checkUser(search: String!): Result!
   }
@@ -455,6 +500,7 @@ export default gql`
     createArticle(input: ArticleCreateInput!, status: PostStatus): [Article]!
     createProject(input: ProjectCreateInput!, status: PostStatus): [Project]!
     createComment(input: CommentCreateInput!): [Comment]!
+    createTicket(input: TicketCreateInput!): [Ticket]!
 
     updateClientUser(input: UserUpdateInput!): User!
     updateUser(email: String!, input: UserUpdateInput!): [User]!
@@ -465,6 +511,7 @@ export default gql`
     updateArticle(id: ID!, input: ArticleUpdateInput!, status: PostStatus): [Article]!
     updateProject(id: ID!, input: ProjectUpdateInput!, status: PostStatus): [Project]!
     updateComment(id: ID!, input: CommentUpdateInput!): [Comment]!
+    updateTicket(id: ID!, input: TicketUpdateInput!): [Ticket]!
 
     deleteFile(id: ID!): Boolean!
     deleteImage(id: ID!): Boolean!
@@ -473,14 +520,18 @@ export default gql`
     deleteCategory(id: ID!): [Category]!
     deleteArticle(id: ID!, status: PostStatus): [Article]!
     deleteProject(id: ID!, status: PostStatus): [Project]!
+    deleteUserFolder(id: ID!): [Folder]!
     deleteComment(id: ID!): [Comment]!
+    deleteTicket(id: ID!): [Ticket]!
 
     likeProject(id: ID!): User!
-    deleteUserFolder(id: ID!): [Folder]!
+
     addUserFolder(name: String!): [Folder]!
     addUserChat(recipient: String!): Boolean
     addUserProject(project: ID!, folder: ID!): Boolean
+
     sendMessage(recipient: String!, text: String!): [Message]!
+    sendTicketMessage(ticket: ID!, recipient: String!, text: String!): [TicketMessage]!
   }
 
   type Subscription {

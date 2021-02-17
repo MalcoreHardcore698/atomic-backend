@@ -418,7 +418,12 @@ export default {
 
         if (!chat) return []
 
-        const message = await MessageModel.create({ chat, user: user.id, text, type: UNREADED })
+        const message = await MessageModel.create({
+          text,
+          chat: chat.id,
+          user: user.id,
+          type: UNREADED
+        })
         chat.messages = [...chat.messages, message.id]
         await chat.save()
 

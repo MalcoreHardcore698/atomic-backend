@@ -6,6 +6,7 @@ import Category from './Category'
 import Article from './Article'
 import Project from './Project'
 import Comment from './Comment'
+import Ticket from './Ticket'
 import UserChat from './UserChat'
 import Chat from './Chat'
 
@@ -192,6 +193,27 @@ module.exports = {
       return await UserModel.findById(user)
     }
   },
+  Ticket: {
+    author: async ({ author }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(author)
+    },
+    counsellor: async ({ counsellor }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(counsellor)
+    },
+    category: async ({ category }, args, { models: { CategoryModel } }) => {
+      return await CategoryModel.findById(category)
+    },
+    messages: async ({ messages }, args, { models: { MessageModel } }) => {
+      const result = []
+
+      for (let id of messages) {
+        const message = await MessageModel.findById(id)
+        if (message) result.push(message)
+      }
+
+      return result
+    }
+  },
   Query: {
     ...Role.Query,
     ...User.Query,
@@ -200,6 +222,7 @@ module.exports = {
     ...Category.Query,
     ...Article.Query,
     ...Project.Query,
+    ...Ticket.Query,
     ...UserChat.Query,
     ...Chat.Query,
     getChatTypes: () => CHAT_TYPES,
@@ -218,6 +241,7 @@ module.exports = {
     ...Article.Mutation,
     ...Project.Mutation,
     ...Comment.Mutation,
+    ...Ticket.Mutation,
     ...UserChat.Mutation,
     ...Chat.Mutation
   },

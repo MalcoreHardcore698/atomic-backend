@@ -3,9 +3,12 @@ import { CATEGORY_NOT_FOUND, CATEGORY_NOT_EMPTY } from '../../../enums/states/er
 export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
+      const search = args.search ? { $text: { $search: args.search } } : {}
+      const type = args.type ? { type: args.type } : {}
+
       try {
         if (args.offset >= 0 && args.limit >= 0) {
-          return await CategoryModel.find()
+          return await CategoryModel.find({ ...type, ...search })
             .sort({
               createdAt: -1
             })
@@ -13,11 +16,11 @@ export default {
             .limit(args.limit)
         }
         if (args.search) {
-          return await CategoryModel.find({ $text: { $search: args.search } }).sort({
+          return await CategoryModel.find({ ...type, ...search }).sort({
             createdAt: -1
           })
         }
-        return await CategoryModel.find().sort({ createdAt: -1 })
+        return await CategoryModel.find({ ...type, ...search }).sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)
       }

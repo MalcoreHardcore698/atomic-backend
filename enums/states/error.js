@@ -3,6 +3,7 @@ export const USER_NOT_FOUND = 'Рользователь не найден!'
 export const ARTICLE_NOT_FOUND = 'Статья не найдена!'
 export const PROJECT_NOT_FOUND = 'Проект не найден!'
 export const CATEGORY_NOT_FOUND = 'Категория не найдена!'
+export const TICKET_NOT_FOUND = 'Обращение не найдено!'
 
 export const ROLE_NOT_EMPTY = 'Роль не может быть пустой'
 export const ARTICLE_NOT_EMPTY = 'Статься не может быть пустой'
@@ -10,6 +11,7 @@ export const PROJECT_NOT_EMPTY = 'Проект не может быть пуст
 export const COMMENT_NOT_EMPTY = 'Коммент не может быть пустым'
 export const USER_NOT_EMPTY = 'Пользователь не может быть пустым'
 export const CATEGORY_NOT_EMPTY = 'Категория не может быть пустой'
+export const TICKET_NOT_EMPTY = 'Обращение не может быть пустым'
 
 export const ROLE_DELETED = 'Роль успешно удалена'
 export const ARTICLE_DELETED = 'Статсья успешно удалена'
@@ -37,6 +39,7 @@ export default [
   ARTICLE_NOT_FOUND,
   PROJECT_NOT_FOUND,
   CATEGORY_NOT_FOUND,
+  TICKET_NOT_FOUND,
 
   ROLE_NOT_EMPTY,
   ARTICLE_NOT_EMPTY,
@@ -44,6 +47,7 @@ export default [
   COMMENT_NOT_EMPTY,
   USER_NOT_EMPTY,
   CATEGORY_NOT_EMPTY,
+  TICKET_NOT_EMPTY,
 
   ROLE_DELETED,
   ARTICLE_DELETED,
