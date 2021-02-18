@@ -1,6 +1,6 @@
 import { TICKET_NOT_EMPTY, TICKET_NOT_FOUND } from '../../../enums/states/error'
 import { UNREADED } from '../../../enums/states/message'
-import { OPENED } from '../../../enums/states/chat'
+import { OPENED, CLOSED } from '../../../enums/states/chat'
 
 export default {
   Query: {
@@ -41,7 +41,11 @@ export default {
     }
   },
   Mutation: {
-    createTicket: async (_, { input }, { models: { UserModel, TicketModel } }) => {
+    createTicket: async (
+      _,
+      { input },
+      { models: { UserModel, TicketModel, TicketMessageModel } }
+    ) => {
       if (input.title.trim() === '') {
         return new Error(TICKET_NOT_EMPTY)
       }
@@ -50,31 +54,59 @@ export default {
       const counsellor = await UserModel.findOne({ email: input.counsellor })
 
       if (author && counsellor) {
-        await TicketModel.create({
+        const ticket = await TicketModel.create({
           ...input,
           author: author.id,
           counsellor: counsellor.id,
           status: OPENED
         })
+
+        if (input.message) {
+          const message = await TicketMessageModel.create({
+            user: author.id,
+            ticket: ticket.id,
+            text: input.message,
+            type: UNREADED
+          })
+
+          if (message) {
+            ticket.messages = [message.id]
+            await ticket.save()
+          }
+        }
       }
 
       return await TicketModel.find().sort({ createdAt: -1 })
     },
-    updateTicket: async (_, { id, input }, { models: { UserModel, TicketModel } }) => {
-      if (input.body.trim() === '') {
-        throw new Error(TICKET_NOT_EMPTY)
-      }
-
+    updateTicket: async (
+      _,
+      { id, input },
+      { models: { UserModel, TicketModel, TicketMessageModel } }
+    ) => {
       const ticket = await TicketModel.findById(id)
       const author = await UserModel.findOne({ email: input.email })
       const counsellor = await UserModel.findOne({ email: input.counsellor })
 
-      if (ticket) {
+      if (author && counsellor) {
         ticket.title = input.title || ticket.title
         ticket.author = author?.id || ticket.author
         ticket.counsellor = counsellor?.id || ticket.counsellor
         ticket.category = input.category || ticket.category
         ticket.status = input.status || ticket.status
+
+        if (input.message && ticket.messages.length === 0) {
+          const message = await TicketMessageModel.create({
+            user: author.id,
+            ticket: ticket.id,
+            text: input.message,
+            type: UNREADED
+          })
+
+          if (message) {
+            ticket.messages = [message.id]
+          }
+        }
+
         await ticket.save()
       }
 
@@ -106,11 +138,27 @@ export default {
 
       return []
     },
-    deleteTicket: async (_, { id }, { models: { TicketModel } }) => {
+    deleteTicket: async (_, { id }, { models: { TicketModel, TicketMessageModel } }) => {
       try {
         const ticket = await TicketModel.findById(id)
+
         await ticket.delete()
+        for (let message of ticket.messages) {
+          const candidate = await TicketMessageModel.findById(message)
+          await candidate.delete()
+        }
+
         return await TicketModel.find().sort({ createdAt: -1 })
+      } catch (err) {
+        throw new Error(err)
+      }
+    },
+    closeTicket: async (_, { id }, { models: { TicketModel } }) => {
+      try {
+        const ticket = await TicketModel.findById(id)
+        ticket.status = CLOSED
+        await ticket.save()
+        return ticket
       } catch (err) {
         throw new Error(err)
       }

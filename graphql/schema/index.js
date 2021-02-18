@@ -351,6 +351,7 @@ export default gql`
 
   input TicketCreateInput {
     title: String!
+    message: String!
     author: String!
     counsellor: String!
     category: ID!
@@ -423,6 +424,7 @@ export default gql`
 
   input TicketUpdateInput {
     title: String
+    message: String
     author: String
     counsellor: String
     messages: [ID]
@@ -532,6 +534,8 @@ export default gql`
 
     sendMessage(recipient: String!, text: String!): [Message]!
     sendTicketMessage(ticket: ID!, recipient: String!, text: String!): [TicketMessage]!
+
+    closeTicket(id: ID!): Ticket!
   }
 
   type Subscription {

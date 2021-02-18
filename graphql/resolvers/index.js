@@ -193,6 +193,14 @@ module.exports = {
       return await UserModel.findById(user)
     }
   },
+  TicketMessage: {
+    ticket: async ({ ticket }, args, { models: { TicketModel } }) => {
+      return await TicketModel.findById(ticket)
+    },
+    user: async ({ user }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(user)
+    }
+  },
   Ticket: {
     author: async ({ author }, args, { models: { UserModel } }) => {
       return await UserModel.findById(author)
@@ -203,11 +211,11 @@ module.exports = {
     category: async ({ category }, args, { models: { CategoryModel } }) => {
       return await CategoryModel.findById(category)
     },
-    messages: async ({ messages }, args, { models: { MessageModel } }) => {
+    messages: async ({ messages }, args, { models: { TicketMessageModel } }) => {
       const result = []
 
       for (let id of messages) {
-        const message = await MessageModel.findById(id)
+        const message = await TicketMessageModel.findById(id)
         if (message) result.push(message)
       }
 
