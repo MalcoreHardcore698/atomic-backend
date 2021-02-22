@@ -357,6 +357,12 @@ export default gql`
     category: ID!
   }
 
+  input UserTicketCreateInput {
+    title: String!
+    message: String!
+    category: ID!
+  }
+
   input UserUpdateInput {
     name: String
     about: String
@@ -422,12 +428,17 @@ export default gql`
     status: PostStatus
   }
 
+  input TicketMessageUpdate {
+    id: ID!
+    text: String!
+  }
+
   input TicketUpdateInput {
     title: String
     message: String
     author: String
     counsellor: String
-    messages: [ID]
+    messages: [TicketMessageUpdate]
     category: ID
     status: StatusTicket
   }
@@ -503,6 +514,7 @@ export default gql`
     createProject(input: ProjectCreateInput!, status: PostStatus): [Project]!
     createComment(input: CommentCreateInput!): [Comment]!
     createTicket(input: TicketCreateInput!): [Ticket]!
+    createUserTicket(input: UserTicketCreateInput!): Boolean
 
     updateClientUser(input: UserUpdateInput!): User!
     updateUser(email: String!, input: UserUpdateInput!): [User]!
