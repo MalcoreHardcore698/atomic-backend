@@ -178,6 +178,7 @@ export default {
 
             return {
               ...newUser._doc,
+              register: true,
               token: jwt.sign({ uid: newUser._id }, SECRET)
             }
           }
@@ -195,7 +196,6 @@ export default {
 
             return {
               ...newUser._doc,
-              register: true,
               token: jwt.sign({ uid: user._id }, SECRET)
             }
           }
@@ -427,7 +427,7 @@ export default {
         chat.messages = [...chat.messages, message.id]
         await chat.save()
 
-        return await MessageModel.find({ chat, user: user.id })
+        return await MessageModel.find({ chat: chat.id })
       }
 
       return []

@@ -27,6 +27,12 @@ export default {
         return new Error(err)
       }
     },
+    getUserTickets: async (_, args, { user, models: { TicketModel } }) => {
+      if (!user) return []
+      const userTickets = await TicketModel.find({ author: user.id, status: OPENED })
+      if (userTickets) return userTickets
+      return []
+    },
     getTicket: async (_, { id }, { models: { TicketModel } }) => {
       try {
         const ticket = await TicketModel.findById(id)
@@ -158,8 +164,8 @@ export default {
     },
     sendTicketMessage: async (
       _,
-      { ticket, recipient, text },
-      { models: { UserModel, TicketModel, TicketMessageModel } }
+      { ticket, recipient, text, isClient },
+      { user, models: { UserModel, TicketModel, TicketMessageModel } }
     ) => {
       const candidate = await UserModel.findOne({ email: recipient })
 
@@ -171,7 +177,7 @@ export default {
         const message = await TicketMessageModel.create({
           text,
           ticket,
-          user: foundedTicket.counsellor,
+          user: isClient ? user.id : foundedTicket.counsellor,
           type: UNREADED
         })
         foundedTicket.messages = [...foundedTicket.messages, message.id]

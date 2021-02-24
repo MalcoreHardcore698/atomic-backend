@@ -481,6 +481,7 @@ export default gql`
     getAccountTypes: [AccountType]!
     getPermissions: [Permission]!
     getPostStatus: [PostStatus]!
+    getUserTickets: [Ticket]!
     getUserChats: [UserChat]!
     getUserMembers(email: String!): [User]!
 
@@ -545,7 +546,12 @@ export default gql`
     addUserProject(project: ID!, folder: ID!): Boolean
 
     sendMessage(recipient: String!, text: String!): [Message]!
-    sendTicketMessage(ticket: ID!, recipient: String!, text: String!): [TicketMessage]!
+    sendTicketMessage(
+      ticket: ID!
+      recipient: String!
+      text: String!
+      isClient: Boolean
+    ): [TicketMessage]!
 
     closeTicket(id: ID!): Ticket!
   }
