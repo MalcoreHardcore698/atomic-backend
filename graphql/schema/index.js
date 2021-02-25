@@ -240,9 +240,10 @@ export default gql`
 
   type Comment {
     id: ID!
-    user: User!
+    author: User!
     article: Article!
     text: String!
+    likes: [User]
     updatedAt: String!
     createdAt: String!
   }
@@ -344,11 +345,6 @@ export default gql`
     status: PostStatus!
   }
 
-  input CommentCreateInput {
-    article: ID!
-    text: String!
-  }
-
   input TicketCreateInput {
     title: String!
     message: String!
@@ -443,11 +439,6 @@ export default gql`
     status: StatusTicket
   }
 
-  input CommentUpdateInput {
-    article: ID
-    text: String
-  }
-
   type Query {
     getRoles(offset: Int, limit: Int, search: String): [Role]!
     getUsers(
@@ -475,7 +466,7 @@ export default gql`
     getTickets(offset: Int, limit: Int, search: String): [Ticket]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
     getArticles(offset: Int, limit: Int, search: String, status: PostStatus): [Article]!
-    getComments(offset: Int, limit: Int, search: String, id: ID!): [Comment]!
+    getComments(id: ID!, offset: Int, limit: Int, search: String): [Comment]!
     getChatTypes: [ChatType]!
     getStatusChatTypes: [StatusChatType]!
     getAccountTypes: [AccountType]!
@@ -513,7 +504,6 @@ export default gql`
     createCategory(input: CategoryCreateInput!): [Category]!
     createArticle(input: ArticleCreateInput!, status: PostStatus): [Article]!
     createProject(input: ProjectCreateInput!, status: PostStatus): [Project]!
-    createComment(input: CommentCreateInput!): [Comment]!
     createTicket(input: TicketCreateInput!): [Ticket]!
     createUserTicket(input: UserTicketCreateInput!): Boolean
 
@@ -522,10 +512,10 @@ export default gql`
     updateRole(id: ID!, input: RoleUpdateInput!): [Role]!
     updateFile(id: ID!, file: Upload!): File!
     updateImage(id: ID!, file: Upload!): Image!
+    updateComment(id: ID!, text: String): [Comment]!
     updateCategory(id: ID!, input: CategoryUpdateInput!): [Category]!
     updateArticle(id: ID!, input: ArticleUpdateInput!, status: PostStatus): [Article]!
     updateProject(id: ID!, input: ProjectUpdateInput!, status: PostStatus): [Project]!
-    updateComment(id: ID!, input: CommentUpdateInput!): [Comment]!
     updateTicket(id: ID!, input: TicketUpdateInput!): [Ticket]!
 
     deleteFile(id: ID!): Boolean!
@@ -540,11 +530,13 @@ export default gql`
     deleteTicket(id: ID!): [Ticket]!
 
     likeProject(id: ID!): User!
+    likeComment(comment: ID!, likedUser: String, liked: Boolean!): Comment!
 
     addUserFolder(name: String!): [Folder]!
     addUserChat(recipient: String!): Boolean
     addUserProject(project: ID!, folder: ID!): Boolean
 
+    sendComment(article: ID!, text: String!): [Comment]!
     sendMessage(recipient: String!, text: String!): [Message]!
     sendTicketMessage(
       ticket: ID!

@@ -1,37 +1,49 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
+import { getValidDocuments } from '../../../utils/functions'
+
+export async function checkValidProject({ UserModel }, article) {
+  const author = await UserModel.findById(article.author)
+
+  if (!author) {
+    await article.delete()
+    return false
+  }
+
+  return true
+}
+
+export async function getProjects({ ProjectModel, UserModel }, args) {
+  return await getValidDocuments(ProjectModel, args, { UserModel }, checkValidProject)
+}
 
 export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
+        const author = await UserModel.findOne({ email: args.author })
+        const member = await UserModel.findOne({ email: args.member })
         const status = args.status ? { status: args.status } : {}
         const category = args.category ? { category: args.category } : {}
         const search = args.search ? { $text: { $search: args.search } } : {}
+        const find = {
+          ...status,
+          ...category,
+          ...search,
+          ...(member
+            ? { $or: [{ members: { $elemMatch: { $eq: member?.id } } }, { company: member?.id }] }
+            : {}),
+          ...(author ? { author: author?.id } : {})
+        }
 
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await ProjectModel.find({ ...status, ...category, ...search })
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.author) {
-          const user = await UserModel.findOne({ email: args.author })
-          return await ProjectModel.find({ author: user.id }).sort({ createdAt: -1 })
-        }
-        if (args.member) {
-          const user = await UserModel.findOne({ email: args.member })
-          return await ProjectModel.find({
-            $or: [{ members: { $elemMatch: { $eq: user.id } } }, { company: user.id }]
-          }).sort({
-            createdAt: -1
-          })
-        }
-        return await ProjectModel.find({ ...status, ...category, ...search }).sort({
-          createdAt: -1
-        })
+        return await getProjects(
+          { ProjectModel, UserModel },
+          {
+            find,
+            skip: args.offset,
+            limit: args.limit
+          }
+        )
       } catch (err) {
         throw new Error(err)
       }
@@ -53,11 +65,9 @@ export default {
     getProject: async (_, { id }, { models: { ProjectModel } }) => {
       try {
         const project = await ProjectModel.findById(id)
-        if (project) {
-          return project
-        } else {
-          return new Error(PROJECT_NOT_FOUND)
-        }
+
+        if (project) return project
+        else return new Error(PROJECT_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }

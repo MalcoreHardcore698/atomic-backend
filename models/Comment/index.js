@@ -2,8 +2,9 @@ import { Schema, model } from 'mongoose'
 
 const CommentSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     article: { type: Schema.Types.ObjectId, ref: 'Article', required: true },
+    likes: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     text: { type: String, required: true }
   },
   {

@@ -1,24 +1,18 @@
-import ERROR from '../../../enums/states/error'
+import { getDocuments } from '../../../utils/functions'
+import { ROLE_NOT_FOUND, ROLE_NOT_EMPTY } from '../../../enums/states/error'
 
 export default {
   Query: {
     getRoles: async (_, args, { models: { RoleModel } }) => {
       try {
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await RoleModel.find()
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.search) {
-          return await RoleModel.find({ $text: { $search: args.search } }).sort({
-            createdAt: -1
-          })
-        }
-        const roles = await RoleModel.find().sort({ createdAt: -1 })
-        return roles
+        const search = args.search ? { $text: { $search: args.search } } : {}
+        const find = { ...search }
+
+        return await getDocuments(RoleModel, {
+          find,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
@@ -26,11 +20,9 @@ export default {
     getRole: async (_, { id }, { models: { RoleModel } }) => {
       try {
         const role = await RoleModel.findById(id)
-        if (role) {
-          return role
-        } else {
-          throw new Error(ERROR.ROLE_NOT_FOUND)
-        }
+
+        if (role) return role
+        else return new Error(ROLE_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }
@@ -39,7 +31,7 @@ export default {
   Mutation: {
     createRole: async (_, { input }, { models: { RoleModel } }) => {
       if (input.name.trim() === '') {
-        throw new Error(ERROR.ROLE_NOT_EMPTY)
+        throw new Error(ROLE_NOT_EMPTY)
       }
 
       await RoleModel.create(input)
@@ -48,7 +40,7 @@ export default {
     },
     updateRole: async (_, { id, input }, { models: { RoleModel } }) => {
       if (input.name.trim() === '') {
-        throw new Error(ERROR.ROLE_NOT_EMPTY)
+        throw new Error(ROLE_NOT_EMPTY)
       }
 
       const role = await RoleModel.findById(id)

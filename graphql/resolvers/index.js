@@ -193,6 +193,24 @@ module.exports = {
       return await UserModel.findById(user)
     }
   },
+  Comment: {
+    author: async ({ author }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(author)
+    },
+    article: async ({ article }, args, { models: { ArticleModel } }) => {
+      return await ArticleModel.findById(article)
+    },
+    likes: async ({ likes }, args, { models: { UserModel } }) => {
+      const result = []
+
+      for (let id of likes) {
+        const user = await UserModel.findById(id)
+        if (user) result.push(user)
+      }
+
+      return result
+    }
+  },
   TicketMessage: {
     ticket: async ({ ticket }, args, { models: { TicketModel } }) => {
       return await TicketModel.findById(ticket)
@@ -228,6 +246,7 @@ module.exports = {
     ...File.Query,
     ...Image.Query,
     ...Category.Query,
+    ...Comment.Query,
     ...Article.Query,
     ...Project.Query,
     ...Ticket.Query,

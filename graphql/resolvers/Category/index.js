@@ -1,26 +1,19 @@
+import { getDocuments } from '../../../utils/functions'
 import { CATEGORY_NOT_FOUND, CATEGORY_NOT_EMPTY } from '../../../enums/states/error'
 
 export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
-      const search = args.search ? { $text: { $search: args.search } } : {}
-      const type = args.type ? { type: args.type } : {}
-
       try {
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await CategoryModel.find({ ...type, ...search })
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.search) {
-          return await CategoryModel.find({ ...type, ...search }).sort({
-            createdAt: -1
-          })
-        }
-        return await CategoryModel.find({ ...type, ...search }).sort({ createdAt: -1 })
+        const search = args.search ? { $text: { $search: args.search } } : {}
+        const type = args.type ? { type: args.type } : {}
+        const find = { ...search, ...type }
+
+        return await getDocuments(CategoryModel, {
+          find,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
@@ -28,11 +21,9 @@ export default {
     getCategory: async (_, { id }, { models: { CategoryModel } }) => {
       try {
         const category = await CategoryModel.findById(id)
-        if (category) {
-          return category
-        } else {
-          return new Error(CATEGORY_NOT_FOUND)
-        }
+
+        if (category) return category
+        else return new Error(CATEGORY_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }

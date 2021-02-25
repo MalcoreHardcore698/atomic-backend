@@ -12,6 +12,24 @@ const SERVER_URL = NODE_ENV ? config.get('server-local-url') : config.get('serve
 const UPLOAD_DIR = config.get('upload-dir')
 const SECRET = config.get('secret')
 
+export async function getDocuments(Model, { find, sort = { createdAt: -1 }, skip, limit }) {
+  return await Model.find(find).sort(sort).skip(skip).limit(limit)
+}
+
+export async function getValidDocuments(Model, findArgs, validateModels, validateCallback) {
+  const documents = await getDocuments(Model, findArgs)
+
+  const result = []
+  for (let document of documents) {
+    const candidate = await validateCallback(validateModels, document)
+    if (candidate) {
+      result.push(document)
+    }
+  }
+
+  return result
+}
+
 export async function getUser(req) {
   const token = req.headers.authorization || ''
 

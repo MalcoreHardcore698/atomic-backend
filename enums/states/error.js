@@ -4,6 +4,9 @@ export const ARTICLE_NOT_FOUND = 'Статья не найдена!'
 export const PROJECT_NOT_FOUND = 'Проект не найден!'
 export const CATEGORY_NOT_FOUND = 'Категория не найдена!'
 export const TICKET_NOT_FOUND = 'Обращение не найдено!'
+export const COMMENT_NOT_FOUND = 'Комментарий не найжен!'
+export const IMAGE_NOT_FOUND = 'Изображение не найдено!'
+export const FILE_NOT_FOUND = 'Файл не найден!'
 
 export const ROLE_NOT_EMPTY = 'Роль не может быть пустой'
 export const ARTICLE_NOT_EMPTY = 'Статься не может быть пустой'
@@ -38,6 +41,7 @@ export default [
   USER_NOT_FOUND,
   ARTICLE_NOT_FOUND,
   PROJECT_NOT_FOUND,
+  COMMENT_NOT_FOUND,
   CATEGORY_NOT_FOUND,
   TICKET_NOT_FOUND,
 

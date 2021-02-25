@@ -1,46 +1,76 @@
+import { getValidDocuments } from '../../../utils/functions'
 import { TICKET_NOT_EMPTY, TICKET_NOT_FOUND } from '../../../enums/states/error'
-import { UNREADED } from '../../../enums/states/message'
 import { OPENED, CLOSED } from '../../../enums/states/chat'
+import { UNREADED } from '../../../enums/states/message'
+
+export async function checkValidTicket({ UserModel, CategoryModel }, ticket) {
+  const author = await UserModel.findById(ticket.author)
+  const counsellor = await UserModel.findById(ticket.counsellor)
+  const category = await CategoryModel.findById(ticket.category)
+
+  if (!author || !counsellor || !category) {
+    await ticket.delete()
+    return false
+  }
+
+  return true
+}
+
+export async function getTickets({ TicketModel, UserModel, CategoryModel }, args) {
+  return await getValidDocuments(TicketModel, args, { UserModel, CategoryModel }, checkValidTicket)
+}
 
 export default {
   Query: {
-    getTickets: async (_, args, { models: { TicketModel } }) => {
-      const search = args.search ? { $text: { $search: args.search } } : {}
-      const category = args.category ? { category: args.category } : {}
-
+    getTickets: async (_, args, { models: { TicketModel, UserModel, CategoryModel } }) => {
       try {
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await TicketModel.find({ ...category, ...search })
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.search) {
-          return await TicketModel.find({ ...category, ...search }).sort({
-            createdAt: -1
-          })
-        }
-        return await TicketModel.find({ ...category, ...search }).sort({ createdAt: -1 })
+        const search = args.search ? { $text: { $search: args.search } } : {}
+        const category = args.category ? { category: args.category } : {}
+        const find = { ...category, ...search }
+
+        return await getTickets(
+          { TicketModel, UserModel, CategoryModel },
+          {
+            find,
+            skip: args.offset,
+            limit: args.limit
+          }
+        )
       } catch (err) {
         return new Error(err)
       }
     },
-    getUserTickets: async (_, args, { user, models: { TicketModel } }) => {
+    getUserTickets: async (
+      _,
+      args,
+      { user, models: { TicketModel, UserModel, CategoryModel } }
+    ) => {
       if (!user) return []
-      const userTickets = await TicketModel.find({ author: user.id, status: OPENED })
-      if (userTickets) return userTickets
-      return []
+
+      try {
+        const search = args.search ? { $text: { $search: args.search } } : {}
+        const category = args.category ? { category: args.category } : {}
+        const find = { ...category, ...search, author: user.id, status: OPENED }
+
+        return await getTickets(
+          { TicketModel, UserModel, CategoryModel },
+          {
+            find,
+            skip: args.offset,
+            limit: args.limit
+          }
+        )
+      } catch (err) {
+        throw new Error(err)
+      }
     },
-    getTicket: async (_, { id }, { models: { TicketModel } }) => {
+    getTicket: async (_, { id }, { models: { TicketModel, UserModel, CategoryModel } }) => {
       try {
         const ticket = await TicketModel.findById(id)
-        if (ticket) {
-          return ticket
-        } else {
-          return new Error(TICKET_NOT_FOUND)
-        }
+        const candidate = await checkValidTicket({ UserModel, CategoryModel }, ticket)
+
+        if (candidate) return ticket
+        else return new Error(TICKET_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }

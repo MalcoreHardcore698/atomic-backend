@@ -1,37 +1,50 @@
+import { getValidDocuments } from '../../../utils/functions'
 import { NEW_ARTICLE } from '../../../enums/types/events'
 import { ARTICLE_NOT_FOUND, ARTICLE_NOT_EMPTY } from '../../../enums/states/error'
 
+export async function checkValidArticle({ UserModel }, article) {
+  const author = await UserModel.findById(article.author)
+
+  if (!author) {
+    await article.delete()
+    return false
+  }
+
+  return true
+}
+
+export async function getArticles({ ArticleModel, UserModel }, args) {
+  return await getValidDocuments(ArticleModel, args, { UserModel }, checkValidArticle)
+}
+
 export default {
   Query: {
-    getArticles: async (_, args, { models: { ArticleModel } }) => {
+    getArticles: async (_, args, { models: { ArticleModel, UserModel } }) => {
       try {
         const status = args.status ? { status: args.status } : {}
-        const category = args.category ? { category: args.category } : {}
         const search = args.search ? { $text: { $search: args.search } } : {}
+        const category = args.category ? { category: args.category } : {}
+        const find = { ...status, ...category, ...search }
 
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await ArticleModel.find({ ...status, ...category, ...search })
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        return await ArticleModel.find({ ...status, ...category, ...search }).sort({
-          createdAt: -1
-        })
+        return await getArticles(
+          { ArticleModel, UserModel },
+          {
+            find,
+            skip: args.offset,
+            limit: args.limit
+          }
+        )
       } catch (err) {
         throw new Error(err)
       }
     },
-    getArticle: async (_, { id }, { models: { ArticleModel } }) => {
+    getArticle: async (_, { id }, { models: { ArticleModel, UserModel, CategoryModel } }) => {
       try {
         const article = await ArticleModel.findById(id)
-        if (article) {
-          return article
-        } else {
-          return new Error(ARTICLE_NOT_FOUND)
-        }
+        const candidate = await checkValidArticle({ UserModel, CategoryModel }, article)
+
+        if (candidate) return article
+        else return new Error(ARTICLE_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }

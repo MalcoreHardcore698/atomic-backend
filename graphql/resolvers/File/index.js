@@ -1,23 +1,18 @@
-import ERROR from '../../../enums/states/error'
+import { FILE_NOT_FOUND } from '../../../enums/states/error'
+import { getDocuments } from '../../../utils/functions'
 
 export default {
   Query: {
     getFiles: async (_, args, { models: { FileModel } }) => {
       try {
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await FileModel.find()
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.search) {
-          return await FileModel.find({ $text: { $search: args.search } }).sort({
-            createdAt: -1
-          })
-        }
-        return await FileModel.find(args).sort({ createdAt: -1 })
+        const search = args.search ? { $text: { $search: args.search } } : {}
+        const find = { ...search }
+
+        return await getDocuments(FileModel, {
+          find,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
@@ -25,11 +20,9 @@ export default {
     getFile: async (_, { id }, { models: { FileModel } }) => {
       try {
         const file = await FileModel.findById(id)
-        if (file) {
-          return file
-        } else {
-          return new Error(ERROR.FILE_NOT_FOUND)
-        }
+
+        if (file) return file
+        else return new Error(FILE_NOT_FOUND)
       } catch (err) {
         throw new Error(err)
       }
@@ -37,16 +30,24 @@ export default {
   },
   Mutation: {
     createFile: async (_, { file }, { storeUpload, models: { FileModel } }) => {
-      const doc = await storeUpload(file)
+      try {
+        const doc = await storeUpload(file)
 
-      return await FileModel.create({
-        path: doc.path,
-        size: doc.size,
-        filename: doc.filename
-      })
+        return await FileModel.create({
+          path: doc.path,
+          size: doc.size,
+          filename: doc.filename
+        })
+      } catch (err) {
+        throw new Error(err)
+      }
     },
     updateFile: async (_, { id }, { models: { FileModel } }) => {
-      return await FileModel.findById(id)
+      try {
+        return await FileModel.findById(id)
+      } catch (err) {
+        throw new Error(err)
+      }
     },
     deleteFile: async (_, { id }, { models: { FileModel } }) => {
       try {
@@ -54,8 +55,7 @@ export default {
         await file.delete()
         return true
       } catch (err) {
-        console.log(err)
-        return false
+        throw new Error(err)
       }
     }
   }
