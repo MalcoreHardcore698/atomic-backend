@@ -9,6 +9,7 @@ import Comment from './Comment'
 import Ticket from './Ticket'
 import UserChat from './UserChat'
 import Chat from './Chat'
+import DashboardActivity from './DashboardActivity'
 
 import CHAT_TYPES from '../../enums/types/chat'
 import STATUS_CHAT_TYPES from '../../enums/states/chat'
@@ -240,6 +241,11 @@ module.exports = {
       return result
     }
   },
+  DashboardActivity: {
+    user: async ({ user }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(user)
+    }
+  },
   Query: {
     ...Role.Query,
     ...User.Query,
@@ -252,12 +258,29 @@ module.exports = {
     ...Ticket.Query,
     ...UserChat.Query,
     ...Chat.Query,
+    ...DashboardActivity.Query,
     getChatTypes: () => CHAT_TYPES,
     getStatusChatTypes: () => STATUS_CHAT_TYPES,
     getCategoryTypes: () => CATEGORY_TYPES,
     getAccountTypes: () => ACCOUNT_TYPES,
     getPermissions: () => ROLE_PERMISSIONS,
-    getPostStatus: () => POST_STATUSES
+    getPostStatus: () => POST_STATUSES,
+    getDashboardStatistics: async (
+      _,
+      args,
+      { models: { UserModel, ProjectModel, ArticleModel, CategoryModel } }
+    ) => {
+      const usersCount = await UserModel.estimatedDocumentCount()
+      const projectsCount = await ProjectModel.estimatedDocumentCount()
+      const articlesCount = await ArticleModel.estimatedDocumentCount()
+      const categoriesCount = await CategoryModel.estimatedDocumentCount()
+      return {
+        usersCount,
+        projectsCount,
+        articlesCount,
+        categoriesCount
+      }
+    }
   },
   Mutation: {
     ...Role.Mutation,
@@ -270,7 +293,8 @@ module.exports = {
     ...Comment.Mutation,
     ...Ticket.Mutation,
     ...UserChat.Mutation,
-    ...Chat.Mutation
+    ...Chat.Mutation,
+    ...DashboardActivity.Mutation
   },
   Subscription: {
     ...Article.Subscription,

@@ -8,6 +8,15 @@ export default gql`
     ENTITY
   }
 
+  enum EntityType {
+    USER
+    CATEGORY
+    ARTICLE
+    PROJECT
+    TICKET
+    ROLE
+  }
+
   enum ChatType {
     PERSONAL
     GROUP
@@ -265,6 +274,23 @@ export default gql`
     message: String!
   }
 
+  type DashboardStatistics {
+    usersCount: Int!
+    projectsCount: Int!
+    articlesCount: Int!
+    categoriesCount: Int!
+  }
+
+  type DashboardActivity {
+    id: ID!
+    user: User!
+    message: String!
+    entityType: EntityType!
+    identityString: String!
+    updatedAt: String!
+    createdAt: String!
+  }
+
   input RegisterInput {
     name: String!
     account: AccountType!
@@ -485,6 +511,9 @@ export default gql`
     getProject(id: ID!): Project
     getCategory(id: ID!): Category
     getTicket(id: ID!): Ticket
+
+    getDashboardStatistics: DashboardStatistics!
+    getDashboardActivities: [DashboardActivity]!
 
     checkUser(search: String!): Result!
   }

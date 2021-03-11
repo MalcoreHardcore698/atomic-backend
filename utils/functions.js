@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 import config from 'config'
 import models from '../models'
 
-const { UserModel } = models
+const { UserModel, DashboardActivityModel } = models
 
 const NODE_ENV = process.env.NODE_ENV !== 'production'
 const SERVER_URL = NODE_ENV ? config.get('server-local-url') : config.get('server-host-url')
@@ -130,6 +130,28 @@ export async function deleteUploads(files, model) {
   for (let id of files) {
     await deleteUpload(id, model)
   }
+}
+
+export async function safeDashboardActivities(limit, sort = { createdAt: -1 }) {
+  const dashboardActivities = await DashboardActivityModel.find().sort(sort).limit(limit)
+  const dashboardActivityIdsForSafe = dashboardActivities.map(
+    (dashboardActivity) => dashboardActivity.id
+  )
+  const dashboardActivityForDelete = await DashboardActivityModel.find({
+    _id: {
+      $not: {
+        $in: dashboardActivityIdsForSafe
+      }
+    }
+  })
+  await DashboardActivityModel.deleteMany({
+    _id: dashboardActivityForDelete.map((dashboardActivity) => dashboardActivity.id)
+  })
+}
+
+export async function createDashboardActivity(args) {
+  await DashboardActivityModel.create(args)
+  await safeDashboardActivities(10)
 }
 
 export function parseCookie(cookie, cname) {

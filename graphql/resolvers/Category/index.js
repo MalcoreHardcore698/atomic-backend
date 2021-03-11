@@ -1,5 +1,7 @@
-import { getDocuments } from '../../../utils/functions'
+import { getDocuments, createDashboardActivity } from '../../../utils/functions'
 import { CATEGORY_NOT_FOUND, CATEGORY_NOT_EMPTY } from '../../../enums/states/error'
+import * as M from '../../../enums/states/activity'
+import * as T from '../../../enums/types/entity'
 
 export default {
   Query: {
@@ -30,21 +32,35 @@ export default {
     }
   },
   Mutation: {
-    createCategory: async (_, { input }, { models: { CategoryModel } }) => {
+    createCategory: async (_, { input }, { user, models: { CategoryModel } }) => {
       if (input.name.trim() === '') {
         throw new Error(CATEGORY_NOT_EMPTY)
       }
 
-      await CategoryModel.create(input)
+      const category = await CategoryModel.create(input)
+
+      await createDashboardActivity({
+        user: user.id,
+        message: M.CREATE_CATEGORY,
+        entityType: T.CATEGORY,
+        identityString: category._id.toString()
+      })
 
       return await CategoryModel.find().sort({ createdAt: -1 })
     },
-    updateCategory: async (_, { id, input }, { models: { CategoryModel } }) => {
+    updateCategory: async (_, { id, input }, { user, models: { CategoryModel } }) => {
       if (input.name.trim() === '') {
         throw new Error(CATEGORY_NOT_EMPTY)
       }
 
       const category = await CategoryModel.findById(id)
+
+      await createDashboardActivity({
+        user: user.id,
+        message: M.UPDATE_CATEGORY,
+        entityType: T.CATEGORY,
+        identityString: category._id.toString()
+      })
 
       if (category) {
         category.name = input.name || category.name
@@ -58,10 +74,17 @@ export default {
     deleteCategory: async (
       _,
       { id },
-      { models: { CategoryModel, ArticleModel, ProjectModel } }
+      { user, models: { CategoryModel, ArticleModel, ProjectModel } }
     ) => {
       try {
         const category = await CategoryModel.findById(id)
+
+        await createDashboardActivity({
+          user: user.id,
+          message: M.DELETE_CATEGORY,
+          entityType: T.CATEGORY,
+          identityString: category._id.toString()
+        })
 
         await ArticleModel.update({ category: id }, { $unset: { category: '' } })
         await ProjectModel.update({ category: id }, { $unset: { category: '' } })

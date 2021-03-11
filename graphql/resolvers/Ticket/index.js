@@ -222,11 +222,11 @@ export default {
       try {
         const ticket = await TicketModel.findById(id)
 
-        await ticket.delete()
-        for (let message of ticket.messages) {
-          const candidate = await TicketMessageModel.findById(message)
-          await candidate.delete()
+        for (let id of ticket.messages) {
+          const message = await TicketMessageModel.findById(id)
+          await message.delete()
         }
+        await ticket.delete()
 
         return await TicketModel.find().sort({ createdAt: -1 })
       } catch (err) {

@@ -13,6 +13,7 @@ import RoleModel from './Role'
 import UserModel from './User'
 import UserChatModel from './UserChat'
 import TicketModel from './Ticket'
+import DashboardActivityModel from './DashboardActivity'
 
 module.exports = {
   ArticleModel,
@@ -29,5 +30,6 @@ module.exports = {
   TicketModel,
   RoleModel,
   UserModel,
-  UserChatModel
+  UserChatModel,
+  DashboardActivityModel
 }

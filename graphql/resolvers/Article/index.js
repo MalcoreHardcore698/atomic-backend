@@ -1,6 +1,8 @@
-import { getValidDocuments } from '../../../utils/functions'
+import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
 import { NEW_ARTICLE } from '../../../enums/types/events'
 import { ARTICLE_NOT_FOUND, ARTICLE_NOT_EMPTY } from '../../../enums/states/error'
+import * as M from '../../../enums/states/activity'
+import * as T from '../../../enums/types/entity'
 
 export async function checkValidArticle({ UserModel }, article) {
   const author = await UserModel.findById(article.author)
@@ -71,7 +73,14 @@ export default {
 
       await article.save()
 
-      pubsub.publish(NEW_ARTICLE, {
+      await createDashboardActivity({
+        user: user.id,
+        message: M.CREATE_ARTICLE,
+        entityType: T.ARTICLE,
+        identityString: article._id.toString()
+      })
+
+      await pubsub.publish(NEW_ARTICLE, {
         newArticle: article
       })
 
@@ -82,7 +91,7 @@ export default {
     updateArticle: async (
       _,
       { id, input, status },
-      { pubsub, deleteUpload, createUpload, models: { ArticleModel, ImageModel } }
+      { user, pubsub, deleteUpload, createUpload, models: { ArticleModel, ImageModel } }
     ) => {
       if (input.body.trim() === '') {
         throw new Error(ARTICLE_NOT_EMPTY)
@@ -104,7 +113,14 @@ export default {
 
         await article.save()
 
-        pubsub.publish(NEW_ARTICLE, {
+        await createDashboardActivity({
+          user: user.id,
+          message: M.UPDATE_ARTICLE,
+          entityType: T.ARTICLE,
+          identityString: article._id.toString()
+        })
+
+        await pubsub.publish(NEW_ARTICLE, {
           newArticle: article
         })
       }
@@ -116,12 +132,19 @@ export default {
     deleteArticle: async (
       _,
       { id, status },
-      { deleteUpload, models: { ArticleModel, ImageModel } }
+      { user, deleteUpload, models: { ArticleModel, ImageModel } }
     ) => {
       try {
         const article = await ArticleModel.findById(id)
 
         await deleteUpload(article.preview, ImageModel)
+
+        await createDashboardActivity({
+          user: user.id,
+          message: M.DELETE_ARTICLE,
+          entityType: T.ARTICLE,
+          identityString: article._id.toString()
+        })
 
         await article.delete()
 

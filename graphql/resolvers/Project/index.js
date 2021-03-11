@@ -1,6 +1,8 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import { getValidDocuments } from '../../../utils/functions'
+import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
+import * as M from '../../../enums/states/activity'
+import * as T from '../../../enums/types/entity'
 
 export async function checkValidProject({ UserModel }, article) {
   const author = await UserModel.findById(article.author)
@@ -95,6 +97,13 @@ export default {
         status: input.status || 'MODERATION'
       })
 
+      await createDashboardActivity({
+        user: user.id,
+        message: M.CREATE_PROJECT,
+        entityType: T.PROJECT,
+        identityString: project._id.toString()
+      })
+
       if (input.company) {
         const company = await UserModel.findOne({ email: input.company })
         if (company) project.company = company.id
@@ -119,7 +128,7 @@ export default {
 
       await project.save()
 
-      pubsub.publish(NEW_PROJECT, {
+      await pubsub.publish(NEW_PROJECT, {
         newProject: project
       })
 
@@ -131,6 +140,7 @@ export default {
       _,
       { id, input, status },
       {
+        user,
         pubsub,
         deleteUpload,
         createUpload,
@@ -143,6 +153,13 @@ export default {
       }
 
       const project = await ProjectModel.findById(id)
+
+      await createDashboardActivity({
+        user: user.id,
+        message: M.UPDATE_PROJECT,
+        entityType: T.PROJECT,
+        identityString: project._id.toString()
+      })
 
       if (project) {
         project.title = input.title || project.title
@@ -191,7 +208,7 @@ export default {
 
         await project.save()
 
-        pubsub.publish(NEW_PROJECT, {
+        await pubsub.publish(NEW_PROJECT, {
           newProject: project
         })
       }
@@ -203,10 +220,17 @@ export default {
     deleteProject: async (
       _,
       { id, status },
-      { deleteUpload, deleteUploads, models: { ProjectModel, ImageModel, FileModel } }
+      { user, deleteUpload, deleteUploads, models: { ProjectModel, ImageModel, FileModel } }
     ) => {
       try {
         const project = await ProjectModel.findById(id)
+
+        await createDashboardActivity({
+          user: user.id,
+          message: M.DELETE_PROJECT,
+          entityType: T.PROJECT,
+          identityString: project._id.toString()
+        })
 
         await deleteUpload(project.preview, ImageModel)
         await deleteUploads(project.screenshots, ImageModel)

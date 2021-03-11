@@ -2,6 +2,7 @@ import { UserInputError } from 'apollo-server-express'
 import { v4 } from 'uuid'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import { createDashboardActivity } from '../../../utils/functions'
 import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
 import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
 import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
@@ -10,6 +11,8 @@ import { PERSONAL } from '../../../enums/types/chat'
 import { OPENED } from '../../../enums/states/chat'
 import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
 import config from 'config'
+import * as M from '../../../enums/states/activity'
+import * as T from '../../../enums/types/entity'
 
 const SALT = config.get('salt')
 const SECRET = config.get('secret')
@@ -313,7 +316,11 @@ export default {
         token: jwt.sign({ uid: newUser._id }, SECRET)
       }
     },
-    createUser: async (_, { input }, { createUpload, models: { UserModel, ImageModel } }) => {
+    createUser: async (
+      _,
+      { input },
+      { user: author, createUpload, models: { UserModel, ImageModel } }
+    ) => {
       const candidate = await UserModel.findOne({
         $or: [{ email: input.email }, { phone: input.phone }]
       })
@@ -321,6 +328,13 @@ export default {
       if (!candidate) {
         const user = new UserModel({
           ...input
+        })
+
+        await createDashboardActivity({
+          user: author.id,
+          message: M.CREATE_USER,
+          entityType: T.USER,
+          identityString: user.email
         })
 
         if (input.company) {
@@ -373,7 +387,7 @@ export default {
     updateUser: async (
       _,
       { email, input },
-      { deleteUpload, createUpload, models: { UserModel, ImageModel } }
+      { user: author, deleteUpload, createUpload, models: { UserModel, ImageModel } }
     ) => {
       const user = await UserModel.findOne({ email })
 
@@ -398,6 +412,13 @@ export default {
           await deleteUpload(user.avatar, ImageModel)
           user.avatar = avatar
         }
+
+        await createDashboardActivity({
+          user: author.id,
+          message: M.UPDATE_USER,
+          entityType: T.USER,
+          identityString: user.email
+        })
 
         await user.save()
       }
@@ -515,9 +536,20 @@ export default {
 
       return user?.folders || []
     },
-    deleteUser: async (_, { email }, { deleteUpload, models: { UserModel, ImageModel } }) => {
+    deleteUser: async (
+      _,
+      { email },
+      { user: author, deleteUpload, models: { UserModel, ImageModel } }
+    ) => {
       try {
         const user = await UserModel.findOne({ email })
+
+        await createDashboardActivity({
+          user: author.id,
+          message: M.DELETE_USER,
+          entityType: T.USER,
+          identityString: user.email
+        })
 
         deleteUpload(user.avatar, ImageModel)
 
