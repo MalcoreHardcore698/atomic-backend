@@ -1,7 +1,9 @@
-import { getValidDocuments } from '../../../utils/functions'
+import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
 import { TICKET_NOT_EMPTY, TICKET_NOT_FOUND } from '../../../enums/states/error'
 import { OPENED, CLOSED } from '../../../enums/states/chat'
 import { UNREADED } from '../../../enums/states/message'
+import * as M from '../../../enums/states/activity'
+import * as T from '../../../enums/types/entity'
 
 export async function checkValidTicket({ UserModel, CategoryModel }, ticket) {
   const author = await UserModel.findById(ticket.author)
@@ -115,7 +117,7 @@ export default {
     createTicket: async (
       _,
       { input },
-      { models: { UserModel, TicketModel, TicketMessageModel } }
+      { user, models: { UserModel, TicketModel, TicketMessageModel } }
     ) => {
       if (input.title.trim() === '') {
         return new Error(TICKET_NOT_EMPTY)
@@ -130,6 +132,13 @@ export default {
           author: author.id,
           counsellor: counsellor.id,
           status: OPENED
+        })
+
+        await createDashboardActivity({
+          user: user.id,
+          message: M.CREATE_TICKET,
+          entityType: T.TICKET,
+          identityString: ticket._id.toString()
         })
 
         if (input.message) {
@@ -152,11 +161,18 @@ export default {
     updateTicket: async (
       _,
       { id, input },
-      { models: { UserModel, TicketModel, TicketMessageModel } }
+      { user, models: { UserModel, TicketModel, TicketMessageModel } }
     ) => {
       const ticket = await TicketModel.findById(id)
       const author = await UserModel.findOne({ email: input.email })
       const counsellor = await UserModel.findOne({ email: input.counsellor })
+
+      await createDashboardActivity({
+        user: user.id,
+        message: M.UPDATE_TICKET,
+        entityType: T.TICKET,
+        identityString: ticket._id.toString()
+      })
 
       ticket.title = input.title || ticket.title
       ticket.author = author?.id || ticket.author
@@ -218,9 +234,16 @@ export default {
 
       return []
     },
-    deleteTicket: async (_, { id }, { models: { TicketModel, TicketMessageModel } }) => {
+    deleteTicket: async (_, { id }, { user, models: { TicketModel, TicketMessageModel } }) => {
       try {
         const ticket = await TicketModel.findById(id)
+
+        await createDashboardActivity({
+          user: user.id,
+          message: M.DELETE_TICKET,
+          entityType: T.TICKET,
+          identityString: ticket._id.toString()
+        })
 
         for (let id of ticket.messages) {
           const message = await TicketMessageModel.findById(id)

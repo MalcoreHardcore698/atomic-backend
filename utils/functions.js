@@ -221,6 +221,7 @@ export async function getDocumentGraph(Model) {
       }
     }
   ])
+
   return Object.entries(documents[0]?.data).map(([date, count]) => ({
     count,
     createdAt: new Date(date)
