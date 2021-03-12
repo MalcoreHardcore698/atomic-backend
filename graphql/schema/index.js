@@ -274,11 +274,15 @@ export default gql`
     message: String!
   }
 
-  type DashboardStatistics {
-    usersCount: Int!
-    projectsCount: Int!
-    articlesCount: Int!
-    categoriesCount: Int!
+  type StatisticGraphItem {
+    count: Int!
+    createdAt: String!
+  }
+
+  type DashboardStatistic {
+    title: String!
+    total: Int!
+    graph: [StatisticGraphItem]!
   }
 
   type DashboardActivity {
@@ -512,7 +516,7 @@ export default gql`
     getCategory(id: ID!): Category
     getTicket(id: ID!): Ticket
 
-    getDashboardStatistics: DashboardStatistics!
+    getDashboardStatistics: [DashboardStatistic]!
     getDashboardActivities: [DashboardActivity]!
 
     checkUser(search: String!): Result!

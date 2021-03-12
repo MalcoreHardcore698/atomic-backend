@@ -1,3 +1,5 @@
+import { getDocumentGraph } from '../../utils/functions'
+
 import Role from './Role'
 import User from './User'
 import File from './File'
@@ -271,15 +273,39 @@ module.exports = {
       { models: { UserModel, ProjectModel, ArticleModel, CategoryModel } }
     ) => {
       const usersCount = await UserModel.estimatedDocumentCount()
+      const usersGraph = await getDocumentGraph(UserModel)
+
       const projectsCount = await ProjectModel.estimatedDocumentCount()
+      const projectsGraph = await getDocumentGraph(ProjectModel)
+
       const articlesCount = await ArticleModel.estimatedDocumentCount()
+      const articlesGraph = await getDocumentGraph(ArticleModel)
+
       const categoriesCount = await CategoryModel.estimatedDocumentCount()
-      return {
-        usersCount,
-        projectsCount,
-        articlesCount,
-        categoriesCount
-      }
+      const categoriesGraph = await getDocumentGraph(CategoryModel)
+
+      return [
+        {
+          title: 'Пользователи',
+          total: usersCount,
+          graph: usersGraph
+        },
+        {
+          title: 'Проекты',
+          total: projectsCount,
+          graph: projectsGraph
+        },
+        {
+          title: 'Статьи',
+          total: articlesCount,
+          graph: articlesGraph
+        },
+        {
+          title: 'Категории',
+          total: categoriesCount,
+          graph: categoriesGraph
+        }
+      ]
     }
   },
   Mutation: {

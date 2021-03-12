@@ -154,6 +154,79 @@ export async function createDashboardActivity(args) {
   await safeDashboardActivities(10)
 }
 
+export function getDateByMonth(offset = 0) {
+  const date = new Date()
+  return new Date(date.setMonth(date.getMonth() - offset))
+}
+
+export async function getDocumentGraph(Model) {
+  const monthsArray = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]
+
+  const documents = await Model.aggregate([
+    {
+      $match: {
+        createdAt: { $gte: getDateByMonth(5), $lte: getDateByMonth() }
+      }
+    },
+    {
+      $group: {
+        _id: { year_month: { $substrCP: ['$createdAt', 0, 7] } },
+        count: { $sum: 1 }
+      }
+    },
+    {
+      $sort: { '_id.year_month': 1 }
+    },
+    {
+      $project: {
+        _id: 0,
+        count: 1,
+        month_year: {
+          $concat: [
+            {
+              $arrayElemAt: [
+                monthsArray,
+                { $subtract: [{ $toInt: { $substrCP: ['$_id.year_month', 5, 2] } }, 1] }
+              ]
+            },
+            '-',
+            { $substrCP: ['$_id.year_month', 0, 4] }
+          ]
+        }
+      }
+    },
+    {
+      $group: {
+        _id: null,
+        data: { $push: { k: '$month_year', v: '$count' } }
+      }
+    },
+    {
+      $project: {
+        data: { $arrayToObject: '$data' },
+        _id: 0
+      }
+    }
+  ])
+  return Object.entries(documents[0]?.data).map(([date, count]) => ({
+    count,
+    createdAt: new Date(date)
+  }))
+}
+
 export function parseCookie(cookie, cname) {
   const name = cname + '='
   const decodedCookie = decodeURIComponent(cookie)
