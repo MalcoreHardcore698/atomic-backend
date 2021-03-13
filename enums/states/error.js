@@ -7,6 +7,7 @@ export const TICKET_NOT_FOUND = 'Обращение не найдено!'
 export const COMMENT_NOT_FOUND = 'Комментарий не найжен!'
 export const IMAGE_NOT_FOUND = 'Изображение не найдено!'
 export const FILE_NOT_FOUND = 'Файл не найден!'
+export const SETTINGS_NOT_FOUND = 'Настройки не найдены!'
 
 export const ROLE_NOT_EMPTY = 'Роль не может быть пустой'
 export const ARTICLE_NOT_EMPTY = 'Статься не может быть пустой'

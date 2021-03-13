@@ -285,6 +285,31 @@ export default gql`
     graph: [StatisticGraphItem]!
   }
 
+  type DashboardSettingsGeneral {
+    logotype: Image
+  }
+
+  type DashboardSettingsScaffold {
+    title: String
+    primary: Project
+    residues: [Project]
+    background: Image
+  }
+
+  type DashboardSettingsMeta {
+    title: String
+    description: String
+  }
+
+  type DashboardSettings {
+    id: ID!
+    general: DashboardSettingsGeneral!
+    scaffold: DashboardSettingsScaffold!
+    meta: DashboardSettingsMeta!
+    updatedAt: String!
+    createdAt: String!
+  }
+
   type DashboardActivity {
     id: ID!
     user: User!
@@ -293,6 +318,24 @@ export default gql`
     identityString: String!
     updatedAt: String!
     createdAt: String!
+  }
+
+  input DashboardSettingsGeneralInput {
+    logotype: Upload
+    logotypeSize: Int
+  }
+
+  input DashboardSettingsScaffoldInput {
+    title: String
+    primary: ID
+    residues: [ID]
+    background: Upload
+    backgroundSize: Int
+  }
+
+  input DashboardSettingsMetaInput {
+    title: String
+    description: String
   }
 
   input RegisterInput {
@@ -469,6 +512,12 @@ export default gql`
     status: StatusTicket
   }
 
+  input DashboardSettingsInput {
+    general: DashboardSettingsGeneralInput!
+    scaffold: DashboardSettingsScaffoldInput!
+    meta: DashboardSettingsMetaInput!
+  }
+
   type Query {
     getRoles(offset: Int, limit: Int, search: String): [Role]!
     getUsers(
@@ -518,6 +567,7 @@ export default gql`
 
     getDashboardStatistics: [DashboardStatistic]!
     getDashboardActivities: [DashboardActivity]!
+    getDashboardSettings: DashboardSettings!
 
     checkUser(search: String!): Result!
   }
@@ -539,6 +589,7 @@ export default gql`
     createProject(input: ProjectCreateInput!, status: PostStatus): [Project]!
     createTicket(input: TicketCreateInput!): [Ticket]!
     createUserTicket(input: UserTicketCreateInput!): Boolean
+    createDashboardSettings(input: DashboardSettingsInput!): DashboardSettings!
 
     updateClientUser(input: UserUpdateInput!): User!
     updateUser(email: String!, input: UserUpdateInput!): [User]!
@@ -550,6 +601,7 @@ export default gql`
     updateArticle(id: ID!, input: ArticleUpdateInput!, status: PostStatus): [Article]!
     updateProject(id: ID!, input: ProjectUpdateInput!, status: PostStatus): [Project]!
     updateTicket(id: ID!, input: TicketUpdateInput!): [Ticket]!
+    updateDashboardSettings(input: DashboardSettingsInput!): DashboardSettings!
 
     deleteFile(id: ID!): Boolean!
     deleteImage(id: ID!): Boolean!
@@ -561,6 +613,7 @@ export default gql`
     deleteUserFolder(id: ID!): [Folder]!
     deleteComment(id: ID!): [Comment]!
     deleteTicket(id: ID!): [Ticket]!
+    deleteDashboardSettings: Boolean!
 
     likeProject(id: ID!): User!
     likeComment(comment: ID!, likedUser: String, liked: Boolean!): Comment!

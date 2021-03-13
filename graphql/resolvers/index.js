@@ -12,6 +12,7 @@ import Ticket from './Ticket'
 import UserChat from './UserChat'
 import Chat from './Chat'
 import DashboardActivity from './DashboardActivity'
+import DashboardSettings from './DashboardSettings'
 
 import CHAT_TYPES from '../../enums/types/chat'
 import STATUS_CHAT_TYPES from '../../enums/states/chat'
@@ -248,6 +249,24 @@ module.exports = {
       return await UserModel.findById(user)
     }
   },
+  DashboardSettings: {
+    general: async ({ general }, args, { models: { ImageModel } }) => {
+      const logotype = await ImageModel.findById(general.logotype)
+      return { ...general, logotype }
+    },
+    scaffold: async ({ scaffold }, args, { models: { ProjectModel, ImageModel } }) => {
+      const primary = await ProjectModel.findById(scaffold.primary)
+      const background = await ImageModel.findById(scaffold.background)
+
+      const residues = []
+      for (let id of scaffold.residues) {
+        const project = await ProjectModel.findById(id)
+        if (project) residues.push(project)
+      }
+
+      return { ...scaffold, primary, residues, background }
+    }
+  },
   Query: {
     ...Role.Query,
     ...User.Query,
@@ -261,6 +280,7 @@ module.exports = {
     ...UserChat.Query,
     ...Chat.Query,
     ...DashboardActivity.Query,
+    ...DashboardSettings.Query,
     getChatTypes: () => CHAT_TYPES,
     getStatusChatTypes: () => STATUS_CHAT_TYPES,
     getCategoryTypes: () => CATEGORY_TYPES,
@@ -320,7 +340,8 @@ module.exports = {
     ...Ticket.Mutation,
     ...UserChat.Mutation,
     ...Chat.Mutation,
-    ...DashboardActivity.Mutation
+    ...DashboardActivity.Mutation,
+    ...DashboardSettings.Mutation
   },
   Subscription: {
     ...Article.Subscription,

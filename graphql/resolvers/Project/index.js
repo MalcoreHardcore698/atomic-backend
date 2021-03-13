@@ -184,27 +184,28 @@ export default {
         }
 
         if (input.preview) {
+          await deleteUpload(project.preview, ImageModel)
           const preview = await createUpload(input.preview, input.previewSize, ImageModel)
-          if (preview) {
-            await deleteUpload(project.preview, ImageModel)
-            project.preview = preview
-          }
+          if (preview) project.preview = preview
         }
 
-        const files = await createUploads(
-          input.files?.filter((f) => f),
-          input.fileSizes,
-          FileModel
-        )
+        if (input.files) {
+          const files = await createUploads(
+            input.files?.filter((f) => f),
+            input.fileSizes,
+            FileModel
+          )
+          if (files) project.files = files
+        }
 
-        const screenshots = await createUploads(
-          input.screenshots?.filter((f) => f),
-          input.screenshotSizes,
-          ImageModel
-        )
-
-        if (files) project.files = files
-        if (screenshots) project.screenshots = screenshots
+        if (input.screenshots) {
+          const screenshots = await createUploads(
+            input.screenshots?.filter((f) => f),
+            input.screenshotSizes,
+            ImageModel
+          )
+          if (screenshots) project.screenshots = screenshots
+        }
 
         await project.save()
 

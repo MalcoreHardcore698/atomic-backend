@@ -105,11 +105,9 @@ export default {
         article.category = input.category || article.category
         article.status = input.status || article.status || 'MODERATION'
 
+        await deleteUpload(article.preview, ImageModel)
         const preview = await createUpload(input.preview, input.previewSize, ImageModel)
-        if (preview) {
-          await deleteUpload(article.preview, ImageModel)
-          article.preview = preview
-        }
+        if (preview) article.preview = preview
 
         await article.save()
 

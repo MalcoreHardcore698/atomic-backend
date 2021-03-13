@@ -374,11 +374,9 @@ export default {
 
       if (input.password) user.password = input.password
 
+      await deleteUpload(user.avatar, ImageModel)
       const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-      if (avatar) {
-        await deleteUpload(user.avatar, ImageModel)
-        user.avatar = avatar
-      }
+      if (avatar) user.avatar = avatar
 
       await user.save()
 
@@ -407,11 +405,9 @@ export default {
 
         if (input.password) user.password = input.password
 
+        await deleteUpload(user.avatar, ImageModel)
         const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-        if (avatar) {
-          await deleteUpload(user.avatar, ImageModel)
-          user.avatar = avatar
-        }
+        if (avatar) user.avatar = avatar
 
         await createDashboardActivity({
           user: author.id,

@@ -14,6 +14,7 @@ import UserModel from './User'
 import UserChatModel from './UserChat'
 import TicketModel from './Ticket'
 import DashboardActivityModel from './DashboardActivity'
+import DashboardSettingsModel from './DashboardSettings'
 
 module.exports = {
   ArticleModel,
@@ -31,5 +32,6 @@ module.exports = {
   RoleModel,
   UserModel,
   UserChatModel,
-  DashboardActivityModel
+  DashboardActivityModel,
+  DashboardSettingsModel
 }
