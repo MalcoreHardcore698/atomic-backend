@@ -4,11 +4,11 @@ import { createDashboardActivity, getValidDocuments } from '../../../utils/funct
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 
-export async function checkValidProject({ UserModel }, article) {
-  const author = await UserModel.findById(article.author)
+export async function checkValidProject({ UserModel }, project) {
+  const author = await UserModel.findById(project.author)
 
   if (!author) {
-    await article.delete()
+    await project.delete()
     return false
   }
 
@@ -27,10 +27,15 @@ export default {
         const member = await UserModel.findOne({ email: args.member })
         const status = args.status ? { status: args.status } : {}
         const category = args.category ? { category: args.category } : {}
+
+        const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
+        const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
+
         const search = args.search ? { $text: { $search: args.search } } : {}
         const find = {
           ...status,
           ...category,
+          ...rating,
           ...search,
           ...(member
             ? { $or: [{ members: { $elemMatch: { $eq: member?.id } } }, { company: member?.id }] }
@@ -255,19 +260,14 @@ export default {
         if (candidate) {
           if (isLiked) {
             candidate.rating = candidate.rating.filter((item) => String(item) !== String(user.id))
-            user.likedProjects = (user?.likedProjects || []).filter(
-              (item) => String(item) !== String(candidate.id)
-            )
           } else {
             candidate.rating = [...candidate.rating, user.id]
-            user.likedProjects = [...(user?.likedProjects || []), candidate.id]
           }
 
           await candidate.save()
-          await user.save()
         }
 
-        return user
+        return await ProjectModel.find({ rating: user.id })
       } catch (err) {
         console.log(err)
         return user

@@ -62,22 +62,16 @@ module.exports = {
     members: async ({ id }, args, { models: { UserModel } }) => {
       return await UserModel.countDocuments({ company: id })
     },
-    folders: async ({ folders }, args, { models: { ProjectModel } }) => {
+    folders: async ({ folders }) => {
       const result = []
 
       if (folders && folders.length) {
         for (let folder of folders) {
-          const projects = []
-
           if (folder) {
-            for (let id of folder.projects) {
-              const project = await ProjectModel.findById(id)
-              if (project) projects.push(project)
-            }
             result.push({
               id: folder.id,
               name: folder.name,
-              projects
+              projects: folder.projects
             })
           }
         }

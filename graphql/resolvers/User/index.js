@@ -524,6 +524,25 @@ export default {
       }
       return false
     },
+    removeUserProject: async (_, { project, folder }, { user }) => {
+      if (user) {
+        for (let item of user.folders) {
+          if (item.id === folder) {
+            user.folders = user.folders.map((f) =>
+              f.id === folder
+                ? {
+                    ...f._doc,
+                    projects: f.projects.filter((pr) => !pr.equals(project))
+                  }
+                : { ...f._doc }
+            )
+            await user.save()
+            return true
+          }
+        }
+      }
+      return false
+    },
     deleteUserFolder: async (_, { id }, { user }) => {
       if (user) {
         user.folders = user.folders.filter((folder) => folder.id !== id)

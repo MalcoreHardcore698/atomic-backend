@@ -105,7 +105,7 @@ export default gql`
   type Folder {
     id: ID!
     name: String!
-    projects: [Project]!
+    projects: [ID]!
   }
 
   type Chat {
@@ -537,6 +537,7 @@ export default gql`
       offset: Int
       limit: Int
       category: ID
+      rating: [String]
       search: String
       author: String
       member: String
@@ -615,12 +616,13 @@ export default gql`
     deleteTicket(id: ID!): [Ticket]!
     deleteDashboardSettings: Boolean!
 
-    likeProject(id: ID!): User!
+    likeProject(id: ID!): [Project]!
     likeComment(comment: ID!, likedUser: String, liked: Boolean!): Comment!
 
     addUserFolder(name: String!): [Folder]!
     addUserChat(recipient: String!): Boolean
     addUserProject(project: ID!, folder: ID!): Boolean
+    removeUserProject(project: ID!, folder: ID!): Boolean
 
     sendComment(article: ID!, text: String!): [Comment]!
     sendMessage(recipient: String!, text: String!): [Message]!
