@@ -528,6 +528,7 @@ export default gql`
       search: String
       account: [AccountType]
       company: String
+      role: String
     ): [User]!
     getFiles(offset: Int, limit: Int, search: String): [File]!
     getImages(offset: Int, limit: Int, search: String): [Image]!

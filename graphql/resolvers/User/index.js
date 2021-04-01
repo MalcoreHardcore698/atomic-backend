@@ -2,7 +2,7 @@ import { UserInputError } from 'apollo-server-express'
 import { v4 } from 'uuid'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { createDashboardActivity } from '../../../utils/functions'
+import { createDashboardActivity, getDocuments } from '../../../utils/functions'
 import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
 import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
 import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
@@ -19,47 +19,37 @@ const SECRET = config.get('secret')
 
 export default {
   Query: {
-    getUsers: async (_, args, { models: { UserModel } }) => {
-      const search = args.search
-        ? {
-            $text: { $search: args.search.toString() },
-            account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY]
-          }
-        : {}
-
+    getUsers: async (_, args, { models: { UserModel, RoleModel } }) => {
       try {
-        if (args.offset >= 0 && args.limit >= 0) {
-          return await UserModel.find(search)
-            .sort({
-              createdAt: -1
-            })
-            .skip(args.offset)
-            .limit(args.limit)
-        }
-        if (args.search) {
-          return await UserModel.find(search).sort({
-            createdAt: -1
-          })
-        }
-        return await UserModel.find({
-          ...(args.email ? { email: { $nin: args.email } } : {}),
-          ...(args.company ? { company: args.company } : {}),
-          account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY]
-        }).sort({ createdAt: -1 })
+        const roleOne = args.role && (await RoleModel.findOne({ name: args.role }))
+        const role = args.role && roleOne ? { role: roleOne.id } : {}
+        const email = args.email ? { email: { $nin: args.email } } : {}
+        const company = args.company ? { company: args.company } : {}
+        const account = { account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY] }
+        const search = args.search ? { $text: { $search: args.search.toString() } } : {}
+        const find = { ...email, ...company, ...role, ...account, ...search }
+
+        return await getDocuments(UserModel, {
+          find,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
     },
     getUser: async (_, { email }, { user, models: { UserModel } }) => {
-      if (email) {
-        return UserModel.findOne({ email })
-      }
+      try {
+        if (email) {
+          return UserModel.findOne({ email })
+        }
 
-      if (user) {
-        return user
-      }
+        if (user) return user
 
-      return null
+        return null
+      } catch (err) {
+        throw new Error(err)
+      }
     },
     getUserChats: async (_, args, { user, models: { UserChatModel } }) => {
       if (!user) return []
