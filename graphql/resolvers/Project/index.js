@@ -23,25 +23,22 @@ export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
-        const author = await UserModel.findOne({ email: args.author })
-        const member = await UserModel.findOne({ email: args.member })
-        const status = args.status ? { status: args.status } : {}
-        const category = args.category ? { category: args.category } : {}
+        const authorOne = await UserModel.findOne({ email: args.author })
+        const memberOne = await UserModel.findOne({ email: args.member })
 
+        const status = args.status ? { status: args.status } : {}
+        const author = authorOne ? { author: authorOne?.id } : {}
+        const category = args.category ? { category: args.category } : {}
         const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
         const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
-
         const search = args.search ? { $text: { $search: args.search } } : {}
-        const find = {
-          ...status,
-          ...category,
-          ...rating,
-          ...search,
-          ...(member
-            ? { $or: [{ members: { $elemMatch: { $eq: member?.id } } }, { company: member?.id }] }
-            : {}),
-          ...(author ? { author: author?.id } : {})
-        }
+        const member = memberOne
+          ? {
+              $or: [{ members: { $elemMatch: { $eq: memberOne?.id } } }, { company: memberOne?.id }]
+            }
+          : {}
+
+        const find = { ...status, ...category, ...rating, ...member, ...author, ...search }
 
         return await getProjects(
           { ProjectModel, UserModel },
