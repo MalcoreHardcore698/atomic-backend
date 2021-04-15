@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 import config from 'config'
 import models from '../models'
 
-const { UserModel, DashboardActivityModel } = models
+const { UserModel, NoticeModel, DashboardActivityModel } = models
 
 const NODE_ENV = process.env.NODE_ENV !== 'production'
 const SERVER_URL = NODE_ENV ? config.get('server-local-url') : config.get('server-host-url')
@@ -132,26 +132,37 @@ export async function deleteUploads(files, model) {
   }
 }
 
-export async function safeDashboardActivities(limit, sort = { createdAt: -1 }) {
-  const dashboardActivities = await DashboardActivityModel.find().sort(sort).limit(limit)
-  const dashboardActivityIdsForSafe = dashboardActivities.map(
-    (dashboardActivity) => dashboardActivity.id
-  )
-  const dashboardActivityForDelete = await DashboardActivityModel.find({
+export async function safeDocuments(Model, limit, sort) {
+  const documents = await Model.find().sort(sort).limit(limit)
+  const documentsIdsForSafe = documents.map((document) => document.id)
+  const documentsForDelete = await Model.find({
     _id: {
       $not: {
-        $in: dashboardActivityIdsForSafe
+        $in: documentsIdsForSafe
       }
     }
   })
-  await DashboardActivityModel.deleteMany({
-    _id: dashboardActivityForDelete.map((dashboardActivity) => dashboardActivity.id)
+  await Model.deleteMany({
+    _id: documentsForDelete.map((document) => document.id)
   })
+}
+
+export async function safeDashboardActivities(limit, sort = { createdAt: -1 }) {
+  return safeDocuments(DashboardActivityModel, limit, sort)
+}
+
+export async function safeNotifications(limit, sort = { createdAt: -1 }) {
+  return safeDocuments(NoticeModel, limit, sort)
 }
 
 export async function createDashboardActivity(args) {
   await DashboardActivityModel.create(args)
   await safeDashboardActivities(10)
+}
+
+export async function createNotice(args) {
+  await NoticeModel.create(args)
+  await safeNotifications(10)
 }
 
 export function getDateByMonth(offset = 0) {

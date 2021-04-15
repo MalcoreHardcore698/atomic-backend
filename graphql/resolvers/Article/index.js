@@ -23,10 +23,13 @@ export default {
   Query: {
     getArticles: async (_, args, { models: { ArticleModel, UserModel } }) => {
       try {
+        const authorOne = args.author && (await UserModel.findOne({ email: args.author }))
+        const author = authorOne ? { author: authorOne.id } : {}
+
         const status = args.status ? { status: args.status } : {}
         const search = args.search ? { $text: { $search: args.search } } : {}
         const category = args.category ? { category: args.category } : {}
-        const find = { ...status, ...category, ...search }
+        const find = { ...status, ...category, ...author, ...search }
 
         return await getArticles(
           { ArticleModel, UserModel },

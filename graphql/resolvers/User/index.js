@@ -2,10 +2,12 @@ import { UserInputError } from 'apollo-server-express'
 import { v4 } from 'uuid'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { createDashboardActivity, getDocuments } from '../../../utils/functions'
+import { createNotice, createDashboardActivity, getDocuments } from '../../../utils/functions'
 import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
 import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
 import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
+import { PURPOSE_PROJECT, PURPOSE_ARTICLE } from '../../../enums/settings/role'
+import { MESSAGE, INVITE } from '../../../enums/types/notice'
 import { UNREADED } from '../../../enums/states/message'
 import { PERSONAL } from '../../../enums/types/chat'
 import { OPENED } from '../../../enums/states/chat'
@@ -387,6 +389,7 @@ export default {
         user.gender = input.gender || user.gender
         user.account = input.account || user.account
         user.dateOfBirth = input.dateOfBirth || user.dateOfBirth
+        user.role = input.role || user.role
 
         if (input.company) {
           const company = await UserModel.findOne({ email: input.company })
@@ -533,6 +536,173 @@ export default {
       }
       return false
     },
+    inviteUserMember: async (_, { email }, { user, models: { UserModel } }) => {
+      if (user.account === ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        if (candidate && candidate.account !== ENTITY) {
+          await createNotice({
+            type: INVITE,
+            author: candidate.id,
+            title: 'Вас пригласила компания',
+            message: `${user.name} пригласила вас к себе`
+          })
+        }
+      }
+
+      return true
+    },
+    applyInviteUserMember: async (
+      _,
+      { id, email },
+      { user, models: { UserModel, NoticeModel } }
+    ) => {
+      if (user.account !== ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        // TODO: Need to find company instead author
+        // Now candidate equal author => IS NOT CORRECT,
+        // because candidate will be equal company
+        if (candidate && candidate.account === ENTITY) {
+          user.company = candidate.id
+          await user.save()
+
+          const notice = await NoticeModel.findById(id)
+          notice.type = MESSAGE
+          notice.title = 'Предложение принято'
+          notice.message = `Вы приняли предложение ${candidate.name}`
+          await notice.save()
+
+          await createNotice({
+            type: MESSAGE,
+            author: candidate.id,
+            title: 'Пользователь принял приглашение',
+            message: `${user.name} принял ваше предложение`
+          })
+        }
+      }
+
+      return NoticeModel.find({ author: user.id }).sort({ createdAt: -1 })
+    },
+    rejectInviteUserMember: async (
+      _,
+      { id, email },
+      { user, models: { UserModel, NoticeModel } }
+    ) => {
+      if (user.account !== ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        // TODO: Need to find company instead author
+        // Now candidate equal author => IS NOT CORRECT,
+        // because candidate will be equal company
+        if (candidate && candidate.account === ENTITY) {
+          const notice = await NoticeModel.findById(id)
+          notice.type = MESSAGE
+          notice.title = 'Предложение отклонено'
+          notice.message = `Вы отклонили предложение ${candidate.name}`
+          await notice.save()
+
+          await createNotice({
+            type: MESSAGE,
+            author: candidate.id,
+            title: 'Пользователь отклонил приглашение',
+            message: `${user.name} отклонил ваше предложение`
+          })
+        }
+      }
+
+      return NoticeModel.find({ author: user.id }).sort({ createdAt: -1 })
+    },
+    appointUserMember: async (_, { email }, { user, models: { UserModel, RoleModel } }) => {
+      if (user.account === ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        if (candidate && candidate.account !== ENTITY) {
+          const userRole = await RoleModel.findById(candidate.role)
+
+          if (
+            userRole &&
+            userRole.permissions?.length > 0 &&
+            !userRole.permissions.includes(PURPOSE_PROJECT) &&
+            !userRole.permissions.includes(PURPOSE_ARTICLE)
+          ) {
+            const permissions = [...userRole.permissions, PURPOSE_PROJECT, PURPOSE_ARTICLE]
+            const args = { name: `RESPONSIBLE ${userRole.name}`, permissions }
+            const roleOne = await RoleModel.findOne({ permissions })
+            const role = roleOne || (await RoleModel.create(args))
+
+            candidate.role = role.id
+
+            await candidate.save()
+
+            await createNotice({
+              type: MESSAGE,
+              author: candidate.id,
+              title: 'Вас назначили ответственным',
+              message: `Компания ${user.name} назначила вас ответственным`
+            })
+          }
+        }
+      }
+
+      return UserModel.find({ company: user.id }).sort({ createdAt: -1 })
+    },
+    excludeUserMember: async (_, { email }, { user, models: { UserModel, RoleModel } }) => {
+      if (user.account === ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        if (candidate && candidate.account !== ENTITY) {
+          const userRole = await RoleModel.findById(candidate.role)
+
+          if (
+            userRole &&
+            userRole.permissions?.length > 0 &&
+            userRole.permissions.includes(PURPOSE_PROJECT) &&
+            userRole.permissions.includes(PURPOSE_ARTICLE)
+          ) {
+            const permissions = userRole.permissions
+              .filter((permission) => permission !== PURPOSE_PROJECT)
+              .filter((permission) => permission !== PURPOSE_ARTICLE)
+            const args = { name: userRole.name.replace('RESPONSIBLE ', ''), permissions }
+            const roleOne = await RoleModel.findOne({ permissions })
+            const role = roleOne || (await RoleModel.create(args))
+
+            candidate.role = role.id
+
+            await candidate.save()
+
+            await createNotice({
+              type: MESSAGE,
+              author: candidate.id,
+              title: 'С вас сняли полномочия',
+              message: `Компания ${user.name} сняла с вас полномочия`
+            })
+          }
+        }
+      }
+
+      return UserModel.find({ company: user.id }).sort({ createdAt: -1 })
+    },
+    dismissUserMember: async (_, { email }, { user, models: { UserModel } }) => {
+      if (user.account === ENTITY) {
+        const candidate = await UserModel.findOne({ email })
+
+        if (candidate && candidate.account !== ENTITY) {
+          candidate.company = null
+
+          await candidate.save()
+
+          await createNotice({
+            type: MESSAGE,
+            author: candidate.id,
+            title: 'Вас исключили из компании',
+            message: `Компания ${user.name} вас исключила`
+          })
+        }
+      }
+
+      return UserModel.find({ company: user.id }).sort({ createdAt: -1 })
+    },
     deleteUserFolder: async (_, { id }, { user }) => {
       if (user) {
         user.folders = user.folders.filter((folder) => folder.id !== id)
@@ -559,7 +729,7 @@ export default {
         deleteUpload(user.avatar, ImageModel)
 
         await user.delete()
-        return await UserModel.find().sort({ createdAt: -1 })
+        return UserModel.find().sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)
       }

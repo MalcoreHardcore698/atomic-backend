@@ -10,6 +10,7 @@ import Project from './Project'
 import Comment from './Comment'
 import Ticket from './Ticket'
 import UserChat from './UserChat'
+import Notice from './Notice'
 import Chat from './Chat'
 import DashboardActivity from './DashboardActivity'
 import DashboardSettings from './DashboardSettings'
@@ -272,6 +273,7 @@ module.exports = {
     ...Project.Query,
     ...Ticket.Query,
     ...UserChat.Query,
+    ...Notice.Query,
     ...Chat.Query,
     ...DashboardActivity.Query,
     ...DashboardSettings.Query,
@@ -333,6 +335,7 @@ module.exports = {
     ...Comment.Mutation,
     ...Ticket.Mutation,
     ...UserChat.Mutation,
+    ...Notice.Mutation,
     ...Chat.Mutation,
     ...DashboardActivity.Mutation,
     ...DashboardSettings.Mutation

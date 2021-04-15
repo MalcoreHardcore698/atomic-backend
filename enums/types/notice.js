@@ -1,5 +1,4 @@
-export const SYSTEM = 'SYSTEM'
-export const CHAT = 'CHAT'
-export const USER = 'USER'
+export const MESSAGE = 'MESSAGE'
+export const INVITE = 'INVITE'
 
-export default [SYSTEM, CHAT, USER]
+export default [MESSAGE, INVITE]

@@ -1,7 +1,9 @@
 import { Schema, model } from 'mongoose'
+import NOTICE_TYPES from '../../enums/types/notice'
 
 const NoticeSchema = new Schema(
   {
+    type: { type: String, enum: NOTICE_TYPES, required: true },
     author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     title: { type: String, required: true },
     message: { type: String, required: true }

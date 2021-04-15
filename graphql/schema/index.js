@@ -22,6 +22,11 @@ export default gql`
     GROUP
   }
 
+  enum NoticeType {
+    MESSAGE
+    INVITE
+  }
+
   enum StatusChatType {
     OPENED
     CLOSED
@@ -81,6 +86,8 @@ export default gql`
     DELETE_PROJECT
     COMMENT_ARTICLE
     COMMENT_PROJECT
+    PURPOSE_PROJECT
+    PURPOSE_ARTICLE
     CHATTING
   }
 
@@ -183,6 +190,7 @@ export default gql`
 
   type Notice {
     id: ID!
+    type: NoticeType!
     author: User
     title: String!
     message: String!
@@ -546,16 +554,24 @@ export default gql`
     ): [Project]!
     getTickets(offset: Int, limit: Int, search: String): [Ticket]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
-    getArticles(offset: Int, limit: Int, search: String, status: PostStatus): [Article]!
+    getArticles(
+      offset: Int
+      limit: Int
+      search: String
+      author: String
+      status: PostStatus
+    ): [Article]!
     getComments(id: ID!, offset: Int, limit: Int, search: String): [Comment]!
     getChatTypes: [ChatType]!
     getStatusChatTypes: [StatusChatType]!
     getAccountTypes: [AccountType]!
+    getNoticeTypes: [NoticeType]!
     getPermissions: [Permission]!
     getPostStatus: [PostStatus]!
     getUserTickets: [Ticket]!
     getUserChats: [UserChat]!
     getUserMembers(email: String!): [User]!
+    getNotifications(author: String, search: String): [Notice]!
 
     getUser(email: String): User
     getChat(id: ID): Chat!
@@ -566,6 +582,7 @@ export default gql`
     getProject(id: ID!): Project
     getCategory(id: ID!): Category
     getTicket(id: ID!): Ticket
+    getNotice(id: ID!): Notice
 
     getDashboardStatistics: [DashboardStatistic]!
     getDashboardActivities: [DashboardActivity]!
@@ -624,6 +641,13 @@ export default gql`
     addUserChat(recipient: String!): Boolean
     addUserProject(project: ID!, folder: ID!): Boolean
     removeUserProject(project: ID!, folder: ID!): Boolean
+
+    inviteUserMember(email: String!): Boolean!
+    applyInviteUserMember(id: ID!, email: String!): [Notice]!
+    rejectInviteUserMember(id: ID!, email: String!): [Notice]!
+    appointUserMember(email: String!): [User]!
+    excludeUserMember(email: String!): [User]!
+    dismissUserMember(email: String!): [User]!
 
     sendComment(article: ID!, text: String!): [Comment]!
     sendMessage(recipient: String!, text: String!): [Message]!
