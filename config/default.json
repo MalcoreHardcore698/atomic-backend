@@ -5,10 +5,10 @@
   "port": 5000,
   "upload-dir": "uploads",
 
-  "host-url": "http://atomic.ru.com",
+  "host-url": "https://atomic.ru.com",
   "local-url": "http://localhost:3000",
 
-  "server-host-url": "http://api.atomic.ru.com",
+  "server-host-url": "https://api.atomic.ru.com",
   "server-local-url": "http://localhost:5000",
 
   "mongo-db-url": "mongodb+srv://admin:xnCXyzVApMpHo6ee@cluster0.yjaue.mongodb.net/app?retryWrites=true&w=majority",
