@@ -194,6 +194,7 @@ export default gql`
     author: User
     title: String!
     message: String!
+    company: User
     updatedAt: String!
     createdAt: String!
   }

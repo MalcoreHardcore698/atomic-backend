@@ -152,6 +152,9 @@ module.exports = {
   Notice: {
     author: async ({ author }, args, { models: { UserModel } }) => {
       return await UserModel.findById(author)
+    },
+    company: async ({ company }, args, { models: { UserModel } }) => {
+      return await UserModel.findById(company)
     }
   },
   UserChat: {

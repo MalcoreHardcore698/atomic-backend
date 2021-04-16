@@ -545,7 +545,8 @@ export default {
             type: INVITE,
             author: candidate.id,
             title: 'Вас пригласила компания',
-            message: `${user.name} пригласила вас к себе`
+            message: `${user.name} пригласила вас к себе`,
+            company: user.id
           })
         }
       }
@@ -558,24 +559,21 @@ export default {
       { user, models: { UserModel, NoticeModel } }
     ) => {
       if (user.account !== ENTITY) {
-        const candidate = await UserModel.findOne({ email })
+        const company = await UserModel.findOne({ email })
 
-        // TODO: Need to find company instead author
-        // Now candidate equal author => IS NOT CORRECT,
-        // because candidate will be equal company
-        if (candidate && candidate.account === ENTITY) {
-          user.company = candidate.id
+        if (company && company.account === ENTITY) {
+          user.company = company.id
           await user.save()
 
           const notice = await NoticeModel.findById(id)
           notice.type = MESSAGE
           notice.title = 'Предложение принято'
-          notice.message = `Вы приняли предложение ${candidate.name}`
+          notice.message = `Вы приняли предложение ${company.name}`
           await notice.save()
 
           await createNotice({
             type: MESSAGE,
-            author: candidate.id,
+            author: company.id,
             title: 'Пользователь принял приглашение',
             message: `${user.name} принял ваше предложение`
           })
@@ -590,21 +588,18 @@ export default {
       { user, models: { UserModel, NoticeModel } }
     ) => {
       if (user.account !== ENTITY) {
-        const candidate = await UserModel.findOne({ email })
+        const company = await UserModel.findOne({ email })
 
-        // TODO: Need to find company instead author
-        // Now candidate equal author => IS NOT CORRECT,
-        // because candidate will be equal company
-        if (candidate && candidate.account === ENTITY) {
+        if (company && company.account === ENTITY) {
           const notice = await NoticeModel.findById(id)
           notice.type = MESSAGE
           notice.title = 'Предложение отклонено'
-          notice.message = `Вы отклонили предложение ${candidate.name}`
+          notice.message = `Вы отклонили предложение ${company.name}`
           await notice.save()
 
           await createNotice({
             type: MESSAGE,
-            author: candidate.id,
+            author: company.id,
             title: 'Пользователь отклонил приглашение',
             message: `${user.name} отклонил ваше предложение`
           })

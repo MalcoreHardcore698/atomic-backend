@@ -5,6 +5,7 @@ const NoticeSchema = new Schema(
   {
     type: { type: String, enum: NOTICE_TYPES, required: true },
     author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    company: { type: Schema.Types.ObjectId, ref: 'User' },
     title: { type: String, required: true },
     message: { type: String, required: true }
   },
