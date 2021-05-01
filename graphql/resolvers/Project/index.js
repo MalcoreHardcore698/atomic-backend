@@ -1,23 +1,8 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
+import { createDashboardActivity, getDocuments } from '../../../utils/functions'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
-
-export async function checkValidProject({ UserModel }, project) {
-  const author = await UserModel.findById(project.author)
-
-  if (!author) {
-    await project.delete()
-    return false
-  }
-
-  return true
-}
-
-export async function getProjects({ ProjectModel, UserModel }, args) {
-  return await getValidDocuments(ProjectModel, args, { UserModel }, checkValidProject)
-}
 
 export default {
   Query: {
@@ -40,14 +25,11 @@ export default {
 
         const find = { ...status, ...category, ...rating, ...member, ...author, ...search }
 
-        return await getProjects(
-          { ProjectModel, UserModel },
-          {
-            find,
-            skip: args.offset,
-            limit: args.limit
-          }
-        )
+        return getDocuments(ProjectModel, {
+          find,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
@@ -166,6 +148,7 @@ export default {
       if (project) {
         project.title = input.title || project.title
         project.body = input.body || project.body
+        project.characteristics = input.characteristics || project.characteristics
         project.description = input.description || project.description
         project.category = input.category || project.category
         project.presentation = input.presentation || project.presentation

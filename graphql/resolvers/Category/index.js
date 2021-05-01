@@ -9,7 +9,7 @@ export default {
       try {
         const search = args.search ? { $text: { $search: args.search } } : {}
         const type = args.type ? { type: args.type } : {}
-        const find = { ...search, ...type }
+        const find = { ...type, ...search }
 
         return await getDocuments(CategoryModel, {
           find,

@@ -218,12 +218,20 @@ export default gql`
     createdAt: String!
   }
 
+  type Characteristic {
+    id: ID!
+    name: String!
+    value: String!
+    isVisualize: Boolean!
+  }
+
   type Project {
     id: ID!
     author: User!
     title: String!
-    description: String!
     body: String!
+    characteristics: [Characteristic]
+    description: String!
     company: User
     preview: File
     category: Category
@@ -410,10 +418,17 @@ export default gql`
     status: PostStatus
   }
 
+  input CharacteristicInput {
+    name: String!
+    value: String!
+    isVisualize: Boolean!
+  }
+
   input ProjectCreateInput {
     title: String!
-    description: String!
     body: String!
+    characteristics: [CharacteristicInput]
+    description: String
     preview: Upload
     previewSize: Int
     category: ID
@@ -491,8 +506,9 @@ export default gql`
 
   input ProjectUpdateInput {
     title: String
-    description: String
     body: String
+    characteristics: [CharacteristicInput]
+    description: String
     preview: Upload
     previewSize: Int
     category: ID
