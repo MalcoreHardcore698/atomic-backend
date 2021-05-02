@@ -34,6 +34,7 @@
     "lodash": "^4.17.20",
     "mkdirp": "^1.0.4",
     "mongoose": "^5.9.16",
+    "nodemailer": "^6.6.0",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-facebook-token": "^4.0.0",

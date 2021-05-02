@@ -29,6 +29,10 @@ async function start() {
     return res.send('General API')
   })
 
+  app.get('/droppassword_mail/:email', (req, res) => {
+    return res.send('password reset API')
+  })
+
   server.applyMiddleware({ app })
 
   app.listen({ port: PORT }, () => NODE_ENV && console.log(`🚀 Server ready at ${LOCAL_URL}`))

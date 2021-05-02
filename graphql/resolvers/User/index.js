@@ -15,9 +15,11 @@ import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums
 import config from 'config'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
+import { randomString } from '../../../functions/string-functions'
 
 const SALT = config.get('salt')
 const SECRET = config.get('secret')
+const nodemailer = require('nodemailer')
 
 export default {
   Query: {
@@ -374,6 +376,60 @@ export default {
 
       return user
     },
+    updateUserPasswordResetStatus: async (_, { email }, { models: { UserModel } }) => {
+      const user = await UserModel.findOne({ email })
+      user.resetPasswordKey = randomString(6)
+      await user.save()
+
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'webconsult.ekb@gmail.com',
+          pass: 'bzbodvxmhpuvmfnp'
+        }
+      })
+
+      const mailOptions = {
+        from: 'admin@atomic.ru.com',
+        to: email,
+        subject: 'Ключ сброса Вашего пароля',
+        html: `<h1>Используйте этот ключ для сброса пароля</h1><b>${user.resetPasswordKey}</b>`
+      }
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error)
+        } else {
+          console.log('Email sent: ' + info.response)
+        }
+      })
+
+      return { email: user.email, resetPasswordKey: user.resetPasswordKey }
+    },
+
+    getResetTokenByEmail: async (_, { email, token }, { models: { UserModel } }) => {
+      const user = await UserModel.findOne({ email })
+      if (user.resetPasswordKey === token) {
+        return true
+      } else {
+        return false
+      }
+    },
+
+    checkTokenAndResetPassword: async (
+      _,
+      { email, token, password },
+      { models: { UserModel } }
+    ) => {
+      const user = await UserModel.findOne({ email })
+      if (user.resetPasswordKey === token) {
+        user.password = await bcrypt.hashSync(password, SALT)
+        await user.save()
+        return { email }
+      } else {
+        return { email: '' }
+      }
+    },
+
     updateUser: async (
       _,
       { email, input },

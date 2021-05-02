@@ -156,6 +156,7 @@ export default gql`
     settings: [UserSetting]
     token: String
     register: String
+    resetPasswordKey: String
     updatedAt: String!
     createdAt: String!
   }
@@ -613,6 +614,9 @@ export default gql`
 
     updateClientUser(input: UserUpdateInput!): User!
     updateUser(email: String!, input: UserUpdateInput!): [User]!
+    updateUserPasswordResetStatus(email: String!): User!
+    getResetTokenByEmail(email: String!, token: String!): Boolean!
+    checkTokenAndResetPassword(email: String!, token: String!, password: String!): User!
     updateRole(id: ID!, input: RoleUpdateInput!): [Role]!
     updateFile(id: ID!, file: Upload!): File!
     updateImage(id: ID!, file: Upload!): Image!
