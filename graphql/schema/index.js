@@ -645,14 +645,14 @@ export default gql`
 
     deleteFile(id: ID!): Boolean!
     deleteImage(id: ID!): Boolean!
-    deleteRole(id: ID!): [Role]!
-    deleteUser(email: String!): [User]!
-    deleteCategory(id: ID!): [Category]!
-    deleteArticle(id: ID!, status: PostStatus): [Article]!
-    deleteProject(id: ID!, status: PostStatus): [Project]!
+    deleteRole(id: [ID]!): [Role]!
+    deleteUser(email: [String]!): [User]!
+    deleteCategory(id: [ID]!): [Category]!
+    deleteArticle(id: [ID]!, status: PostStatus): [Article]!
+    deleteProject(id: [ID]!, status: PostStatus): [Project]!
     deleteUserFolder(id: ID!): [Folder]!
     deleteComment(id: ID!): [Comment]!
-    deleteTicket(id: ID!): [Ticket]!
+    deleteTicket(id: [ID]!): [Ticket]!
     deleteDashboardSettings: Boolean!
 
     likeProject(id: ID!): [Project]!

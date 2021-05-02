@@ -77,19 +77,26 @@ export default {
       { user, models: { CategoryModel, ArticleModel, ProjectModel } }
     ) => {
       try {
-        const category = await CategoryModel.findById(id)
+        for (let str of id) {
+          const category = await CategoryModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_CATEGORY,
-          entityType: T.CATEGORY,
-          identityString: category._id.toString()
-        })
+          if (category) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_CATEGORY,
+                entityType: T.CATEGORY,
+                identityString: category._id.toString()
+              })
 
-        await ArticleModel.update({ category: id }, { $unset: { category: '' } })
-        await ProjectModel.update({ category: id }, { $unset: { category: '' } })
+              await ArticleModel.update({ category: id }, { $unset: { category: '' } })
+              await ProjectModel.update({ category: id }, { $unset: { category: '' } })
 
-        await category.delete()
+              await category.delete()
+            }
+          }
+        }
+
         return await CategoryModel.find().sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)

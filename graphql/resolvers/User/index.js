@@ -768,18 +768,25 @@ export default {
       { user: author, deleteUpload, models: { UserModel, ImageModel } }
     ) => {
       try {
-        const user = await UserModel.findOne({ email })
+        for (let str of email) {
+          const user = await UserModel.findOne({ email: str })
 
-        await createDashboardActivity({
-          user: author.id,
-          message: M.DELETE_USER,
-          entityType: T.USER,
-          identityString: user.email
-        })
+          if (user) {
+            if (author) {
+              await createDashboardActivity({
+                user: author.id,
+                message: M.DELETE_USER,
+                entityType: T.USER,
+                identityString: user.email
+              })
 
-        deleteUpload(user.avatar, ImageModel)
+              deleteUpload(user.avatar, ImageModel)
 
-        await user.delete()
+              await user.delete()
+            }
+          }
+        }
+
         return UserModel.find().sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)

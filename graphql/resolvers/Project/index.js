@@ -209,20 +209,26 @@ export default {
       { user, deleteUpload, deleteUploads, models: { ProjectModel, ImageModel, FileModel } }
     ) => {
       try {
-        const project = await ProjectModel.findById(id)
+        for (let str of id) {
+          const project = await ProjectModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_PROJECT,
-          entityType: T.PROJECT,
-          identityString: project._id.toString()
-        })
+          if (project) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_PROJECT,
+                entityType: T.PROJECT,
+                identityString: project._id.toString()
+              })
 
-        await deleteUpload(project.preview, ImageModel)
-        await deleteUploads(project.screenshots, ImageModel)
-        await deleteUploads(project.files, FileModel)
+              await deleteUpload(project.preview, ImageModel)
+              await deleteUploads(project.screenshots, ImageModel)
+              await deleteUploads(project.files, FileModel)
 
-        await project.delete()
+              await project.delete()
+            }
+          }
+        }
 
         const args = {}
         if (status) args.status = status

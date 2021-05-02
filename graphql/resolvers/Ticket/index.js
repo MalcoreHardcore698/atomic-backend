@@ -236,20 +236,26 @@ export default {
     },
     deleteTicket: async (_, { id }, { user, models: { TicketModel, TicketMessageModel } }) => {
       try {
-        const ticket = await TicketModel.findById(id)
+        for (let str of id) {
+          const ticket = await TicketModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_TICKET,
-          entityType: T.TICKET,
-          identityString: ticket._id.toString()
-        })
+          if (ticket) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_TICKET,
+                entityType: T.TICKET,
+                identityString: ticket._id.toString()
+              })
 
-        for (let id of ticket.messages) {
-          const message = await TicketMessageModel.findById(id)
-          await message.delete()
+              for (let id of ticket.messages) {
+                const message = await TicketMessageModel.findById(id)
+                await message.delete()
+              }
+              await ticket.delete()
+            }
+          }
         }
-        await ticket.delete()
 
         return await TicketModel.find().sort({ createdAt: -1 })
       } catch (err) {
