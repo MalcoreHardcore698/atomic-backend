@@ -2,24 +2,31 @@ import { UserInputError } from 'apollo-server-express'
 import { v4 } from 'uuid'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { createNotice, createDashboardActivity, getDocuments } from '../../../utils/functions'
+import config from 'config'
+
+import { randomString } from '../../../functions/string-functions'
 import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
 import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
+import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
 import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
 import { PURPOSE_PROJECT, PURPOSE_ARTICLE } from '../../../enums/settings/role'
 import { MESSAGE, INVITE } from '../../../enums/types/notice'
 import { UNREADED } from '../../../enums/states/message'
 import { PERSONAL } from '../../../enums/types/chat'
 import { OPENED } from '../../../enums/states/chat'
-import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
-import config from 'config'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
-import { randomString } from '../../../functions/string-functions'
+import template from '../../../utils/templates'
+import {
+  createNotice,
+  createDashboardActivity,
+  getDocuments,
+  sendMail
+} from '../../../utils/functions'
 
 const SALT = config.get('salt')
 const SECRET = config.get('secret')
-const nodemailer = require('nodemailer')
+const HOST_EMAIL = config.get('host-email')
 
 export default {
   Query: {
@@ -173,6 +180,13 @@ export default {
               }
             })
 
+            sendMail({
+              from: HOST_EMAIL,
+              to: email,
+              subject: template.registrationCompletedSubject,
+              html: template.registrationCompleted({ name })
+            })
+
             return {
               ...newUser._doc,
               register: true,
@@ -190,6 +204,13 @@ export default {
               },
               { new: true }
             )
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: email,
+              subject: template.googleAuthSubject,
+              html: template.googleAuth({ name: user.name })
+            })
 
             return {
               ...newUser._doc,
@@ -246,6 +267,13 @@ export default {
               }
             })
 
+            sendMail({
+              from: HOST_EMAIL,
+              to: email,
+              subject: template.registrationCompletedSubject,
+              html: template.registrationCompleted({ name })
+            })
+
             return {
               ...newUser._doc,
               token: jwt.sign({ uid: newUser._id }, SECRET)
@@ -262,6 +290,13 @@ export default {
               },
               { new: true }
             )
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: email,
+              subject: template.facebookAuthSubject,
+              html: template.facebookAuth({ name: user.name })
+            })
 
             return {
               ...newUser._doc,
@@ -303,6 +338,13 @@ export default {
         phone,
         password: bcryptPassword,
         confirmPassword
+      })
+
+      sendMail({
+        from: HOST_EMAIL,
+        to: email,
+        subject: template.registrationCompletedSubject,
+        html: template.registrationCompleted({ name })
       })
 
       return {
@@ -381,55 +423,34 @@ export default {
       user.resetPasswordKey = randomString(6)
       await user.save()
 
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'webconsult.ekb@gmail.com',
-          pass: 'bzbodvxmhpuvmfnp'
-        }
-      })
-
-      const mailOptions = {
-        from: 'admin@atomic.ru.com',
+      sendMail({
+        from: HOST_EMAIL,
         to: email,
-        subject: 'Ключ сброса Вашего пароля',
-        html: `<h1>Используйте этот ключ для сброса пароля</h1><b>${user.resetPasswordKey}</b>`
-      }
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error)
-        } else {
-          console.log('Email sent: ' + info.response)
-        }
+        subject: template.resetPasswordSubject,
+        html: template.resetPassword({ key: user.resetPasswordKey })
       })
 
       return { email: user.email, resetPasswordKey: user.resetPasswordKey }
     },
-
     getResetTokenByEmail: async (_, { email, token }, { models: { UserModel } }) => {
       const user = await UserModel.findOne({ email })
-      if (user.resetPasswordKey === token) {
-        return true
-      } else {
-        return false
-      }
+      return user.resetPasswordKey === token
     },
-
     checkTokenAndResetPassword: async (
       _,
       { email, token, password },
       { models: { UserModel } }
     ) => {
       const user = await UserModel.findOne({ email })
+
       if (user.resetPasswordKey === token) {
         user.password = await bcrypt.hashSync(password, SALT)
         await user.save()
         return { email }
-      } else {
-        return { email: '' }
       }
-    },
 
+      return { email: '' }
+    },
     updateUser: async (
       _,
       { email, input },
@@ -597,12 +618,21 @@ export default {
         const candidate = await UserModel.findOne({ email })
 
         if (candidate && candidate.account !== ENTITY) {
+          const message = `${user.name} пригласила Вас к себе`
+
           await createNotice({
             type: INVITE,
             author: candidate.id,
-            title: 'Вас пригласила компания',
-            message: `${user.name} пригласила вас к себе`,
-            company: user.id
+            title: template.inviteUserMemberSubject,
+            company: user.id,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.inviteUserMemberSubject,
+            html: template.inviteUserMember({ message })
           })
         }
       }
@@ -627,11 +657,20 @@ export default {
           notice.message = `Вы приняли предложение ${company.name}`
           await notice.save()
 
+          const message = `${user.name} принял Ваше предложение`
+
           await createNotice({
             type: MESSAGE,
             author: company.id,
-            title: 'Пользователь принял приглашение',
-            message: `${user.name} принял ваше предложение`
+            title: template.applyInviteUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: company.email,
+            subject: template.applyInviteUserMemberSubject,
+            html: template.applyInviteUserMember({ message })
           })
         }
       }
@@ -653,11 +692,20 @@ export default {
           notice.message = `Вы отклонили предложение ${company.name}`
           await notice.save()
 
+          const message = `${user.name} отклонил Ваше предложение`
+
           await createNotice({
             type: MESSAGE,
             author: company.id,
-            title: 'Пользователь отклонил приглашение',
-            message: `${user.name} отклонил ваше предложение`
+            title: template.rejectInviteUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: company.email,
+            subject: template.rejectInviteUserMemberSubject,
+            html: template.rejectInviteUserMember({ message })
           })
         }
       }
@@ -686,11 +734,20 @@ export default {
 
             await candidate.save()
 
+            const message = `Компания ${user.name} назначила Вас ответственным`
+
             await createNotice({
               type: MESSAGE,
               author: candidate.id,
-              title: 'Вас назначили ответственным',
-              message: `Компания ${user.name} назначила вас ответственным`
+              title: template.appointUserMemberSubject,
+              message
+            })
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: candidate.email,
+              subject: template.appointUserMemberSubject,
+              html: template.appointUserMember({ message })
             })
           }
         }
@@ -722,11 +779,20 @@ export default {
 
             await candidate.save()
 
+            const message = `Компания ${user.name} сняла с Вас полномочия`
+
             await createNotice({
               type: MESSAGE,
               author: candidate.id,
-              title: 'С вас сняли полномочия',
-              message: `Компания ${user.name} сняла с вас полномочия`
+              title: template.excludeUserMemberSubject,
+              message
+            })
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: candidate.email,
+              subject: template.excludeUserMemberSubject,
+              html: template.excludeUserMember({ message })
             })
           }
         }
@@ -743,11 +809,20 @@ export default {
 
           await candidate.save()
 
+          const message = `Компания ${user.name} Вас исключила`
+
           await createNotice({
             type: MESSAGE,
             author: candidate.id,
-            title: 'Вас исключили из компании',
-            message: `Компания ${user.name} вас исключила`
+            title: template.dismissUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: candidate.email,
+            subject: template.dismissUserMemberSubject,
+            html: template.dismissUserMember({ message })
           })
         }
       }
@@ -781,6 +856,13 @@ export default {
               })
 
               deleteUpload(user.avatar, ImageModel)
+
+              sendMail({
+                from: HOST_EMAIL,
+                to: user.email,
+                subject: template.deleteUserSubject,
+                html: template.deleteUser()
+              })
 
               await user.delete()
             }

@@ -1,8 +1,10 @@
 import { createWriteStream, existsSync, mkdirSync, unlink } from 'fs'
+import nodemailer from 'nodemailer'
 import jwt from 'jsonwebtoken'
 import rimraf from 'rimraf'
 import { v4 } from 'uuid'
 import config from 'config'
+
 import models from '../models'
 
 const { UserModel, NoticeModel, DashboardActivityModel } = models
@@ -11,6 +13,24 @@ const NODE_ENV = process.env.NODE_ENV !== 'production'
 const SERVER_URL = NODE_ENV ? config.get('server-local-url') : config.get('server-host-url')
 const UPLOAD_DIR = config.get('upload-dir')
 const SECRET = config.get('secret')
+
+export function sendMail(options) {
+  const service = config.get('transporter-service')
+  const auth = {
+    user: config.get('transporter-auth-user'),
+    pass: config.get('transporter-auth-pass')
+  }
+
+  const transporter = nodemailer.createTransport({ service, auth })
+
+  transporter.sendMail(options, (error, info) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('Email sent: ' + info.response)
+    }
+  })
+}
 
 export async function getDocuments(Model, { find, sort = { createdAt: -1 }, skip, limit }) {
   return await Model.find(find).sort(sort).skip(skip).limit(limit)
