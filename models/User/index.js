@@ -20,6 +20,7 @@ const UserSchema = new Schema(
     },
     email: { type: String, required: true },
     phone: { type: String },
+    resetPasswordKey: { type: String },
     folders: [
       {
         name: { type: String, required: true },

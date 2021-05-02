@@ -71,16 +71,24 @@ export default {
     },
     deleteRole: async (_, { id }, { user, models: { RoleModel } }) => {
       try {
-        const role = await RoleModel.findById(id)
+        for (let str of id) {
+          const role = await RoleModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_ROLE,
-          entityType: T.ROLE,
-          identityString: role._id.toString()
-        })
+          if (role) {
+            if (user) {
+              const role = await RoleModel.findById(id)
 
-        await role.delete()
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_ROLE,
+                entityType: T.ROLE,
+                identityString: role._id.toString()
+              })
+
+              await role.delete()
+            }
+          }
+        }
 
         return await RoleModel.find().sort({ createdAt: -1 })
       } catch (err) {

@@ -136,18 +136,24 @@ export default {
       { user, deleteUpload, models: { ArticleModel, ImageModel } }
     ) => {
       try {
-        const article = await ArticleModel.findById(id)
+        for (let str of id) {
+          const article = await ArticleModel.findById(str)
 
-        await deleteUpload(article.preview, ImageModel)
+          if (article) {
+            if (user) {
+              await deleteUpload(article.preview, ImageModel)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_ARTICLE,
-          entityType: T.ARTICLE,
-          identityString: article._id.toString()
-        })
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_ARTICLE,
+                entityType: T.ARTICLE,
+                identityString: article._id.toString()
+              })
 
-        await article.delete()
+              await article.delete()
+            }
+          }
+        }
 
         const args = {}
         if (status) args.status = status
