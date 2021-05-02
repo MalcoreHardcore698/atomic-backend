@@ -6,6 +6,13 @@ const ProjectSchema = new Schema(
     author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     title: { type: String, required: true },
     body: { type: String, required: true },
+    characteristics: [
+      {
+        name: { type: String, required: true },
+        value: { type: String, required: true },
+        isVisualize: { type: Boolean, required: true }
+      }
+    ],
     description: { type: String },
     company: { type: Schema.Types.ObjectId, ref: 'User' },
     preview: { type: Schema.Types.ObjectId, ref: 'Image' },
@@ -25,6 +32,6 @@ const ProjectSchema = new Schema(
   }
 )
 
-ProjectSchema.index({ title: 'text', description: 'text' })
+ProjectSchema.index({ title: 'text' })
 
 export default model('Project', ProjectSchema)
