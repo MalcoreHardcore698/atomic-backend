@@ -679,6 +679,8 @@ export default gql`
       isClient: Boolean
     ): [TicketMessage]!
 
+    readMessages(id: [ID]!): Boolean!
+
     closeTicket(id: ID!): Ticket!
   }
 

@@ -3,15 +3,16 @@ import { getDocumentGraph } from '../../utils/functions'
 import Role from './Role'
 import User from './User'
 import File from './File'
+import Chat from './Chat'
 import Image from './Image'
-import Category from './Category'
+import Ticket from './Ticket'
+import Notice from './Notice'
 import Article from './Article'
 import Project from './Project'
 import Comment from './Comment'
-import Ticket from './Ticket'
+import Message from './Message'
 import UserChat from './UserChat'
-import Notice from './Notice'
-import Chat from './Chat'
+import Category from './Category'
 import DashboardActivity from './DashboardActivity'
 import DashboardSettings from './DashboardSettings'
 
@@ -269,15 +270,16 @@ module.exports = {
     ...Role.Query,
     ...User.Query,
     ...File.Query,
+    ...Chat.Query,
     ...Image.Query,
-    ...Category.Query,
+    ...Ticket.Query,
+    ...Notice.Query,
     ...Comment.Query,
     ...Article.Query,
     ...Project.Query,
-    ...Ticket.Query,
+    ...Message.Query,
     ...UserChat.Query,
-    ...Notice.Query,
-    ...Chat.Query,
+    ...Category.Query,
     ...DashboardActivity.Query,
     ...DashboardSettings.Query,
     getChatTypes: () => CHAT_TYPES,
@@ -331,15 +333,16 @@ module.exports = {
     ...Role.Mutation,
     ...User.Mutation,
     ...File.Mutation,
+    ...Chat.Mutation,
     ...Image.Mutation,
-    ...Category.Mutation,
+    ...Ticket.Mutation,
+    ...Notice.Mutation,
     ...Article.Mutation,
     ...Project.Mutation,
     ...Comment.Mutation,
-    ...Ticket.Mutation,
+    ...Message.Mutation,
     ...UserChat.Mutation,
-    ...Notice.Mutation,
-    ...Chat.Mutation,
+    ...Category.Mutation,
     ...DashboardActivity.Mutation,
     ...DashboardSettings.Mutation
   },
