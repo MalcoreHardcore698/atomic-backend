@@ -26,7 +26,7 @@ export default {
   Query: {
     getTickets: async (_, args, { models: { TicketModel, UserModel, CategoryModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
         const category = args.category ? { category: args.category } : {}
         const find = { ...category, ...search }
 

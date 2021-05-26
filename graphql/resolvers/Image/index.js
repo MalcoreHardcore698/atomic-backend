@@ -5,7 +5,7 @@ export default {
   Query: {
     getImages: async (_, args, { models: { ImageModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { path: { $regex: args.search, $options: 'i' } } : {}
         const find = { ...search }
 
         return await getDocuments(ImageModel, {

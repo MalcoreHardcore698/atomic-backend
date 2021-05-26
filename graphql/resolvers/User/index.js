@@ -37,7 +37,7 @@ export default {
         const email = args.email ? { email: { $nin: args.email } } : {}
         const company = args.company ? { company: args.company } : {}
         const account = { account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY] }
-        const search = args.search ? { $text: { $search: args.search.toString() } } : {}
+        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
         const find = { ...email, ...company, ...role, ...account, ...search }
 
         return await getDocuments(UserModel, {

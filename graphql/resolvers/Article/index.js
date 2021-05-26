@@ -27,7 +27,7 @@ export default {
         const author = authorOne ? { author: authorOne.id } : {}
 
         const status = args.status ? { status: args.status } : {}
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
         const category = args.category ? { category: args.category } : {}
         const find = { ...status, ...category, ...author, ...search }
 

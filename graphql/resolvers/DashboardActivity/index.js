@@ -4,7 +4,7 @@ export default {
   Query: {
     getDashboardActivities: async (_, args, { models: { DashboardActivityModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { message: { $regex: args.search, $options: 'i' } } : {}
         const find = { ...search }
 
         return await getDocuments(DashboardActivityModel, {

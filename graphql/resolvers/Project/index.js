@@ -16,7 +16,7 @@ export default {
         const category = args.category ? { category: args.category } : {}
         const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
         const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
         const member = memberOne
           ? {
               $or: [{ members: { $elemMatch: { $eq: memberOne?.id } } }, { company: memberOne?.id }]

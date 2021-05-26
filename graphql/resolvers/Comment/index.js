@@ -27,7 +27,7 @@ export default {
   Query: {
     getComments: async (_, args, { models: { CommentModel, UserModel, ArticleModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { text: { $regex: args.search, $options: 'i' } } : {}
         const find = { ...search, article: args.id }
 
         return await getComments(

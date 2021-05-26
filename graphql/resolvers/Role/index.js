@@ -7,7 +7,7 @@ export default {
   Query: {
     getRoles: async (_, args, { models: { RoleModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
         const find = { ...search }
 
         return await getDocuments(RoleModel, {

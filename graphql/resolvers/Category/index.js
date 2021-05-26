@@ -7,7 +7,7 @@ export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
         const type = args.type ? { type: args.type } : {}
         const find = { ...type, ...search }
 
