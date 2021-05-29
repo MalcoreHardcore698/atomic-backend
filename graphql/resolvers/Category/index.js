@@ -1,4 +1,4 @@
-import { getDocuments, createDashboardActivity } from '../../../utils/functions'
+import {getDocuments, createDashboardActivity, parseToQueryDate} from '../../../utils/functions'
 import { CATEGORY_NOT_FOUND, CATEGORY_NOT_EMPTY } from '../../../enums/states/error'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
@@ -7,9 +7,16 @@ export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
       try {
-        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
+        const createdAt = parseToQueryDate(args.createdAt)
+
+        const search = args.search ? {
+          $or: [
+            { name: { $regex: args.search, $options: 'i' } },
+            { description: { $regex: args.search, $options: 'i' } }
+          ]
+        } : {}
         const type = args.type ? { type: args.type } : {}
-        const find = { ...type, ...search }
+        const find = { ...type, ...createdAt, ...search }
 
         return await getDocuments(CategoryModel, {
           find,

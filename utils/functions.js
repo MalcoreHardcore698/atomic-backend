@@ -1,9 +1,10 @@
 import { createWriteStream, existsSync, mkdirSync, unlink } from 'fs'
 import nodemailer from 'nodemailer'
+import mongoose from 'mongoose'
 import jwt from 'jsonwebtoken'
 import rimraf from 'rimraf'
-import { v4 } from 'uuid'
 import config from 'config'
+import { v4 } from 'uuid'
 
 import models from '../models'
 
@@ -279,4 +280,21 @@ export function parseCookie(cookie, cname) {
   }
 
   return r.replace('"', '').replace('"', '')
+}
+
+export async function parseToQueryCompany(company) {
+  const isValidCompany = mongoose.Types.ObjectId.isValid(company)
+  const candidate = !isValidCompany && (await UserModel.findOne({ email: company }))
+
+  return isValidCompany ? company : candidate ? { company: candidate.id } : {}
+}
+
+export function parseToQueryDate(date, field = 'createdAt') {
+  const startOfDay = new Date(parseInt(date))
+  const endOfDay = new Date(parseInt(date))
+
+  startOfDay.setHours(0,0,0,0)
+  endOfDay.setHours(23,59,59,999)
+
+  return date ? { [field]: { $gte: startOfDay, $lte: endOfDay } } : {}
 }

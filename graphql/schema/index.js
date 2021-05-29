@@ -545,7 +545,7 @@ export default gql`
   }
 
   type Query {
-    getRoles(offset: Int, limit: Int, search: String): [Role]!
+    getRoles(offset: Int, limit: Int, search: String, createdAt: String): [Role]!
     getUsers(
       offset: Int
       limit: Int
@@ -555,10 +555,11 @@ export default gql`
       account: [AccountType]
       company: String
       role: String
+      createdAt: String
     ): [User]!
     getFiles(offset: Int, limit: Int, search: String): [File]!
     getImages(offset: Int, limit: Int, search: String): [Image]!
-    getCategories(offset: Int, limit: Int, type: CategoryType, search: String): [Category]!
+    getCategories(offset: Int, limit: Int, type: CategoryType, search: String, createdAt: String): [Category]!
     getCategoryTypes: [CategoryType]!
     getProjects(
       offset: Int
@@ -568,19 +569,24 @@ export default gql`
       search: String
       author: String
       member: String
+      company: String
       status: PostStatus
+      createdAt: String
     ): [Project]!
-    getTickets(offset: Int, limit: Int, search: String): [Ticket]!
+    getTickets(offset: Int, limit: Int, search: String, createdAt: String): [Ticket]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
     getArticles(
       offset: Int
       limit: Int
+      category: ID
       search: String
       author: String
       status: PostStatus
+      createdAt: String
     ): [Article]!
     getComments(id: ID!, offset: Int, limit: Int, search: String): [Comment]!
     getChatTypes: [ChatType]!
+    getGenderTypes: [GenderType]!
     getStatusChatTypes: [StatusChatType]!
     getAccountTypes: [AccountType]!
     getNoticeTypes: [NoticeType]!

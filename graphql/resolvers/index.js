@@ -17,6 +17,7 @@ import DashboardActivity from './DashboardActivity'
 import DashboardSettings from './DashboardSettings'
 
 import CHAT_TYPES from '../../enums/types/chat'
+import GENDER_TYPES from '../../enums/types/gender'
 import STATUS_CHAT_TYPES from '../../enums/states/chat'
 import CATEGORY_TYPES from '../../enums/types/category'
 import ACCOUNT_TYPES, { USER } from '../../enums/types/account'
@@ -283,11 +284,12 @@ module.exports = {
     ...DashboardActivity.Query,
     ...DashboardSettings.Query,
     getChatTypes: () => CHAT_TYPES,
+    getPostStatus: () => POST_STATUSES,
+    getPermissions: () => ROLE_PERMISSIONS,
     getStatusChatTypes: () => STATUS_CHAT_TYPES,
     getCategoryTypes: () => CATEGORY_TYPES,
     getAccountTypes: () => ACCOUNT_TYPES,
-    getPermissions: () => ROLE_PERMISSIONS,
-    getPostStatus: () => POST_STATUSES,
+    getGenderTypes: () => GENDER_TYPES,
     getDashboardStatistics: async (
       _,
       args,

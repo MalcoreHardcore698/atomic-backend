@@ -1,26 +1,29 @@
-import { UserInputError } from 'apollo-server-express'
-import { v4 } from 'uuid'
-import bcrypt from 'bcrypt'
+import {UserInputError} from 'apollo-server-express'
+import mongoose from 'mongoose'
 import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
 import config from 'config'
+import {v4} from 'uuid'
 
-import { randomString } from '../../../functions/string-functions'
-import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
-import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
-import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
-import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
-import { PURPOSE_PROJECT, PURPOSE_ARTICLE } from '../../../enums/settings/role'
-import { MESSAGE, INVITE } from '../../../enums/types/notice'
-import { UNREADED } from '../../../enums/states/message'
-import { PERSONAL } from '../../../enums/types/chat'
-import { OPENED } from '../../../enums/states/chat'
+import {randomString} from '../../../functions/string-functions'
+import {validateLoginInput, validateRegisterInput} from '../../../utils/validators'
+import {authenticateFacebook, authenticateGoogle} from '../../../utils/passport'
+import {USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS} from '../../../enums/states/error'
+import {ENTITY, INDIVIDUAL, OFICIAL, USER} from '../../../enums/types/account'
+import {PURPOSE_ARTICLE, PURPOSE_PROJECT} from '../../../enums/settings/role'
+import {INVITE, MESSAGE} from '../../../enums/types/notice'
+import {UNREADED} from '../../../enums/states/message'
+import {PERSONAL} from '../../../enums/types/chat'
+import {OPENED} from '../../../enums/states/chat'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 import template from '../../../utils/templates'
 import {
+  getDocuments,
   createNotice,
   createDashboardActivity,
-  getDocuments,
+  parseToQueryCompany,
+  parseToQueryDate,
   sendMail
 } from '../../../utils/functions'
 
@@ -32,13 +35,21 @@ export default {
   Query: {
     getUsers: async (_, args, { models: { UserModel, RoleModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+        const company = await parseToQueryCompany(args.company)
+
         const roleOne = args.role && (await RoleModel.findOne({ name: args.role }))
         const role = args.role && roleOne ? { role: roleOne.id } : {}
+
         const email = args.email ? { email: { $nin: args.email } } : {}
-        const company = args.company ? { company: args.company } : {}
         const account = { account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY] }
-        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
-        const find = { ...email, ...company, ...role, ...account, ...search }
+        const search = args.search ? {
+          $or: [
+            { name: { $regex: args.search, $options: 'i' } },
+            { about: { $regex: args.search, $options: 'i' } }
+          ]
+        } : {}
+        const find = { ...email, ...company, ...role, ...account, ...createdAt, ...search }
 
         return await getDocuments(UserModel, {
           find,

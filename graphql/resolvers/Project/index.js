@@ -1,6 +1,6 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import { createDashboardActivity, getDocuments } from '../../../utils/functions'
+import {createDashboardActivity, getDocuments, parseToQueryCompany, parseToQueryDate} from '../../../utils/functions'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 
@@ -8,6 +8,9 @@ export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+        const company = await parseToQueryCompany(args.company)
+
         const authorOne = await UserModel.findOne({ email: args.author })
         const memberOne = await UserModel.findOne({ email: args.member })
 
@@ -16,14 +19,19 @@ export default {
         const category = args.category ? { category: args.category } : {}
         const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
         const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
-        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
+        const search = args.search ? {
+          $or: [
+            { title: { $regex: args.search, $options: 'i' } },
+            { description: { $regex: args.search, $options: 'i' } }
+          ]
+        } : {}
         const member = memberOne
           ? {
               $or: [{ members: { $elemMatch: { $eq: memberOne?.id } } }, { company: memberOne?.id }]
             }
           : {}
 
-        const find = { ...status, ...category, ...rating, ...member, ...author, ...search }
+        const find = { ...status, ...category, ...rating, ...member, ...author, ...company, ...createdAt, ...search }
 
         return getDocuments(ProjectModel, {
           find,

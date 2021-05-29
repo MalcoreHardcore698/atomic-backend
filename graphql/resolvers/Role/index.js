@@ -1,4 +1,4 @@
-import { createDashboardActivity, getDocuments } from '../../../utils/functions'
+import {createDashboardActivity, getDocuments, parseToQueryDate} from '../../../utils/functions'
 import { ROLE_NOT_FOUND, ROLE_NOT_EMPTY } from '../../../enums/states/error'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
@@ -7,8 +7,10 @@ export default {
   Query: {
     getRoles: async (_, args, { models: { RoleModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+
         const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
-        const find = { ...search }
+        const find = { ...createdAt, ...search }
 
         return await getDocuments(RoleModel, {
           find,

@@ -1,4 +1,4 @@
-import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
+import { createDashboardActivity, getValidDocuments, parseToQueryDate } from '../../../utils/functions'
 import { NEW_ARTICLE } from '../../../enums/types/events'
 import { ARTICLE_NOT_FOUND, ARTICLE_NOT_EMPTY } from '../../../enums/states/error'
 import * as M from '../../../enums/states/activity'
@@ -23,13 +23,20 @@ export default {
   Query: {
     getArticles: async (_, args, { models: { ArticleModel, UserModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+
         const authorOne = args.author && (await UserModel.findOne({ email: args.author }))
         const author = authorOne ? { author: authorOne.id } : {}
 
         const status = args.status ? { status: args.status } : {}
-        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
+        const search = args.search ? {
+          $or: [
+            { title: { $regex: args.search, $options: 'i' } },
+            { body: { $regex: args.search, $options: 'i' } }
+          ]
+        } : {}
         const category = args.category ? { category: args.category } : {}
-        const find = { ...status, ...category, ...author, ...search }
+        const find = { ...status, ...category, ...author, ...createdAt, ...search }
 
         return await getArticles(
           { ArticleModel, UserModel },
