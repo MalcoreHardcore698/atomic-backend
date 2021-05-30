@@ -9,11 +9,18 @@ export default {
       try {
         const createdAt = parseToQueryDate(args.createdAt)
 
+        const permissions = args.permissions ? {
+          permissions: {
+            $all: Array.isArray(args.permissions) ? args.permissions : [args.permissions]
+          }
+        } : {}
         const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
-        const find = { ...createdAt, ...search }
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...createdAt, ...permissions, ...search }
 
         return await getDocuments(RoleModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

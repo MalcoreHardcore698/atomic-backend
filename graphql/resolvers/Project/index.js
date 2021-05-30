@@ -1,6 +1,6 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import {createDashboardActivity, getDocuments, parseToQueryCompany, parseToQueryDate} from '../../../utils/functions'
+import {createDashboardActivity, getDocuments, parseToQueryUser, parseToQueryDate} from '../../../utils/functions'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 
@@ -9,7 +9,7 @@ export default {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
         const createdAt = parseToQueryDate(args.createdAt)
-        const company = await parseToQueryCompany(args.company)
+        const company = await parseToQueryUser(args.company, 'company')
 
         const authorOne = await UserModel.findOne({ email: args.author })
         const memberOne = await UserModel.findOne({ email: args.member })
@@ -31,10 +31,12 @@ export default {
             }
           : {}
 
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...status, ...category, ...rating, ...member, ...author, ...company, ...createdAt, ...search }
 
         return getDocuments(ProjectModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

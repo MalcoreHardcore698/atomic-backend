@@ -77,13 +77,17 @@ export default gql`
     ADD_ARTICLE
     ADD_PROJECT
     EDIT_USER
+    EDIT_ROLE
     EDIT_CATEGORY
     EDIT_ARTICLE
     EDIT_PROJECT
+    EDIT_TICKET
     DELETE_USER
+    DELETE_ROLE
     DELETE_CATEGORY
     DELETE_ARTICLE
     DELETE_PROJECT
+    DELETE_TICKET
     COMMENT_ARTICLE
     COMMENT_PROJECT
     PURPOSE_PROJECT
@@ -545,8 +549,16 @@ export default gql`
   }
 
   type Query {
-    getRoles(offset: Int, limit: Int, search: String, createdAt: String): [Role]!
+    getRoles(
+      sort: String
+      offset: Int
+      limit: Int
+      search: String
+      permissions: [Permission]
+      createdAt: String
+    ): [Role]!
     getUsers(
+      sort: String
       offset: Int
       limit: Int
       search: String
@@ -557,11 +569,19 @@ export default gql`
       role: String
       createdAt: String
     ): [User]!
-    getFiles(offset: Int, limit: Int, search: String): [File]!
-    getImages(offset: Int, limit: Int, search: String): [Image]!
-    getCategories(offset: Int, limit: Int, type: CategoryType, search: String, createdAt: String): [Category]!
+    getFiles(sort: String, offset: Int, limit: Int, search: String): [File]!
+    getImages(sort: String, offset: Int, limit: Int, search: String): [Image]!
+    getCategories(
+      sort: String
+      offset: Int
+      limit: Int
+      type: CategoryType
+      search: String
+      createdAt: String
+    ): [Category]!
     getCategoryTypes: [CategoryType]!
     getProjects(
+      sort: String
       offset: Int
       limit: Int
       category: ID
@@ -573,9 +593,20 @@ export default gql`
       status: PostStatus
       createdAt: String
     ): [Project]!
-    getTickets(offset: Int, limit: Int, search: String, createdAt: String): [Ticket]!
+    getTickets(
+      sort: String
+      offset: Int
+      limit: Int,
+      search: String
+      author: String
+      counsellor: String
+      category: String
+      status: StatusTicket
+      createdAt: String
+    ): [Ticket]!
     getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
     getArticles(
+      sort: String
       offset: Int
       limit: Int
       category: ID
@@ -588,6 +619,7 @@ export default gql`
     getChatTypes: [ChatType]!
     getGenderTypes: [GenderType]!
     getStatusChatTypes: [StatusChatType]!
+    getStatusTicketTypes: [StatusTicket]!
     getAccountTypes: [AccountType]!
     getNoticeTypes: [NoticeType]!
     getPermissions: [Permission]!

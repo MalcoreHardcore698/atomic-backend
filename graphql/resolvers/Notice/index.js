@@ -8,10 +8,12 @@ export default {
         const authorOne = await UserModel.findOne({ email: args.author })
         const author = authorOne ? { author: authorOne.id } : {}
         const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...author, ...search }
 
         return await getDocuments(NoticeModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

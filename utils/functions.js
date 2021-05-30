@@ -282,11 +282,11 @@ export function parseCookie(cookie, cname) {
   return r.replace('"', '').replace('"', '')
 }
 
-export async function parseToQueryCompany(company) {
-  const isValidCompany = mongoose.Types.ObjectId.isValid(company)
-  const candidate = !isValidCompany && (await UserModel.findOne({ email: company }))
+export async function parseToQueryUser(userIdOrEmail, findField = 'id') {
+  const isValidId = mongoose.Types.ObjectId.isValid(userIdOrEmail)
+  const candidate = !isValidId && (await UserModel.findOne({ email: userIdOrEmail }))
 
-  return isValidCompany ? company : candidate ? { company: candidate.id } : {}
+  return isValidId ? userIdOrEmail : candidate ? { [findField]: candidate.id } : {}
 }
 
 export function parseToQueryDate(date, field = 'createdAt') {

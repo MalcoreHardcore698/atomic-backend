@@ -1,4 +1,4 @@
-import {createDashboardActivity, getValidDocuments, parseToQueryDate} from '../../../utils/functions'
+import {createDashboardActivity, getValidDocuments, parseToQueryDate, parseToQueryUser} from '../../../utils/functions'
 import { TICKET_NOT_EMPTY, TICKET_NOT_FOUND } from '../../../enums/states/error'
 import { OPENED, CLOSED } from '../../../enums/states/chat'
 import { UNREADED } from '../../../enums/states/message'
@@ -27,15 +27,19 @@ export default {
     getTickets: async (_, args, { models: { TicketModel, UserModel, CategoryModel } }) => {
       try {
         const createdAt = parseToQueryDate(args.createdAt)
+        const author = await parseToQueryUser(args.author, 'author')
+        const counsellor = await parseToQueryUser(args.counsellor, 'counsellor')
 
         const category = args.category ? { category: args.category } : {}
         const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
-        const find = { ...category, ...createdAt, ...search }
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...author, ...counsellor, ...category, ...createdAt, ...search }
 
         return await getTickets(
           { TicketModel, UserModel, CategoryModel },
           {
             find,
+            sort,
             skip: args.offset,
             limit: args.limit
           }

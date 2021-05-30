@@ -22,7 +22,7 @@ import {
   getDocuments,
   createNotice,
   createDashboardActivity,
-  parseToQueryCompany,
+  parseToQueryUser,
   parseToQueryDate,
   sendMail
 } from '../../../utils/functions'
@@ -36,7 +36,7 @@ export default {
     getUsers: async (_, args, { models: { UserModel, RoleModel } }) => {
       try {
         const createdAt = parseToQueryDate(args.createdAt)
-        const company = await parseToQueryCompany(args.company)
+        const company = await parseToQueryUser(args.company, 'company')
 
         const roleOne = args.role && (await RoleModel.findOne({ name: args.role }))
         const role = args.role && roleOne ? { role: roleOne.id } : {}
@@ -49,10 +49,12 @@ export default {
             { about: { $regex: args.search, $options: 'i' } }
           ]
         } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...email, ...company, ...role, ...account, ...createdAt, ...search }
 
         return await getDocuments(UserModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

@@ -16,10 +16,12 @@ export default {
           ]
         } : {}
         const type = args.type ? { type: args.type } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...type, ...createdAt, ...search }
 
         return await getDocuments(CategoryModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

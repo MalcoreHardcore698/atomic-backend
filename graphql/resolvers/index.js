@@ -287,6 +287,7 @@ module.exports = {
     getPostStatus: () => POST_STATUSES,
     getPermissions: () => ROLE_PERMISSIONS,
     getStatusChatTypes: () => STATUS_CHAT_TYPES,
+    getStatusTicketTypes: () => STATUS_CHAT_TYPES,
     getCategoryTypes: () => CATEGORY_TYPES,
     getAccountTypes: () => ACCOUNT_TYPES,
     getGenderTypes: () => GENDER_TYPES,

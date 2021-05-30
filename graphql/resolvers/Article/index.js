@@ -36,12 +36,14 @@ export default {
           ]
         } : {}
         const category = args.category ? { category: args.category } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...status, ...category, ...author, ...createdAt, ...search }
 
         return await getArticles(
           { ArticleModel, UserModel },
           {
             find,
+            sort,
             skip: args.offset,
             limit: args.limit
           }
