@@ -161,6 +161,8 @@ export default gql`
     token: String
     register: String
     resetPasswordKey: String
+    countOfNewNotifications: Int
+    countOfNewMessages: Int
     updatedAt: String!
     createdAt: String!
   }
@@ -200,6 +202,7 @@ export default gql`
     title: String!
     message: String!
     company: User
+    status: StatusMessageType!
     updatedAt: String!
     createdAt: String!
   }
@@ -718,6 +721,7 @@ export default gql`
     ): [TicketMessage]!
 
     readMessages(id: [ID]!): Boolean!
+    readNotifications(id: [ID]!): Boolean!
 
     closeTicket(id: ID!): Ticket!
   }

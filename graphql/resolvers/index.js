@@ -23,6 +23,7 @@ import CATEGORY_TYPES from '../../enums/types/category'
 import ACCOUNT_TYPES, { USER } from '../../enums/types/account'
 import ROLE_PERMISSIONS from '../../enums/settings/role'
 import POST_STATUSES from '../../enums/types/post'
+import { UNREADED } from '../../enums/states/message'
 
 module.exports = {
   User: {
@@ -81,6 +82,45 @@ module.exports = {
       }
 
       return result
+    },
+    countOfNewNotifications: async ({ id }, args, { models: { NoticeModel } }) => {
+      const result = []
+
+      const notifications = await NoticeModel.find({ author: id })
+
+      if (notifications?.length > 0) {
+        for (let notificationId of notifications) {
+          const notification = await NoticeModel.findById(notificationId)
+          if (notification.status === UNREADED) {
+            result.push(notification)
+          }
+        }
+      }
+
+      return result.length
+    },
+    countOfNewMessages: async (
+      { id },
+      args,
+      { models: { UserChatModel, ChatModel, MessageModel } }
+    ) => {
+      const messages = []
+
+      const userChats = await UserChatModel.find({ user: id })
+
+      for (let userChat of userChats) {
+        const chat = await ChatModel.findById(userChat.chat)
+        if (chat) {
+          for (let messageId of chat.messages) {
+            const message = await MessageModel.findById(messageId)
+            if (message?.type === UNREADED) {
+              messages.push(message)
+            }
+          }
+        }
+      }
+
+      return messages.length
     }
   },
   Article: {

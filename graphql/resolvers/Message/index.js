@@ -1,4 +1,4 @@
-import { AuthenticationError, UserInputError } from 'apollo-server-express'
+import { UserInputError } from 'apollo-server-express'
 import { MESSAGE_NOT_FOUND } from '../../../enums/states/error'
 import { READED } from '../../../enums/states/message'
 

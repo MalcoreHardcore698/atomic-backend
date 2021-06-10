@@ -6,6 +6,7 @@ import rimraf from 'rimraf'
 import config from 'config'
 import { v4 } from 'uuid'
 
+import { UNREADED } from '../enums/states/message'
 import models from '../models'
 
 const { UserModel, NoticeModel, DashboardActivityModel } = models
@@ -182,7 +183,10 @@ export async function createDashboardActivity(args) {
 }
 
 export async function createNotice(args) {
-  await NoticeModel.create(args)
+  await NoticeModel.create({
+    ...args,
+    status: UNREADED
+  })
   await safeNotifications(10)
 }
 
@@ -293,8 +297,8 @@ export function parseToQueryDate(date, field = 'createdAt') {
   const startOfDay = new Date(parseInt(date))
   const endOfDay = new Date(parseInt(date))
 
-  startOfDay.setHours(0,0,0,0)
-  endOfDay.setHours(23,59,59,999)
+  startOfDay.setHours(0, 0, 0, 0)
+  endOfDay.setHours(23, 59, 59, 999)
 
   return date ? { [field]: { $gte: startOfDay, $lte: endOfDay } } : {}
 }

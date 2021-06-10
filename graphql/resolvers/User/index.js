@@ -1,20 +1,19 @@
-import {UserInputError} from 'apollo-server-express'
-import mongoose from 'mongoose'
+import { UserInputError } from 'apollo-server-express'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import config from 'config'
-import {v4} from 'uuid'
+import { v4 } from 'uuid'
 
-import {randomString} from '../../../functions/string-functions'
-import {validateLoginInput, validateRegisterInput} from '../../../utils/validators'
-import {authenticateFacebook, authenticateGoogle} from '../../../utils/passport'
-import {USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS} from '../../../enums/states/error'
-import {ENTITY, INDIVIDUAL, OFICIAL, USER} from '../../../enums/types/account'
-import {PURPOSE_ARTICLE, PURPOSE_PROJECT} from '../../../enums/settings/role'
-import {INVITE, MESSAGE} from '../../../enums/types/notice'
-import {UNREADED} from '../../../enums/states/message'
-import {PERSONAL} from '../../../enums/types/chat'
-import {OPENED} from '../../../enums/states/chat'
+import { randomString } from '../../../functions/string-functions'
+import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
+import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
+import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
+import { ENTITY, INDIVIDUAL, OFICIAL, USER } from '../../../enums/types/account'
+import { PURPOSE_ARTICLE, PURPOSE_PROJECT } from '../../../enums/settings/role'
+import { INVITE, MESSAGE } from '../../../enums/types/notice'
+import { UNREADED } from '../../../enums/states/message'
+import { PERSONAL } from '../../../enums/types/chat'
+import { OPENED } from '../../../enums/states/chat'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 import template from '../../../utils/templates'
@@ -43,12 +42,14 @@ export default {
 
         const email = args.email ? { email: { $nin: args.email } } : {}
         const account = { account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY] }
-        const search = args.search ? {
-          $or: [
-            { name: { $regex: args.search, $options: 'i' } },
-            { about: { $regex: args.search, $options: 'i' } }
-          ]
-        } : {}
+        const search = args.search
+          ? {
+              $or: [
+                { name: { $regex: args.search, $options: 'i' } },
+                { about: { $regex: args.search, $options: 'i' } }
+              ]
+            }
+          : {}
         const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...email, ...company, ...role, ...account, ...createdAt, ...search }
 
@@ -81,9 +82,19 @@ export default {
       if (userChats) return userChats
       return []
     },
-    getUserMembers: async (_, { email }, { models: { UserModel } }) => {
-      const user = await UserModel.findOne({ email })
-      if (user) return await UserModel.find({ company: user.id })
+    getUserMembers: async (_, args, { models: { UserModel } }) => {
+      const user = await UserModel.findOne({ email: args.email })
+
+      if (user) {
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        return getDocuments(UserModel, {
+          find: { company: user.id },
+          sort,
+          skip: args.offset,
+          limit: args.limit
+        })
+      }
+
       return []
     },
     checkUser: async (_, { search }, { models: { UserModel } }) => {
