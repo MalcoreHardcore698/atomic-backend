@@ -83,6 +83,10 @@ module.exports = {
 
       return result
     },
+    registerOfASocialNetwork: ({ googleAccount, facebookAccount }) => {
+      if (googleAccount?.accessToken || facebookAccount?.accessToken) return true
+      return false
+    },
     countOfNewNotifications: async ({ id }, args, { models: { NoticeModel } }) => {
       const result = []
 
@@ -113,7 +117,7 @@ module.exports = {
         if (chat) {
           for (let messageId of chat.messages) {
             const message = await MessageModel.findById(messageId)
-            if (message?.type === UNREADED) {
+            if (message && message.type === UNREADED && message.author?.equals(id)) {
               messages.push(message)
             }
           }

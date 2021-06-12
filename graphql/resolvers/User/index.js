@@ -434,9 +434,11 @@ export default {
 
       if (input.password) user.password = input.password
 
-      await deleteUpload(user.avatar, ImageModel)
-      const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-      if (avatar) user.avatar = avatar
+      if (input.avatar && input.avatarSize) {
+        await deleteUpload(user.avatar, ImageModel)
+        const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
+        if (avatar) user.avatar = avatar
+      }
 
       await user.save()
 
@@ -492,16 +494,21 @@ export default {
         user.dateOfBirth = input.dateOfBirth || user.dateOfBirth
         user.role = input.role || user.role
 
+        if (input.password) {
+          const bcryptPassword = await bcrypt.hashSync(input.password, SALT)
+          user.password = bcryptPassword
+        }
+
         if (input.company) {
           const company = await UserModel.findOne({ email: input.company })
           if (company && company.account === ENTITY) user.company = company.id
         }
 
-        if (input.password) user.password = input.password
-
-        await deleteUpload(user.avatar, ImageModel)
-        const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-        if (avatar) user.avatar = avatar
+        if (input.avatar && input.avatarSize) {
+          await deleteUpload(user.avatar, ImageModel)
+          const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
+          if (avatar) user.avatar = avatar
+        }
 
         await createDashboardActivity({
           user: author.id,

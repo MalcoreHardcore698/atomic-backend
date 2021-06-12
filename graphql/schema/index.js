@@ -160,6 +160,7 @@ export default gql`
     settings: [UserSetting]
     token: String
     register: String
+    registerOfASocialNetwork: Boolean
     resetPasswordKey: String
     countOfNewNotifications: Int
     countOfNewMessages: Int
@@ -470,6 +471,7 @@ export default gql`
     avatar: Upload
     avatarSize: Int
     company: String
+    password: String
     account: AccountType
     gender: GenderType
     email: String
