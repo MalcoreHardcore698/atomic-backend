@@ -20,10 +20,16 @@ export const attentionAuthTemplate = `
   </p>
 `
 
+export const footer = `
+  <br />
+  <p style="font-size: 12px">Пожалуйста, не отвечайте на это письмо, так как оно сгенерировано автоматически.</p> 
+`
+
 export const googleAuth = ({ name }) => {
   return `
     <h1>${name}, в Ваш аккаунт был выполнен вход через Google</h1>
     ${attentionAuthTemplate}
+    ${footer}
   `
 }
 
@@ -31,12 +37,14 @@ export const facebookAuth = ({ name }) => {
   return `
     <h1>${name}, в Ваш аккаунт был выполнен вход через Facebook</h1>
     ${attentionAuthTemplate}
+    ${footer}
   `
 }
 
 export const registrationCompleted = ({ name }) => {
   return `
     <h1>${name}, поздравляем с регистрацией!</h1>
+    ${footer}
   `
 }
 
@@ -44,6 +52,7 @@ export const resetPassword = ({ key }) => {
   return `
     <h1>Используйте этот ключ для сброса пароля</h1>
     <b>${key}</b>
+    ${footer}
   `
 }
 
@@ -51,36 +60,42 @@ export const inviteUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
     <a href="${HOST}/profile?notifications">Ответить</a>
+    ${footer}
   `
 }
 
 export const applyInviteUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
+    ${footer}
   `
 }
 
 export const rejectInviteUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
+    ${footer}
   `
 }
 
 export const appointUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
+    ${footer}
   `
 }
 
 export const excludeUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
+    ${footer}
   `
 }
 
 export const dismissUserMember = ({ message }) => {
   return `
     <h1>${message}</h1>
+    ${footer}
   `
 }
 
@@ -88,6 +103,7 @@ export const deleteUser = () => {
   return `
     <h1>К сожалению, Ваш аккаунт был удален</h1>
     <p>Причины удаления аккаунта можно узнать, <a href="${HOST}/support">обратившись</a> в техническую поддержку</p>
+    ${footer} 
   `
 }
 
