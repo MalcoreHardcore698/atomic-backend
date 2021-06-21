@@ -345,36 +345,40 @@ export default {
         throw new UserInputError('Errors', { errors })
       }
 
-      const user = await UserModel.findOne({ $or: [{ name }, { email }, { phone }] })
+      const user = await UserModel.findOne({ $or: [{ email }, { phone }] })
       if (user) {
         throw new UserInputError(USER_IS_EXIST)
       }
 
       const role = await RoleModel.findOne({ name: USER })
 
-      const bcryptPassword = await bcrypt.hashSync(password, SALT)
+      if (role) {
+        const bcryptPassword = await bcrypt.hashSync(password, SALT)
 
-      const newUser = await UserModel.create({
-        name,
-        role,
-        account,
-        email,
-        phone,
-        password: bcryptPassword,
-        confirmPassword
-      })
+        const newUser = await UserModel.create({
+          name,
+          role,
+          account,
+          email,
+          phone,
+          password: bcryptPassword,
+          confirmPassword
+        })
 
-      sendMail({
-        from: HOST_EMAIL,
-        to: email,
-        subject: template.registrationCompletedSubject,
-        html: template.registrationCompleted({ name })
-      })
+        sendMail({
+          from: HOST_EMAIL,
+          to: email,
+          subject: template.registrationCompletedSubject,
+          html: template.registrationCompleted({ name })
+        })
 
-      return {
-        ...newUser._doc,
-        token: jwt.sign({ uid: newUser._id }, SECRET)
+        return {
+          ...newUser._doc,
+          token: jwt.sign({ uid: newUser._id }, SECRET)
+        }
       }
+
+      throw new UserInputError('Errors', { errors })
     },
     createUser: async (
       _,
