@@ -1,6 +1,12 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import {createDashboardActivity, getDocuments, parseToQueryUser, parseToQueryDate} from '../../../utils/functions'
+import {
+  createDashboardActivity,
+  getDocuments,
+  parseToQueryUser,
+  parseToQueryDate
+} from '../../../utils/functions'
+import { PUBLISHED } from '../../../enums/types/post'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
 
@@ -14,17 +20,19 @@ export default {
         const authorOne = await UserModel.findOne({ email: args.author })
         const memberOne = await UserModel.findOne({ email: args.member })
 
-        const status = args.status ? { status: args.status } : {}
+        const status = { status: args.status ?? PUBLISHED }
         const author = authorOne ? { author: authorOne?.id } : {}
         const category = args.category ? { category: args.category } : {}
         const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
         const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
-        const search = args.search ? {
-          $or: [
-            { title: { $regex: args.search, $options: 'i' } },
-            { description: { $regex: args.search, $options: 'i' } }
-          ]
-        } : {}
+        const search = args.search
+          ? {
+              $or: [
+                { title: { $regex: args.search, $options: 'i' } },
+                { description: { $regex: args.search, $options: 'i' } }
+              ]
+            }
+          : {}
         const member = memberOne
           ? {
               $or: [{ members: { $elemMatch: { $eq: memberOne?.id } } }, { company: memberOne?.id }]
@@ -32,7 +40,16 @@ export default {
           : {}
 
         const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
-        const find = { ...status, ...category, ...rating, ...member, ...author, ...company, ...createdAt, ...search }
+        const find = {
+          ...status,
+          ...category,
+          ...rating,
+          ...member,
+          ...author,
+          ...company,
+          ...createdAt,
+          ...search
+        }
 
         return getDocuments(ProjectModel, {
           find,

@@ -34,6 +34,12 @@ export function sendMail(options) {
   })
 }
 
+export async function getRandomDocument(Model, args) {
+  const count = await Model.estimatedDocumentCount()
+  const random = Math.floor(Math.random() * count)
+  return await Model.findOne(args).skip(random)
+}
+
 export async function getDocuments(Model, { find, sort = { createdAt: -1 }, skip, limit }) {
   return await Model.find(find).sort(sort).skip(skip).limit(limit)
 }

@@ -172,80 +172,76 @@ export default {
         access_token: accessToken
       }
 
-      try {
-        const { data } = await authenticateGoogle(req, res)
+      const { data } = await authenticateGoogle(req, res)
 
-        if (data) {
-          const { profile, accessToken } = data
-          const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
-          const name = profile && profile.displayName
-          const user = await UserModel.findOne({ email })
+      if (data) {
+        const { profile, accessToken } = data
+        const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
+        const name = profile && profile.displayName
+        const user = await UserModel.findOne({ email })
 
-          if (!user) {
-            const account = INDIVIDUAL
-            const role = await RoleModel.findOne({ name: USER })
-            const avatar =
-              profile &&
-              profile._json &&
-              (await ImageModel.create({
-                filename: profile._json.picture,
-                path: profile._json.picture,
-                size: 10
-              }))
+        if (!user) {
+          const account = INDIVIDUAL
+          const role = await RoleModel.findOne({ name: USER })
+          const avatar =
+            profile &&
+            profile._json &&
+            (await ImageModel.create({
+              filename: profile._json.picture,
+              path: profile._json.picture,
+              size: 10
+            }))
 
-            const newUser = await UserModel.create({
-              name,
-              role,
-              email,
-              avatar,
-              account,
+          const newUser = await UserModel.create({
+            name,
+            role,
+            email,
+            avatar,
+            account,
+            googleAccount: {
+              accessToken
+            }
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.registrationCompletedSubject,
+            html: template.registrationCompleted({ name })
+          })
+
+          return {
+            ...newUser._doc,
+            register: true,
+            token: jwt.sign({ uid: newUser._id }, SECRET)
+          }
+        }
+
+        if (user) {
+          const newUser = await UserModel.findOneAndUpdate(
+            { email },
+            {
               googleAccount: {
                 accessToken
               }
-            })
+            },
+            { new: true }
+          )
 
-            sendMail({
-              from: HOST_EMAIL,
-              to: email,
-              subject: template.registrationCompletedSubject,
-              html: template.registrationCompleted({ name })
-            })
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.googleAuthSubject,
+            html: template.googleAuth({ name: user.name })
+          })
 
-            return {
-              ...newUser._doc,
-              register: true,
-              token: jwt.sign({ uid: newUser._id }, SECRET)
-            }
+          return {
+            ...newUser._doc,
+            token: jwt.sign({ uid: user._id }, SECRET)
           }
-
-          if (user) {
-            const newUser = await UserModel.findOneAndUpdate(
-              { email },
-              {
-                googleAccount: {
-                  accessToken
-                }
-              },
-              { new: true }
-            )
-
-            sendMail({
-              from: HOST_EMAIL,
-              to: email,
-              subject: template.googleAuthSubject,
-              html: template.googleAuth({ name: user.name })
-            })
-
-            return {
-              ...newUser._doc,
-              token: jwt.sign({ uid: user._id }, SECRET)
-            }
-          }
-        } else {
-          return new Error('Authentication Failure!')
         }
-      } catch (error) {
-        throw new Error(error)
+      } else {
+        return null
       }
     },
     facebookAuth: async (
@@ -258,81 +254,77 @@ export default {
         access_token: accessToken
       }
 
-      try {
-        const { data } = await authenticateFacebook(req, res)
+      const { data } = await authenticateFacebook(req, res)
 
-        if (data) {
-          const { profile, accessToken } = data
-          const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
-          const name = profile && profile.displayName
-          const user = await UserModel.findOne({ email })
+      if (data) {
+        const { profile, accessToken } = data
+        const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
+        const name = profile && profile.displayName
+        const user = await UserModel.findOne({ email })
 
-          if (!user) {
-            const account = INDIVIDUAL
-            const role = await RoleModel.findOne({ name: USER })
-            const avatar =
-              profile &&
-              profile.photos &&
-              profile.photos[0] &&
-              (await ImageModel.create({
-                filename: profile.photos[0].value,
-                path: profile.photos[0].value,
-                size: 10
-              }))
+        if (!user) {
+          const account = INDIVIDUAL
+          const role = await RoleModel.findOne({ name: USER })
+          const avatar =
+            profile &&
+            profile.photos &&
+            profile.photos[0] &&
+            (await ImageModel.create({
+              filename: profile.photos[0].value,
+              path: profile.photos[0].value,
+              size: 10
+            }))
 
-            const newUser = await UserModel.create({
-              name,
-              role,
-              email,
-              avatar,
-              account,
+          const newUser = await UserModel.create({
+            name,
+            role,
+            email,
+            avatar,
+            account,
+            facebookAccount: {
+              accessToken
+            }
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.registrationCompletedSubject,
+            html: template.registrationCompleted({ name })
+          })
+
+          return {
+            ...newUser._doc,
+            token: jwt.sign({ uid: newUser._id }, SECRET)
+          }
+        }
+
+        if (user) {
+          const newUser = await UserModel.findOneAndUpdate(
+            { email },
+            {
               facebookAccount: {
                 accessToken
               }
-            })
+            },
+            { new: true }
+          )
 
-            sendMail({
-              from: HOST_EMAIL,
-              to: email,
-              subject: template.registrationCompletedSubject,
-              html: template.registrationCompleted({ name })
-            })
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.facebookAuthSubject,
+            html: template.facebookAuth({ name: user.name })
+          })
 
-            return {
-              ...newUser._doc,
-              token: jwt.sign({ uid: newUser._id }, SECRET)
-            }
+          return {
+            ...newUser._doc,
+            register: true,
+            token: jwt.sign({ uid: user._id }, SECRET)
           }
-
-          if (user) {
-            const newUser = await UserModel.findOneAndUpdate(
-              { email },
-              {
-                facebookAccount: {
-                  accessToken
-                }
-              },
-              { new: true }
-            )
-
-            sendMail({
-              from: HOST_EMAIL,
-              to: email,
-              subject: template.facebookAuthSubject,
-              html: template.facebookAuth({ name: user.name })
-            })
-
-            return {
-              ...newUser._doc,
-              register: true,
-              token: jwt.sign({ uid: user._id }, SECRET)
-            }
-          }
-        } else {
-          return new Error('Authentication Failure!')
         }
-      } catch (error) {
-        throw new Error(error)
+      } else {
+        return null
       }
     },
     register: async (

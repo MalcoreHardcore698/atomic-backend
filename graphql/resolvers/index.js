@@ -1,4 +1,4 @@
-import { getDocumentGraph } from '../../utils/functions'
+import { getRandomDocument, getDocumentGraph } from '../../utils/functions'
 
 import Role from './Role'
 import User from './User'
@@ -299,16 +299,30 @@ module.exports = {
       return { ...general, logotype }
     },
     scaffold: async ({ scaffold }, args, { models: { ProjectModel, ImageModel } }) => {
-      const primary = await ProjectModel.findById(scaffold.primary)
-      const background = await ImageModel.findById(scaffold.background)
-
+      let primary = {}
       const residues = []
-      for (let id of scaffold.residues) {
-        const project = await ProjectModel.findById(id)
-        if (project) residues.push(project)
+
+      const background = await ImageModel.findById(scaffold.background)
+      const isRandom = scaffold.isRandom
+
+      if (isRandom) {
+        primary = await getRandomDocument(ProjectModel, { status: 'PUBLISHED' })
+
+        // eslint-disable-next-line no-unused-vars
+        for (let id of scaffold.residues) {
+          const project = await getRandomDocument(ProjectModel, { status: 'PUBLISHED' })
+          if (project) residues.push(project)
+        }
+      } else {
+        primary = await ProjectModel.findById(scaffold.primary)
+
+        for (let id of scaffold.residues) {
+          const project = await ProjectModel.findById(id)
+          if (project) residues.push(project)
+        }
       }
 
-      return { ...scaffold, primary, residues, background }
+      return { ...scaffold, primary, residues, background, isRandom }
     }
   },
   Query: {

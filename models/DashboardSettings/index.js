@@ -9,7 +9,8 @@ const DashboardSettingsSchema = new Schema(
       title: { type: String },
       primary: { type: Schema.Types.ObjectId, ref: 'Project' },
       residues: [{ type: Schema.Types.ObjectId, ref: 'Project' }],
-      background: { type: Schema.Types.ObjectId, ref: 'Image' }
+      background: { type: Schema.Types.ObjectId, ref: 'Image' },
+      isRandom: { type: Boolean }
     },
     meta: {
       title: { type: String },

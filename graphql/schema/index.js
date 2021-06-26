@@ -320,6 +320,7 @@ export default gql`
     primary: Project
     residues: [Project]
     background: Image
+    isRandom: Boolean
   }
 
   type DashboardSettingsMeta {
@@ -357,6 +358,7 @@ export default gql`
     residues: [ID]
     background: Upload
     backgroundSize: Int
+    isRandom: Boolean
   }
 
   input DashboardSettingsMetaInput {
@@ -448,7 +450,7 @@ export default gql`
     fileSizes: [Int]
     screenshots: [Upload]
     screenshotSizes: [Int]
-    status: PostStatus!
+    status: PostStatus
   }
 
   input TicketCreateInput {
@@ -595,7 +597,7 @@ export default gql`
       author: String
       member: String
       company: String
-      status: PostStatus
+      status: [PostStatus]
       createdAt: String
     ): [Project]!
     getTickets(
@@ -609,7 +611,7 @@ export default gql`
       status: StatusTicket
       createdAt: String
     ): [Ticket]!
-    getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
+    getProjectsByIds(projects: [ID]!, status: [PostStatus]): [Project]!
     getArticles(
       sort: String
       offset: Int
@@ -617,7 +619,7 @@ export default gql`
       category: ID
       search: String
       author: String
-      status: PostStatus
+      status: [PostStatus]
       createdAt: String
     ): [Article]!
     getComments(id: ID!, offset: Int, limit: Int, search: String): [Comment]!
@@ -653,8 +655,8 @@ export default gql`
   }
 
   type Mutation {
-    googleAuth(accessToken: String!): User!
-    facebookAuth(accessToken: String!): User!
+    googleAuth(accessToken: String!): User
+    facebookAuth(accessToken: String!): User
     checkin(login: String!): Boolean!
     login(login: String!, password: String!): User!
     register(input: RegisterInput): User!
