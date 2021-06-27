@@ -23,8 +23,11 @@ export default {
         const status = { status: args.status ?? PUBLISHED }
         const author = authorOne ? { author: authorOne?.id } : {}
         const category = args.category ? { category: args.category } : {}
-        const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
-        const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
+        const users = Array.isArray(args.rating)
+          ? await UserModel.find({ email: args.rating })
+          : [args.rating]
+        const rating =
+          args.rating && users.length > 0 ? { rating: { $in: users.map((u) => u.id) } } : {}
         const search = args.search
           ? {
               $or: [
