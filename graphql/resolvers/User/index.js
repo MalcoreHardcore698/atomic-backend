@@ -384,8 +384,8 @@ export default {
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'webconsult.ekb@gmail.com',
-          pass: 'bzbodvxmhpuvmfnp'
+          user: 'noreply.atomic@gmail.com',
+          pass: 'xrvhbfibzzmzignx'
         }
       })
 
