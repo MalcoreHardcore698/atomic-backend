@@ -11,7 +11,7 @@
 
   "transporter-service": "gmail",
   "transporter-auth-user": "noreply.atomic@gmail.com",
-  "transporter-auth-pass": "jEfwefqd34Fewgl",
+  "transporter-auth-pass": "xrvhbfibzzmzignx",
 
   "server-host-url": "https://api.atomic.ru.com",
   "server-local-url": "http://localhost:5000",
