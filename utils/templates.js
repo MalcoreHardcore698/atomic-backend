@@ -16,7 +16,7 @@ export const deleteUserSubject = 'Ваш аккаунт был удален'
 
 export const attentionAuthTemplate = `
   <p>
-    В Ваш аккаунт был выполнен вход. Если это не Вы, убедительная просьба, <a href="${HOST}/auth">сбросить пароль</a> или <a href="${HOST}/support">обратиться</a> в техническую поддержку
+    В Ваш аккаунт был выполнен вход. Если это не Вы, убедительная просьба, <a href="${HOST}/reset-password">сбросить пароль</a> или <a href="${HOST}/support">обратиться</a> в техническую поддержку
   </p>
 `
 
