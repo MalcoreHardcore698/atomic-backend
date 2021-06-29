@@ -15,4 +15,6 @@ const TicketSchema = new Schema(
   }
 )
 
+TicketSchema.index({ title: 'text' })
+
 export default model('Ticket', TicketSchema)

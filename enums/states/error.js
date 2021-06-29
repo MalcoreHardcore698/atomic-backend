@@ -9,6 +9,7 @@ export const IMAGE_NOT_FOUND = 'Изображение не найдено!'
 export const FILE_NOT_FOUND = 'Файл не найден!'
 export const SETTINGS_NOT_FOUND = 'Настройки не найдены!'
 export const NOTICE_NOT_FOUND = 'Уведомление не найдено!'
+export const MESSAGE_NOT_FOUND = 'Сообщение не найдено!'
 
 export const ROLE_NOT_EMPTY = 'Роль не может быть пустой'
 export const ARTICLE_NOT_EMPTY = 'Статься не может быть пустой'
@@ -45,6 +46,7 @@ export default [
   PROJECT_NOT_FOUND,
   COMMENT_NOT_FOUND,
   CATEGORY_NOT_FOUND,
+  MESSAGE_NOT_FOUND,
   TICKET_NOT_FOUND,
 
   ROLE_NOT_EMPTY,

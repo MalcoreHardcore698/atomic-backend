@@ -1,4 +1,4 @@
-import { getDocuments, createDashboardActivity } from '../../../utils/functions'
+import {getDocuments, createDashboardActivity, parseToQueryDate} from '../../../utils/functions'
 import { CATEGORY_NOT_FOUND, CATEGORY_NOT_EMPTY } from '../../../enums/states/error'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
@@ -7,12 +7,21 @@ export default {
   Query: {
     getCategories: async (_, args, { models: { CategoryModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const createdAt = parseToQueryDate(args.createdAt)
+
+        const search = args.search ? {
+          $or: [
+            { name: { $regex: args.search, $options: 'i' } },
+            { description: { $regex: args.search, $options: 'i' } }
+          ]
+        } : {}
         const type = args.type ? { type: args.type } : {}
-        const find = { ...search, ...type }
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...type, ...createdAt, ...search }
 
         return await getDocuments(CategoryModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })
@@ -77,19 +86,26 @@ export default {
       { user, models: { CategoryModel, ArticleModel, ProjectModel } }
     ) => {
       try {
-        const category = await CategoryModel.findById(id)
+        for (let str of id) {
+          const category = await CategoryModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_CATEGORY,
-          entityType: T.CATEGORY,
-          identityString: category._id.toString()
-        })
+          if (category) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_CATEGORY,
+                entityType: T.CATEGORY,
+                identityString: category._id.toString()
+              })
 
-        await ArticleModel.update({ category: id }, { $unset: { category: '' } })
-        await ProjectModel.update({ category: id }, { $unset: { category: '' } })
+              await ArticleModel.update({ category: id }, { $unset: { category: '' } })
+              await ProjectModel.update({ category: id }, { $unset: { category: '' } })
 
-        await category.delete()
+              await category.delete()
+            }
+          }
+        }
+
         return await CategoryModel.find().sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)

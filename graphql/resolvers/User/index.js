@@ -1,40 +1,61 @@
 import { UserInputError } from 'apollo-server-express'
-import { v4 } from 'uuid'
-import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { createNotice, createDashboardActivity, getDocuments } from '../../../utils/functions'
+import bcrypt from 'bcrypt'
+import config from 'config'
+import { v4 } from 'uuid'
+
+import { randomString } from '../../../functions/string-functions'
 import { validateLoginInput, validateRegisterInput } from '../../../utils/validators'
 import { authenticateFacebook, authenticateGoogle } from '../../../utils/passport'
-import { USER, ENTITY, INDIVIDUAL, OFICIAL } from '../../../enums/types/account'
-import { PURPOSE_PROJECT, PURPOSE_ARTICLE } from '../../../enums/settings/role'
-import { MESSAGE, INVITE } from '../../../enums/types/notice'
+import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
+import { ENTITY, INDIVIDUAL, OFICIAL, USER } from '../../../enums/types/account'
+import { PURPOSE_ARTICLE, PURPOSE_PROJECT } from '../../../enums/settings/role'
+import { INVITE, MESSAGE } from '../../../enums/types/notice'
 import { UNREADED } from '../../../enums/states/message'
 import { PERSONAL } from '../../../enums/types/chat'
 import { OPENED } from '../../../enums/states/chat'
-import { USER_IS_EXIST, USER_NOT_FOUND, WRONG_CREDENTIALS } from '../../../enums/states/error'
-import config from 'config'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
-import { randomString } from '../../../functions/string-functions'
+import template from '../../../utils/templates'
+import {
+  getDocuments,
+  createNotice,
+  createDashboardActivity,
+  parseToQueryUser,
+  parseToQueryDate,
+  sendMail
+} from '../../../utils/functions'
 
 const SALT = config.get('salt')
 const SECRET = config.get('secret')
-const nodemailer = require('nodemailer')
+const HOST_EMAIL = config.get('host-email')
 
 export default {
   Query: {
     getUsers: async (_, args, { models: { UserModel, RoleModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+        const company = await parseToQueryUser(args.company, 'company')
+
         const roleOne = args.role && (await RoleModel.findOne({ name: args.role }))
         const role = args.role && roleOne ? { role: roleOne.id } : {}
+
         const email = args.email ? { email: { $nin: args.email } } : {}
-        const company = args.company ? { company: args.company } : {}
         const account = { account: args?.account || [INDIVIDUAL, OFICIAL, ENTITY] }
-        const search = args.search ? { $text: { $search: args.search.toString() } } : {}
-        const find = { ...email, ...company, ...role, ...account, ...search }
+        const search = args.search
+          ? {
+              $or: [
+                { name: { $regex: args.search, $options: 'i' } },
+                { about: { $regex: args.search, $options: 'i' } }
+              ]
+            }
+          : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...email, ...company, ...role, ...account, ...createdAt, ...search }
 
         return await getDocuments(UserModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })
@@ -61,9 +82,19 @@ export default {
       if (userChats) return userChats
       return []
     },
-    getUserMembers: async (_, { email }, { models: { UserModel } }) => {
-      const user = await UserModel.findOne({ email })
-      if (user) return await UserModel.find({ company: user.id })
+    getUserMembers: async (_, args, { models: { UserModel } }) => {
+      const user = await UserModel.findOne({ email: args.email })
+
+      if (user) {
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        return getDocuments(UserModel, {
+          find: { company: user.id },
+          sort,
+          skip: args.offset,
+          limit: args.limit
+        })
+      }
+
       return []
     },
     checkUser: async (_, { search }, { models: { UserModel } }) => {
@@ -141,66 +172,76 @@ export default {
         access_token: accessToken
       }
 
-      try {
-        const { data } = await authenticateGoogle(req, res)
+      const { data } = await authenticateGoogle(req, res)
 
-        if (data) {
-          const { profile, accessToken } = data
-          const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
-          const name = profile && profile.displayName
-          const user = await UserModel.findOne({ email })
+      if (data) {
+        const { profile, accessToken } = data
+        const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
+        const name = profile && profile.displayName
+        const user = await UserModel.findOne({ email })
 
-          if (!user) {
-            const account = INDIVIDUAL
-            const role = await RoleModel.findOne({ name: USER })
-            const avatar =
-              profile &&
-              profile._json &&
-              (await ImageModel.create({
-                filename: profile._json.picture,
-                path: profile._json.picture,
-                size: 10
-              }))
+        if (!user) {
+          const account = INDIVIDUAL
+          const role = await RoleModel.findOne({ name: USER })
+          const avatar =
+            profile &&
+            profile._json &&
+            (await ImageModel.create({
+              filename: profile._json.picture,
+              path: profile._json.picture,
+              size: 10
+            }))
 
-            const newUser = await UserModel.create({
-              name,
-              role,
-              email,
-              avatar,
-              account,
+          const newUser = await UserModel.create({
+            name,
+            role,
+            email,
+            avatar,
+            account,
+            googleAccount: {
+              accessToken
+            }
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.registrationCompletedSubject,
+            html: template.registrationCompleted({ name })
+          })
+
+          return {
+            ...newUser._doc,
+            register: true,
+            token: jwt.sign({ uid: newUser._id }, SECRET)
+          }
+        }
+
+        if (user) {
+          const newUser = await UserModel.findOneAndUpdate(
+            { email },
+            {
               googleAccount: {
                 accessToken
               }
-            })
+            },
+            { new: true }
+          )
 
-            return {
-              ...newUser._doc,
-              register: true,
-              token: jwt.sign({ uid: newUser._id }, SECRET)
-            }
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.googleAuthSubject,
+            html: template.googleAuth({ name: user.name })
+          })
+
+          return {
+            ...newUser._doc,
+            token: jwt.sign({ uid: user._id }, SECRET)
           }
-
-          if (user) {
-            const newUser = await UserModel.findOneAndUpdate(
-              { email },
-              {
-                googleAccount: {
-                  accessToken
-                }
-              },
-              { new: true }
-            )
-
-            return {
-              ...newUser._doc,
-              token: jwt.sign({ uid: user._id }, SECRET)
-            }
-          }
-        } else {
-          return new Error('Authentication Failure!')
         }
-      } catch (error) {
-        throw new Error(error)
+      } else {
+        return null
       }
     },
     facebookAuth: async (
@@ -213,67 +254,77 @@ export default {
         access_token: accessToken
       }
 
-      try {
-        const { data } = await authenticateFacebook(req, res)
+      const { data } = await authenticateFacebook(req, res)
 
-        if (data) {
-          const { profile, accessToken } = data
-          const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
-          const name = profile && profile.displayName
-          const user = await UserModel.findOne({ email })
+      if (data) {
+        const { profile, accessToken } = data
+        const email = profile && profile.emails && profile.emails[0] && profile.emails[0].value
+        const name = profile && profile.displayName
+        const user = await UserModel.findOne({ email })
 
-          if (!user) {
-            const account = INDIVIDUAL
-            const role = await RoleModel.findOne({ name: USER })
-            const avatar =
-              profile &&
-              profile.photos &&
-              profile.photos[0] &&
-              (await ImageModel.create({
-                filename: profile.photos[0].value,
-                path: profile.photos[0].value,
-                size: 10
-              }))
+        if (!user) {
+          const account = INDIVIDUAL
+          const role = await RoleModel.findOne({ name: USER })
+          const avatar =
+            profile &&
+            profile.photos &&
+            profile.photos[0] &&
+            (await ImageModel.create({
+              filename: profile.photos[0].value,
+              path: profile.photos[0].value,
+              size: 10
+            }))
 
-            const newUser = await UserModel.create({
-              name,
-              role,
-              email,
-              avatar,
-              account,
+          const newUser = await UserModel.create({
+            name,
+            role,
+            email,
+            avatar,
+            account,
+            facebookAccount: {
+              accessToken
+            }
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.registrationCompletedSubject,
+            html: template.registrationCompleted({ name })
+          })
+
+          return {
+            ...newUser._doc,
+            token: jwt.sign({ uid: newUser._id }, SECRET)
+          }
+        }
+
+        if (user) {
+          const newUser = await UserModel.findOneAndUpdate(
+            { email },
+            {
               facebookAccount: {
                 accessToken
               }
-            })
+            },
+            { new: true }
+          )
 
-            return {
-              ...newUser._doc,
-              token: jwt.sign({ uid: newUser._id }, SECRET)
-            }
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.facebookAuthSubject,
+            html: template.facebookAuth({ name: user.name })
+          })
+
+          return {
+            ...newUser._doc,
+            register: true,
+            token: jwt.sign({ uid: user._id }, SECRET)
           }
-
-          if (user) {
-            const newUser = await UserModel.findOneAndUpdate(
-              { email },
-              {
-                facebookAccount: {
-                  accessToken
-                }
-              },
-              { new: true }
-            )
-
-            return {
-              ...newUser._doc,
-              register: true,
-              token: jwt.sign({ uid: user._id }, SECRET)
-            }
-          }
-        } else {
-          return new Error('Authentication Failure!')
         }
-      } catch (error) {
-        throw new Error(error)
+      } else {
+        return null
       }
     },
     register: async (
@@ -286,29 +337,40 @@ export default {
         throw new UserInputError('Errors', { errors })
       }
 
-      const user = await UserModel.findOne({ $or: [{ name }, { email }, { phone }] })
+      const user = await UserModel.findOne({ $or: [{ email }, { phone }] })
       if (user) {
         throw new UserInputError(USER_IS_EXIST)
       }
 
       const role = await RoleModel.findOne({ name: USER })
 
-      const bcryptPassword = await bcrypt.hashSync(password, SALT)
+      if (role) {
+        const bcryptPassword = await bcrypt.hashSync(password, SALT)
 
-      const newUser = await UserModel.create({
-        name,
-        role,
-        account,
-        email,
-        phone,
-        password: bcryptPassword,
-        confirmPassword
-      })
+        const newUser = await UserModel.create({
+          name,
+          role,
+          account,
+          email,
+          phone,
+          password: bcryptPassword,
+          confirmPassword
+        })
 
-      return {
-        ...newUser._doc,
-        token: jwt.sign({ uid: newUser._id }, SECRET)
+        sendMail({
+          from: HOST_EMAIL,
+          to: email,
+          subject: template.registrationCompletedSubject,
+          html: template.registrationCompleted({ name })
+        })
+
+        return {
+          ...newUser._doc,
+          token: jwt.sign({ uid: newUser._id }, SECRET)
+        }
       }
+
+      throw new UserInputError('Errors', { errors })
     },
     createUser: async (
       _,
@@ -368,9 +430,11 @@ export default {
 
       if (input.password) user.password = input.password
 
-      await deleteUpload(user.avatar, ImageModel)
-      const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-      if (avatar) user.avatar = avatar
+      if (input.avatar && input.avatarSize) {
+        await deleteUpload(user.avatar, ImageModel)
+        const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
+        if (avatar) user.avatar = avatar
+      }
 
       await user.save()
 
@@ -381,55 +445,34 @@ export default {
       user.resetPasswordKey = randomString(6)
       await user.save()
 
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'noreply.atomic@gmail.com',
-          pass: 'xrvhbfibzzmzignx'
-        }
-      })
-
-      const mailOptions = {
-        from: 'admin@atomic.ru.com',
+      sendMail({
+        from: HOST_EMAIL,
         to: email,
-        subject: 'Ключ сброса Вашего пароля',
-        html: `<h1>Используйте этот ключ для сброса пароля</h1><b>${user.resetPasswordKey}</b>`
-      }
-      transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-          console.log(error)
-        } else {
-          console.log('Email sent: ' + info.response)
-        }
+        subject: template.resetPasswordSubject,
+        html: template.resetPassword({ key: user.resetPasswordKey })
       })
 
       return { email: user.email, resetPasswordKey: user.resetPasswordKey }
     },
-
     getResetTokenByEmail: async (_, { email, token }, { models: { UserModel } }) => {
       const user = await UserModel.findOne({ email })
-      if (user.resetPasswordKey === token) {
-        return true
-      } else {
-        return false
-      }
+      return user.resetPasswordKey === token
     },
-
     checkTokenAndResetPassword: async (
       _,
       { email, token, password },
       { models: { UserModel } }
     ) => {
       const user = await UserModel.findOne({ email })
+
       if (user.resetPasswordKey === token) {
         user.password = await bcrypt.hashSync(password, SALT)
         await user.save()
         return { email }
-      } else {
-        return { email: '' }
       }
-    },
 
+      return { email: '' }
+    },
     updateUser: async (
       _,
       { email, input },
@@ -447,16 +490,21 @@ export default {
         user.dateOfBirth = input.dateOfBirth || user.dateOfBirth
         user.role = input.role || user.role
 
+        if (input.password) {
+          const bcryptPassword = await bcrypt.hashSync(input.password, SALT)
+          user.password = bcryptPassword
+        }
+
         if (input.company) {
           const company = await UserModel.findOne({ email: input.company })
           if (company && company.account === ENTITY) user.company = company.id
         }
 
-        if (input.password) user.password = input.password
-
-        await deleteUpload(user.avatar, ImageModel)
-        const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
-        if (avatar) user.avatar = avatar
+        if (input.avatar && input.avatarSize) {
+          await deleteUpload(user.avatar, ImageModel)
+          const avatar = await createUpload(input.avatar, input.avatarSize, ImageModel)
+          if (avatar) user.avatar = avatar
+        }
 
         await createDashboardActivity({
           user: author.id,
@@ -597,12 +645,21 @@ export default {
         const candidate = await UserModel.findOne({ email })
 
         if (candidate && candidate.account !== ENTITY) {
+          const message = `${user.name} пригласила Вас к себе`
+
           await createNotice({
             type: INVITE,
             author: candidate.id,
-            title: 'Вас пригласила компания',
-            message: `${user.name} пригласила вас к себе`,
-            company: user.id
+            title: template.inviteUserMemberSubject,
+            company: user.id,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: email,
+            subject: template.inviteUserMemberSubject,
+            html: template.inviteUserMember({ message })
           })
         }
       }
@@ -627,11 +684,20 @@ export default {
           notice.message = `Вы приняли предложение ${company.name}`
           await notice.save()
 
+          const message = `${user.name} принял Ваше предложение`
+
           await createNotice({
             type: MESSAGE,
             author: company.id,
-            title: 'Пользователь принял приглашение',
-            message: `${user.name} принял ваше предложение`
+            title: template.applyInviteUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: company.email,
+            subject: template.applyInviteUserMemberSubject,
+            html: template.applyInviteUserMember({ message })
           })
         }
       }
@@ -653,11 +719,20 @@ export default {
           notice.message = `Вы отклонили предложение ${company.name}`
           await notice.save()
 
+          const message = `${user.name} отклонил Ваше предложение`
+
           await createNotice({
             type: MESSAGE,
             author: company.id,
-            title: 'Пользователь отклонил приглашение',
-            message: `${user.name} отклонил ваше предложение`
+            title: template.rejectInviteUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: company.email,
+            subject: template.rejectInviteUserMemberSubject,
+            html: template.rejectInviteUserMember({ message })
           })
         }
       }
@@ -686,11 +761,20 @@ export default {
 
             await candidate.save()
 
+            const message = `Компания ${user.name} назначила Вас ответственным`
+
             await createNotice({
               type: MESSAGE,
               author: candidate.id,
-              title: 'Вас назначили ответственным',
-              message: `Компания ${user.name} назначила вас ответственным`
+              title: template.appointUserMemberSubject,
+              message
+            })
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: candidate.email,
+              subject: template.appointUserMemberSubject,
+              html: template.appointUserMember({ message })
             })
           }
         }
@@ -722,11 +806,20 @@ export default {
 
             await candidate.save()
 
+            const message = `Компания ${user.name} сняла с Вас полномочия`
+
             await createNotice({
               type: MESSAGE,
               author: candidate.id,
-              title: 'С вас сняли полномочия',
-              message: `Компания ${user.name} сняла с вас полномочия`
+              title: template.excludeUserMemberSubject,
+              message
+            })
+
+            sendMail({
+              from: HOST_EMAIL,
+              to: candidate.email,
+              subject: template.excludeUserMemberSubject,
+              html: template.excludeUserMember({ message })
             })
           }
         }
@@ -743,11 +836,20 @@ export default {
 
           await candidate.save()
 
+          const message = `Компания ${user.name} Вас исключила`
+
           await createNotice({
             type: MESSAGE,
             author: candidate.id,
-            title: 'Вас исключили из компании',
-            message: `Компания ${user.name} вас исключила`
+            title: template.dismissUserMemberSubject,
+            message
+          })
+
+          sendMail({
+            from: HOST_EMAIL,
+            to: candidate.email,
+            subject: template.dismissUserMemberSubject,
+            html: template.dismissUserMember({ message })
           })
         }
       }
@@ -768,18 +870,32 @@ export default {
       { user: author, deleteUpload, models: { UserModel, ImageModel } }
     ) => {
       try {
-        const user = await UserModel.findOne({ email })
+        for (let str of email) {
+          const user = await UserModel.findOne({ email: str })
 
-        await createDashboardActivity({
-          user: author.id,
-          message: M.DELETE_USER,
-          entityType: T.USER,
-          identityString: user.email
-        })
+          if (user) {
+            if (author) {
+              await createDashboardActivity({
+                user: author.id,
+                message: M.DELETE_USER,
+                entityType: T.USER,
+                identityString: user.email
+              })
 
-        deleteUpload(user.avatar, ImageModel)
+              deleteUpload(user.avatar, ImageModel)
 
-        await user.delete()
+              sendMail({
+                from: HOST_EMAIL,
+                to: user.email,
+                subject: template.deleteUserSubject,
+                html: template.deleteUser()
+              })
+
+              await user.delete()
+            }
+          }
+        }
+
         return UserModel.find().sort({ createdAt: -1 })
       } catch (err) {
         throw new Error(err)

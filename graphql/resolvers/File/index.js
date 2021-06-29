@@ -5,11 +5,13 @@ export default {
   Query: {
     getFiles: async (_, args, { models: { FileModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { path: { $regex: args.search, $options: 'i' } } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
         const find = { ...search }
 
         return await getDocuments(FileModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })

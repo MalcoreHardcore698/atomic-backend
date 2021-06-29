@@ -1,4 +1,4 @@
-import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
+import {createDashboardActivity, getValidDocuments, parseToQueryDate, parseToQueryUser} from '../../../utils/functions'
 import { TICKET_NOT_EMPTY, TICKET_NOT_FOUND } from '../../../enums/states/error'
 import { OPENED, CLOSED } from '../../../enums/states/chat'
 import { UNREADED } from '../../../enums/states/message'
@@ -26,14 +26,20 @@ export default {
   Query: {
     getTickets: async (_, args, { models: { TicketModel, UserModel, CategoryModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const createdAt = parseToQueryDate(args.createdAt)
+        const author = await parseToQueryUser(args.author, 'author')
+        const counsellor = await parseToQueryUser(args.counsellor, 'counsellor')
+
         const category = args.category ? { category: args.category } : {}
-        const find = { ...category, ...search }
+        const search = args.search ? { title: { $regex: args.search, $options: 'i' } } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...author, ...counsellor, ...category, ...createdAt, ...search }
 
         return await getTickets(
           { TicketModel, UserModel, CategoryModel },
           {
             find,
+            sort,
             skip: args.offset,
             limit: args.limit
           }
@@ -236,20 +242,26 @@ export default {
     },
     deleteTicket: async (_, { id }, { user, models: { TicketModel, TicketMessageModel } }) => {
       try {
-        const ticket = await TicketModel.findById(id)
+        for (let str of id) {
+          const ticket = await TicketModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_TICKET,
-          entityType: T.TICKET,
-          identityString: ticket._id.toString()
-        })
+          if (ticket) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_TICKET,
+                entityType: T.TICKET,
+                identityString: ticket._id.toString()
+              })
 
-        for (let id of ticket.messages) {
-          const message = await TicketMessageModel.findById(id)
-          await message.delete()
+              for (let id of ticket.messages) {
+                const message = await TicketMessageModel.findById(id)
+                await message.delete()
+              }
+              await ticket.delete()
+            }
+          }
         }
-        await ticket.delete()
 
         return await TicketModel.find().sort({ createdAt: -1 })
       } catch (err) {

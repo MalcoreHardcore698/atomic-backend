@@ -77,13 +77,17 @@ export default gql`
     ADD_ARTICLE
     ADD_PROJECT
     EDIT_USER
+    EDIT_ROLE
     EDIT_CATEGORY
     EDIT_ARTICLE
     EDIT_PROJECT
+    EDIT_TICKET
     DELETE_USER
+    DELETE_ROLE
     DELETE_CATEGORY
     DELETE_ARTICLE
     DELETE_PROJECT
+    DELETE_TICKET
     COMMENT_ARTICLE
     COMMENT_PROJECT
     PURPOSE_PROJECT
@@ -156,7 +160,10 @@ export default gql`
     settings: [UserSetting]
     token: String
     register: String
+    registerOfASocialNetwork: Boolean
     resetPasswordKey: String
+    countOfNewNotifications: Int
+    countOfNewMessages: Int
     updatedAt: String!
     createdAt: String!
   }
@@ -196,6 +203,7 @@ export default gql`
     title: String!
     message: String!
     company: User
+    status: StatusMessageType!
     updatedAt: String!
     createdAt: String!
   }
@@ -219,12 +227,20 @@ export default gql`
     createdAt: String!
   }
 
+  type Characteristic {
+    id: ID!
+    name: String!
+    value: String!
+    isVisualize: Boolean!
+  }
+
   type Project {
     id: ID!
     author: User!
     title: String!
-    description: String!
     body: String!
+    characteristics: [Characteristic]
+    description: String!
     company: User
     preview: File
     category: Category
@@ -304,6 +320,7 @@ export default gql`
     primary: Project
     residues: [Project]
     background: Image
+    isRandom: Boolean
   }
 
   type DashboardSettingsMeta {
@@ -341,6 +358,7 @@ export default gql`
     residues: [ID]
     background: Upload
     backgroundSize: Int
+    isRandom: Boolean
   }
 
   input DashboardSettingsMetaInput {
@@ -411,10 +429,17 @@ export default gql`
     status: PostStatus
   }
 
+  input CharacteristicInput {
+    name: String!
+    value: String!
+    isVisualize: Boolean!
+  }
+
   input ProjectCreateInput {
     title: String!
-    description: String!
     body: String!
+    characteristics: [CharacteristicInput]
+    description: String
     preview: Upload
     previewSize: Int
     category: ID
@@ -425,7 +450,7 @@ export default gql`
     fileSizes: [Int]
     screenshots: [Upload]
     screenshotSizes: [Int]
-    status: PostStatus!
+    status: PostStatus
   }
 
   input TicketCreateInput {
@@ -448,6 +473,7 @@ export default gql`
     avatar: Upload
     avatarSize: Int
     company: String
+    password: String
     account: AccountType
     gender: GenderType
     email: String
@@ -492,8 +518,9 @@ export default gql`
 
   input ProjectUpdateInput {
     title: String
-    description: String
     body: String
+    characteristics: [CharacteristicInput]
+    description: String
     preview: Upload
     previewSize: Int
     category: ID
@@ -529,8 +556,16 @@ export default gql`
   }
 
   type Query {
-    getRoles(offset: Int, limit: Int, search: String): [Role]!
+    getRoles(
+      sort: String
+      offset: Int
+      limit: Int
+      search: String
+      permissions: [Permission]
+      createdAt: String
+    ): [Role]!
     getUsers(
+      sort: String
       offset: Int
       limit: Int
       search: String
@@ -539,12 +574,21 @@ export default gql`
       account: [AccountType]
       company: String
       role: String
+      createdAt: String
     ): [User]!
-    getFiles(offset: Int, limit: Int, search: String): [File]!
-    getImages(offset: Int, limit: Int, search: String): [Image]!
-    getCategories(offset: Int, limit: Int, type: CategoryType, search: String): [Category]!
+    getFiles(sort: String, offset: Int, limit: Int, search: String): [File]!
+    getImages(sort: String, offset: Int, limit: Int, search: String): [Image]!
+    getCategories(
+      sort: String
+      offset: Int
+      limit: Int
+      type: CategoryType
+      search: String
+      createdAt: String
+    ): [Category]!
     getCategoryTypes: [CategoryType]!
     getProjects(
+      sort: String
       offset: Int
       limit: Int
       category: ID
@@ -552,20 +596,37 @@ export default gql`
       search: String
       author: String
       member: String
-      status: PostStatus
+      company: String
+      status: [PostStatus]
+      createdAt: String
     ): [Project]!
-    getTickets(offset: Int, limit: Int, search: String): [Ticket]!
-    getProjectsByIds(projects: [ID]!, status: PostStatus): [Project]!
-    getArticles(
+    getTickets(
+      sort: String
       offset: Int
-      limit: Int
+      limit: Int,
       search: String
       author: String
-      status: PostStatus
+      counsellor: String
+      category: String
+      status: StatusTicket
+      createdAt: String
+    ): [Ticket]!
+    getProjectsByIds(projects: [ID]!, status: [PostStatus]): [Project]!
+    getArticles(
+      sort: String
+      offset: Int
+      limit: Int
+      category: ID
+      search: String
+      author: String
+      status: [PostStatus]
+      createdAt: String
     ): [Article]!
     getComments(id: ID!, offset: Int, limit: Int, search: String): [Comment]!
     getChatTypes: [ChatType]!
+    getGenderTypes: [GenderType]!
     getStatusChatTypes: [StatusChatType]!
+    getStatusTicketTypes: [StatusTicket]!
     getAccountTypes: [AccountType]!
     getNoticeTypes: [NoticeType]!
     getPermissions: [Permission]!
@@ -594,8 +655,8 @@ export default gql`
   }
 
   type Mutation {
-    googleAuth(accessToken: String!): User!
-    facebookAuth(accessToken: String!): User!
+    googleAuth(accessToken: String!): User
+    facebookAuth(accessToken: String!): User
     checkin(login: String!): Boolean!
     login(login: String!, password: String!): User!
     register(input: RegisterInput): User!
@@ -629,14 +690,14 @@ export default gql`
 
     deleteFile(id: ID!): Boolean!
     deleteImage(id: ID!): Boolean!
-    deleteRole(id: ID!): [Role]!
-    deleteUser(email: String!): [User]!
-    deleteCategory(id: ID!): [Category]!
-    deleteArticle(id: ID!, status: PostStatus): [Article]!
-    deleteProject(id: ID!, status: PostStatus): [Project]!
+    deleteRole(id: [ID]!): [Role]!
+    deleteUser(email: [String]!): [User]!
+    deleteCategory(id: [ID]!): [Category]!
+    deleteArticle(id: [ID]!, status: PostStatus): [Article]!
+    deleteProject(id: [ID]!, status: PostStatus): [Project]!
     deleteUserFolder(id: ID!): [Folder]!
     deleteComment(id: ID!): [Comment]!
-    deleteTicket(id: ID!): [Ticket]!
+    deleteTicket(id: [ID]!): [Ticket]!
     deleteDashboardSettings: Boolean!
 
     likeProject(id: ID!): [Project]!
@@ -662,6 +723,9 @@ export default gql`
       text: String!
       isClient: Boolean
     ): [TicketMessage]!
+
+    readMessages(id: [ID]!): Boolean!
+    readNotifications(id: [ID]!): Boolean!
 
     closeTicket(id: ID!): Ticket!
   }

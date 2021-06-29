@@ -27,14 +27,15 @@ export default {
   Query: {
     getComments: async (_, args, { models: { CommentModel, UserModel, ArticleModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const search = args.search ? { text: { $regex: args.search, $options: 'i' } } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: 1 }
         const find = { ...search, article: args.id }
 
         return await getComments(
           { CommentModel, UserModel, ArticleModel },
           {
             find,
-            sort: { createdAt: 1 },
+            sort,
             skip: args.offset,
             limit: args.limit
           }

@@ -10,7 +10,8 @@ export default {
         else {
           return await DashboardSettingsModel.create({
             scaffold: {
-              title: 'Создавай школу будущего с нами'
+              title: 'Создавай школу будущего с нами',
+              isRandom: true
             },
             meta: {
               title: 'Atomic',
@@ -39,7 +40,8 @@ export default {
             title: args.scaffold.title,
             primary: args.scaffold.primary,
             residues: args.scaffold.residues,
-            background: args.scaffold.background
+            background: args.scaffold.background,
+            isRandom: args.scaffold.isRandom
           },
           meta: args.meta
         })
@@ -66,6 +68,7 @@ export default {
           settings.scaffold.primary = input.scaffold?.primary || settings.scaffold?.primary
           settings.scaffold.residues = input.scaffold?.residues || settings.scaffold?.residues
           settings.scaffold.background = input.scaffold?.background || settings.scaffold?.background
+          settings.scaffold.isRandom = input.scaffold?.isRandom ?? settings.scaffold?.isRandom
           settings.meta.title = input.meta?.title || settings.meta?.title
           settings.meta.description = input.meta?.description || settings.meta?.description
 

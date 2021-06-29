@@ -1,53 +1,65 @@
 import { NEW_PROJECT } from '../../../enums/types/events'
 import { PROJECT_NOT_FOUND, PROJECT_NOT_EMPTY } from '../../../enums/states/error'
-import { createDashboardActivity, getValidDocuments } from '../../../utils/functions'
+import {
+  createDashboardActivity,
+  getDocuments,
+  parseToQueryUser,
+  parseToQueryDate
+} from '../../../utils/functions'
+import { PUBLISHED } from '../../../enums/types/post'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
-
-export async function checkValidProject({ UserModel }, project) {
-  const author = await UserModel.findById(project.author)
-
-  if (!author) {
-    await project.delete()
-    return false
-  }
-
-  return true
-}
-
-export async function getProjects({ ProjectModel, UserModel }, args) {
-  return await getValidDocuments(ProjectModel, args, { UserModel }, checkValidProject)
-}
 
 export default {
   Query: {
     getProjects: async (_, args, { models: { ProjectModel, UserModel } }) => {
       try {
+        const createdAt = parseToQueryDate(args.createdAt)
+        const company = await parseToQueryUser(args.company, 'company')
+
         const authorOne = await UserModel.findOne({ email: args.author })
         const memberOne = await UserModel.findOne({ email: args.member })
 
-        const status = args.status ? { status: args.status } : {}
+        const status = { status: args.status ?? PUBLISHED }
         const author = authorOne ? { author: authorOne?.id } : {}
         const category = args.category ? { category: args.category } : {}
-        const users = Array.isArray(args.rating) ? await UserModel.find({ email: args.rating }) : []
-        const rating = args.rating && users.length > 0 ? { rating: users.map((u) => u.id) } : {}
-        const search = args.search ? { $text: { $search: args.search } } : {}
+        const users = Array.isArray(args.rating)
+          ? await UserModel.find({ email: args.rating })
+          : [args.rating]
+        const rating =
+          args.rating && users.length > 0 ? { rating: { $in: users.map((u) => u.id) } } : {}
+        const search = args.search
+          ? {
+              $or: [
+                { title: { $regex: args.search, $options: 'i' } },
+                { description: { $regex: args.search, $options: 'i' } }
+              ]
+            }
+          : {}
         const member = memberOne
           ? {
               $or: [{ members: { $elemMatch: { $eq: memberOne?.id } } }, { company: memberOne?.id }]
             }
           : {}
 
-        const find = { ...status, ...category, ...rating, ...member, ...author, ...search }
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = {
+          ...status,
+          ...category,
+          ...rating,
+          ...member,
+          ...author,
+          ...company,
+          ...createdAt,
+          ...search
+        }
 
-        return await getProjects(
-          { ProjectModel, UserModel },
-          {
-            find,
-            skip: args.offset,
-            limit: args.limit
-          }
-        )
+        return getDocuments(ProjectModel, {
+          find,
+          sort,
+          skip: args.offset,
+          limit: args.limit
+        })
       } catch (err) {
         throw new Error(err)
       }
@@ -166,6 +178,7 @@ export default {
       if (project) {
         project.title = input.title || project.title
         project.body = input.body || project.body
+        project.characteristics = input.characteristics || project.characteristics
         project.description = input.description || project.description
         project.category = input.category || project.category
         project.presentation = input.presentation || project.presentation
@@ -226,20 +239,26 @@ export default {
       { user, deleteUpload, deleteUploads, models: { ProjectModel, ImageModel, FileModel } }
     ) => {
       try {
-        const project = await ProjectModel.findById(id)
+        for (let str of id) {
+          const project = await ProjectModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_PROJECT,
-          entityType: T.PROJECT,
-          identityString: project._id.toString()
-        })
+          if (project) {
+            if (user) {
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_PROJECT,
+                entityType: T.PROJECT,
+                identityString: project._id.toString()
+              })
 
-        await deleteUpload(project.preview, ImageModel)
-        await deleteUploads(project.screenshots, ImageModel)
-        await deleteUploads(project.files, FileModel)
+              await deleteUpload(project.preview, ImageModel)
+              await deleteUploads(project.screenshots, ImageModel)
+              await deleteUploads(project.files, FileModel)
 
-        await project.delete()
+              await project.delete()
+            }
+          }
+        }
 
         const args = {}
         if (status) args.status = status

@@ -5,8 +5,13 @@
   "port": 5000,
   "upload-dir": "uploads",
 
+  "host-email": "admin@atomic.ru.com",
   "host-url": "https://atomic.ru.com",
   "local-url": "http://localhost:3000",
+
+  "transporter-service": "gmail",
+  "transporter-auth-user": "noreply.atomic@gmail.com",
+  "transporter-auth-pass": "xrvhbfibzzmzignx",
 
   "server-host-url": "https://api.atomic.ru.com",
   "server-local-url": "http://localhost:5000",

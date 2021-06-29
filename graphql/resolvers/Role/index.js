@@ -1,4 +1,4 @@
-import { createDashboardActivity, getDocuments } from '../../../utils/functions'
+import {createDashboardActivity, getDocuments, parseToQueryDate} from '../../../utils/functions'
 import { ROLE_NOT_FOUND, ROLE_NOT_EMPTY } from '../../../enums/states/error'
 import * as M from '../../../enums/states/activity'
 import * as T from '../../../enums/types/entity'
@@ -7,11 +7,20 @@ export default {
   Query: {
     getRoles: async (_, args, { models: { RoleModel } }) => {
       try {
-        const search = args.search ? { $text: { $search: args.search } } : {}
-        const find = { ...search }
+        const createdAt = parseToQueryDate(args.createdAt)
+
+        const permissions = args.permissions ? {
+          permissions: {
+            $all: Array.isArray(args.permissions) ? args.permissions : [args.permissions]
+          }
+        } : {}
+        const search = args.search ? { name: { $regex: args.search, $options: 'i' } } : {}
+        const sort = args.sort ? { [args.sort]: 1 } : { createdAt: -1 }
+        const find = { ...createdAt, ...permissions, ...search }
 
         return await getDocuments(RoleModel, {
           find,
+          sort,
           skip: args.offset,
           limit: args.limit
         })
@@ -71,16 +80,24 @@ export default {
     },
     deleteRole: async (_, { id }, { user, models: { RoleModel } }) => {
       try {
-        const role = await RoleModel.findById(id)
+        for (let str of id) {
+          const role = await RoleModel.findById(str)
 
-        await createDashboardActivity({
-          user: user.id,
-          message: M.DELETE_ROLE,
-          entityType: T.ROLE,
-          identityString: role._id.toString()
-        })
+          if (role) {
+            if (user) {
+              const role = await RoleModel.findById(id)
 
-        await role.delete()
+              await createDashboardActivity({
+                user: user.id,
+                message: M.DELETE_ROLE,
+                entityType: T.ROLE,
+                identityString: role._id.toString()
+              })
+
+              await role.delete()
+            }
+          }
+        }
 
         return await RoleModel.find().sort({ createdAt: -1 })
       } catch (err) {

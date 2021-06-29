@@ -1,26 +1,29 @@
-import { getDocumentGraph } from '../../utils/functions'
+import { getRandomDocument, getDocumentGraph } from '../../utils/functions'
 
 import Role from './Role'
 import User from './User'
 import File from './File'
+import Chat from './Chat'
 import Image from './Image'
-import Category from './Category'
+import Ticket from './Ticket'
+import Notice from './Notice'
 import Article from './Article'
 import Project from './Project'
 import Comment from './Comment'
-import Ticket from './Ticket'
+import Message from './Message'
 import UserChat from './UserChat'
-import Notice from './Notice'
-import Chat from './Chat'
+import Category from './Category'
 import DashboardActivity from './DashboardActivity'
 import DashboardSettings from './DashboardSettings'
 
 import CHAT_TYPES from '../../enums/types/chat'
+import GENDER_TYPES from '../../enums/types/gender'
 import STATUS_CHAT_TYPES from '../../enums/states/chat'
 import CATEGORY_TYPES from '../../enums/types/category'
 import ACCOUNT_TYPES, { USER } from '../../enums/types/account'
 import ROLE_PERMISSIONS from '../../enums/settings/role'
 import POST_STATUSES from '../../enums/types/post'
+import { UNREADED } from '../../enums/states/message'
 
 module.exports = {
   User: {
@@ -79,6 +82,49 @@ module.exports = {
       }
 
       return result
+    },
+    registerOfASocialNetwork: ({ googleAccount, facebookAccount }) => {
+      if (googleAccount?.accessToken || facebookAccount?.accessToken) return true
+      return false
+    },
+    countOfNewNotifications: async ({ id }, args, { models: { NoticeModel } }) => {
+      const result = []
+
+      const notifications = await NoticeModel.find({ author: id })
+
+      if (notifications?.length > 0) {
+        for (let notificationId of notifications) {
+          const notification = await NoticeModel.findById(notificationId)
+          if (notification.status === UNREADED) {
+            result.push(notification)
+          }
+        }
+      }
+
+      return result.length
+    },
+    countOfNewMessages: async (
+      { id },
+      args,
+      { models: { UserChatModel, ChatModel, MessageModel } }
+    ) => {
+      const messages = []
+
+      const userChats = await UserChatModel.find({ user: id })
+
+      for (let userChat of userChats) {
+        const chat = await ChatModel.findById(userChat.chat)
+        if (chat) {
+          for (let messageId of chat.messages) {
+            const message = await MessageModel.findById(messageId)
+            if (message && message.type === UNREADED && message.author?.equals(id)) {
+              messages.push(message)
+            }
+          }
+        }
+      }
+
+      return messages.length
     }
   },
   Article: {
@@ -253,39 +299,56 @@ module.exports = {
       return { ...general, logotype }
     },
     scaffold: async ({ scaffold }, args, { models: { ProjectModel, ImageModel } }) => {
-      const primary = await ProjectModel.findById(scaffold.primary)
-      const background = await ImageModel.findById(scaffold.background)
-
+      let primary = {}
       const residues = []
-      for (let id of scaffold.residues) {
-        const project = await ProjectModel.findById(id)
-        if (project) residues.push(project)
+
+      const background = await ImageModel.findById(scaffold.background)
+      const isRandom = scaffold.isRandom
+
+      if (isRandom) {
+        primary = await getRandomDocument(ProjectModel, { status: 'PUBLISHED' })
+
+        // eslint-disable-next-line no-unused-vars
+        for (let id of scaffold.residues) {
+          const project = await getRandomDocument(ProjectModel, { status: 'PUBLISHED' })
+          if (project) residues.push(project)
+        }
+      } else {
+        primary = await ProjectModel.findById(scaffold.primary)
+
+        for (let id of scaffold.residues) {
+          const project = await ProjectModel.findById(id)
+          if (project) residues.push(project)
+        }
       }
 
-      return { ...scaffold, primary, residues, background }
+      return { ...scaffold, primary, residues, background, isRandom }
     }
   },
   Query: {
     ...Role.Query,
     ...User.Query,
     ...File.Query,
+    ...Chat.Query,
     ...Image.Query,
-    ...Category.Query,
+    ...Ticket.Query,
+    ...Notice.Query,
     ...Comment.Query,
     ...Article.Query,
     ...Project.Query,
-    ...Ticket.Query,
+    ...Message.Query,
     ...UserChat.Query,
-    ...Notice.Query,
-    ...Chat.Query,
+    ...Category.Query,
     ...DashboardActivity.Query,
     ...DashboardSettings.Query,
     getChatTypes: () => CHAT_TYPES,
+    getPostStatus: () => POST_STATUSES,
+    getPermissions: () => ROLE_PERMISSIONS,
     getStatusChatTypes: () => STATUS_CHAT_TYPES,
+    getStatusTicketTypes: () => STATUS_CHAT_TYPES,
     getCategoryTypes: () => CATEGORY_TYPES,
     getAccountTypes: () => ACCOUNT_TYPES,
-    getPermissions: () => ROLE_PERMISSIONS,
-    getPostStatus: () => POST_STATUSES,
+    getGenderTypes: () => GENDER_TYPES,
     getDashboardStatistics: async (
       _,
       args,
@@ -331,15 +394,16 @@ module.exports = {
     ...Role.Mutation,
     ...User.Mutation,
     ...File.Mutation,
+    ...Chat.Mutation,
     ...Image.Mutation,
-    ...Category.Mutation,
+    ...Ticket.Mutation,
+    ...Notice.Mutation,
     ...Article.Mutation,
     ...Project.Mutation,
     ...Comment.Mutation,
-    ...Ticket.Mutation,
+    ...Message.Mutation,
     ...UserChat.Mutation,
-    ...Notice.Mutation,
-    ...Chat.Mutation,
+    ...Category.Mutation,
     ...DashboardActivity.Mutation,
     ...DashboardSettings.Mutation
   },

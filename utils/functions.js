@@ -1,8 +1,12 @@
 import { createWriteStream, existsSync, mkdirSync, unlink } from 'fs'
+import nodemailer from 'nodemailer'
+import mongoose from 'mongoose'
 import jwt from 'jsonwebtoken'
 import rimraf from 'rimraf'
-import { v4 } from 'uuid'
 import config from 'config'
+import { v4 } from 'uuid'
+
+import { UNREADED } from '../enums/states/message'
 import models from '../models'
 
 const { UserModel, NoticeModel, DashboardActivityModel } = models
@@ -11,6 +15,30 @@ const NODE_ENV = process.env.NODE_ENV !== 'production'
 const SERVER_URL = NODE_ENV ? config.get('server-local-url') : config.get('server-host-url')
 const UPLOAD_DIR = config.get('upload-dir')
 const SECRET = config.get('secret')
+
+export function sendMail(options) {
+  const service = config.get('transporter-service')
+  const auth = {
+    user: config.get('transporter-auth-user'),
+    pass: config.get('transporter-auth-pass')
+  }
+
+  const transporter = nodemailer.createTransport({ service, auth })
+
+  transporter.sendMail(options, (error, info) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('Email sent: ' + info.response)
+    }
+  })
+}
+
+export async function getRandomDocument(Model, args) {
+  const count = await Model.estimatedDocumentCount()
+  const random = Math.floor(Math.random() * count)
+  return await Model.findOne(args).skip(random)
+}
 
 export async function getDocuments(Model, { find, sort = { createdAt: -1 }, skip, limit }) {
   return await Model.find(find).sort(sort).skip(skip).limit(limit)
@@ -161,7 +189,10 @@ export async function createDashboardActivity(args) {
 }
 
 export async function createNotice(args) {
-  await NoticeModel.create(args)
+  await NoticeModel.create({
+    ...args,
+    status: UNREADED
+  })
   await safeNotifications(10)
 }
 
@@ -259,4 +290,21 @@ export function parseCookie(cookie, cname) {
   }
 
   return r.replace('"', '').replace('"', '')
+}
+
+export async function parseToQueryUser(userIdOrEmail, findField = 'id') {
+  const isValidId = mongoose.Types.ObjectId.isValid(userIdOrEmail)
+  const candidate = !isValidId && (await UserModel.findOne({ email: userIdOrEmail }))
+
+  return isValidId ? userIdOrEmail : candidate ? { [findField]: candidate.id } : {}
+}
+
+export function parseToQueryDate(date, field = 'createdAt') {
+  const startOfDay = new Date(parseInt(date))
+  const endOfDay = new Date(parseInt(date))
+
+  startOfDay.setHours(0, 0, 0, 0)
+  endOfDay.setHours(23, 59, 59, 999)
+
+  return date ? { [field]: { $gte: startOfDay, $lte: endOfDay } } : {}
 }
